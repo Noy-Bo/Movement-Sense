@@ -14,7 +14,7 @@ import matplotlib.pyplot as plt
 
 import numpy as np
 import pyrealsense2 as rs
-
+import Algebra
 import cv2
 import csv
 
@@ -189,6 +189,10 @@ try:
                 alphaposeObject.keypoints[i+1] = xyz[1]
                 alphaposeObject.keypoints[i+2] = xyz[2]
 
+            skeleton = Algebra.AlphaSkeleton(alphaposeObject)
+
+
+
 
 
             # visualisation test
@@ -197,7 +201,7 @@ try:
             # for i in range(0,78,3):
             #     ax.scatter( alphaposeObject.keypoints[i], alphaposeObject.keypoints[i+1], alphaposeObject.keypoints[i+2], cmap='viridis', linewidth=0.5);
 
-         
+
 
 
         numOfFrames += 1
