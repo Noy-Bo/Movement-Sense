@@ -62,8 +62,10 @@ class AlphaPoseObject(object):
 # Setup:
 pipeline = rs.pipeline()
 cfg = rs.config()
-cfg.enable_device_from_file("C:\Age_Estimation_Project\\bag_files\Eliran_Squat_1.5_Front.bag", False)
-logfile_name = "LOG_Eliran_Squat_150_Front.txt"
+cfg.enable_device_from_file("C:\Age_Estimation_Project\\bag_files\Yaron_movement\yaron_200.bag", False)
+#logfile_name = "yaron_200_depth.txt"
+#orientation = "horizontal"
+json_log_name ="log_color.json"
 
 
 
@@ -92,7 +94,7 @@ all_depth_timestamps = []
 
 color_depth = []
 timestamps = []
-
+first = True
 
 # Streaming loop
 parser = argparse.ArgumentParser()
@@ -113,7 +115,7 @@ for item in alphapose_array:
 
 
 # open's the log as json array.
-log_file = open('log.json')
+log_file = open(json_log_name)
 log_array = json.load(log_file)
 log_list = []
 
@@ -137,74 +139,114 @@ try:
 
         # TimeStamps
         depth_timestamp = aligned_depth_frame.timestamp
+        # checking if we already read this frame
+        if depth_timestamp not in all_depth_timestamps:
+            all_depth_timestamps.append(depth_timestamp)
 
-        # marks code to valid the frame in log file
-        color_frame_name = None
-        for item in log_list:  # searching for color timestamp of corresponding color frame
-            if item.depth_timestamp == str(depth_timestamp):
-                color_frame_name = item.color_timestamp + ".png"
-                break
+            # marks code to valid the frame in log file
+            color_frame_name = None
+            for item in log_list:  # searching for color timestamp of corresponding color frame
+                if item.depth_timestamp == str(depth_timestamp):
+                    color_frame_name = item.color_timestamp + ".png"
+                    break
 
-        # finding color's alphaposeObject
-        alphaposeObject = None
-        for item in skeletonsTable:  # searching for the full corresponding alphapose cloud object
-            if item.image_id == color_frame_name:
-                alphaposeObject = item
-                break
+            # finding color's alphaposeObject
+            alphaposeObject = None
+            for item in skeletonsTable:  # searching for the full corresponding alphapose cloud object
+                if item.image_id == color_frame_name:
+                    alphaposeObject = item
+                    break
 
-        # color_frame = open(color_frame_name)  # open the correct .png file
-
-
-
-
-        # alphaposeObject
-        # aligned_depth_frame
-        #color_frame_name.png
-
-
-        # Generating 3d points from aligned_depth
-        if alphaposeObject != None:
-            # Get height / width configurations.
-            w, h = aligned_depth_frame.width, aligned_depth_frame.height
-
-            pc = rs.pointcloud()
-            points = pc.calculate(aligned_depth_frame)
-
-            # Create a VertexList to hold pointcloud data
-            # Will pre-allocates memory according to the attributes below
-            # vertex_list = pyglet.graphics.vertex_list(
-            #     w * h, 'v3f/stream', 't2f/stream', 'n3f/stream')
-
-            points = pc.calculate(aligned_depth_frame)
-            verts = np.asarray(points.get_vertices(2)).reshape(h, w, 3)
-            # print("rawsize: {}, vertsSize: {}".format(vertsRaw.size, verts.size))
-            texcoords = np.asarray(points.get_texture_coordinates(2))
-
-            # writing 3d points inside alphapose object
-            for i in range(0,78,3):
-                pixel_x = int(math.floor(alphaposeObject.keypoints[i]))
-                pixel_y = int(math.floor(alphaposeObject.keypoints[i+1]))
-                xyz = verts[pixel_y,pixel_x]
-                alphaposeObject.keypoints[i] = xyz[0]
-                alphaposeObject.keypoints[i+1] = xyz[1]
-                alphaposeObject.keypoints[i+2] = xyz[2]
-
-            skeleton = Algebra.AlphaSkeleton(alphaposeObject)
+            # color_frame = open(color_frame_name)  # open the correct .png file
 
 
 
 
-
-            # visualisation test
-            # fig = plt.figure()
-            # ax = plt.axes(projection='3d')
-            # for i in range(0,78,3):
-            #     ax.scatter( alphaposeObject.keypoints[i], alphaposeObject.keypoints[i+1], alphaposeObject.keypoints[i+2], cmap='viridis', linewidth=0.5);
+            # alphaposeObject
+            # aligned_depth_frame
+            #color_frame_name.png
 
 
+            # Generating 3d points from aligned_depth
+            if alphaposeObject != None:
+                # Get height / width configurations.
+                w, h = aligned_depth_frame.width, aligned_depth_frame.height
+
+                pc = rs.pointcloud()
+                points = pc.calculate(aligned_depth_frame)
+
+                # Create a VertexList to hold pointcloud data
+                # Will pre-allocates memory according to the attributes below
+                # vertex_list = pyglet.graphics.vertex_list(
+                #     w * h, 'v3f/stream', 't2f/stream', 'n3f/stream')
+
+                points = pc.calculate(aligned_depth_frame)
+                verts = np.asarray(points.get_vertices(2)).reshape(h, w, 3)
+                # print("rawsize: {}, vertsSize: {}".format(vertsRaw.size, verts.size))
+                texcoords = np.asarray(points.get_texture_coordinates(2))
 
 
-        numOfFrames += 1
+                # writing 3d points inside alphapose object
+                for i in range(0,78,3):
+                    # incase pose estimation didnt return a valid point.
+                    if math.fabs(alphaposeObject.keypoints[i]) == 0 and math.fabs(alphaposeObject.keypoints[i+1]) == 0:
+                        alphaposeObject.keypoints[i] = 0
+                        alphaposeObject.keypoints[i + 1] = 0
+                        alphaposeObject.keypoints[i + 2] = 0
+                    else:
+                        pixel_x = int(math.floor(alphaposeObject.keypoints[i]))
+                        pixel_y = int(math.floor(alphaposeObject.keypoints[i+1]))
+                        if Algebra.outOfBoundries(pixel_x,pixel_y) == True:
+                            alphaposeObject.keypoints[i] = 0
+                            alphaposeObject.keypoints[i + 1] = 0
+                            alphaposeObject.keypoints[i + 2] = 0
+                        else:
+                            xyz = verts[pixel_y,pixel_x]
+                            alphaposeObject.keypoints[i] = xyz[0]
+                            alphaposeObject.keypoints[i+1] = xyz[1]
+                            alphaposeObject.keypoints[i+2] = xyz[2]
+
+                skeleton = Algebra.AlphaSkeleton(alphaposeObject)
+
+
+                # # butt distance from floor
+                # if first == True and Algebra.isZero(skeleton.rKnee) != True and Algebra.isZero(skeleton.lKnee) != True:
+                #     first = False
+                #     floor_point_x = (skeleton.lAnkle.x + skeleton.rAnkle.x) / 2
+                #
+                # if Algebra.isZero(skeleton.head) == False:
+                #     head_x = skeleton.head.x
+                #     # if hip_x - floor_point_x > 2:
+                #     #     print("here")
+                #     print(skeleton.head.x - floor_point_x)
+
+                # yaron's right hand from body side andle
+                if Algebra.isZero(skeleton.rShoulder) == False and Algebra.isZero(skeleton.rHip) == False and Algebra.isZero(skeleton.rElbow) == False:
+                    normalizeShoulderToElbow = Algebra.getNormalizeVector(skeleton.rShoulder,skeleton.rElbow)
+                    normalizeShoulderToHip = Algebra.getNormalizeVector(skeleton.rShoulder,skeleton.rHip)
+                    if (Algebra.isZero(normalizeShoulderToHip) == False and Algebra.isZero(normalizeShoulderToElbow) == False):
+                        angle = Algebra.getAngle(normalizeShoulderToElbow,normalizeShoulderToHip)
+                    else:
+                        angle = -1
+                    print(angle)
+
+
+
+
+
+
+
+
+                # visualisation test
+                # fig = plt.figure()
+                # ax = plt.axes(projection='3d')
+                # for i in range(0,78,3):
+                #     ax.scatter( alphaposeObject.keypoints[i], alphaposeObject.keypoints[i+1], alphaposeObject.keypoints[i+2], cmap='viridis', linewidth=0.5);
+
+
+
+
+            numOfFrames += 1
 
         key = cv2.waitKey(1)
         if key & 0xFF == ord('q') or key == 27:
@@ -218,6 +260,7 @@ try:
 
 finally:
     pipeline.stop()
+    print("successfully finished, number of frames: {}".format(numOfFrames))
 
 
 

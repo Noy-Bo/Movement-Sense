@@ -8,19 +8,21 @@
 ################################################################################
 
 import argparse
+import json
 import time
-
+import Algebra
 import numpy as np
 import pyrealsense2 as rs
 
 import cv2
 import csv
-
+takeClosest = lambda num,collection:min(collection,key=lambda x:abs(x-num))
 # Setup:
 pipeline = rs.pipeline()
 cfg = rs.config()
-cfg.enable_device_from_file("C:\Age_Estimation_Project\\bag_files\Eliran_Squat_1.5_Front.bag", True)
-logfile_name = "LOG_Eliran_Squat_150_Front.txt"
+cfg.enable_device_from_file("C:\Age_Estimation_Project\\bag_files\Yaron_movement\yaron_150_vertical.bag", True)
+logfile_color_name = "yaron_150_vertical_color.txt"
+logfile_depth_name = "yaron_150_vertical_depth.txt"
 listfile_name = "list.txt"
 
 
@@ -45,12 +47,16 @@ clipping_distance = clipping_distance_in_meters / depth_scale
 align_to = rs.stream.color
 align = rs.align(align_to)
 numOfFrames = 0
+numOfColorFrames = 0
+numOfDepthFrames = 0
 # field names
 all_depth_timestamps = []
 all_color_timestamps = []
 
 color_depth = []
 timestamps = []
+timestampsColorJson = []
+timestampsDepthJson = []
 
 
 # Streaming loop
@@ -58,7 +64,7 @@ parser = argparse.ArgumentParser()
 parser.add_argument("-d", "--directory", type=str, help="Path to save the images")
 parser.add_argument("-i", "--input", type=str, help="Bag file to read")
 args = parser.parse_args()
-t_end = time.time() + 60*60*2
+t_end = time.time() + 60*15
 try:
     while time.time() < t_end:
 
@@ -81,27 +87,26 @@ try:
         color_timestamp_str = str(color_timestamp)
         depth_timestamp_str = str(depth_timestamp)
 
+        # object with depth/color mapping
         color_depth.append(color_timestamp_str)
         color_depth.append(depth_timestamp_str)
 
-        # checking foor new captured frame
+        #NEW
+        # catching new color frame
         if (color_timestamp_str not in all_color_timestamps):
-            print("new frame captured!")
-
-            #adding the new frame to the bank
             all_color_timestamps.append(color_timestamp_str)
-            timestamps.append(color_depth)
 
-            #writing the png to dir
-            # writing image & list
+            # writing the png to dir
             color_image = np.asanyarray(aligned_color_frame.get_data())
             cv2.imwrite("{}.png".format(color_timestamp_str), color_image)
+            numOfColorFrames += 1
 
-            numOfFrames += 1
+        # catching new color frame
+        if (depth_timestamp_str not in all_depth_timestamps):
+            all_depth_timestamps.append(depth_timestamp_str)
+            numOfDepthFrames += 1
 
-        # reseting the data
         color_depth = []
-
 
         numOfFrames += 1
 
@@ -119,36 +124,111 @@ finally:
     pipeline.stop()
 
 
-    #turning back to float and sorting
-    log = open(logfile_name, "a")
-    list = open(listfile_name, "a")
-    log.write("\taligned to color:\n\n")
 
-    #converting to float
-    for stamp in timestamps: # iterating over timestamps
-        stamp[0] = float(stamp[0])
-        stamp[1] = float(stamp[1])
-
-    #sort stamps after converting to float
-    timestamps.sort
 
     # ~~WARNING!~~ DELETES THE CURRENT FILES!!
     # opening files to write into
-    log = open(logfile_name, "w")
+    log_color = open(logfile_color_name, "w")
+    log_depth = open(logfile_depth_name, "w")
     list = open(listfile_name, "w")
 
-    for stamp in timestamps:
 
-        #writing to log file
-        log.write("color timestamp: {}\n".format(stamp[0]))
-        log.write("depth timestamp: {}\n\n".format(stamp[1]))
+    #converting to float
+    for i in range(0,len(all_depth_timestamps)):
+       all_depth_timestamps[i] = float(all_depth_timestamps[i])
 
-        #writing to list file
-        list = open(listfile_name, "a")
-        list.write("{}.png\n".format(stamp[0]))
+    for i in range(0, len(all_color_timestamps)):
+        all_color_timestamps[i] = float(all_color_timestamps[i])
+
+    # sorting arrays
+    all_color_timestamps.sort
+    all_depth_timestamps.sort
+
+    # building log by color
+    logfile_by_color = []
+    for stamp in all_color_timestamps:
+        color_depth.append(stamp)
+        color_depth.append(takeClosest(stamp,all_depth_timestamps))
+        logfile_by_color.append(color_depth)
+        color_depth = []
+
+    # writing to color_log and list
+    log_color = open(logfile_color_name, "a")
+    list = open(listfile_name, "a")
+
+    for cd in logfile_by_color:
+
+        # writing to log file
+        log_color.write("depth timestamp: {}\n".format(cd[1]))
+        log_color.write("color timestamp: {}\n\n".format(cd[0]))
+
+        # writing to json
+        # sorry futre Noy and Mark, im just too lazy~
+        for stamp in all_color_timestamps:
+            if stamp == cd[0]:
+                color_str = str(stamp)
+                break;
 
 
+        for stamp in all_depth_timestamps:
+            if stamp == cd[1]:
+                depth_str = str(stamp)
+                break;
 
+        timestampsColorJson.append({'color_timestamp': color_str, 'depth_timestamp': depth_str})
+
+        # writing to list file
+        list.write("{}.png\n".format(cd[0]))
+
+    list.close()
+    log_color.close()
+
+
+    # building log by depth
+
+    logfile_by_depth = []
+    for stamp in all_depth_timestamps:
+        color_depth.append(takeClosest(stamp, all_color_timestamps))
+        color_depth.append(stamp)
+        logfile_by_depth.append(color_depth)
+        color_depth = []
+
+    # writing to depth_log
+    log_depth = open(logfile_depth_name, "a")
+
+    for cd in logfile_by_depth:
+        # writing to log file
+        log_depth.write("depth timestamp: {}\n".format(cd[1]))
+        log_depth.write("color timestamp: {}\n\n".format(cd[0]))
+
+        # writing to json
+        # sorry future Noy and Mark, im just too lazy~
+        for stamp in all_color_timestamps:
+            if stamp == cd[0]:
+                color_str = str(stamp)
+                break;
+
+        for stamp in all_depth_timestamps:
+            if stamp == cd[1]:
+                depth_str = str(stamp)
+                break;
+
+        timestampsDepthJson.append({'color_timestamp': color_str, 'depth_timestamp': depth_str})
+
+
+    log_depth.close()
+
+    with open('log_color.json', "w") as f:
+        json.dump(timestampsColorJson, f)
+
+    with open('log_depth.json', "w") as f:
+        json.dump(timestampsDepthJson, f)
+
+    # with open('log.json', "w") as f:
+    #     json.dump(timestampsJson, f)
+
+
+    print("succesfully captured {} color frames and {} depth frames".format(numOfColorFrames,numOfDepthFrames));
 
 
 

@@ -81,6 +81,16 @@ class AlphaSkeleton(object):
 
 ###############################################################################################
 
+def takeClosest(num,collection):
+   return min(collection,key=lambda x:abs(x-num))
+
+
+def closest(lst, K):
+    lst = np.asarray(lst)
+    idx = (np.abs(lst - K)).argmin()
+    return lst[idx]
+
+
 def getDistance(pointA, pointB):
     return math.sqrt((math.pow((pointA.x - pointB.x), 2) + math.pow((pointA.y - pointB.y), 2) + math.pow((pointA.z - pointB.z), 2)))
 
@@ -95,10 +105,16 @@ def getNormalizeVector(pointA, pointB = Point3D(0,0,0)):
     if norm != 0:
         if p.x != 0:
             p.x = p.x / norm
+        else:
+            pass
         if p.y != 0:
             p.y = p.y / norm
+        else:
+            pass
         if p.z != 0:
             p.z = p.z / norm
+        else:
+            pass
     return p
 
 
@@ -110,10 +126,21 @@ def getAngle(normalizedVectorA, normalizedVectorB):
 
     # transform to radians to degrees
     angle = angle * (180 / np.pi)
+    if angle == 90:
+        print("error")
     return angle
 
+def isZero(p):
+    if math.fabs(p.x) == 0 and math.fabs(p.y) == 0 and math.fabs(p.z == 0):
+        return True
+    else:
+        return False
 
-
+def outOfBoundries(x,y):
+    if x>1279 or y> 719:
+        return True
+    else:
+        return False
 
 # testing~
 p1 = Point3D(1,0,0)
