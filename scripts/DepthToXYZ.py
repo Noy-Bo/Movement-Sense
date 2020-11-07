@@ -1,9 +1,9 @@
 ## License: Apache 2.0. See LICENSE file in root directory.
 ## Copyright(c) 2017 Intel Corporation. All Rights Reserved.
 
-################################################################################
-##                                                                            ##
-################################################################################
+############################################################################################
+## this script uses bag file, the log, skeleton-key points, to extract and calculate data ##
+############################################################################################
 from mpl_toolkits import mplot3d
 import argparse
 import json
@@ -56,22 +56,43 @@ class AlphaPoseObject(object):
         else:
             skeletonsTable.append(self)
 
+#
 
+# open's the alphapose results and sets them in json array
+skeletonsTable = []  # contains all json's, with the bigger score
+alphapose_file = open('alphapose-results.json')
+alphapose_array = json.load(alphapose_file)
 
+for item in alphapose_array:
+    x = AlphaPoseObject(item['image_id'], item['score'], item['box'], item['keypoints'])
+    x.add()
+
+logfile_name = "Dana_Squat_150_Side_color.txt"
+json_log_name ="log_color.json"
+
+# open's the log as json array.
+log_file = open(json_log_name)
+log_array = json.load(log_file)
+log_list = []
+
+#generating the log_list
+for item in log_array:
+    log_list.append(Timestamp(item['color_timestamp'], item['depth_timestamp']))      # json_list contains all pairs of depth & color
 
 # Setup:
 pipeline = rs.pipeline()
 cfg = rs.config()
-cfg.enable_device_from_file("C:\Age_Estimation_Project\\bag_files\Yaron_movement\yaron_200.bag", False)
-#logfile_name = "yaron_200_depth.txt"
-#orientation = "horizontal"
-json_log_name ="log_color.json"
-
+cfg.enable_device_from_file("C:\Age_Estimation_Project\\bag_files\Bag_Files\Second\Dana_Squat_150_Side.bag", False)
 
 
 profile = pipeline.start(cfg)
 device = profile.get_device()
 playback = device.as_playback()  # this allows the use of pause and resume.
+
+#pasuing playback to let the pipe warm up
+playback.pause
+
+first = True
 
 # Getting the depth sensor's depth scale (see rs-align example for explanation)
 depth_sensor = profile.get_device().first_depth_sensor()
@@ -102,27 +123,10 @@ parser.add_argument("-d", "--directory", type=str, help="Path to save the images
 parser.add_argument("-i", "--input", type=str, help="Bag file to read")
 args = parser.parse_args()
 
-# marks code to load the skeleton keys object
+# letting the pipe warm up for couple of seconds then starting to capture frames
 
-# open's the alphapose results and sets them in json array
-skeletonsTable = []  # contains all json's, with the bigger score
-alphapose_file = open('alphapose-results.json')
-alphapose_array = json.load(alphapose_file)
-
-for item in alphapose_array:
-    x = AlphaPoseObject(item['image_id'], item['score'], item['box'], item['keypoints'])
-    x.add()
-
-
-# open's the log as json array.
-log_file = open(json_log_name)
-log_array = json.load(log_file)
-log_list = []
-
-#generating the log_list
-for item in log_array:
-    log_list.append(Timestamp(item['color_timestamp'], item['depth_timestamp']))      # json_list contains all pairs of depth & color
-
+playback.resume
+#time.sleep(10)
 try:
     while True:
 
@@ -132,10 +136,19 @@ try:
         # pausing the playback to do heavy calculations
         playback.pause()
 
+
         aligned_frames = align.process(frames)
 
         # Get aligned frames
         aligned_depth_frame = aligned_frames.get_depth_frame()
+
+
+        # Extracting the width \ height from first frame
+        if (first == True):
+            first = False
+            Algebra.max_height_resulotion = aligned_depth_frame.height
+            Algebra.max_width_resulotion = aligned_depth_frame.width
+
 
         # TimeStamps
         depth_timestamp = aligned_depth_frame.timestamp
@@ -220,16 +233,35 @@ try:
                 #     #     print("here")
                 #     print(skeleton.head.x - floor_point_x)
 
-                # yaron's right hand from body side andle
-                if Algebra.isZero(skeleton.rShoulder) == False and Algebra.isZero(skeleton.rHip) == False and Algebra.isZero(skeleton.rElbow) == False:
-                    normalizeShoulderToElbow = Algebra.getNormalizeVector(skeleton.rShoulder,skeleton.rElbow)
-                    normalizeShoulderToHip = Algebra.getNormalizeVector(skeleton.rShoulder,skeleton.rHip)
-                    if (Algebra.isZero(normalizeShoulderToHip) == False and Algebra.isZero(normalizeShoulderToElbow) == False):
-                        angle = Algebra.getAngle(normalizeShoulderToElbow,normalizeShoulderToHip)
+                # # yaron's right hand from body side andle
+                # if Algebra.isZero(skeleton.rShoulder) == False and Algebra.isZero(skeleton.rHip) == False and Algebra.isZero(skeleton.rElbow) == False:
+                #     normalizeShoulderToElbow = Algebra.getNormalizeVector(skeleton.rShoulder,skeleton.rElbow)
+                #     normalizeShoulderToHip = Algebra.getNormalizeVector(skeleton.rShoulder,skeleton.rHip)
+                #     if (Algebra.isZero(normalizeShoulderToHip) == False and Algebra.isZero(normalizeShoulderToElbow) == False):
+                #         angle = Algebra.getAngle(normalizeShoulderToElbow,normalizeShoulderToHip)
+                #     else:
+                #         angle = -1
+                #     print(angle)
+
+                # knee angle on squatting
+                if (Algebra.isZero(skeleton.rHip) == False and Algebra.isZero(skeleton.rKnee) == False and Algebra.isZero(skeleton.rAnkle) == False):
+                    normalizeHipToKnee = Algebra.getNormalizeVector(skeleton.rHip,skeleton.rKnee)
+                    normalizeKneeToAnkle = Algebra.getNormalizeVector(skeleton.rAnkle, skeleton.rKnee)
+                    if (Algebra.isZero(normalizeHipToKnee) == False and Algebra.isZero(normalizeKneeToAnkle) == False):
+                        angle = Algebra.getAngle(normalizeHipToKnee,normalizeKneeToAnkle)
                     else:
                         angle = -1
                     print(angle)
 
+                    # #test
+                    # if angle > 89:
+                    #
+                    #     fig = plt.figure()
+                    #     ax = plt.axes(projection='3d')
+                    #
+                    #     ax.scatter(skeleton.rHip.x,skeleton.rHip.y,skeleton.rHip.z, cmap='blue', linewidth=0.5);
+                    #     ax.scatter(skeleton.rKnee.x,skeleton.rKnee.y,skeleton.rKnee.z, cmap='red', linewidth=0.5);
+                    #     ax.scatter(skeleton.rAnkle.x,skeleton.rAnkle.y,skeleton.rAnkle.z, cmap='green', linewidth=0.5);
 
 
 

@@ -20,9 +20,9 @@ takeClosest = lambda num,collection:min(collection,key=lambda x:abs(x-num))
 # Setup:
 pipeline = rs.pipeline()
 cfg = rs.config()
-cfg.enable_device_from_file("C:\Age_Estimation_Project\\bag_files\Yaron_movement\yaron_150_vertical.bag", True)
-logfile_color_name = "yaron_150_vertical_color.txt"
-logfile_depth_name = "yaron_150_vertical_depth.txt"
+cfg.enable_device_from_file("C:\Age_Estimation_Project\\bag_files\Bag_Files\Second\Eliran_Squat_150_Side.bag", True)
+logfile_color_name = "Eliran_Squat_150_Side_color.txt"
+logfile_depth_name = "Eliran_Squat_150_Side_depth.txt"
 listfile_name = "list.txt"
 
 
@@ -64,7 +64,7 @@ parser = argparse.ArgumentParser()
 parser.add_argument("-d", "--directory", type=str, help="Path to save the images")
 parser.add_argument("-i", "--input", type=str, help="Bag file to read")
 args = parser.parse_args()
-t_end = time.time() + 60*15
+t_end = time.time() + 60 * 60
 try:
     while time.time() < t_end:
 
@@ -224,8 +224,6 @@ finally:
     with open('log_depth.json', "w") as f:
         json.dump(timestampsDepthJson, f)
 
-    # with open('log.json', "w") as f:
-    #     json.dump(timestampsJson, f)
 
 
     print("succesfully captured {} color frames and {} depth frames".format(numOfColorFrames,numOfDepthFrames));
