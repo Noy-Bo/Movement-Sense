@@ -80,15 +80,14 @@ class AlphaSkeleton(object):
         i += 3
 
 ###############################################################################################
+max_height_resulotion = 0
+max_width_resulotion = 0
 
+
+################################################################################################
 def takeClosest(num,collection):
    return min(collection,key=lambda x:abs(x-num))
 
-
-def closest(lst, K):
-    lst = np.asarray(lst)
-    idx = (np.abs(lst - K)).argmin()
-    return lst[idx]
 
 
 def getDistance(pointA, pointB):
@@ -122,10 +121,16 @@ def getNormalizeVector(pointA, pointB = Point3D(0,0,0)):
 def getAngle(normalizedVectorA, normalizedVectorB):
 
     # dot product
-    angle = math.acos((normalizedVectorA.x * normalizedVectorB.x) + (normalizedVectorA.y * normalizedVectorB.y) + (normalizedVectorA.z * normalizedVectorB.z))
+    angle = -1
+    res = (normalizedVectorA.x * normalizedVectorB.x) + (normalizedVectorA.y * normalizedVectorB.y) + (normalizedVectorA.z * normalizedVectorB.z)
+    if res >= -1 and res <= 1:
+        angle = math.acos((normalizedVectorA.x * normalizedVectorB.x) + (normalizedVectorA.y * normalizedVectorB.y) + (normalizedVectorA.z * normalizedVectorB.z))
+    else:
+        pass
 
     # transform to radians to degrees
-    angle = angle * (180 / np.pi)
+    if (angle != -1):
+        angle = angle * (180 / np.pi)
     if angle == 90:
         print("error")
     return angle
@@ -137,20 +142,8 @@ def isZero(p):
         return False
 
 def outOfBoundries(x,y):
-    if x>1279 or y> 719:
+    if x>(max_width_resulotion-1) or y>(max_height_resulotion-1) :
         return True
     else:
         return False
-
-# testing~
-p1 = Point3D(1,0,0)
-p2 = Point3D(3,3,0)
-p3 = Point3D(0,0,0)
-
-print (getNormalizeVector(p1,p2))
-
-
-# print (getNorm(p1))
-# testAngle = getAngle(getNormalizeVector(p2,None,1),getNormalizeVector(p1,None,1))
-# print(testAngle)
 
