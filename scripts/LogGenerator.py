@@ -20,9 +20,9 @@ takeClosest = lambda num,collection:min(collection,key=lambda x:abs(x-num))
 # Setup:
 pipeline = rs.pipeline()
 cfg = rs.config()
-cfg.enable_device_from_file("C:\Age_Estimation_Project\\bag_files\Bag_Files\Second\Eliran_Squat_150_Side.bag", True)
-logfile_color_name = "Eliran_Squat_150_Side_color.txt"
-logfile_depth_name = "Eliran_Squat_150_Side_depth.txt"
+cfg.enable_device_from_file("C:\Age_Estimation_Project\\bag_files\Bag_Files\Second\Eliran_Standing_Side.bag", True)
+logfile_color_name = "Eliran_Standing_Side_color.txt"
+logfile_depth_name = "Eliran_Standing_Side_depth.txt"
 listfile_name = "list.txt"
 
 
@@ -64,7 +64,7 @@ parser = argparse.ArgumentParser()
 parser.add_argument("-d", "--directory", type=str, help="Path to save the images")
 parser.add_argument("-i", "--input", type=str, help="Bag file to read")
 args = parser.parse_args()
-t_end = time.time() + 60 * 60
+t_end = time.time() + 60 * 45
 try:
     while time.time() < t_end:
 
