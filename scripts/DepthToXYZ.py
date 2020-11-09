@@ -11,12 +11,17 @@ import math
 import time
 import numpy as np
 import matplotlib.pyplot as plt
+import xlsxwriter
 
+import sys
+
+from Excel import addToExcel
+
+sys.path.append('C:\Python27\Lib\site-packages')
 import numpy as np
 import pyrealsense2 as rs
 import Algebra
 import cv2
-import csv
 
 
 # class for timestamps
@@ -67,8 +72,20 @@ for item in alphapose_array:
     x = AlphaPoseObject(item['image_id'], item['score'], item['box'], item['keypoints'])
     x.add()
 
+heading = "Dana_Squat_1.5_Front_color"
+headingX = "Time (sec)"
+headingY = "Distance butt-to-floor (cm)"
+headingY2 = "Knees angle (cm)"
+excelFilename = "chart_scatter.xlsx"
+dataX = []
+dataX2 = []
+dataY = []
+dataY2 = []
+time = []
+startingTimeStamp = 0
+currentTimeStamp = 0
 
-json_log_name ="log_depth.json"
+json_log_name ="log_color.json"
 
 # open's the log as json array.
 log_file = open(json_log_name)
@@ -82,8 +99,7 @@ for item in log_array:
 # Setup:
 pipeline = rs.pipeline()
 cfg = rs.config()
-cfg.enable_device_from_file("C:\Age_Estimation_Project\\bag_files\Bag_Files\Second\Dana_Stand_Side.bag", False)
-
+cfg.enable_device_from_file("C:\Users\markf\Downloads\Project\BAG files\Second\Dana_Squat_1.5_Front.bag", False)
 
 profile = pipeline.start(cfg)
 device = profile.get_device()
@@ -93,6 +109,7 @@ playback = device.as_playback()  # this allows the use of pause and resume.
 playback.pause
 
 first = True
+firstFloor = True
 
 # Getting the depth sensor's depth scale (see rs-align example for explanation)
 depth_sensor = profile.get_device().first_depth_sensor()
@@ -115,7 +132,6 @@ all_depth_timestamps = []
 
 color_depth = []
 timestamps = []
-first = True
 
 # Streaming loop
 parser = argparse.ArgumentParser()
@@ -124,12 +140,10 @@ parser.add_argument("-i", "--input", type=str, help="Bag file to read")
 args = parser.parse_args()
 
 # letting the pipe warm up for couple of seconds then starting to capture frames
-
 playback.resume
 #time.sleep(10)
 try:
     while True:
-
         # Get frameset of color and depth
         frames = pipeline.wait_for_frames()
 
@@ -146,6 +160,7 @@ try:
         # Extracting the width \ height from first frame
         if (first == True):
             first = False
+            startingTimeStamp = aligned_depth_frame.timestamp
             Algebra.max_height_resulotion = aligned_depth_frame.height
             Algebra.max_width_resulotion = aligned_depth_frame.width
 
@@ -168,6 +183,7 @@ try:
             for item in skeletonsTable:  # searching for the full corresponding alphapose cloud object
                 if item.image_id == color_frame_name:
                     alphaposeObject = item
+                    currentTimeStamp = float(item.image_id[:-4])
                     break
 
             # color_frame = open(color_frame_name)  # open the correct .png file
@@ -222,16 +238,19 @@ try:
                 skeleton = Algebra.AlphaSkeleton(alphaposeObject)
 
 
-                # # butt distance from floor
-                # if first == True and Algebra.isZero(skeleton.rKnee) != True and Algebra.isZero(skeleton.lKnee) != True:
-                #     first = False
-                #     floor_point_x = (skeleton.lAnkle.x + skeleton.rAnkle.x) / 2
-                #
-                # if Algebra.isZero(skeleton.head) == False:
-                #     head_x = skeleton.head.x
-                #     # if hip_x - floor_point_x > 2:
-                #     #     print("here")
-                #     print(skeleton.head.x - floor_point_x)
+                # butt distance from floor
+                floor_point_x = None
+                if firstFloor == True and Algebra.isZero(skeleton.rKnee) != True and Algebra.isZero(skeleton.lKnee) != True:
+                    first = False
+                    floor_point_x = (skeleton.lAnkle.x + skeleton.rAnkle.x) / 2
+                if not Algebra.isZero(skeleton.head):
+                    dataX.append((currentTimeStamp - startingTimeStamp)/1000)
+                    dataY.append((skeleton.hip.x - floor_point_x))
+                    # head_x = skeleton.hip.x
+                    # if hip_x - floor_point_x > 2:
+                    #     print("here")
+    #                print(skeleton.head.x - floor_point_x)
+
 
                 # # yaron's right hand from body side andle
                 # if Algebra.isZero(skeleton.rShoulder) == False and Algebra.isZero(skeleton.rHip) == False and Algebra.isZero(skeleton.rElbow) == False:
@@ -322,9 +341,11 @@ try:
                     if (Algebra.isZero(normalizeShoulderToElbow) == False and Algebra.isZero(
                             normalizeElbowToWrist) == False):
                         angle = Algebra.getAngle(normalizeShoulderToElbow, normalizeElbowToWrist)
-                        print(180 - angle)
+                        #print(180 - angle)
                     else:
                         angle = -1
+                    dataX2.append((currentTimeStamp - startingTimeStamp)/1000)
+                    dataY2.append(angle)
 
 
 
@@ -361,7 +382,6 @@ try:
         if key & 0xFF == ord('q') or key == 27:
             cv2.destroyAllWindows()
             break
-
         # resuming after heavy calculations.
         playback.resume()
 
@@ -369,6 +389,8 @@ try:
 
 finally:
     pipeline.stop()
+    # call addToExcel(filename,dataX,dataY,heading,headingX,headingY), dataX=[...], dataY=[....]
+    addToExcel(excelFilename, dataX, dataX2, dataY, dataY2, heading, headingX, headingY, headingY2)
     print("successfully finished, number of frames: {}".format(numOfFrames))
 
 
