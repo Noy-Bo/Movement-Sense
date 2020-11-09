@@ -72,11 +72,12 @@ for item in alphapose_array:
     x = AlphaPoseObject(item['image_id'], item['score'], item['box'], item['keypoints'])
     x.add()
 
-heading = "Dana_Squat_1.5_Front_color"
+json_log_name = "log_color.json"                    # choose color or depth
+excelFilename = "Dana_Squat_1.0_Front_color.xlsx"    # change
+heading = "Dana_Squat_1.0_Front_color"               # change    &     line 101
 headingX = "Time (sec)"
 headingY = "Distance butt-to-floor (cm)"
 headingY2 = "Knees angle (cm)"
-excelFilename = "chart_scatter.xlsx"
 dataX = []
 dataX2 = []
 dataY = []
@@ -84,8 +85,6 @@ dataY2 = []
 time = []
 startingTimeStamp = 0
 currentTimeStamp = 0
-
-json_log_name ="log_color.json"
 
 # open's the log as json array.
 log_file = open(json_log_name)
@@ -99,7 +98,7 @@ for item in log_array:
 # Setup:
 pipeline = rs.pipeline()
 cfg = rs.config()
-cfg.enable_device_from_file("C:\Users\markf\Downloads\Project\BAG files\Second\Dana_Squat_1.5_Front.bag", False)
+cfg.enable_device_from_file("C:\Users\markf\Downloads\Project\BAG files\Second\Dana_Squat_1.0_Front.bag", False)
 
 profile = pipeline.start(cfg)
 device = profile.get_device()
@@ -239,12 +238,12 @@ try:
 
 
                 # butt distance from floor
-                floor_point_x = None
+                #floor_point_x = None
                 if firstFloor == True and Algebra.isZero(skeleton.rKnee) != True and Algebra.isZero(skeleton.lKnee) != True:
-                    first = False
+                    firstFloor = False
                     floor_point_x = (skeleton.lAnkle.x + skeleton.rAnkle.x) / 2
-                if not Algebra.isZero(skeleton.head):
-                    dataX.append((currentTimeStamp - startingTimeStamp)/1000)
+                if not Algebra.isZero(skeleton.hip):
+                    dataX.append((currentTimeStamp - startingTimeStamp) / 1000)
                     dataY.append((skeleton.hip.x - floor_point_x))
                     # head_x = skeleton.hip.x
                     # if hip_x - floor_point_x > 2:
@@ -262,15 +261,16 @@ try:
                 #         angle = -1
                 #     print(angle)
 
-                # # knee angle on squatting
-                # if (Algebra.isZero(skeleton.rHip) == False and Algebra.isZero(skeleton.rKnee) == False and Algebra.isZero(skeleton.rAnkle) == False):
-                #     normalizeHipToKnee = Algebra.getNormalizeVector(skeleton.rHip,skeleton.rKnee)
-                #     normalizeKneeToAnkle = Algebra.getNormalizeVector(skeleton.rAnkle, skeleton.rKnee)
-                #     if (Algebra.isZero(normalizeHipToKnee) == False and Algebra.isZero(normalizeKneeToAnkle) == False):
-                #         angle = Algebra.getAngle(normalizeHipToKnee,normalizeKneeToAnkle)
-                #     else:
-                #         angle = -1
-                #     print(angle)
+                # knee angle on squatting
+                if (Algebra.isZero(skeleton.rHip) == False and Algebra.isZero(skeleton.rKnee) == False and Algebra.isZero(skeleton.rAnkle) == False):
+                    normalizeHipToKnee = Algebra.getNormalizeVector(skeleton.rHip,skeleton.rKnee)
+                    normalizeKneeToAnkle = Algebra.getNormalizeVector(skeleton.rAnkle, skeleton.rKnee)
+                    if (Algebra.isZero(normalizeHipToKnee) == False and Algebra.isZero(normalizeKneeToAnkle) == False):
+                        angle = Algebra.getAngle(normalizeHipToKnee,normalizeKneeToAnkle)
+                    else:
+                        angle = -1
+                    dataX2.append((currentTimeStamp - startingTimeStamp) / 1000)
+                    dataY2.append(angle)
 
 
 
@@ -330,22 +330,22 @@ try:
                 # generating points for sanity checkout
 
                 # front angle of Anterior Neck_Waist
-                if Algebra.isZero(skeleton.rElbow) == False and Algebra.isZero(
-                        skeleton.rWrist) == False and Algebra.isZero(
-                        skeleton.rShoulder) == False:
-                    skeleton.rElbow.z = 0
-                    skeleton.rShoulder.z = 0
-                    skeleton.rWrist.z = 0
-                    normalizeShoulderToElbow = Algebra.getNormalizeVector(skeleton.rElbow, skeleton.rShoulder)
-                    normalizeElbowToWrist = Algebra.getNormalizeVector(skeleton.rElbow, skeleton.rWrist)
-                    if (Algebra.isZero(normalizeShoulderToElbow) == False and Algebra.isZero(
-                            normalizeElbowToWrist) == False):
-                        angle = Algebra.getAngle(normalizeShoulderToElbow, normalizeElbowToWrist)
-                        #print(180 - angle)
-                    else:
-                        angle = -1
-                    dataX2.append((currentTimeStamp - startingTimeStamp)/1000)
-                    dataY2.append(angle)
+                # if Algebra.isZero(skeleton.rElbow) == False and Algebra.isZero(
+                #         skeleton.rWrist) == False and Algebra.isZero(
+                #         skeleton.rShoulder) == False:
+                #     skeleton.rElbow.z = 0
+                #     skeleton.rShoulder.z = 0
+                #     skeleton.rWrist.z = 0
+                #     normalizeShoulderToElbow = Algebra.getNormalizeVector(skeleton.rElbow, skeleton.rShoulder)
+                #     normalizeElbowToWrist = Algebra.getNormalizeVector(skeleton.rElbow, skeleton.rWrist)
+                #     if (Algebra.isZero(normalizeShoulderToElbow) == False and Algebra.isZero(
+                #             normalizeElbowToWrist) == False):
+                #         angle = Algebra.getAngle(normalizeShoulderToElbow, normalizeElbowToWrist)
+                #         #print(180 - angle)
+                #     else:
+                #         angle = -1
+                #     dataX2.append((currentTimeStamp - startingTimeStamp)/1000)
+                #     dataY2.append(angle)
 
 
 
