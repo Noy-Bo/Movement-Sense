@@ -67,8 +67,8 @@ for item in alphapose_array:
     x = AlphaPoseObject(item['image_id'], item['score'], item['box'], item['keypoints'])
     x.add()
 
-logfile_name = "Dana_Squat_150_Side_color.txt"
-json_log_name ="log_color.json"
+
+json_log_name ="log_depth.json"
 
 # open's the log as json array.
 log_file = open(json_log_name)
@@ -82,7 +82,7 @@ for item in log_array:
 # Setup:
 pipeline = rs.pipeline()
 cfg = rs.config()
-cfg.enable_device_from_file("C:\Age_Estimation_Project\\bag_files\Bag_Files\Second\Dana_Squat_150_Side.bag", False)
+cfg.enable_device_from_file("C:\Age_Estimation_Project\\bag_files\Bag_Files\Second\Dana_Stand_Side.bag", False)
 
 
 profile = pipeline.start(cfg)
@@ -243,25 +243,102 @@ try:
                 #         angle = -1
                 #     print(angle)
 
-                # knee angle on squatting
-                if (Algebra.isZero(skeleton.rHip) == False and Algebra.isZero(skeleton.rKnee) == False and Algebra.isZero(skeleton.rAnkle) == False):
-                    normalizeHipToKnee = Algebra.getNormalizeVector(skeleton.rHip,skeleton.rKnee)
-                    normalizeKneeToAnkle = Algebra.getNormalizeVector(skeleton.rAnkle, skeleton.rKnee)
-                    if (Algebra.isZero(normalizeHipToKnee) == False and Algebra.isZero(normalizeKneeToAnkle) == False):
-                        angle = Algebra.getAngle(normalizeHipToKnee,normalizeKneeToAnkle)
+                # # knee angle on squatting
+                # if (Algebra.isZero(skeleton.rHip) == False and Algebra.isZero(skeleton.rKnee) == False and Algebra.isZero(skeleton.rAnkle) == False):
+                #     normalizeHipToKnee = Algebra.getNormalizeVector(skeleton.rHip,skeleton.rKnee)
+                #     normalizeKneeToAnkle = Algebra.getNormalizeVector(skeleton.rAnkle, skeleton.rKnee)
+                #     if (Algebra.isZero(normalizeHipToKnee) == False and Algebra.isZero(normalizeKneeToAnkle) == False):
+                #         angle = Algebra.getAngle(normalizeHipToKnee,normalizeKneeToAnkle)
+                #     else:
+                #         angle = -1
+                #     print(angle)
+
+
+
+                # # # angle between base-spine to neck and base-spine to ankle
+                # if (Algebra.isZero(skeleton.neck) == False and Algebra.isZero(skeleton.rKnee) == False and Algebra.isZero(skeleton.hip) == False):
+                #     normalizeHipToNeck = Algebra.getNormalizeVector(skeleton.neck,skeleton.hip)
+                #     normalizeHipToAnkle = Algebra.getNormalizeVector(skeleton.rAnkle, skeleton.hip)
+                #     if (Algebra.isZero(normalizeHipToAnkle) == False and Algebra.isZero(normalizeHipToNeck) == False):
+                #         angle = Algebra.getAngle(normalizeHipToAnkle,normalizeHipToNeck)
+                #     else:
+                #         angle = -1
+                #     print(180-angle)
+
+                # #front angle of body curve (C) from estimated crotch point to hip, and from hip to neck. Anterior Neck_Crotch angle
+                # if Algebra.isZero(skeleton.neck) == False and Algebra.isZero(skeleton.hip) == False and Algebra.isZero(skeleton.rHip) == False and Algebra.isZero(skeleton.lHip) == False:
+                #     normalizeHipToNeck = Algebra.getNormalizeVector(skeleton.hip,skeleton.neck)
+                #
+                #     # generating estimation of crotch point.
+                #     estimatedCrotchPoint = Algebra.Point3D(((skeleton.rHip.x + skeleton.lHip.x)/2),((skeleton.rHip.y + skeleton.lHip.y)/2),skeleton.hip.z)
+                #
+                #     normalizeHipToCrotch = Algebra.getNormalizeVector(skeleton.hip,estimatedCrotchPoint)
+                #
+                #     if (Algebra.isZero(normalizeHipToCrotch) == False and Algebra.isZero(normalizeHipToNeck) == False):
+                #         angle = Algebra.getAngle(normalizeHipToCrotch,normalizeHipToNeck)
+                #     else:
+                #         angle = -1
+                #     print(180-angle)
+
+
+                # front angle of Anterior Neck_Vertex. (head to neck \\ neck to crotch )
+                # if Algebra.isZero(skeleton.neck) == False and Algebra.isZero(skeleton.head) == False and Algebra.isZero(
+                #     skeleton.hip) == False and Algebra.isZero(skeleton.rHip) == False and Algebra.isZero(skeleton.lHip) == False:
+                #
+                #     estimatedCrotchPoint = Algebra.Point3D(((skeleton.rHip.x + skeleton.lHip.x) / 2), ((skeleton.rHip.y + skeleton.lHip.y) / 2), skeleton.hip.z)
+                #     normalizeHeadToNeck = Algebra.getNormalizeVector(skeleton.neck,skeleton.head)
+                #     normalizeNeckToCrotch = Algebra.getNormalizeVector(skeleton.neck,estimatedCrotchPoint)
+                #     if (Algebra.isZero(normalizeNeckToCrotch) == False and Algebra.isZero(normalizeHeadToNeck) == False):
+                #         angle = Algebra.getAngle(normalizeHeadToNeck,normalizeNeckToCrotch)
+                #         print(180 - angle)
+                #     else:
+                #         angle = -1
+
+                # # front angle of Anterior Neck_Waist
+                # if Algebra.isZero(skeleton.neck) == False and Algebra.isZero(skeleton.head) == False and Algebra.isZero(
+                #         skeleton.hip) == False:
+                #     # skeleton.neck.z = 0
+                #     # skeleton.hip.z = 0
+                #     # skeleton.head.z = 0
+                #     normalizeHeadToNeck = Algebra.getNormalizeVector(skeleton.neck, skeleton.head)
+                #     normalizeNeckToHip = Algebra.getNormalizeVector(skeleton.neck, skeleton.hip)
+                #     if (Algebra.isZero(normalizeNeckToHip) == False and Algebra.isZero(normalizeHeadToNeck) == False):
+                #         angle = Algebra.getAngle(normalizeHeadToNeck, normalizeNeckToHip)
+                #         print(180 - angle)
+                #     else:
+                #         angle = -1
+
+                # generating points for sanity checkout
+
+                # front angle of Anterior Neck_Waist
+                if Algebra.isZero(skeleton.rElbow) == False and Algebra.isZero(
+                        skeleton.rWrist) == False and Algebra.isZero(
+                        skeleton.rShoulder) == False:
+                    skeleton.rElbow.z = 0
+                    skeleton.rShoulder.z = 0
+                    skeleton.rWrist.z = 0
+                    normalizeShoulderToElbow = Algebra.getNormalizeVector(skeleton.rElbow, skeleton.rShoulder)
+                    normalizeElbowToWrist = Algebra.getNormalizeVector(skeleton.rElbow, skeleton.rWrist)
+                    if (Algebra.isZero(normalizeShoulderToElbow) == False and Algebra.isZero(
+                            normalizeElbowToWrist) == False):
+                        angle = Algebra.getAngle(normalizeShoulderToElbow, normalizeElbowToWrist)
+                        print(180 - angle)
                     else:
                         angle = -1
-                    print(angle)
 
-                    # #test
-                    # if angle > 89:
+
+
+
+
+
+
+                    # fig = plt.figure()
+                    # ax = plt.axes(projection='3d')
+                    # ax.scatter(skeleton.hip.x, skeleton.hip.y, skeleton.hip.z, cmap='blue', linewidth=0.5);
+                    # ax.scatter(skeleton.rHip.x,skeleton.rHip.y,skeleton.rHip.z, cmap='blue', linewidth=0.5);
+                    # ax.scatter(skeleton.lHip.x,skeleton.lHip.y,skeleton.lHip.z, cmap='blue', linewidth=0.5);
                     #
-                    #     fig = plt.figure()
-                    #     ax = plt.axes(projection='3d')
-                    #
-                    #     ax.scatter(skeleton.rHip.x,skeleton.rHip.y,skeleton.rHip.z, cmap='blue', linewidth=0.5);
-                    #     ax.scatter(skeleton.rKnee.x,skeleton.rKnee.y,skeleton.rKnee.z, cmap='red', linewidth=0.5);
-                    #     ax.scatter(skeleton.rAnkle.x,skeleton.rAnkle.y,skeleton.rAnkle.z, cmap='green', linewidth=0.5);
+                    # ax.scatter(estimatedCrotchPoint.x,estimatedCrotchPoint.y,estimatedCrotchPoint.z, cmap='green', linewidth=0.5);
 
 
 
