@@ -82,7 +82,7 @@ for item in log_array:
 # Setup:
 pipeline = rs.pipeline()
 cfg = rs.config()
-cfg.enable_device_from_file("C:\Age_Estimation_Project\\bag_files\Bag_Files\Second\Dana_Squat_150_Side.bag", False)
+cfg.enable_device_from_file("C:\Users\markf\Downloads\Project\BAG files\Yaron_movement\yaron_150.bag", False)
 
 
 profile = pipeline.start(cfg)
