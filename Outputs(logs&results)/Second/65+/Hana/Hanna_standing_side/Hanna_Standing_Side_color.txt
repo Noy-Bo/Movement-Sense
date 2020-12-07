@@ -1,0 +1,210 @@
+depth timestamp: 786955.244
+color timestamp: 786964.515
+
+depth timestamp: 786988.419
+color timestamp: 786997.688
+
+depth timestamp: 787021.618
+color timestamp: 787030.86
+
+depth timestamp: 787054.817
+color timestamp: 787064.033
+
+depth timestamp: 787087.993
+color timestamp: 787097.205
+
+depth timestamp: 787121.168
+color timestamp: 787130.378
+
+depth timestamp: 787154.367
+color timestamp: 787163.55
+
+depth timestamp: 787187.566
+color timestamp: 787196.723
+
+depth timestamp: 787220.741
+color timestamp: 787229.895
+
+depth timestamp: 787253.963
+color timestamp: 787263.068
+
+depth timestamp: 787287.115
+color timestamp: 787296.24
+
+depth timestamp: 787320.337
+color timestamp: 787329.413
+
+depth timestamp: 787353.512
+color timestamp: 787362.586
+
+depth timestamp: 787386.688
+color timestamp: 787395.758
+
+depth timestamp: 787419.887
+color timestamp: 787428.931
+
+depth timestamp: 787453.062
+color timestamp: 787462.103
+
+depth timestamp: 787486.285
+color timestamp: 787495.276
+
+depth timestamp: 787519.46
+color timestamp: 787528.448
+
+depth timestamp: 787552.659
+color timestamp: 787561.621
+
+depth timestamp: 787585.834
+color timestamp: 787594.793
+
+depth timestamp: 787619.033
+color timestamp: 787627.966
+
+depth timestamp: 787652.232
+color timestamp: 787661.138
+
+depth timestamp: 787685.408
+color timestamp: 787694.311
+
+depth timestamp: 787718.607
+color timestamp: 787727.483
+
+depth timestamp: 787751.782
+color timestamp: 787760.656
+
+depth timestamp: 787784.981
+color timestamp: 787793.828
+
+depth timestamp: 787818.179
+color timestamp: 787827.001
+
+depth timestamp: 787851.355
+color timestamp: 787860.173
+
+depth timestamp: 787884.553
+color timestamp: 787893.346
+
+depth timestamp: 787917.729
+color timestamp: 787926.518
+
+depth timestamp: 787950.927
+color timestamp: 787959.691
+
+depth timestamp: 787984.126
+color timestamp: 787992.864
+
+depth timestamp: 788050.5
+color timestamp: 788059.209
+
+depth timestamp: 788083.699
+color timestamp: 788092.381
+
+depth timestamp: 788116.874
+color timestamp: 788125.554
+
+depth timestamp: 788183.295
+color timestamp: 788191.899
+
+depth timestamp: 788249.646
+color timestamp: 788225.071
+
+depth timestamp: 788249.646
+color timestamp: 788258.244
+
+depth timestamp: 788282.845
+color timestamp: 788291.416
+
+depth timestamp: 788349.219
+color timestamp: 788357.761
+
+depth timestamp: 788415.616
+color timestamp: 788390.934
+
+depth timestamp: 788415.616
+color timestamp: 788424.106
+
+depth timestamp: 788481.967
+color timestamp: 788490.451
+
+depth timestamp: 788548.341
+color timestamp: 788523.624
+
+depth timestamp: 788548.341
+color timestamp: 788556.796
+
+depth timestamp: 788581.563
+color timestamp: 788589.969
+
+depth timestamp: 788647.937
+color timestamp: 788656.314
+
+depth timestamp: 788681.136
+color timestamp: 788689.487
+
+depth timestamp: 788747.487
+color timestamp: 788755.832
+
+depth timestamp: 788813.884
+color timestamp: 788789.004
+
+depth timestamp: 788847.06
+color timestamp: 788855.349
+
+depth timestamp: 788880.258
+color timestamp: 788888.522
+
+depth timestamp: 788946.656
+color timestamp: 788921.694
+
+depth timestamp: 789013.03
+color timestamp: 789021.212
+
+depth timestamp: 789079.404
+color timestamp: 789054.384
+
+depth timestamp: 789112.603
+color timestamp: 789120.729
+
+depth timestamp: 789145.778
+color timestamp: 789153.902
+
+depth timestamp: 789212.175
+color timestamp: 789187.074
+
+depth timestamp: 789212.175
+color timestamp: 789220.247
+
+depth timestamp: 789311.725
+color timestamp: 789319.765
+
+depth timestamp: 789378.122
+color timestamp: 789386.11
+
+depth timestamp: 789411.298
+color timestamp: 789419.282
+
+depth timestamp: 789477.695
+color timestamp: 789452.455
+
+depth timestamp: 789510.871
+color timestamp: 789518.8
+
+depth timestamp: 789544.069
+color timestamp: 789551.972
+
+depth timestamp: 789610.443
+color timestamp: 789585.145
+
+depth timestamp: 789610.443
+color timestamp: 789618.317
+
+depth timestamp: 788979.831
+color timestamp: 788988.039
+
+depth timestamp: 789278.55
+color timestamp: 789286.592
+
+depth timestamp: 786955.244
+color timestamp: 786931.343
+
