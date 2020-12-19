@@ -6,7 +6,7 @@
 ##           saves the color frame as png with its timestamp as title         ##
 ##             generates list with png names sorted by timestamps             ##
 ################################################################################
-
+from scipy import ndimage
 import argparse
 import json
 import time
@@ -20,11 +20,10 @@ takeClosest = lambda num,collection:min(collection,key=lambda x:abs(x-num))
 # Setup:
 pipeline = rs.pipeline()
 cfg = rs.config()
-cfg.enable_device_from_file("C:\Age_Estimation_Project\\bag_files\Bag_Files\Second\Hanna_Squat_Front.bag", True)
-logfile_color_name = "Hanna_Squat_Front_color.txt"
-logfile_depth_name = "Hanna_Squat_Front_depth.txt"
+cfg.enable_device_from_file("C:\Age_Estimation_Project\\bag_files\sub02_squat_side.bag", True)
+logfile_color_name = "sub02_squat_side_color.txt"
+logfile_depth_name = "sub02_squat_side_depth.txt"
 listfile_name = "list.txt"
-
 
 
 profile = pipeline.start(cfg)
@@ -64,7 +63,7 @@ parser = argparse.ArgumentParser()
 parser.add_argument("-d", "--directory", type=str, help="Path to save the images")
 parser.add_argument("-i", "--input", type=str, help="Bag file to read")
 args = parser.parse_args()
-t_end = time.time() + 60 * 25
+t_end = time.time() + 60 * 15
 try:
     while time.time() < t_end:
 
@@ -98,7 +97,15 @@ try:
 
             # writing the png to dir
             color_image = np.asanyarray(aligned_color_frame.get_data())
-            cv2.imwrite("{}.png".format(color_timestamp_str), color_image)
+
+
+
+
+            # rotation angle in degree
+            rotated = ndimage.rotate(color_image, 90)
+
+            # writing the png to dir
+            cv2.imwrite("{}.png".format(color_timestamp_str), rotated)
 
             numOfColorFrames += 1
 
