@@ -15,11 +15,11 @@ import numpy as np
 from scipy import ndimage, misc
 from mpl_toolkits.mplot3d import axes3d
 import matplotlib.pyplot as plt
-import xlsxwriter
+#import xlsxwriter
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
 from matplotlib.figure import Figure
 
-from Excel import addToExcel
+#from Excel import addToExcel
 import sys
 
 sys.path.append('C:\Python27\Lib\site-packages')
@@ -67,15 +67,18 @@ class AlphaPoseObject(object):
         else:
             skeletonsTable.append(self)
 
-
+# =========== ALPHAPOSE
 # open's the alphapose results and sets them in json array
-skeletonsTable = []  # contains all json's, with the bigger score
-alphapose_file = open('alphapose-results.json')
-alphapose_array = json.load(alphapose_file)
+# skeletonsTable = []  # contains all json's, with the bigger score
+# alphapose_file = open('alphapose-results.json')
+# alphapose_array = json.load(alphapose_file)
+#
+# for item in alphapose_array:
+#     x = AlphaPoseObject(item['image_id'], item['score'], item['box'], item['keypoints'])
+#     x.add()
 
-for item in alphapose_array:
-    x = AlphaPoseObject(item['image_id'], item['score'], item['box'], item['keypoints'])
-    x.add()
+# =========== OPENPOSE
+skeletonsTable = Algebra.OpenPoseReader()
 
 json_log_name = "log_color.json"  # choose color or depth
 excelFilename = "Hanna_Squat_Front_depth.xlsx"  # change
@@ -104,7 +107,7 @@ for item in log_array:
 # Setup:
 pipeline = rs.pipeline()
 cfg = rs.config()
-cfg.enable_device_from_file("C:\Age_Estimation_Project\\bag_files\Dana_Squat_150_Side.bag", False)
+cfg.enable_device_from_file("C:\Age_Estimation_Project\\bag_files\sub02_squat_side.bag", False)
 
 profile = pipeline.start(cfg)
 device = profile.get_device()
@@ -115,6 +118,7 @@ playback.pause
 
 first = True
 firstFloor = True
+isRotated =False
 
 # Getting the depth sensor's depth scale (see rs-align example for explanation)
 depth_sensor = profile.get_device().first_depth_sensor()
@@ -175,10 +179,10 @@ plotCount = 1;
 
 # letting the pipe warm up for couple of seconds then starting to capture frames
 playback.resume()
-time.sleep(4.5)
+time.sleep(1)
 try:
     while True:
-    #while loop < 40:
+    #while loop < 60:
         loop = loop + 1
         # Get frameset of color and depth
         frames = pipeline.wait_for_frames()
@@ -216,22 +220,22 @@ try:
                     color_frame_name = item.color_timestamp + ".png"
                     break
 
-            # finding color's alphaposeObject
-            alphaposeObject = None
+            # finding color's skeletonObject
+            skeletonObject = None
             for item in skeletonsTable:  # searching for the full corresponding alphapose cloud object
                 if item.image_id == color_frame_name:
-                    alphaposeObject = item
+                    skeletonObject = item
                     currentTimeStamp = float(item.image_id[:-4])
                     break
 
             # color_frame = open(color_frame_name)  # open the correct .png file
 
-            # alphaposeObject
+            # skeletonObject
             # aligned_depth_frame
             # color_frame_name.png
 
             # Generating 3d points from aligned_depth
-            if alphaposeObject != None and lastTimeStamp != currentTimeStamp:
+            if skeletonObject != None and lastTimeStamp != currentTimeStamp:
 
                 # Get height / width configurations.
                 w, h = aligned_depth_frame.width, aligned_depth_frame.height
@@ -246,28 +250,34 @@ try:
 
                 points = pc.calculate(aligned_depth_frame)
                 verts = np.asarray(points.get_vertices(2)).reshape(h, w, 3)
+
+                # rotation
+                verts = np.rot90(verts) # this is for images that were rotated 90 degrees
+                isRotated = True # dont forget to disable this in cases u dont rotate
+
                 # print("rawsize: {}, vertsSize: {}".format(vertsRaw.size, verts.size))
                 texcoords = np.asarray(points.get_texture_coordinates(2))
 
                 # writing 3d points inside alphapose object
-                skeleton2 = Algebra.AlphaSkeleton(alphaposeObject)
-                for i in range(0, 78, 3):
+                # ==================== AlphaPose
+                #skeleton2 = Algebra.AlphaSkeleton(skeletonObject)
+                for i in range(0, 75, 3):
                     # incase pose estimation didnt return a valid point.
-                    if math.fabs(alphaposeObject.keypoints[i]) == 0 and math.fabs(
-                            alphaposeObject.keypoints[i + 1]) == 0:
-                        alphaposeObject.keypoints[i] = 0
-                        alphaposeObject.keypoints[i + 1] = 0
-                        alphaposeObject.keypoints[i + 2] = 0
+                    if math.fabs(skeletonObject.keypoints[i]) == 0 and math.fabs(
+                            skeletonObject.keypoints[i + 1]) == 0:
+                        skeletonObject.keypoints[i] = 0
+                        skeletonObject.keypoints[i + 1] = 0
+                        skeletonObject.keypoints[i + 2] = 0
                     else:
-                        pixel_x = int(math.floor(alphaposeObject.keypoints[i]))
-                        pixel_y = int(math.floor(alphaposeObject.keypoints[i + 1]))
-                        if Algebra.outOfBoundries(pixel_x, pixel_y) == True:
-                            alphaposeObject.keypoints[i] = 0
-                            alphaposeObject.keypoints[i + 1] = 0
-                            alphaposeObject.keypoints[i + 2] = 0
+                        pixel_x = int(math.floor(skeletonObject.keypoints[i]))
+                        pixel_y = int(math.floor(skeletonObject.keypoints[i + 1]))
+                        if Algebra.outOfBoundries(pixel_x, pixel_y,isRotated) == True:
+                            skeletonObject.keypoints[i] = 0
+                            skeletonObject.keypoints[i + 1] = 0
+                            skeletonObject.keypoints[i + 2] = 0
                         else:
                             set1 = Algebra.eroding(pixel_y, pixel_x, aligned_depth_frame.height,
-                                                   aligned_depth_frame.width)
+                                                   aligned_depth_frame.width,isRotated)
                             collect = []
                             for item in set1:
                                 xyz = verts[item.x, item.y]
@@ -275,36 +285,40 @@ try:
                             xyz = verts[pixel_y, pixel_x]
                             point = Algebra.rounded(xyz[2], collect)
                             # xyz = verts[pixel_y, pixel_x]
-                            alphaposeObject.keypoints[i] = point.x
-                            alphaposeObject.keypoints[i + 1] = point.y
-                            alphaposeObject.keypoints[i + 2] = point.z
+                            skeletonObject.keypoints[i] = point.x
+                            skeletonObject.keypoints[i + 1] = point.y
+                            skeletonObject.keypoints[i + 2] = point.z
 
-                skeleton = Algebra.AlphaSkeleton(alphaposeObject)
+                # ALPHA POSE
+                #skeleton = Algebra.AlphaSkeleton(skeletonObject)
+                # OPEN POSE
+                skeleton = Algebra.OpenPoseSkeleton(skeletonObject.keypoints)
+
 
                 # butt distance from floor
                 # floor_point_x = None
-                if firstFloor == True and Algebra.isZero(skeleton.rKnee) != True and Algebra.isZero(
-                        skeleton.lKnee) != True:
-                    firstFloor = False
-                    floor_point_x = (skeleton.lAnkle.x + skeleton.rAnkle.x) / 2
-                    floor_point_y = (skeleton.lAnkle.y + skeleton.rAnkle.y) / 2
-                if not Algebra.isZero(skeleton.hip):
-                    if len(dataX) < 3:
-                        dataX.append((currentTimeStamp - startingTimeStamp) / 1000)
-                        dataY.append(abs(skeleton.hip.x - floor_point_x))
-                    elif np.median(np.array(dataY[-3:])) * top > abs(skeleton.hip.x - floor_point_x) and np.median(
-                            np.array(dataY[-3:])) * bottom < abs(skeleton.hip.x - floor_point_x):
-                        dataX.append((currentTimeStamp - startingTimeStamp) / 1000)
-                        dataY.append(abs(skeleton.hip.x - floor_point_x))
-                        top = 1.3;
-                        bottom = 0.7;
-                    else:
-                        # print("top = " + str(top) + " ~ " + str(
-                        #     np.median(np.array(dataY[-3:])) * top) + " bottom = " + str(bottom) + " ~ " + str(
-                        #     np.median(np.array(dataY[-3:])) * bottom))
-                        top *= 1.3
-                        bottom *= 0.7
-                        # print(abs(skeleton.hip.x - floor_point_x))
+                # if firstFloor == True and Algebra.isZero(skeleton.rKnee) != True and Algebra.isZero(
+                #         skeleton.lKnee) != True:
+                #     firstFloor = False
+                #     floor_point_x = (skeleton.lAnkle.x + skeleton.rAnkle.x) / 2
+                #     floor_point_y = (skeleton.lAnkle.y + skeleton.rAnkle.y) / 2
+                # if not Algebra.isZero(skeleton.hip):
+                #     if len(dataX) < 3:
+                #         dataX.append((currentTimeStamp - startingTimeStamp) / 1000)
+                #         dataY.append(abs(skeleton.hip.x - floor_point_x))
+                #     elif np.median(np.array(dataY[-3:])) * top > abs(skeleton.hip.x - floor_point_x) and np.median(
+                #             np.array(dataY[-3:])) * bottom < abs(skeleton.hip.x - floor_point_x):
+                #         dataX.append((currentTimeStamp - startingTimeStamp) / 1000)
+                #         dataY.append(abs(skeleton.hip.x - floor_point_x))
+                #         top = 1.3;
+                #         bottom = 0.7;
+                #     else:
+                #         # print("top = " + str(top) + " ~ " + str(
+                #         #     np.median(np.array(dataY[-3:])) * top) + " bottom = " + str(bottom) + " ~ " + str(
+                #         #     np.median(np.array(dataY[-3:])) * bottom))
+                #         top *= 1.3
+                #         bottom *= 0.7
+                #         # print(abs(skeleton.hip.x - floor_point_x))
 
                 # # yaron's right hand from body side andle
                 # if Algebra.isZero(skeleton.rShoulder) == False and Algebra.isZero(skeleton.rHip) == False and Algebra.isZero(skeleton.rElbow) == False:
@@ -315,33 +329,39 @@ try:
                 #     else:
                 #         angle = -1
                 #     print(angle)
-
+                # skeleton.rKnee.z += 0.045
+                # skeleton.rAnkle.z += 0.01
+                # skeleton.rHip.z += 0.
                 # knee angle on squatting
                 if (Algebra.isZero(skeleton.rHip) == False and Algebra.isZero(
                         skeleton.rKnee) == False and Algebra.isZero(skeleton.rAnkle) == False):
-                    normalizeHipToKnee = Algebra.getNormalizeVector(skeleton.rHip, skeleton.rKnee)
-                    normalizeKneeToAnkle = Algebra.getNormalizeVector(skeleton.rAnkle, skeleton.rKnee)
+                    normalizeHipToKnee = Algebra.getNormalizeVector2D(skeleton.rHip, skeleton.rKnee)
+                    normalizeKneeToAnkle = Algebra.getNormalizeVector2D(skeleton.rAnkle, skeleton.rKnee)
                     if (Algebra.isZero(normalizeHipToKnee) == False and Algebra.isZero(normalizeKneeToAnkle) == False):
-                        angle = Algebra.getAngle(normalizeHipToKnee, normalizeKneeToAnkle)
+                        angle = Algebra.getAngle2D(normalizeHipToKnee, normalizeKneeToAnkle)
+                        dataX2.append((currentTimeStamp - startingTimeStamp) / 1000)
+                        dataY2.append(angle)
+                        print(angle)
                     else:
                         angle = -1
-                    if len(dataX2) < 3:
-                        dataX2.append((currentTimeStamp - startingTimeStamp) / 1000)
-                        dataY2.append(angle)
-                    elif np.median(np.array(dataY2[-3:])) * top_angle > angle and np.median(
-                            np.array(dataY2[-3:])) * bottom_angle < angle:
-                        dataX2.append((currentTimeStamp - startingTimeStamp) / 1000)
-                        dataY2.append(angle)
-                        top_angle = 1.4;
-                        bottom_angle = 0.6;
-                    else:
-                        print("top = " + str(top_angle) + " ~ " + str(
-                            np.median(np.array(dataY2[-3:])) * top_angle) + " bottom = " + str(
-                            bottom_angle) + " ~ " + str(np.median(np.array(dataY2[-3:])) * bottom_angle))
-                        top_angle *= 1.3
-                        bottom_angle *= 0.7
-                        print(angle)
-                        print("missed angle")
+
+                    # if len(dataX2) < 3:
+                    #     dataX2.append((currentTimeStamp - startingTimeStamp) / 1000)
+                    #     dataY2.append(angle)
+                    # elif np.median(np.array(dataY2[-3:])) * top_angle > angle and np.median(
+                    #         np.array(dataY2[-3:])) * bottom_angle < angle:
+                    #     dataX2.append((currentTimeStamp - startingTimeStamp) / 1000)
+                    #     dataY2.append(angle)
+                    #     top_angle = 1.4;
+                    #     bottom_angle = 0.6;
+                    # else:
+                    #     print("top = " + str(top_angle) + " ~ " + str(
+                    #         np.median(np.array(dataY2[-3:])) * top_angle) + " bottom = " + str(
+                    #         bottom_angle) + " ~ " + str(np.median(np.array(dataY2[-3:])) * bottom_angle))
+                    #     top_angle *= 1.3
+                    #     bottom_angle *= 0.7
+                    #     print(angle)
+                    #     print("missed angle")
                 # # # angle between base-spine to neck and base-spine to ankle
                 # if (Algebra.isZero(skeleton.neck) == False and Algebra.isZero(skeleton.rKnee) == False and Algebra.isZero(skeleton.hip) == False):
                 #     normalizeHipToNeck = Algebra.getNormalizeVector(skeleton.neck,skeleton.hip)
@@ -473,7 +493,7 @@ try:
                 #plt.pause(0.01)
 
             numOfFrames += 1
-            print(numOfFrames)
+            #print(numOfFrames)
             lastTimeStamp = currentTimeStamp
             # Algebra.roundGraph(dataX,dataY,ax)
 
@@ -488,14 +508,14 @@ try:
 finally:
     pipeline.stop()
     # save last state of plot
-    Algebra.roundGraph(dataX, dataY, ax, "Time (sec)", "Butt to floor distance (meter)", 1.5)
+    #Algebra.roundGraph(dataX, dataY, ax, "Time (sec)", "Butt to floor distance (meter)", 1.5)
     Algebra.roundGraph(dataX2, dataY2, bx, "Time (sec)", "Knee angle (degrees)", 200)
     plt.savefig("plotNormal.pdf")
     # save last state of gaussian plot
-    Algebra.roundGraph(dataX, ndimage.gaussian_filter1d(dataY, 1), ax,"Time (sec)", "Butt to floor distance (meter)", 1.5)
+    #Algebra.roundGraph(dataX, ndimage.gaussian_filter1d(dataY, 1), ax,"Time (sec)", "Butt to floor distance (meter)", 1.5)
     Algebra.roundGraph(dataX2, ndimage.gaussian_filter1d(dataY2, 1), bx,"Time (sec)", "Knee angle (degrees)", 200)
     plt.savefig("plotSmoothGauss1.pdf")
-    Algebra.roundGraph(dataX, ndimage.gaussian_filter1d(dataY, 2), ax,"Time (sec)", "Butt to floor distance (meter)", 1.5)
+    #Algebra.roundGraph(dataX, ndimage.gaussian_filter1d(dataY, 2), ax,"Time (sec)", "Butt to floor distance (meter)", 1.5)
     Algebra.roundGraph(dataX2, ndimage.gaussian_filter1d(dataY2, 2), bx,"Time (sec)", "Knee angle (degrees)", 200)
     plt.savefig("plotSmoothGauss2.pdf")
 
