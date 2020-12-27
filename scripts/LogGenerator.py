@@ -20,9 +20,9 @@ takeClosest = lambda num,collection:min(collection,key=lambda x:abs(x-num))
 # Setup:
 pipeline = rs.pipeline()
 cfg = rs.config()
-cfg.enable_device_from_file("C:\Age_Estimation_Project\\bag_files\sub02_squat_side.bag", True)
-logfile_color_name = "sub02_squat_side_color.txt"
-logfile_depth_name = "sub02_squat_side_depth.txt"
+cfg.enable_device_from_file("C:\Age_Estimation_Project\\bag_files\Sub002_Stand_Front.bag", True)
+logfile_color_name = "Sub002_Stand_Front_color.txt"
+logfile_depth_name = "Sub002_Stand_Front_depth.txt"
 listfile_name = "list.txt"
 
 
@@ -37,7 +37,7 @@ print("Depth Scale is: ", depth_scale)
 
 # We will be removing the background of objects more than
 #  clipping_distance_in_meters meters away
-clipping_distance_in_meters = 2.2  # 1 meter
+clipping_distance_in_meters = 2.5  #  meter
 clipping_distance = clipping_distance_in_meters / depth_scale
 
 # Create an align object
@@ -63,7 +63,7 @@ parser = argparse.ArgumentParser()
 parser.add_argument("-d", "--directory", type=str, help="Path to save the images")
 parser.add_argument("-i", "--input", type=str, help="Bag file to read")
 args = parser.parse_args()
-t_end = time.time() + 60 * 15
+t_end = time.time() + 60 * 7
 try:
     while time.time() < t_end:
 
@@ -98,7 +98,12 @@ try:
             # writing the png to dir
             color_image = np.asanyarray(aligned_color_frame.get_data())
 
-
+            # remove background
+            depth_image = np.asanyarray(aligned_depth_frame.get_data())
+            grey_color = 153
+            depth_image_3d = np.dstack(
+                (depth_image, depth_image, depth_image))  # depth image is 1 channel, color is 3 channels
+            color_image = np.where((depth_image_3d > clipping_distance) | (depth_image_3d <= 0), grey_color, color_image)
 
 
             # rotation angle in degree

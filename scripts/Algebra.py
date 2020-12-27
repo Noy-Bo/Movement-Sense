@@ -265,20 +265,22 @@ def getNorm2D(p):
 def getNormalizeVector(pointA, pointB=Point3D(0, 0, 0)):
     p = Point3D((pointA.x - pointB.x), (pointA.y - pointB.y), (pointA.z - pointB.z))
     norm = getNorm(p)
-    if norm != 0:
-        if p.x != 0:
-            p.x = p.x / norm
-        else:
-            pass
-        if p.y != 0:
-            p.y = p.y / norm
-        else:
-            pass
-        if p.z != 0:
-            p.z = p.z / norm
-        else:
-            pass
+    # if norm != 0:
+            # p.x = p.x / norm
+            # p.y = p.y / norm
+            # p.z = p.z / norm
+    #print (p.z+p.y+p.x)
     return p
+def getVectorFrom2Points(pointA,pointB):
+    return np.subtract(pointA,pointB)
+
+def getAngle(pointA,pointB):
+    dotProduct = np.dot(pointA, pointB)
+    norms = np.linalg.norm(pointA) * np.linalg.norm(pointB)
+    angleRadians = np.arccos(np.divide(dotProduct, norms))
+    angleDegrees = angleRadians * (180 / np.pi)
+    return angleDegrees
+
 
 def getNormalizeVector2D(pointA, pointB=Point3D(0, 0, 0)):
     p = Point3D((pointA.x - pointB.x), (pointA.y - pointB.y), (pointA.z - pointB.z))
@@ -309,23 +311,25 @@ def getAngle2D(normalizedVectorA, normalizedVectorB):
         print("error")
     return angle
 
-def getAngle(normalizedVectorA, normalizedVectorB):
-    # dot product
-    angle = -1
-    res = (normalizedVectorA.x * normalizedVectorB.x) + (normalizedVectorA.y * normalizedVectorB.y) + (
-            normalizedVectorA.z * normalizedVectorB.z)
-    if res >= -1 and res <= 1:
-        angle = math.acos((normalizedVectorA.x * normalizedVectorB.x) + (normalizedVectorA.y * normalizedVectorB.y) + (
-                normalizedVectorA.z * normalizedVectorB.z))
-    else:
-        pass
-
-    # transform to radians to degrees
-    if (angle != -1):
-        angle = angle * (180 / np.pi)
-    if angle == 90:
-        print("error")
-    return angle
+# def getAngle(normalizedVectorA, normalizedVectorB):
+#     # dot product
+#     angle = -1
+#     res = (normalizedVectorA.x * normalizedVectorB.x) + (normalizedVectorA.y * normalizedVectorB.y) + (
+#             normalizedVectorA.z * normalizedVectorB.z)
+#     norms = getNorm(normalizedVectorA) * getNorm((normalizedVectorB))
+#     res /= norms
+#     if res >= -1 and res <= 1:
+#         angle = math.acos((normalizedVectorA.x * normalizedVectorB.x) + (normalizedVectorA.y * normalizedVectorB.y) + (
+#                 normalizedVectorA.z * normalizedVectorB.z))
+#     else:
+#         pass
+#
+#     # transform to radians to degrees
+#     if (angle != -1):
+#         angle = angle * (180 / np.pi)
+#     if angle == 90:
+#         print("error")
+#     return angle
 
 
 def isZero(p):
