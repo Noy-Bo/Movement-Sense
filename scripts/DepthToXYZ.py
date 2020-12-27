@@ -69,17 +69,19 @@ class AlphaPoseObject(object):
 
 # =========== ALPHAPOSE
 # open's the alphapose results and sets them in json array
-# skeletonsTable = []  # contains all json's, with the bigger score
-# alphapose_file = open('alphapose-results.json')
-# alphapose_array = json.load(alphapose_file)
-#
-# for item in alphapose_array:
-#     x = AlphaPoseObject(item['image_id'], item['score'], item['box'], item['keypoints'])
-#     x.add()
+skeletonsTable = []  # contains all json's, with the bigger score
+alphapose_file = open('alphapose-results.json')
+alphapose_array = json.load(alphapose_file)
+
+for item in alphapose_array:
+    x = AlphaPoseObject(item['image_id'], item['score'], item['box'], item['keypoints'])
+    x.add()
 
 # =========== OPENPOSE
-skeletonsTable = Algebra.OpenPoseReader()
+#skeletonsTable = Algebra.OpenPoseReader()
 
+
+# ===========
 json_log_name = "log_color.json"  # choose color or depth
 excelFilename = "Hanna_Squat_Front_depth.xlsx"  # change
 heading = "Hanna_Squat_Front_depth"  # change    &     line 101
@@ -107,7 +109,7 @@ for item in log_array:
 # Setup:
 pipeline = rs.pipeline()
 cfg = rs.config()
-cfg.enable_device_from_file("C:\Age_Estimation_Project\\bag_files\sub02_squat_side.bag", False)
+cfg.enable_device_from_file("C:\Age_Estimation_Project\\bag_files\Sub002_Stand_Front.bag", False)
 
 profile = pipeline.start(cfg)
 device = profile.get_device()
@@ -149,7 +151,7 @@ parser.add_argument("-i", "--input", type=str, help="Bag file to read")
 args = parser.parse_args()
 
 # setup plot - two graphs and two images
-fig = plt.figure(num=None, figsize=(60, 10), dpi=80)
+fig = plt.figure(num=None, figsize=(36, 10), dpi=80)
 
 ax = fig.add_subplot(221)
 # ax.set_ylabel("Butt to floor distance (Meter)")
@@ -182,7 +184,7 @@ playback.resume()
 time.sleep(1)
 try:
     while True:
-    #while loop < 60:
+    #while loop < 30:
         loop = loop + 1
         # Get frameset of color and depth
         frames = pipeline.wait_for_frames()
@@ -258,9 +260,52 @@ try:
                 # print("rawsize: {}, vertsSize: {}".format(vertsRaw.size, verts.size))
                 texcoords = np.asarray(points.get_texture_coordinates(2))
 
+
+
                 # writing 3d points inside alphapose object
                 # ==================== AlphaPose
-                #skeleton2 = Algebra.AlphaSkeleton(skeletonObject)
+                pixelSkeleton = Algebra.AlphaSkeleton(skeletonObject)
+                #==================== AlphaPose
+                #pixelSkeleton = Algebra.OpenPoseSkeleton(skeletonObject.keypoints)
+
+                #printing points test
+                color_image_copy = color_image.copy()
+                color_image_copy = ndimage.rotate(color_image, 90)
+                cv2.circle(color_image_copy, (int(pixelSkeleton.rShoulder.x),int(pixelSkeleton.rShoulder.y)),4,(255,0,0),-1)
+                cv2.circle(color_image_copy, (int(pixelSkeleton.lShoulder.x),int(pixelSkeleton.lShoulder.y)),4,(0,255,0),-1)
+                cv2.circle(color_image_copy, (int(pixelSkeleton.rKnee.x), int(pixelSkeleton.rKnee.y)), 4,
+                           (255, 0, 0), -1)
+                cv2.circle(color_image_copy, (int(pixelSkeleton.lKnee.x), int(pixelSkeleton.lKnee.y)), 4,
+                           (0, 255, 0), -1)
+                cv2.circle(color_image_copy, (int(pixelSkeleton.lHip.x), int(pixelSkeleton.lHip.y)), 4,
+                           (0, 255, 0), -1)
+                cv2.circle(color_image_copy, (int(pixelSkeleton.rHip.x), int(pixelSkeleton.rHip.y)), 4,
+                           (255, 0, 0), -1)
+                cv2.circle(color_image_copy, (int(pixelSkeleton.lAnkle.x), int(pixelSkeleton.lAnkle.y)), 4,
+                           (0, 255, 0), -1)
+                cv2.circle(color_image_copy, (int(pixelSkeleton.rAnkle.x), int(pixelSkeleton.rAnkle.y)), 4,
+                           (255, 0, 0), -1)
+                cv2.circle(color_image_copy, (int(pixelSkeleton.lElbow.x), int(pixelSkeleton.lElbow.y)), 4,
+                           (0, 255, 0), -1)
+                cv2.circle(color_image_copy, (int(pixelSkeleton.rElbow.x), int(pixelSkeleton.rElbow.y)), 4,
+                           (255, 0, 0), -1)
+                cv2.circle(color_image_copy, (int(pixelSkeleton.neck.x), int(pixelSkeleton.neck.y)), 4,
+                           (0, 0, 255), -1)
+               # cv2.circle(color_image_copy, (int(pixelSkeleton.midHip.x), int(pixelSkeleton.midHip.y)), 4,
+                #           (0, 0, 255), -1)
+                cv2.circle(color_image_copy, (int(pixelSkeleton.lShoulder.x), int(pixelSkeleton.lShoulder.y)), 4,
+                           (0, 255, 0), -1)
+                cv2.circle(color_image_copy, (int(pixelSkeleton.rWrist.x), int(pixelSkeleton.rWrist.y)), 4,
+                           (255, 0, 0), -1)
+                cv2.circle(color_image_copy, (int(pixelSkeleton.lWrist.x), int(pixelSkeleton.lWrist.y)), 4,
+                           (0, 255, 0), -1)
+
+
+                cv2.circle(color_image_copy, (int(pixelSkeleton.neck.x),int(pixelSkeleton.neck.y)),4,(0,0,255),-1)
+                print(int(pixelSkeleton.lShoulder.x),int(pixelSkeleton.lShoulder.y))
+                #cv2.circle(color_image_copy, (10,200),4,(255,0,0),-1)
+                cv2.imshow("sanity check",color_image_copy)
+
                 for i in range(0, 75, 3):
                     # incase pose estimation didnt return a valid point.
                     if math.fabs(skeletonObject.keypoints[i]) == 0 and math.fabs(
@@ -289,10 +334,10 @@ try:
                             skeletonObject.keypoints[i + 1] = point.y
                             skeletonObject.keypoints[i + 2] = point.z
 
-                # ALPHA POSE
-                #skeleton = Algebra.AlphaSkeleton(skeletonObject)
+                # #ALPHA POSE
+                skeleton = Algebra.AlphaSkeleton(skeletonObject)
                 # OPEN POSE
-                skeleton = Algebra.OpenPoseSkeleton(skeletonObject.keypoints)
+                #skeleton = Algebra.OpenPoseSkeleton(skeletonObject.keypoints)
 
 
                 # butt distance from floor
@@ -320,119 +365,44 @@ try:
                 #         bottom *= 0.7
                 #         # print(abs(skeleton.hip.x - floor_point_x))
 
-                # # yaron's right hand from body side andle
-                # if Algebra.isZero(skeleton.rShoulder) == False and Algebra.isZero(skeleton.rHip) == False and Algebra.isZero(skeleton.rElbow) == False:
-                #     normalizeShoulderToElbow = Algebra.getNormalizeVector(skeleton.rShoulder,skeleton.rElbow)
-                #     normalizeShoulderToHip = Algebra.getNormalizeVector(skeleton.rShoulder,skeleton.rHip)
-                #     if (Algebra.isZero(normalizeShoulderToHip) == False and Algebra.isZero(normalizeShoulderToElbow) == False):
-                #         angle = Algebra.getAngle(normalizeShoulderToElbow,normalizeShoulderToHip)
-                #     else:
-                #         angle = -1
-                #     print(angle)
-                # skeleton.rKnee.z += 0.045
-                # skeleton.rAnkle.z += 0.01
-                # skeleton.rHip.z += 0.
-                # knee angle on squatting
-                if (Algebra.isZero(skeleton.rHip) == False and Algebra.isZero(
-                        skeleton.rKnee) == False and Algebra.isZero(skeleton.rAnkle) == False):
-                    normalizeHipToKnee = Algebra.getNormalizeVector2D(skeleton.rHip, skeleton.rKnee)
-                    normalizeKneeToAnkle = Algebra.getNormalizeVector2D(skeleton.rAnkle, skeleton.rKnee)
-                    if (Algebra.isZero(normalizeHipToKnee) == False and Algebra.isZero(normalizeKneeToAnkle) == False):
-                        angle = Algebra.getAngle2D(normalizeHipToKnee, normalizeKneeToAnkle)
-                        dataX2.append((currentTimeStamp - startingTimeStamp) / 1000)
-                        dataY2.append(angle)
-                        print(angle)
-                    else:
-                        angle = -1
 
-                    # if len(dataX2) < 3:
-                    #     dataX2.append((currentTimeStamp - startingTimeStamp) / 1000)
-                    #     dataY2.append(angle)
-                    # elif np.median(np.array(dataY2[-3:])) * top_angle > angle and np.median(
-                    #         np.array(dataY2[-3:])) * bottom_angle < angle:
-                    #     dataX2.append((currentTimeStamp - startingTimeStamp) / 1000)
-                    #     dataY2.append(angle)
-                    #     top_angle = 1.4;
-                    #     bottom_angle = 0.6;
-                    # else:
-                    #     print("top = " + str(top_angle) + " ~ " + str(
-                    #         np.median(np.array(dataY2[-3:])) * top_angle) + " bottom = " + str(
-                    #         bottom_angle) + " ~ " + str(np.median(np.array(dataY2[-3:])) * bottom_angle))
-                    #     top_angle *= 1.3
-                    #     bottom_angle *= 0.7
-                    #     print(angle)
-                    #     print("missed angle")
-                # # # angle between base-spine to neck and base-spine to ankle
-                # if (Algebra.isZero(skeleton.neck) == False and Algebra.isZero(skeleton.rKnee) == False and Algebra.isZero(skeleton.hip) == False):
-                #     normalizeHipToNeck = Algebra.getNormalizeVector(skeleton.neck,skeleton.hip)
-                #     normalizeHipToAnkle = Algebra.getNormalizeVector(skeleton.rAnkle, skeleton.hip)
-                #     if (Algebra.isZero(normalizeHipToAnkle) == False and Algebra.isZero(normalizeHipToNeck) == False):
-                #         angle = Algebra.getAngle(normalizeHipToAnkle,normalizeHipToNeck)
-                #     else:
-                #         angle = -1
-                #     print(180-angle)
 
-                # #front angle of body curve (C) from estimated crotch point to hip, and from hip to neck. Anterior Neck_Crotch angle
-                # if Algebra.isZero(skeleton.neck) == False and Algebra.isZero(skeleton.hip) == False and Algebra.isZero(skeleton.rHip) == False and Algebra.isZero(skeleton.lHip) == False:
-                #     normalizeHipToNeck = Algebra.getNormalizeVector(skeleton.hip,skeleton.neck)
+                # kyphosis
+                if (Algebra.isZero(skeleton.rShoulder) == False and Algebra.isZero(
+                        skeleton.lShoulder) == False and Algebra.isZero(skeleton.neck) == False):
+
+                    skeleton.rShoulder.y = skeleton.lShoulder.y = skeleton.neck.y
+                    rshoulder = np.array([skeleton.rShoulder.x,skeleton.rShoulder.y,skeleton.rShoulder.z])
+                    lshoulder = np.array([skeleton.lShoulder.x,skeleton.lShoulder.y,skeleton.lShoulder.z])
+                    neck = np.array([skeleton.neck.x,skeleton.neck.y,skeleton.neck.z])
+
+                    rightShoulderToNeck = Algebra.getVectorFrom2Points(rshoulder,neck)
+                    leftShoulderToNeck = Algebra.getVectorFrom2Points(lshoulder,neck)
+
+                    angle = Algebra.getAngle(rightShoulderToNeck,leftShoulderToNeck)
+                    angle = 180 - angle
+
+                    dataX2.append((currentTimeStamp - startingTimeStamp) / 1000)
+                    dataY2.append(angle)
+                    print(angle)
+
+                # # knee angle (right)
+                # if (Algebra.isZero(skeleton.rHip) == False and Algebra.isZero(
+                #         skeleton.rKnee) == False and Algebra.isZero(skeleton.rAnkle) == False):
+                #     rHip = np.array([skeleton.rHip.x, skeleton.rHip.y, skeleton.rHip.z])
+                #     rKnee = np.array([skeleton.rKnee.x, skeleton.rKnee.y, skeleton.rKnee.z])
+                #     rAnkle = np.array([skeleton.rAnkle.x, skeleton.rAnkle.y, skeleton.rAnkle.z])
                 #
-                #     # generating estimation of crotch point.
-                #     estimatedCrotchPoint = Algebra.Point3D(((skeleton.rHip.x + skeleton.lHip.x)/2),((skeleton.rHip.y + skeleton.lHip.y)/2),skeleton.hip.z)
+                #     hipToKnee = Algebra.getVectorFrom2Points(rHip, rKnee)
+                #     ankleToKnee = Algebra.getVectorFrom2Points(rAnkle, rKnee)
                 #
-                #     normalizeHipToCrotch = Algebra.getNormalizeVector(skeleton.hip,estimatedCrotchPoint)
+                #     angle = Algebra.getAngle(hipToKnee, ankleToKnee)
+                #     # angle = 180 - angle
                 #
-                #     if (Algebra.isZero(normalizeHipToCrotch) == False and Algebra.isZero(normalizeHipToNeck) == False):
-                #         angle = Algebra.getAngle(normalizeHipToCrotch,normalizeHipToNeck)
-                #     else:
-                #         angle = -1
-                #     print(180-angle)
-
-                # front angle of Anterior Neck_Vertex. (head to neck \\ neck to crotch )
-                # if Algebra.isZero(skeleton.neck) == False and Algebra.isZero(skeleton.head) == False and Algebra.isZero(
-                #     skeleton.hip) == False and Algebra.isZero(skeleton.rHip) == False and Algebra.isZero(skeleton.lHip) == False:
-                #
-                #     estimatedCrotchPoint = Algebra.Point3D(((skeleton.rHip.x + skeleton.lHip.x) / 2), ((skeleton.rHip.y + skeleton.lHip.y) / 2), skeleton.hip.z)
-                #     normalizeHeadToNeck = Algebra.getNormalizeVector(skeleton.neck,skeleton.head)
-                #     normalizeNeckToCrotch = Algebra.getNormalizeVector(skeleton.neck,estimatedCrotchPoint)
-                #     if (Algebra.isZero(normalizeNeckToCrotch) == False and Algebra.isZero(normalizeHeadToNeck) == False):
-                #         angle = Algebra.getAngle(normalizeHeadToNeck,normalizeNeckToCrotch)
-                #         print(180 - angle)
-                #     else:
-                #         angle = -1
-
-                # # front angle of Anterior Neck_Waist
-                # if Algebra.isZero(skeleton.neck) == False and Algebra.isZero(skeleton.head) == False and Algebra.isZero(
-                #         skeleton.hip) == False:
-                #     # skeleton.neck.z = 0
-                #     # skeleton.hip.z = 0
-                #     # skeleton.head.z = 0
-                #     normalizeHeadToNeck = Algebra.getNormalizeVector(skeleton.neck, skeleton.head)
-                #     normalizeNeckToHip = Algebra.getNormalizeVector(skeleton.neck, skeleton.hip)
-                #     if (Algebra.isZero(normalizeNeckToHip) == False and Algebra.isZero(normalizeHeadToNeck) == False):
-                #         angle = Algebra.getAngle(normalizeHeadToNeck, normalizeNeckToHip)
-                #         print(180 - angle)
-                #     else:
-                #         angle = -1
-
-                # generating points for sanity checkout
-
-                # front angle of Anterior Neck_Waist
-                # if Algebra.isZero(skeleton.rElbow) == False and Algebra.isZero(
-                #         skeleton.rWrist) == False and Algebra.isZero(
-                #         skeleton.rShoulder) == False:
-                #     skeleton.rElbow.z = 0
-                #     skeleton.rShoulder.z = 0
-                #     skeleton.rWrist.z = 0
-                #     normalizeShoulderToElbow = Algebra.getNormalizeVector(skeleton.rElbow, skeleton.rShoulder)
-                #     normalizeElbowToWrist = Algebra.getNormalizeVector(skeleton.rElbow, skeleton.rWrist)
-                #     if (Algebra.isZero(normalizeShoulderToElbow) == False and Algebra.isZero(
-                #             normalizeElbowToWrist) == False):
-                #         angle = Algebra.getAngle(normalizeShoulderToElbow, normalizeElbowToWrist)
-                #         #print(180 - angle)
-                #     else:
-                #         angle = -1
-                #     dataX2.append((currentTimeStamp - startingTimeStamp)/1000)
+                #     dataX2.append((currentTimeStamp - startingTimeStamp) / 1000)
                 #     dataY2.append(angle)
+                #     print(angle)
+
 
                 # # get relevant points to draw
                 # floor_point = Algebra.Point3D((skeleton2.rAnkle.x + skeleton2.lAnkle.x) / 2,

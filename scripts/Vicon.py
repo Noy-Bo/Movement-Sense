@@ -141,5 +141,4 @@ def ViconReader(filename):
 # viconSkeletons = ViconReader(r'C:\Users\\1\PycharmProjects\pythonProject3\Sub002_Squat.csv')
 # print("test")
 
-a = OpenPoseReader()
-print("test")
+
