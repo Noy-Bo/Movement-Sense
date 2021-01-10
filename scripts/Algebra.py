@@ -226,11 +226,11 @@ def rounded(value, collection):                 # take a value (z) and collectio
     z = z / len(collect)
     return Point3D(x, y, z)
 
-def roundGraph(x_collection,y_collection,graph,xlabel,ylabel,limit):      # outputs a graph with scattered points and smoothened line
+def roundGraph(x_collection,y_collection,graph,xlabel,ylabel,limit,color = 'b'):      # outputs a graph with scattered points and smoothened line
     if len(x_collection) < 3:
          return
     # resets the graph - TODO: perhaps find a way to only update the latest point
-    graph.clear()
+    #graph.clear() # for vis?
     # casts the data to np.array type for the plot
     x = np.array(x_collection)
     y = np.array(y_collection)
@@ -244,9 +244,10 @@ def roundGraph(x_collection,y_collection,graph,xlabel,ylabel,limit):      # outp
     graph.set_ylabel(ylabel)
     graph.set_xlabel(xlabel)
     graph.set_ylim([0, limit])
+
     #graph.plot(x_smooth, y_smooth)
     # if we want to add the scattered points
-    graph.scatter(x, y, c='b', label='data',s=2)
+    graph.scatter(x, y, c=color, label='data',s=2)
 
 
 

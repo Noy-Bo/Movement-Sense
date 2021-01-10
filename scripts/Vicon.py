@@ -115,8 +115,8 @@ def ViconReader(filename):
         flag = False
         for row in csv_reader:
             if flag is True:
-                points.clear()
-                keypoints.clear()
+                points = []
+                keypoints = []
                 points.append(row)
                 for sublist in points:
                     for item in sublist:
