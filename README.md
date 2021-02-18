@@ -11,6 +11,6 @@ OpenCV 2.4.12, Cubemos – skeleton tracking SDK, OpenPose - pose estimation, Al
 
 
 <p float="center">
-  <img src="https://raw.githubusercontent.com/Noy-Bo/Image_Vision_Project/main/readme/sub002_vid.png" alt="alt text" width="200" height="400">
+  <img src="https://raw.githubusercontent.com/Noy-Bo/Image_Vision_Project/main/readme/sub002_vid.png" alt="alt text" width="1000" height="400">
   
 </p>
