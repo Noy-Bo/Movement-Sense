@@ -9,3 +9,8 @@ Image Vision Project at Geometric Image Processing Lab (GIP) – Technion. As a 
 Technologies:
 OpenCV 2.4.12, Cubemos – skeleton tracking SDK, OpenPose - pose estimation, AlphaPose - pose estimation, Intel Realsense Depth Camera D415 / D435, Intel Realsense SDK 2.0.
 
+
+<p float="center">
+  <img src="https://raw.githubusercontent.com/Noy-Bo/Image_Vision_Project/main/readme/sub002_vid.png" alt="alt text" width="200" height="400">
+  
+</p>
