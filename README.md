@@ -7,7 +7,7 @@ Image Vision Project at Geometric Image Processing Lab (GIP) – Technion. As a 
 * Comparing extracted data with Vicon(Gold-Standart) data.
 
 Technologies:
-OpenCV 2.4.12, Cubemos – skeleton tracking SDK, OpenPose - pose estimation, AlphaPose - pose estimation, Intel Realsense Depth Camera D415 / D435, Intel Realsense SDK 2.0.
+OpenCV, Cubemos – skeleton tracking SDK, OpenPose - pose estimation, AlphaPose - pose estimation, Intel Realsense Depth Camera D415 / D435, Intel Realsense SDK.
 
 
 <p float="center">
