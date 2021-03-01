@@ -1,0 +1,4215 @@
+depth timestamp: 1.60321233744e+12
+color timestamp: 1.60321233739e+12
+
+depth timestamp: 1.60321233744e+12
+color timestamp: 1.60321233746e+12
+
+depth timestamp: 1.60321233748e+12
+color timestamp: 1.60321233749e+12
+
+depth timestamp: 1.60321233755e+12
+color timestamp: 1.60321233756e+12
+
+depth timestamp: 1.60321233758e+12
+color timestamp: 1.60321233759e+12
+
+depth timestamp: 1.60321233761e+12
+color timestamp: 1.60321233762e+12
+
+depth timestamp: 1.60321233765e+12
+color timestamp: 1.60321233766e+12
+
+depth timestamp: 1.60321233771e+12
+color timestamp: 1.60321233772e+12
+
+depth timestamp: 1.60321233778e+12
+color timestamp: 1.60321233776e+12
+
+depth timestamp: 1.60321233781e+12
+color timestamp: 1.60321233782e+12
+
+depth timestamp: 1.60321233788e+12
+color timestamp: 1.60321233786e+12
+
+depth timestamp: 1.60321233791e+12
+color timestamp: 1.60321233792e+12
+
+depth timestamp: 1.60321233798e+12
+color timestamp: 1.60321233796e+12
+
+depth timestamp: 1.60321233801e+12
+color timestamp: 1.60321233802e+12
+
+depth timestamp: 1.60321233805e+12
+color timestamp: 1.60321233806e+12
+
+depth timestamp: 1.60321233808e+12
+color timestamp: 1.60321233809e+12
+
+depth timestamp: 1.60321233814e+12
+color timestamp: 1.60321233816e+12
+
+depth timestamp: 1.60321233818e+12
+color timestamp: 1.60321233819e+12
+
+depth timestamp: 1.60321233824e+12
+color timestamp: 1.60321233826e+12
+
+depth timestamp: 1.60321233828e+12
+color timestamp: 1.60321233829e+12
+
+depth timestamp: 1.60321233831e+12
+color timestamp: 1.60321233832e+12
+
+depth timestamp: 1.60321233838e+12
+color timestamp: 1.60321233839e+12
+
+depth timestamp: 1.60321233841e+12
+color timestamp: 1.60321233842e+12
+
+depth timestamp: 1.60321233848e+12
+color timestamp: 1.60321233849e+12
+
+depth timestamp: 1.60321233851e+12
+color timestamp: 1.60321233852e+12
+
+depth timestamp: 1.60321233855e+12
+color timestamp: 1.60321233856e+12
+
+depth timestamp: 1.60321233858e+12
+color timestamp: 1.60321233859e+12
+
+depth timestamp: 1.60321233865e+12
+color timestamp: 1.60321233866e+12
+
+depth timestamp: 1.60321233868e+12
+color timestamp: 1.60321233869e+12
+
+depth timestamp: 1.60321233871e+12
+color timestamp: 1.60321233872e+12
+
+depth timestamp: 1.60321233875e+12
+color timestamp: 1.60321233876e+12
+
+depth timestamp: 1.60321233881e+12
+color timestamp: 1.60321233882e+12
+
+depth timestamp: 1.60321233885e+12
+color timestamp: 1.60321233886e+12
+
+depth timestamp: 1.60321233891e+12
+color timestamp: 1.60321233892e+12
+
+depth timestamp: 1.60321233898e+12
+color timestamp: 1.60321233896e+12
+
+depth timestamp: 1.60321233898e+12
+color timestamp: 1.60321233899e+12
+
+depth timestamp: 1.60321233904e+12
+color timestamp: 1.60321233906e+12
+
+depth timestamp: 1.60321233908e+12
+color timestamp: 1.60321233909e+12
+
+depth timestamp: 1.60321233911e+12
+color timestamp: 1.60321233912e+12
+
+depth timestamp: 1.60321233914e+12
+color timestamp: 1.60321233916e+12
+
+depth timestamp: 1.60321233918e+12
+color timestamp: 1.60321233919e+12
+
+depth timestamp: 1.60321233921e+12
+color timestamp: 1.60321233922e+12
+
+depth timestamp: 1.60321233924e+12
+color timestamp: 1.60321233926e+12
+
+depth timestamp: 1.60321233928e+12
+color timestamp: 1.60321233929e+12
+
+depth timestamp: 1.60321233931e+12
+color timestamp: 1.60321233932e+12
+
+depth timestamp: 1.60321233938e+12
+color timestamp: 1.60321233939e+12
+
+depth timestamp: 1.60321233941e+12
+color timestamp: 1.60321233942e+12
+
+depth timestamp: 1.60321233944e+12
+color timestamp: 1.60321233946e+12
+
+depth timestamp: 1.60321233948e+12
+color timestamp: 1.60321233949e+12
+
+depth timestamp: 1.60321233954e+12
+color timestamp: 1.60321233956e+12
+
+depth timestamp: 1.60321233958e+12
+color timestamp: 1.60321233959e+12
+
+depth timestamp: 1.60321233964e+12
+color timestamp: 1.60321233966e+12
+
+depth timestamp: 1.60321233968e+12
+color timestamp: 1.60321233969e+12
+
+depth timestamp: 1.60321233971e+12
+color timestamp: 1.60321233972e+12
+
+depth timestamp: 1.60321233974e+12
+color timestamp: 1.60321233976e+12
+
+depth timestamp: 1.60321233978e+12
+color timestamp: 1.60321233979e+12
+
+depth timestamp: 1.60321233981e+12
+color timestamp: 1.60321233982e+12
+
+depth timestamp: 1.60321233984e+12
+color timestamp: 1.60321233986e+12
+
+depth timestamp: 1.60321233988e+12
+color timestamp: 1.60321233989e+12
+
+depth timestamp: 1.60321233991e+12
+color timestamp: 1.60321233992e+12
+
+depth timestamp: 1.60321233995e+12
+color timestamp: 1.60321233996e+12
+
+depth timestamp: 1.60321233998e+12
+color timestamp: 1.60321233999e+12
+
+depth timestamp: 1.60321234001e+12
+color timestamp: 1.60321234002e+12
+
+depth timestamp: 1.60321234005e+12
+color timestamp: 1.60321234006e+12
+
+depth timestamp: 1.60321234008e+12
+color timestamp: 1.60321234009e+12
+
+depth timestamp: 1.60321234011e+12
+color timestamp: 1.60321234012e+12
+
+depth timestamp: 1.60321234018e+12
+color timestamp: 1.60321234016e+12
+
+depth timestamp: 1.60321234018e+12
+color timestamp: 1.60321234019e+12
+
+depth timestamp: 1.60321234021e+12
+color timestamp: 1.60321234022e+12
+
+depth timestamp: 1.60321234028e+12
+color timestamp: 1.60321234026e+12
+
+depth timestamp: 1.60321234031e+12
+color timestamp: 1.60321234032e+12
+
+depth timestamp: 1.60321234038e+12
+color timestamp: 1.60321234036e+12
+
+depth timestamp: 1.60321234041e+12
+color timestamp: 1.60321234042e+12
+
+depth timestamp: 1.60321234048e+12
+color timestamp: 1.60321234046e+12
+
+depth timestamp: 1.60321234048e+12
+color timestamp: 1.60321234049e+12
+
+depth timestamp: 1.60321234051e+12
+color timestamp: 1.60321234052e+12
+
+depth timestamp: 1.60321234054e+12
+color timestamp: 1.60321234056e+12
+
+depth timestamp: 1.60321234058e+12
+color timestamp: 1.60321234059e+12
+
+depth timestamp: 1.60321234065e+12
+color timestamp: 1.60321234066e+12
+
+depth timestamp: 1.60321234068e+12
+color timestamp: 1.60321234069e+12
+
+depth timestamp: 1.60321234071e+12
+color timestamp: 1.60321234072e+12
+
+depth timestamp: 1.60321234074e+12
+color timestamp: 1.60321234076e+12
+
+depth timestamp: 1.60321234078e+12
+color timestamp: 1.60321234079e+12
+
+depth timestamp: 1.60321234081e+12
+color timestamp: 1.60321234082e+12
+
+depth timestamp: 1.60321234084e+12
+color timestamp: 1.60321234086e+12
+
+depth timestamp: 1.60321234091e+12
+color timestamp: 1.60321234092e+12
+
+depth timestamp: 1.60321234098e+12
+color timestamp: 1.60321234096e+12
+
+depth timestamp: 1.60321234098e+12
+color timestamp: 1.60321234099e+12
+
+depth timestamp: 1.60321234101e+12
+color timestamp: 1.60321234102e+12
+
+depth timestamp: 1.60321234104e+12
+color timestamp: 1.60321234106e+12
+
+depth timestamp: 1.60321234108e+12
+color timestamp: 1.60321234109e+12
+
+depth timestamp: 1.60321234114e+12
+color timestamp: 1.60321234113e+12
+
+depth timestamp: 1.60321234114e+12
+color timestamp: 1.60321234116e+12
+
+depth timestamp: 1.60321234118e+12
+color timestamp: 1.60321234119e+12
+
+depth timestamp: 1.60321234124e+12
+color timestamp: 1.60321234123e+12
+
+depth timestamp: 1.60321234124e+12
+color timestamp: 1.60321234126e+12
+
+depth timestamp: 1.60321234134e+12
+color timestamp: 1.60321234133e+12
+
+depth timestamp: 1.60321234138e+12
+color timestamp: 1.60321234136e+12
+
+depth timestamp: 1.60321234138e+12
+color timestamp: 1.60321234139e+12
+
+depth timestamp: 1.60321234144e+12
+color timestamp: 1.60321234143e+12
+
+depth timestamp: 1.60321234148e+12
+color timestamp: 1.60321234149e+12
+
+depth timestamp: 1.60321234154e+12
+color timestamp: 1.60321234153e+12
+
+depth timestamp: 1.60321234154e+12
+color timestamp: 1.60321234156e+12
+
+depth timestamp: 1.60321234161e+12
+color timestamp: 1.60321234163e+12
+
+depth timestamp: 1.60321234168e+12
+color timestamp: 1.60321234166e+12
+
+depth timestamp: 1.60321234171e+12
+color timestamp: 1.60321234173e+12
+
+depth timestamp: 1.60321234178e+12
+color timestamp: 1.60321234176e+12
+
+depth timestamp: 1.60321234178e+12
+color timestamp: 1.60321234179e+12
+
+depth timestamp: 1.60321234184e+12
+color timestamp: 1.60321234186e+12
+
+depth timestamp: 1.60321234188e+12
+color timestamp: 1.60321234189e+12
+
+depth timestamp: 1.60321234194e+12
+color timestamp: 1.60321234193e+12
+
+depth timestamp: 1.60321234194e+12
+color timestamp: 1.60321234196e+12
+
+depth timestamp: 1.60321234198e+12
+color timestamp: 1.60321234199e+12
+
+depth timestamp: 1.60321234204e+12
+color timestamp: 1.60321234203e+12
+
+depth timestamp: 1.60321234204e+12
+color timestamp: 1.60321234206e+12
+
+depth timestamp: 1.60321234214e+12
+color timestamp: 1.60321234213e+12
+
+depth timestamp: 1.60321234214e+12
+color timestamp: 1.60321234216e+12
+
+depth timestamp: 1.60321234224e+12
+color timestamp: 1.60321234223e+12
+
+depth timestamp: 1.60321234228e+12
+color timestamp: 1.60321234226e+12
+
+depth timestamp: 1.60321234228e+12
+color timestamp: 1.60321234229e+12
+
+depth timestamp: 1.60321234231e+12
+color timestamp: 1.60321234233e+12
+
+depth timestamp: 1.60321234235e+12
+color timestamp: 1.60321234236e+12
+
+depth timestamp: 1.60321234238e+12
+color timestamp: 1.60321234239e+12
+
+depth timestamp: 1.60321234244e+12
+color timestamp: 1.60321234243e+12
+
+depth timestamp: 1.60321234244e+12
+color timestamp: 1.60321234246e+12
+
+depth timestamp: 1.60321234248e+12
+color timestamp: 1.60321234249e+12
+
+depth timestamp: 1.60321234254e+12
+color timestamp: 1.60321234253e+12
+
+depth timestamp: 1.60321234254e+12
+color timestamp: 1.60321234256e+12
+
+depth timestamp: 1.60321234258e+12
+color timestamp: 1.60321234259e+12
+
+depth timestamp: 1.60321234264e+12
+color timestamp: 1.60321234263e+12
+
+depth timestamp: 1.60321234264e+12
+color timestamp: 1.60321234266e+12
+
+depth timestamp: 1.60321234268e+12
+color timestamp: 1.60321234269e+12
+
+depth timestamp: 1.60321234274e+12
+color timestamp: 1.60321234273e+12
+
+depth timestamp: 1.60321234274e+12
+color timestamp: 1.60321234276e+12
+
+depth timestamp: 1.60321234278e+12
+color timestamp: 1.60321234279e+12
+
+depth timestamp: 1.60321234284e+12
+color timestamp: 1.60321234283e+12
+
+depth timestamp: 1.60321234288e+12
+color timestamp: 1.60321234286e+12
+
+depth timestamp: 1.60321234294e+12
+color timestamp: 1.60321234293e+12
+
+depth timestamp: 1.60321234298e+12
+color timestamp: 1.60321234296e+12
+
+depth timestamp: 1.60321234298e+12
+color timestamp: 1.60321234299e+12
+
+depth timestamp: 1.60321234301e+12
+color timestamp: 1.60321234303e+12
+
+depth timestamp: 1.60321234305e+12
+color timestamp: 1.60321234306e+12
+
+depth timestamp: 1.60321234308e+12
+color timestamp: 1.60321234309e+12
+
+depth timestamp: 1.60321234314e+12
+color timestamp: 1.60321234313e+12
+
+depth timestamp: 1.60321234318e+12
+color timestamp: 1.60321234316e+12
+
+depth timestamp: 1.60321234321e+12
+color timestamp: 1.60321234323e+12
+
+depth timestamp: 1.60321234325e+12
+color timestamp: 1.60321234326e+12
+
+depth timestamp: 1.60321234328e+12
+color timestamp: 1.60321234329e+12
+
+depth timestamp: 1.60321234335e+12
+color timestamp: 1.60321234336e+12
+
+depth timestamp: 1.60321234338e+12
+color timestamp: 1.60321234339e+12
+
+depth timestamp: 1.60321234344e+12
+color timestamp: 1.60321234343e+12
+
+depth timestamp: 1.60321234348e+12
+color timestamp: 1.60321234349e+12
+
+depth timestamp: 1.60321234355e+12
+color timestamp: 1.60321234353e+12
+
+depth timestamp: 1.60321234355e+12
+color timestamp: 1.60321234356e+12
+
+depth timestamp: 1.60321234361e+12
+color timestamp: 1.60321234363e+12
+
+depth timestamp: 1.60321234365e+12
+color timestamp: 1.60321234366e+12
+
+depth timestamp: 1.60321234368e+12
+color timestamp: 1.60321234369e+12
+
+depth timestamp: 1.60321234371e+12
+color timestamp: 1.60321234373e+12
+
+depth timestamp: 1.60321234375e+12
+color timestamp: 1.60321234376e+12
+
+depth timestamp: 1.60321234378e+12
+color timestamp: 1.60321234379e+12
+
+depth timestamp: 1.60321234381e+12
+color timestamp: 1.60321234383e+12
+
+depth timestamp: 1.60321234385e+12
+color timestamp: 1.60321234386e+12
+
+depth timestamp: 1.60321234391e+12
+color timestamp: 1.60321234393e+12
+
+depth timestamp: 1.60321234395e+12
+color timestamp: 1.60321234396e+12
+
+depth timestamp: 1.60321234398e+12
+color timestamp: 1.60321234399e+12
+
+depth timestamp: 1.60321234405e+12
+color timestamp: 1.60321234403e+12
+
+depth timestamp: 1.60321234405e+12
+color timestamp: 1.60321234406e+12
+
+depth timestamp: 1.60321234408e+12
+color timestamp: 1.60321234409e+12
+
+depth timestamp: 1.60321234411e+12
+color timestamp: 1.60321234413e+12
+
+depth timestamp: 1.60321234415e+12
+color timestamp: 1.60321234416e+12
+
+depth timestamp: 1.60321234418e+12
+color timestamp: 1.60321234419e+12
+
+depth timestamp: 1.60321234424e+12
+color timestamp: 1.60321234426e+12
+
+depth timestamp: 1.60321234428e+12
+color timestamp: 1.60321234429e+12
+
+depth timestamp: 1.60321234431e+12
+color timestamp: 1.60321234433e+12
+
+depth timestamp: 1.60321234435e+12
+color timestamp: 1.60321234436e+12
+
+depth timestamp: 1.60321234441e+12
+color timestamp: 1.60321234443e+12
+
+depth timestamp: 1.60321234445e+12
+color timestamp: 1.60321234446e+12
+
+depth timestamp: 1.60321234448e+12
+color timestamp: 1.60321234449e+12
+
+depth timestamp: 1.60321234455e+12
+color timestamp: 1.60321234456e+12
+
+depth timestamp: 1.60321234458e+12
+color timestamp: 1.60321234459e+12
+
+depth timestamp: 1.60321234461e+12
+color timestamp: 1.60321234463e+12
+
+depth timestamp: 1.60321234465e+12
+color timestamp: 1.60321234466e+12
+
+depth timestamp: 1.60321234468e+12
+color timestamp: 1.60321234469e+12
+
+depth timestamp: 1.60321234471e+12
+color timestamp: 1.60321234473e+12
+
+depth timestamp: 1.60321234475e+12
+color timestamp: 1.60321234476e+12
+
+depth timestamp: 1.60321234478e+12
+color timestamp: 1.60321234479e+12
+
+depth timestamp: 1.60321234481e+12
+color timestamp: 1.60321234483e+12
+
+depth timestamp: 1.60321234485e+12
+color timestamp: 1.60321234486e+12
+
+depth timestamp: 1.60321234495e+12
+color timestamp: 1.60321234493e+12
+
+depth timestamp: 1.60321234495e+12
+color timestamp: 1.60321234496e+12
+
+depth timestamp: 1.60321234498e+12
+color timestamp: 1.60321234499e+12
+
+depth timestamp: 1.60321234501e+12
+color timestamp: 1.60321234503e+12
+
+depth timestamp: 1.60321234505e+12
+color timestamp: 1.60321234506e+12
+
+depth timestamp: 1.60321234511e+12
+color timestamp: 1.60321234513e+12
+
+depth timestamp: 1.60321234515e+12
+color timestamp: 1.60321234516e+12
+
+depth timestamp: 1.60321234518e+12
+color timestamp: 1.60321234519e+12
+
+depth timestamp: 1.60321234525e+12
+color timestamp: 1.60321234526e+12
+
+depth timestamp: 1.60321234528e+12
+color timestamp: 1.60321234529e+12
+
+depth timestamp: 1.60321234531e+12
+color timestamp: 1.60321234533e+12
+
+depth timestamp: 1.60321234535e+12
+color timestamp: 1.60321234536e+12
+
+depth timestamp: 1.60321234538e+12
+color timestamp: 1.60321234539e+12
+
+depth timestamp: 1.60321234541e+12
+color timestamp: 1.60321234543e+12
+
+depth timestamp: 1.60321234545e+12
+color timestamp: 1.60321234546e+12
+
+depth timestamp: 1.60321234551e+12
+color timestamp: 1.6032123455e+12
+
+depth timestamp: 1.60321234551e+12
+color timestamp: 1.60321234553e+12
+
+depth timestamp: 1.60321234555e+12
+color timestamp: 1.60321234556e+12
+
+depth timestamp: 1.60321234561e+12
+color timestamp: 1.6032123456e+12
+
+depth timestamp: 1.60321234561e+12
+color timestamp: 1.60321234563e+12
+
+depth timestamp: 1.60321234565e+12
+color timestamp: 1.60321234566e+12
+
+depth timestamp: 1.60321234571e+12
+color timestamp: 1.6032123457e+12
+
+depth timestamp: 1.60321234571e+12
+color timestamp: 1.60321234573e+12
+
+depth timestamp: 1.60321234575e+12
+color timestamp: 1.60321234576e+12
+
+depth timestamp: 1.60321234581e+12
+color timestamp: 1.6032123458e+12
+
+depth timestamp: 1.60321234581e+12
+color timestamp: 1.60321234583e+12
+
+depth timestamp: 1.60321234585e+12
+color timestamp: 1.60321234586e+12
+
+depth timestamp: 1.60321234591e+12
+color timestamp: 1.6032123459e+12
+
+depth timestamp: 1.60321234591e+12
+color timestamp: 1.60321234593e+12
+
+depth timestamp: 1.60321234595e+12
+color timestamp: 1.60321234596e+12
+
+depth timestamp: 1.60321234601e+12
+color timestamp: 1.603212346e+12
+
+depth timestamp: 1.60321234601e+12
+color timestamp: 1.60321234603e+12
+
+depth timestamp: 1.60321234605e+12
+color timestamp: 1.60321234606e+12
+
+depth timestamp: 1.60321234611e+12
+color timestamp: 1.6032123461e+12
+
+depth timestamp: 1.60321234611e+12
+color timestamp: 1.60321234613e+12
+
+depth timestamp: 1.60321234615e+12
+color timestamp: 1.60321234616e+12
+
+depth timestamp: 1.60321234621e+12
+color timestamp: 1.6032123462e+12
+
+depth timestamp: 1.60321234621e+12
+color timestamp: 1.60321234623e+12
+
+depth timestamp: 1.60321234625e+12
+color timestamp: 1.60321234626e+12
+
+depth timestamp: 1.60321234635e+12
+color timestamp: 1.60321234633e+12
+
+depth timestamp: 1.60321234635e+12
+color timestamp: 1.60321234636e+12
+
+depth timestamp: 1.60321234641e+12
+color timestamp: 1.6032123464e+12
+
+depth timestamp: 1.60321234645e+12
+color timestamp: 1.60321234646e+12
+
+depth timestamp: 1.60321234651e+12
+color timestamp: 1.6032123465e+12
+
+depth timestamp: 1.60321234651e+12
+color timestamp: 1.60321234653e+12
+
+depth timestamp: 1.60321234655e+12
+color timestamp: 1.60321234656e+12
+
+depth timestamp: 1.60321234661e+12
+color timestamp: 1.6032123466e+12
+
+depth timestamp: 1.60321234661e+12
+color timestamp: 1.60321234663e+12
+
+depth timestamp: 1.60321234665e+12
+color timestamp: 1.60321234666e+12
+
+depth timestamp: 1.60321234671e+12
+color timestamp: 1.60321234673e+12
+
+depth timestamp: 1.60321234675e+12
+color timestamp: 1.60321234676e+12
+
+depth timestamp: 1.60321234681e+12
+color timestamp: 1.6032123468e+12
+
+depth timestamp: 1.60321234685e+12
+color timestamp: 1.60321234683e+12
+
+depth timestamp: 1.60321234685e+12
+color timestamp: 1.60321234686e+12
+
+depth timestamp: 1.60321234691e+12
+color timestamp: 1.6032123469e+12
+
+depth timestamp: 1.60321234691e+12
+color timestamp: 1.60321234693e+12
+
+depth timestamp: 1.60321234701e+12
+color timestamp: 1.603212347e+12
+
+depth timestamp: 1.60321234701e+12
+color timestamp: 1.60321234703e+12
+
+depth timestamp: 1.60321234711e+12
+color timestamp: 1.6032123471e+12
+
+depth timestamp: 1.60321234715e+12
+color timestamp: 1.60321234713e+12
+
+depth timestamp: 1.60321234715e+12
+color timestamp: 1.60321234716e+12
+
+depth timestamp: 1.60321234721e+12
+color timestamp: 1.6032123472e+12
+
+depth timestamp: 1.60321234721e+12
+color timestamp: 1.60321234723e+12
+
+depth timestamp: 1.60321234725e+12
+color timestamp: 1.60321234726e+12
+
+depth timestamp: 1.60321234731e+12
+color timestamp: 1.6032123473e+12
+
+depth timestamp: 1.60321234731e+12
+color timestamp: 1.60321234733e+12
+
+depth timestamp: 1.60321234741e+12
+color timestamp: 1.6032123474e+12
+
+depth timestamp: 1.60321234745e+12
+color timestamp: 1.60321234746e+12
+
+depth timestamp: 1.60321234751e+12
+color timestamp: 1.6032123475e+12
+
+depth timestamp: 1.60321234751e+12
+color timestamp: 1.60321234753e+12
+
+depth timestamp: 1.60321234761e+12
+color timestamp: 1.6032123476e+12
+
+depth timestamp: 1.60321234761e+12
+color timestamp: 1.60321234763e+12
+
+depth timestamp: 1.60321234765e+12
+color timestamp: 1.60321234766e+12
+
+depth timestamp: 1.60321234775e+12
+color timestamp: 1.60321234773e+12
+
+depth timestamp: 1.60321234775e+12
+color timestamp: 1.60321234776e+12
+
+depth timestamp: 1.60321234781e+12
+color timestamp: 1.6032123478e+12
+
+depth timestamp: 1.60321234785e+12
+color timestamp: 1.60321234786e+12
+
+depth timestamp: 1.60321234791e+12
+color timestamp: 1.6032123479e+12
+
+depth timestamp: 1.60321234791e+12
+color timestamp: 1.60321234793e+12
+
+depth timestamp: 1.60321234795e+12
+color timestamp: 1.60321234796e+12
+
+depth timestamp: 1.60321234801e+12
+color timestamp: 1.603212348e+12
+
+depth timestamp: 1.60321234801e+12
+color timestamp: 1.60321234803e+12
+
+depth timestamp: 1.60321234811e+12
+color timestamp: 1.6032123481e+12
+
+depth timestamp: 1.60321234811e+12
+color timestamp: 1.60321234813e+12
+
+depth timestamp: 1.60321234815e+12
+color timestamp: 1.60321234816e+12
+
+depth timestamp: 1.60321234821e+12
+color timestamp: 1.6032123482e+12
+
+depth timestamp: 1.60321234821e+12
+color timestamp: 1.60321234823e+12
+
+depth timestamp: 1.60321234825e+12
+color timestamp: 1.60321234826e+12
+
+depth timestamp: 1.60321234831e+12
+color timestamp: 1.6032123483e+12
+
+depth timestamp: 1.60321234835e+12
+color timestamp: 1.60321234833e+12
+
+depth timestamp: 1.60321234835e+12
+color timestamp: 1.60321234836e+12
+
+depth timestamp: 1.60321234841e+12
+color timestamp: 1.6032123484e+12
+
+depth timestamp: 1.60321234841e+12
+color timestamp: 1.60321234843e+12
+
+depth timestamp: 1.60321234845e+12
+color timestamp: 1.60321234846e+12
+
+depth timestamp: 1.60321234851e+12
+color timestamp: 1.60321234853e+12
+
+depth timestamp: 1.60321234855e+12
+color timestamp: 1.60321234856e+12
+
+depth timestamp: 1.60321234861e+12
+color timestamp: 1.6032123486e+12
+
+depth timestamp: 1.60321234861e+12
+color timestamp: 1.60321234863e+12
+
+depth timestamp: 1.60321234865e+12
+color timestamp: 1.60321234866e+12
+
+depth timestamp: 1.60321234871e+12
+color timestamp: 1.6032123487e+12
+
+depth timestamp: 1.60321234871e+12
+color timestamp: 1.60321234873e+12
+
+depth timestamp: 1.60321234878e+12
+color timestamp: 1.60321234877e+12
+
+depth timestamp: 1.60321234881e+12
+color timestamp: 1.6032123488e+12
+
+depth timestamp: 1.60321234881e+12
+color timestamp: 1.60321234883e+12
+
+depth timestamp: 1.60321234888e+12
+color timestamp: 1.60321234887e+12
+
+depth timestamp: 1.60321234891e+12
+color timestamp: 1.6032123489e+12
+
+depth timestamp: 1.60321234891e+12
+color timestamp: 1.60321234893e+12
+
+depth timestamp: 1.60321234898e+12
+color timestamp: 1.60321234897e+12
+
+depth timestamp: 1.60321234901e+12
+color timestamp: 1.603212349e+12
+
+depth timestamp: 1.60321234908e+12
+color timestamp: 1.60321234907e+12
+
+depth timestamp: 1.60321234911e+12
+color timestamp: 1.6032123491e+12
+
+depth timestamp: 1.60321234915e+12
+color timestamp: 1.60321234914e+12
+
+depth timestamp: 1.60321234921e+12
+color timestamp: 1.60321234921e+12
+
+depth timestamp: 1.60321234925e+12
+color timestamp: 1.60321234924e+12
+
+depth timestamp: 1.60321234928e+12
+color timestamp: 1.60321234927e+12
+
+depth timestamp: 1.60321234931e+12
+color timestamp: 1.60321234931e+12
+
+depth timestamp: 1.60321234935e+12
+color timestamp: 1.60321234934e+12
+
+depth timestamp: 1.60321234941e+12
+color timestamp: 1.60321234941e+12
+
+depth timestamp: 1.60321234945e+12
+color timestamp: 1.60321234944e+12
+
+depth timestamp: 1.60321234948e+12
+color timestamp: 1.60321234948e+12
+
+depth timestamp: 1.60321234955e+12
+color timestamp: 1.60321234954e+12
+
+depth timestamp: 1.60321234958e+12
+color timestamp: 1.60321234958e+12
+
+depth timestamp: 1.60321234962e+12
+color timestamp: 1.60321234961e+12
+
+depth timestamp: 1.60321234968e+12
+color timestamp: 1.60321234968e+12
+
+depth timestamp: 1.60321234971e+12
+color timestamp: 1.60321234971e+12
+
+depth timestamp: 1.60321234975e+12
+color timestamp: 1.60321234975e+12
+
+depth timestamp: 1.60321234978e+12
+color timestamp: 1.60321234978e+12
+
+depth timestamp: 1.60321234981e+12
+color timestamp: 1.60321234981e+12
+
+depth timestamp: 1.60321234985e+12
+color timestamp: 1.60321234985e+12
+
+depth timestamp: 1.60321234991e+12
+color timestamp: 1.60321234991e+12
+
+depth timestamp: 1.60321234995e+12
+color timestamp: 1.60321234995e+12
+
+depth timestamp: 1.60321234998e+12
+color timestamp: 1.60321234998e+12
+
+depth timestamp: 1.60321235001e+12
+color timestamp: 1.60321235001e+12
+
+depth timestamp: 1.60321235005e+12
+color timestamp: 1.60321235005e+12
+
+depth timestamp: 1.60321235008e+12
+color timestamp: 1.60321235008e+12
+
+depth timestamp: 1.60321235011e+12
+color timestamp: 1.60321235011e+12
+
+depth timestamp: 1.60321235015e+12
+color timestamp: 1.60321235015e+12
+
+depth timestamp: 1.60321235018e+12
+color timestamp: 1.60321235018e+12
+
+depth timestamp: 1.60321235021e+12
+color timestamp: 1.60321235021e+12
+
+depth timestamp: 1.60321235025e+12
+color timestamp: 1.60321235025e+12
+
+depth timestamp: 1.60321235028e+12
+color timestamp: 1.60321235028e+12
+
+depth timestamp: 1.60321235031e+12
+color timestamp: 1.60321235032e+12
+
+depth timestamp: 1.60321235035e+12
+color timestamp: 1.60321235035e+12
+
+depth timestamp: 1.60321235038e+12
+color timestamp: 1.60321235038e+12
+
+depth timestamp: 1.60321235041e+12
+color timestamp: 1.60321235042e+12
+
+depth timestamp: 1.60321235045e+12
+color timestamp: 1.60321235045e+12
+
+depth timestamp: 1.60321235048e+12
+color timestamp: 1.60321235048e+12
+
+depth timestamp: 1.60321235051e+12
+color timestamp: 1.60321235052e+12
+
+depth timestamp: 1.60321235055e+12
+color timestamp: 1.60321235055e+12
+
+depth timestamp: 1.60321235058e+12
+color timestamp: 1.60321235058e+12
+
+depth timestamp: 1.60321235061e+12
+color timestamp: 1.60321235062e+12
+
+depth timestamp: 1.60321235065e+12
+color timestamp: 1.60321235065e+12
+
+depth timestamp: 1.60321235068e+12
+color timestamp: 1.60321235068e+12
+
+depth timestamp: 1.60321235071e+12
+color timestamp: 1.60321235072e+12
+
+depth timestamp: 1.60321235075e+12
+color timestamp: 1.60321235075e+12
+
+depth timestamp: 1.60321235078e+12
+color timestamp: 1.60321235078e+12
+
+depth timestamp: 1.60321235081e+12
+color timestamp: 1.60321235082e+12
+
+depth timestamp: 1.60321235085e+12
+color timestamp: 1.60321235085e+12
+
+depth timestamp: 1.60321235088e+12
+color timestamp: 1.60321235088e+12
+
+depth timestamp: 1.60321235091e+12
+color timestamp: 1.60321235092e+12
+
+depth timestamp: 1.60321235095e+12
+color timestamp: 1.60321235095e+12
+
+depth timestamp: 1.60321235098e+12
+color timestamp: 1.60321235098e+12
+
+depth timestamp: 1.60321235101e+12
+color timestamp: 1.60321235102e+12
+
+depth timestamp: 1.60321235105e+12
+color timestamp: 1.60321235105e+12
+
+depth timestamp: 1.60321235108e+12
+color timestamp: 1.60321235108e+12
+
+depth timestamp: 1.60321235111e+12
+color timestamp: 1.60321235112e+12
+
+depth timestamp: 1.60321235115e+12
+color timestamp: 1.60321235115e+12
+
+depth timestamp: 1.60321235118e+12
+color timestamp: 1.60321235119e+12
+
+depth timestamp: 1.60321235121e+12
+color timestamp: 1.60321235122e+12
+
+depth timestamp: 1.60321235125e+12
+color timestamp: 1.60321235125e+12
+
+depth timestamp: 1.60321235128e+12
+color timestamp: 1.60321235129e+12
+
+depth timestamp: 1.60321235131e+12
+color timestamp: 1.60321235132e+12
+
+depth timestamp: 1.60321235138e+12
+color timestamp: 1.60321235139e+12
+
+depth timestamp: 1.60321235141e+12
+color timestamp: 1.60321235142e+12
+
+depth timestamp: 1.60321235145e+12
+color timestamp: 1.60321235145e+12
+
+depth timestamp: 1.60321235148e+12
+color timestamp: 1.60321235149e+12
+
+depth timestamp: 1.60321235151e+12
+color timestamp: 1.60321235152e+12
+
+depth timestamp: 1.60321235155e+12
+color timestamp: 1.60321235155e+12
+
+depth timestamp: 1.60321235158e+12
+color timestamp: 1.60321235159e+12
+
+depth timestamp: 1.60321235161e+12
+color timestamp: 1.60321235162e+12
+
+depth timestamp: 1.60321235168e+12
+color timestamp: 1.60321235169e+12
+
+depth timestamp: 1.60321235171e+12
+color timestamp: 1.60321235172e+12
+
+depth timestamp: 1.60321235178e+12
+color timestamp: 1.60321235179e+12
+
+depth timestamp: 1.60321235181e+12
+color timestamp: 1.60321235182e+12
+
+depth timestamp: 1.60321235185e+12
+color timestamp: 1.60321235185e+12
+
+depth timestamp: 1.60321235188e+12
+color timestamp: 1.60321235189e+12
+
+depth timestamp: 1.60321235191e+12
+color timestamp: 1.60321235192e+12
+
+depth timestamp: 1.60321235195e+12
+color timestamp: 1.60321235195e+12
+
+depth timestamp: 1.60321235198e+12
+color timestamp: 1.60321235199e+12
+
+depth timestamp: 1.60321235201e+12
+color timestamp: 1.60321235202e+12
+
+depth timestamp: 1.60321235205e+12
+color timestamp: 1.60321235205e+12
+
+depth timestamp: 1.60321235208e+12
+color timestamp: 1.60321235209e+12
+
+depth timestamp: 1.60321235211e+12
+color timestamp: 1.60321235212e+12
+
+depth timestamp: 1.60321235215e+12
+color timestamp: 1.60321235215e+12
+
+depth timestamp: 1.60321235218e+12
+color timestamp: 1.60321235219e+12
+
+depth timestamp: 1.60321235221e+12
+color timestamp: 1.60321235222e+12
+
+depth timestamp: 1.60321235225e+12
+color timestamp: 1.60321235225e+12
+
+depth timestamp: 1.60321235231e+12
+color timestamp: 1.60321235232e+12
+
+depth timestamp: 1.60321235235e+12
+color timestamp: 1.60321235235e+12
+
+depth timestamp: 1.60321235238e+12
+color timestamp: 1.60321235239e+12
+
+depth timestamp: 1.60321235241e+12
+color timestamp: 1.60321235242e+12
+
+depth timestamp: 1.60321235245e+12
+color timestamp: 1.60321235245e+12
+
+depth timestamp: 1.60321235248e+12
+color timestamp: 1.60321235249e+12
+
+depth timestamp: 1.60321235251e+12
+color timestamp: 1.60321235252e+12
+
+depth timestamp: 1.60321235255e+12
+color timestamp: 1.60321235255e+12
+
+depth timestamp: 1.60321235258e+12
+color timestamp: 1.60321235259e+12
+
+depth timestamp: 1.60321235261e+12
+color timestamp: 1.60321235262e+12
+
+depth timestamp: 1.60321235265e+12
+color timestamp: 1.60321235265e+12
+
+depth timestamp: 1.60321235268e+12
+color timestamp: 1.60321235269e+12
+
+depth timestamp: 1.60321235271e+12
+color timestamp: 1.60321235272e+12
+
+depth timestamp: 1.60321235275e+12
+color timestamp: 1.60321235275e+12
+
+depth timestamp: 1.60321235278e+12
+color timestamp: 1.60321235279e+12
+
+depth timestamp: 1.60321235281e+12
+color timestamp: 1.60321235282e+12
+
+depth timestamp: 1.60321235285e+12
+color timestamp: 1.60321235285e+12
+
+depth timestamp: 1.60321235288e+12
+color timestamp: 1.60321235289e+12
+
+depth timestamp: 1.60321235291e+12
+color timestamp: 1.60321235292e+12
+
+depth timestamp: 1.60321235295e+12
+color timestamp: 1.60321235295e+12
+
+depth timestamp: 1.60321235298e+12
+color timestamp: 1.60321235299e+12
+
+depth timestamp: 1.60321235301e+12
+color timestamp: 1.60321235302e+12
+
+depth timestamp: 1.60321235305e+12
+color timestamp: 1.60321235305e+12
+
+depth timestamp: 1.60321235308e+12
+color timestamp: 1.60321235309e+12
+
+depth timestamp: 1.60321235311e+12
+color timestamp: 1.60321235312e+12
+
+depth timestamp: 1.60321235315e+12
+color timestamp: 1.60321235315e+12
+
+depth timestamp: 1.60321235318e+12
+color timestamp: 1.60321235319e+12
+
+depth timestamp: 1.60321235325e+12
+color timestamp: 1.60321235325e+12
+
+depth timestamp: 1.60321235328e+12
+color timestamp: 1.60321235329e+12
+
+depth timestamp: 1.60321235335e+12
+color timestamp: 1.60321235335e+12
+
+depth timestamp: 1.60321235338e+12
+color timestamp: 1.60321235339e+12
+
+depth timestamp: 1.60321235341e+12
+color timestamp: 1.60321235342e+12
+
+depth timestamp: 1.60321235345e+12
+color timestamp: 1.60321235345e+12
+
+depth timestamp: 1.60321235348e+12
+color timestamp: 1.60321235349e+12
+
+depth timestamp: 1.60321235351e+12
+color timestamp: 1.60321235352e+12
+
+depth timestamp: 1.60321235355e+12
+color timestamp: 1.60321235355e+12
+
+depth timestamp: 1.60321235358e+12
+color timestamp: 1.60321235359e+12
+
+depth timestamp: 1.60321235361e+12
+color timestamp: 1.60321235362e+12
+
+depth timestamp: 1.60321235365e+12
+color timestamp: 1.60321235365e+12
+
+depth timestamp: 1.60321235368e+12
+color timestamp: 1.60321235369e+12
+
+depth timestamp: 1.60321235375e+12
+color timestamp: 1.60321235375e+12
+
+depth timestamp: 1.60321235378e+12
+color timestamp: 1.60321235379e+12
+
+depth timestamp: 1.60321235381e+12
+color timestamp: 1.60321235382e+12
+
+depth timestamp: 1.60321235385e+12
+color timestamp: 1.60321235385e+12
+
+depth timestamp: 1.60321235388e+12
+color timestamp: 1.60321235389e+12
+
+depth timestamp: 1.60321235391e+12
+color timestamp: 1.60321235392e+12
+
+depth timestamp: 1.60321235395e+12
+color timestamp: 1.60321235395e+12
+
+depth timestamp: 1.60321235398e+12
+color timestamp: 1.60321235399e+12
+
+depth timestamp: 1.60321235405e+12
+color timestamp: 1.60321235405e+12
+
+depth timestamp: 1.60321235408e+12
+color timestamp: 1.60321235409e+12
+
+depth timestamp: 1.60321235412e+12
+color timestamp: 1.60321235412e+12
+
+depth timestamp: 1.60321235415e+12
+color timestamp: 1.60321235415e+12
+
+depth timestamp: 1.60321235418e+12
+color timestamp: 1.60321235418e+12
+
+depth timestamp: 1.60321235422e+12
+color timestamp: 1.60321235422e+12
+
+depth timestamp: 1.60321235425e+12
+color timestamp: 1.60321235425e+12
+
+depth timestamp: 1.60321235428e+12
+color timestamp: 1.60321235428e+12
+
+depth timestamp: 1.60321235431e+12
+color timestamp: 1.60321235432e+12
+
+depth timestamp: 1.60321235435e+12
+color timestamp: 1.60321235435e+12
+
+depth timestamp: 1.60321235442e+12
+color timestamp: 1.60321235442e+12
+
+depth timestamp: 1.60321235445e+12
+color timestamp: 1.60321235445e+12
+
+depth timestamp: 1.60321235448e+12
+color timestamp: 1.60321235448e+12
+
+depth timestamp: 1.60321235455e+12
+color timestamp: 1.60321235455e+12
+
+depth timestamp: 1.60321235458e+12
+color timestamp: 1.60321235458e+12
+
+depth timestamp: 1.60321235462e+12
+color timestamp: 1.60321235462e+12
+
+depth timestamp: 1.60321235465e+12
+color timestamp: 1.60321235465e+12
+
+depth timestamp: 1.60321235468e+12
+color timestamp: 1.60321235468e+12
+
+depth timestamp: 1.60321235472e+12
+color timestamp: 1.60321235472e+12
+
+depth timestamp: 1.60321235475e+12
+color timestamp: 1.60321235475e+12
+
+depth timestamp: 1.60321235478e+12
+color timestamp: 1.60321235478e+12
+
+depth timestamp: 1.60321235482e+12
+color timestamp: 1.60321235482e+12
+
+depth timestamp: 1.60321235485e+12
+color timestamp: 1.60321235485e+12
+
+depth timestamp: 1.60321235492e+12
+color timestamp: 1.60321235492e+12
+
+depth timestamp: 1.60321235495e+12
+color timestamp: 1.60321235495e+12
+
+depth timestamp: 1.60321235498e+12
+color timestamp: 1.60321235498e+12
+
+depth timestamp: 1.60321235502e+12
+color timestamp: 1.60321235502e+12
+
+depth timestamp: 1.60321235505e+12
+color timestamp: 1.60321235505e+12
+
+depth timestamp: 1.60321235508e+12
+color timestamp: 1.60321235508e+12
+
+depth timestamp: 1.60321235515e+12
+color timestamp: 1.60321235515e+12
+
+depth timestamp: 1.60321235518e+12
+color timestamp: 1.60321235518e+12
+
+depth timestamp: 1.60321235525e+12
+color timestamp: 1.60321235525e+12
+
+depth timestamp: 1.60321235528e+12
+color timestamp: 1.60321235528e+12
+
+depth timestamp: 1.60321235532e+12
+color timestamp: 1.60321235532e+12
+
+depth timestamp: 1.60321235535e+12
+color timestamp: 1.60321235535e+12
+
+depth timestamp: 1.60321235538e+12
+color timestamp: 1.60321235538e+12
+
+depth timestamp: 1.60321235542e+12
+color timestamp: 1.60321235542e+12
+
+depth timestamp: 1.60321235545e+12
+color timestamp: 1.60321235545e+12
+
+depth timestamp: 1.60321235548e+12
+color timestamp: 1.60321235548e+12
+
+depth timestamp: 1.60321235552e+12
+color timestamp: 1.60321235552e+12
+
+depth timestamp: 1.60321235555e+12
+color timestamp: 1.60321235555e+12
+
+depth timestamp: 1.60321235558e+12
+color timestamp: 1.60321235558e+12
+
+depth timestamp: 1.60321235562e+12
+color timestamp: 1.60321235562e+12
+
+depth timestamp: 1.60321235565e+12
+color timestamp: 1.60321235565e+12
+
+depth timestamp: 1.60321235568e+12
+color timestamp: 1.60321235568e+12
+
+depth timestamp: 1.60321235575e+12
+color timestamp: 1.60321235575e+12
+
+depth timestamp: 1.60321235578e+12
+color timestamp: 1.60321235578e+12
+
+depth timestamp: 1.60321235582e+12
+color timestamp: 1.60321235581e+12
+
+depth timestamp: 1.60321235585e+12
+color timestamp: 1.60321235585e+12
+
+depth timestamp: 1.60321235588e+12
+color timestamp: 1.60321235588e+12
+
+depth timestamp: 1.60321235592e+12
+color timestamp: 1.60321235591e+12
+
+depth timestamp: 1.60321235595e+12
+color timestamp: 1.60321235595e+12
+
+depth timestamp: 1.60321235598e+12
+color timestamp: 1.60321235598e+12
+
+depth timestamp: 1.60321235602e+12
+color timestamp: 1.60321235601e+12
+
+depth timestamp: 1.60321235605e+12
+color timestamp: 1.60321235605e+12
+
+depth timestamp: 1.60321235608e+12
+color timestamp: 1.60321235608e+12
+
+depth timestamp: 1.60321235611e+12
+color timestamp: 1.60321235611e+12
+
+depth timestamp: 1.60321235618e+12
+color timestamp: 1.60321235618e+12
+
+depth timestamp: 1.60321235622e+12
+color timestamp: 1.60321235621e+12
+
+depth timestamp: 1.60321235625e+12
+color timestamp: 1.60321235625e+12
+
+depth timestamp: 1.60321235628e+12
+color timestamp: 1.60321235628e+12
+
+depth timestamp: 1.60321235632e+12
+color timestamp: 1.60321235631e+12
+
+depth timestamp: 1.60321235635e+12
+color timestamp: 1.60321235635e+12
+
+depth timestamp: 1.60321235642e+12
+color timestamp: 1.60321235641e+12
+
+depth timestamp: 1.60321235645e+12
+color timestamp: 1.60321235645e+12
+
+depth timestamp: 1.60321235648e+12
+color timestamp: 1.60321235648e+12
+
+depth timestamp: 1.60321235652e+12
+color timestamp: 1.60321235651e+12
+
+depth timestamp: 1.60321235655e+12
+color timestamp: 1.60321235655e+12
+
+depth timestamp: 1.60321235658e+12
+color timestamp: 1.60321235658e+12
+
+depth timestamp: 1.60321235662e+12
+color timestamp: 1.60321235661e+12
+
+depth timestamp: 1.60321235665e+12
+color timestamp: 1.60321235665e+12
+
+depth timestamp: 1.60321235668e+12
+color timestamp: 1.60321235668e+12
+
+depth timestamp: 1.60321235675e+12
+color timestamp: 1.60321235675e+12
+
+depth timestamp: 1.60321235678e+12
+color timestamp: 1.60321235678e+12
+
+depth timestamp: 1.60321235685e+12
+color timestamp: 1.60321235685e+12
+
+depth timestamp: 1.60321235688e+12
+color timestamp: 1.60321235688e+12
+
+depth timestamp: 1.60321235692e+12
+color timestamp: 1.60321235691e+12
+
+depth timestamp: 1.60321235695e+12
+color timestamp: 1.60321235695e+12
+
+depth timestamp: 1.60321235698e+12
+color timestamp: 1.60321235698e+12
+
+depth timestamp: 1.60321235701e+12
+color timestamp: 1.60321235701e+12
+
+depth timestamp: 1.60321235705e+12
+color timestamp: 1.60321235705e+12
+
+depth timestamp: 1.60321235708e+12
+color timestamp: 1.60321235708e+12
+
+depth timestamp: 1.60321235712e+12
+color timestamp: 1.60321235711e+12
+
+depth timestamp: 1.60321235715e+12
+color timestamp: 1.60321235715e+12
+
+depth timestamp: 1.60321235718e+12
+color timestamp: 1.60321235718e+12
+
+depth timestamp: 1.60321235722e+12
+color timestamp: 1.60321235721e+12
+
+depth timestamp: 1.60321235725e+12
+color timestamp: 1.60321235725e+12
+
+depth timestamp: 1.60321235728e+12
+color timestamp: 1.60321235728e+12
+
+depth timestamp: 1.60321235732e+12
+color timestamp: 1.60321235731e+12
+
+depth timestamp: 1.60321235735e+12
+color timestamp: 1.60321235735e+12
+
+depth timestamp: 1.60321235738e+12
+color timestamp: 1.60321235738e+12
+
+depth timestamp: 1.60321235742e+12
+color timestamp: 1.60321235741e+12
+
+depth timestamp: 1.60321235745e+12
+color timestamp: 1.60321235744e+12
+
+depth timestamp: 1.60321235748e+12
+color timestamp: 1.60321235748e+12
+
+depth timestamp: 1.60321235752e+12
+color timestamp: 1.60321235751e+12
+
+depth timestamp: 1.60321235755e+12
+color timestamp: 1.60321235754e+12
+
+depth timestamp: 1.60321235758e+12
+color timestamp: 1.60321235758e+12
+
+depth timestamp: 1.60321235762e+12
+color timestamp: 1.60321235761e+12
+
+depth timestamp: 1.60321235765e+12
+color timestamp: 1.60321235764e+12
+
+depth timestamp: 1.60321235768e+12
+color timestamp: 1.60321235768e+12
+
+depth timestamp: 1.60321235772e+12
+color timestamp: 1.60321235771e+12
+
+depth timestamp: 1.60321235775e+12
+color timestamp: 1.60321235774e+12
+
+depth timestamp: 1.60321235778e+12
+color timestamp: 1.60321235778e+12
+
+depth timestamp: 1.60321235785e+12
+color timestamp: 1.60321235784e+12
+
+depth timestamp: 1.60321235788e+12
+color timestamp: 1.60321235788e+12
+
+depth timestamp: 1.60321235792e+12
+color timestamp: 1.60321235791e+12
+
+depth timestamp: 1.60321235795e+12
+color timestamp: 1.60321235794e+12
+
+depth timestamp: 1.60321235798e+12
+color timestamp: 1.60321235798e+12
+
+depth timestamp: 1.60321235802e+12
+color timestamp: 1.60321235801e+12
+
+depth timestamp: 1.60321235805e+12
+color timestamp: 1.60321235804e+12
+
+depth timestamp: 1.60321235808e+12
+color timestamp: 1.60321235808e+12
+
+depth timestamp: 1.60321235812e+12
+color timestamp: 1.60321235811e+12
+
+depth timestamp: 1.60321235815e+12
+color timestamp: 1.60321235814e+12
+
+depth timestamp: 1.60321235818e+12
+color timestamp: 1.60321235818e+12
+
+depth timestamp: 1.60321235822e+12
+color timestamp: 1.60321235821e+12
+
+depth timestamp: 1.60321235825e+12
+color timestamp: 1.60321235824e+12
+
+depth timestamp: 1.60321235828e+12
+color timestamp: 1.60321235828e+12
+
+depth timestamp: 1.60321235832e+12
+color timestamp: 1.60321235831e+12
+
+depth timestamp: 1.60321235835e+12
+color timestamp: 1.60321235834e+12
+
+depth timestamp: 1.60321235838e+12
+color timestamp: 1.60321235838e+12
+
+depth timestamp: 1.60321235842e+12
+color timestamp: 1.60321235841e+12
+
+depth timestamp: 1.60321235845e+12
+color timestamp: 1.60321235844e+12
+
+depth timestamp: 1.60321235848e+12
+color timestamp: 1.60321235848e+12
+
+depth timestamp: 1.60321235852e+12
+color timestamp: 1.60321235851e+12
+
+depth timestamp: 1.60321235855e+12
+color timestamp: 1.60321235854e+12
+
+depth timestamp: 1.60321235858e+12
+color timestamp: 1.60321235858e+12
+
+depth timestamp: 1.60321235862e+12
+color timestamp: 1.60321235861e+12
+
+depth timestamp: 1.60321235865e+12
+color timestamp: 1.60321235864e+12
+
+depth timestamp: 1.60321235868e+12
+color timestamp: 1.60321235868e+12
+
+depth timestamp: 1.60321235872e+12
+color timestamp: 1.60321235871e+12
+
+depth timestamp: 1.60321235875e+12
+color timestamp: 1.60321235874e+12
+
+depth timestamp: 1.60321235878e+12
+color timestamp: 1.60321235878e+12
+
+depth timestamp: 1.60321235882e+12
+color timestamp: 1.60321235881e+12
+
+depth timestamp: 1.60321235888e+12
+color timestamp: 1.60321235888e+12
+
+depth timestamp: 1.60321235892e+12
+color timestamp: 1.60321235891e+12
+
+depth timestamp: 1.60321235895e+12
+color timestamp: 1.60321235894e+12
+
+depth timestamp: 1.60321235898e+12
+color timestamp: 1.60321235898e+12
+
+depth timestamp: 1.60321235902e+12
+color timestamp: 1.60321235901e+12
+
+depth timestamp: 1.60321235905e+12
+color timestamp: 1.60321235904e+12
+
+depth timestamp: 1.60321235908e+12
+color timestamp: 1.60321235908e+12
+
+depth timestamp: 1.60321235912e+12
+color timestamp: 1.60321235911e+12
+
+depth timestamp: 1.60321235915e+12
+color timestamp: 1.60321235914e+12
+
+depth timestamp: 1.60321235918e+12
+color timestamp: 1.60321235917e+12
+
+depth timestamp: 1.60321235922e+12
+color timestamp: 1.60321235921e+12
+
+depth timestamp: 1.60321235925e+12
+color timestamp: 1.60321235924e+12
+
+depth timestamp: 1.60321235928e+12
+color timestamp: 1.60321235927e+12
+
+depth timestamp: 1.60321235932e+12
+color timestamp: 1.60321235931e+12
+
+depth timestamp: 1.60321235938e+12
+color timestamp: 1.60321235937e+12
+
+depth timestamp: 1.60321235942e+12
+color timestamp: 1.60321235941e+12
+
+depth timestamp: 1.60321235945e+12
+color timestamp: 1.60321235947e+12
+
+depth timestamp: 1.60321235952e+12
+color timestamp: 1.60321235951e+12
+
+depth timestamp: 1.60321235955e+12
+color timestamp: 1.60321235954e+12
+
+depth timestamp: 1.60321235958e+12
+color timestamp: 1.60321235957e+12
+
+depth timestamp: 1.60321235962e+12
+color timestamp: 1.60321235961e+12
+
+depth timestamp: 1.60321235965e+12
+color timestamp: 1.60321235964e+12
+
+depth timestamp: 1.60321235968e+12
+color timestamp: 1.60321235967e+12
+
+depth timestamp: 1.60321235972e+12
+color timestamp: 1.60321235971e+12
+
+depth timestamp: 1.60321235975e+12
+color timestamp: 1.60321235974e+12
+
+depth timestamp: 1.60321235982e+12
+color timestamp: 1.60321235981e+12
+
+depth timestamp: 1.60321235985e+12
+color timestamp: 1.60321235984e+12
+
+depth timestamp: 1.60321235988e+12
+color timestamp: 1.60321235987e+12
+
+depth timestamp: 1.60321235995e+12
+color timestamp: 1.60321235994e+12
+
+depth timestamp: 1.60321235998e+12
+color timestamp: 1.60321235997e+12
+
+depth timestamp: 1.60321236005e+12
+color timestamp: 1.60321236004e+12
+
+depth timestamp: 1.60321236008e+12
+color timestamp: 1.60321236007e+12
+
+depth timestamp: 1.60321236012e+12
+color timestamp: 1.60321236011e+12
+
+depth timestamp: 1.60321236015e+12
+color timestamp: 1.60321236014e+12
+
+depth timestamp: 1.60321236018e+12
+color timestamp: 1.60321236017e+12
+
+depth timestamp: 1.60321236022e+12
+color timestamp: 1.60321236021e+12
+
+depth timestamp: 1.60321236025e+12
+color timestamp: 1.60321236024e+12
+
+depth timestamp: 1.60321236028e+12
+color timestamp: 1.60321236027e+12
+
+depth timestamp: 1.60321236032e+12
+color timestamp: 1.60321236031e+12
+
+depth timestamp: 1.60321236035e+12
+color timestamp: 1.60321236034e+12
+
+depth timestamp: 1.60321236038e+12
+color timestamp: 1.60321236037e+12
+
+depth timestamp: 1.60321236042e+12
+color timestamp: 1.60321236041e+12
+
+depth timestamp: 1.60321236045e+12
+color timestamp: 1.60321236044e+12
+
+depth timestamp: 1.60321236048e+12
+color timestamp: 1.60321236047e+12
+
+depth timestamp: 1.60321236052e+12
+color timestamp: 1.60321236051e+12
+
+depth timestamp: 1.60321236055e+12
+color timestamp: 1.60321236054e+12
+
+depth timestamp: 1.60321236058e+12
+color timestamp: 1.60321236057e+12
+
+depth timestamp: 1.60321236062e+12
+color timestamp: 1.60321236061e+12
+
+depth timestamp: 1.60321236065e+12
+color timestamp: 1.60321236064e+12
+
+depth timestamp: 1.60321236068e+12
+color timestamp: 1.60321236067e+12
+
+depth timestamp: 1.60321236072e+12
+color timestamp: 1.60321236071e+12
+
+depth timestamp: 1.60321236078e+12
+color timestamp: 1.60321236077e+12
+
+depth timestamp: 1.60321236082e+12
+color timestamp: 1.60321236081e+12
+
+depth timestamp: 1.60321236088e+12
+color timestamp: 1.60321236087e+12
+
+depth timestamp: 1.60321236092e+12
+color timestamp: 1.60321236091e+12
+
+depth timestamp: 1.60321236095e+12
+color timestamp: 1.60321236094e+12
+
+depth timestamp: 1.60321236102e+12
+color timestamp: 1.60321236101e+12
+
+depth timestamp: 1.60321236105e+12
+color timestamp: 1.60321236104e+12
+
+depth timestamp: 1.60321236108e+12
+color timestamp: 1.60321236107e+12
+
+depth timestamp: 1.60321236112e+12
+color timestamp: 1.60321236111e+12
+
+depth timestamp: 1.60321236115e+12
+color timestamp: 1.60321236114e+12
+
+depth timestamp: 1.60321236118e+12
+color timestamp: 1.60321236117e+12
+
+depth timestamp: 1.60321236122e+12
+color timestamp: 1.60321236121e+12
+
+depth timestamp: 1.60321236125e+12
+color timestamp: 1.60321236124e+12
+
+depth timestamp: 1.60321236128e+12
+color timestamp: 1.60321236127e+12
+
+depth timestamp: 1.60321236132e+12
+color timestamp: 1.60321236131e+12
+
+depth timestamp: 1.60321236135e+12
+color timestamp: 1.60321236134e+12
+
+depth timestamp: 1.60321236138e+12
+color timestamp: 1.60321236137e+12
+
+depth timestamp: 1.60321236142e+12
+color timestamp: 1.60321236141e+12
+
+depth timestamp: 1.60321236145e+12
+color timestamp: 1.60321236144e+12
+
+depth timestamp: 1.60321236148e+12
+color timestamp: 1.60321236147e+12
+
+depth timestamp: 1.60321236152e+12
+color timestamp: 1.60321236151e+12
+
+depth timestamp: 1.60321236155e+12
+color timestamp: 1.60321236154e+12
+
+depth timestamp: 1.60321236158e+12
+color timestamp: 1.60321236157e+12
+
+depth timestamp: 1.60321236165e+12
+color timestamp: 1.60321236164e+12
+
+depth timestamp: 1.60321236168e+12
+color timestamp: 1.60321236167e+12
+
+depth timestamp: 1.60321236172e+12
+color timestamp: 1.60321236171e+12
+
+depth timestamp: 1.60321236175e+12
+color timestamp: 1.60321236174e+12
+
+depth timestamp: 1.60321236178e+12
+color timestamp: 1.60321236177e+12
+
+depth timestamp: 1.60321236178e+12
+color timestamp: 1.6032123618e+12
+
+depth timestamp: 1.60321236185e+12
+color timestamp: 1.60321236184e+12
+
+depth timestamp: 1.60321236188e+12
+color timestamp: 1.60321236187e+12
+
+depth timestamp: 1.60321236188e+12
+color timestamp: 1.6032123619e+12
+
+depth timestamp: 1.60321236195e+12
+color timestamp: 1.60321236194e+12
+
+depth timestamp: 1.60321236198e+12
+color timestamp: 1.60321236197e+12
+
+depth timestamp: 1.60321236198e+12
+color timestamp: 1.603212362e+12
+
+depth timestamp: 1.60321236205e+12
+color timestamp: 1.60321236204e+12
+
+depth timestamp: 1.60321236208e+12
+color timestamp: 1.60321236207e+12
+
+depth timestamp: 1.60321236208e+12
+color timestamp: 1.6032123621e+12
+
+depth timestamp: 1.60321236215e+12
+color timestamp: 1.60321236214e+12
+
+depth timestamp: 1.60321236218e+12
+color timestamp: 1.60321236217e+12
+
+depth timestamp: 1.60321236218e+12
+color timestamp: 1.6032123622e+12
+
+depth timestamp: 1.60321236225e+12
+color timestamp: 1.60321236224e+12
+
+depth timestamp: 1.60321236228e+12
+color timestamp: 1.60321236227e+12
+
+depth timestamp: 1.60321236228e+12
+color timestamp: 1.6032123623e+12
+
+depth timestamp: 1.60321236235e+12
+color timestamp: 1.60321236234e+12
+
+depth timestamp: 1.60321236238e+12
+color timestamp: 1.60321236237e+12
+
+depth timestamp: 1.60321236242e+12
+color timestamp: 1.60321236241e+12
+
+depth timestamp: 1.60321236245e+12
+color timestamp: 1.60321236244e+12
+
+depth timestamp: 1.60321236248e+12
+color timestamp: 1.60321236247e+12
+
+depth timestamp: 1.60321236255e+12
+color timestamp: 1.60321236254e+12
+
+depth timestamp: 1.60321236258e+12
+color timestamp: 1.60321236257e+12
+
+depth timestamp: 1.60321236262e+12
+color timestamp: 1.60321236261e+12
+
+depth timestamp: 1.60321236265e+12
+color timestamp: 1.60321236267e+12
+
+depth timestamp: 1.60321236272e+12
+color timestamp: 1.60321236271e+12
+
+depth timestamp: 1.60321236275e+12
+color timestamp: 1.60321236274e+12
+
+depth timestamp: 1.60321236278e+12
+color timestamp: 1.60321236277e+12
+
+depth timestamp: 1.60321236282e+12
+color timestamp: 1.60321236281e+12
+
+depth timestamp: 1.60321236285e+12
+color timestamp: 1.60321236284e+12
+
+depth timestamp: 1.60321236288e+12
+color timestamp: 1.60321236287e+12
+
+depth timestamp: 1.60321236292e+12
+color timestamp: 1.60321236291e+12
+
+depth timestamp: 1.60321236295e+12
+color timestamp: 1.60321236294e+12
+
+depth timestamp: 1.60321236298e+12
+color timestamp: 1.60321236297e+12
+
+depth timestamp: 1.60321236302e+12
+color timestamp: 1.60321236301e+12
+
+depth timestamp: 1.60321236305e+12
+color timestamp: 1.60321236304e+12
+
+depth timestamp: 1.60321236308e+12
+color timestamp: 1.60321236307e+12
+
+depth timestamp: 1.60321236312e+12
+color timestamp: 1.60321236311e+12
+
+depth timestamp: 1.60321236315e+12
+color timestamp: 1.60321236314e+12
+
+depth timestamp: 1.60321236318e+12
+color timestamp: 1.60321236317e+12
+
+depth timestamp: 1.60321236322e+12
+color timestamp: 1.60321236321e+12
+
+depth timestamp: 1.60321236325e+12
+color timestamp: 1.60321236324e+12
+
+depth timestamp: 1.60321236328e+12
+color timestamp: 1.60321236327e+12
+
+depth timestamp: 1.60321236332e+12
+color timestamp: 1.60321236331e+12
+
+depth timestamp: 1.60321236335e+12
+color timestamp: 1.60321236334e+12
+
+depth timestamp: 1.60321236338e+12
+color timestamp: 1.60321236337e+12
+
+depth timestamp: 1.60321236342e+12
+color timestamp: 1.60321236341e+12
+
+depth timestamp: 1.60321236345e+12
+color timestamp: 1.60321236344e+12
+
+depth timestamp: 1.60321236348e+12
+color timestamp: 1.60321236347e+12
+
+depth timestamp: 1.60321236352e+12
+color timestamp: 1.60321236351e+12
+
+depth timestamp: 1.60321236355e+12
+color timestamp: 1.60321236354e+12
+
+depth timestamp: 1.60321236358e+12
+color timestamp: 1.60321236357e+12
+
+depth timestamp: 1.60321236362e+12
+color timestamp: 1.60321236361e+12
+
+depth timestamp: 1.60321236365e+12
+color timestamp: 1.60321236364e+12
+
+depth timestamp: 1.60321236368e+12
+color timestamp: 1.60321236367e+12
+
+depth timestamp: 1.60321236368e+12
+color timestamp: 1.6032123637e+12
+
+depth timestamp: 1.60321236375e+12
+color timestamp: 1.60321236374e+12
+
+depth timestamp: 1.60321236378e+12
+color timestamp: 1.60321236377e+12
+
+depth timestamp: 1.60321236378e+12
+color timestamp: 1.6032123638e+12
+
+depth timestamp: 1.60321236385e+12
+color timestamp: 1.60321236384e+12
+
+depth timestamp: 1.60321236388e+12
+color timestamp: 1.60321236387e+12
+
+depth timestamp: 1.60321236388e+12
+color timestamp: 1.6032123639e+12
+
+depth timestamp: 1.60321236395e+12
+color timestamp: 1.60321236394e+12
+
+depth timestamp: 1.60321236398e+12
+color timestamp: 1.60321236397e+12
+
+depth timestamp: 1.60321236398e+12
+color timestamp: 1.603212364e+12
+
+depth timestamp: 1.60321236405e+12
+color timestamp: 1.60321236404e+12
+
+depth timestamp: 1.60321236408e+12
+color timestamp: 1.60321236407e+12
+
+depth timestamp: 1.60321236408e+12
+color timestamp: 1.6032123641e+12
+
+depth timestamp: 1.60321236415e+12
+color timestamp: 1.60321236414e+12
+
+depth timestamp: 1.60321236418e+12
+color timestamp: 1.60321236417e+12
+
+depth timestamp: 1.60321236418e+12
+color timestamp: 1.6032123642e+12
+
+depth timestamp: 1.60321236425e+12
+color timestamp: 1.60321236424e+12
+
+depth timestamp: 1.60321236425e+12
+color timestamp: 1.60321236427e+12
+
+depth timestamp: 1.60321236429e+12
+color timestamp: 1.6032123643e+12
+
+depth timestamp: 1.60321236435e+12
+color timestamp: 1.60321236434e+12
+
+depth timestamp: 1.60321236435e+12
+color timestamp: 1.60321236437e+12
+
+depth timestamp: 1.60321236439e+12
+color timestamp: 1.6032123644e+12
+
+depth timestamp: 1.60321236445e+12
+color timestamp: 1.60321236444e+12
+
+depth timestamp: 1.60321236445e+12
+color timestamp: 1.60321236447e+12
+
+depth timestamp: 1.60321236449e+12
+color timestamp: 1.6032123645e+12
+
+depth timestamp: 1.60321236455e+12
+color timestamp: 1.60321236454e+12
+
+depth timestamp: 1.60321236458e+12
+color timestamp: 1.60321236457e+12
+
+depth timestamp: 1.60321236458e+12
+color timestamp: 1.6032123646e+12
+
+depth timestamp: 1.60321236465e+12
+color timestamp: 1.60321236464e+12
+
+depth timestamp: 1.60321236468e+12
+color timestamp: 1.60321236467e+12
+
+depth timestamp: 1.60321236468e+12
+color timestamp: 1.6032123647e+12
+
+depth timestamp: 1.60321236475e+12
+color timestamp: 1.60321236474e+12
+
+depth timestamp: 1.60321236478e+12
+color timestamp: 1.60321236477e+12
+
+depth timestamp: 1.60321236478e+12
+color timestamp: 1.6032123648e+12
+
+depth timestamp: 1.60321236485e+12
+color timestamp: 1.60321236484e+12
+
+depth timestamp: 1.60321236488e+12
+color timestamp: 1.60321236487e+12
+
+depth timestamp: 1.60321236488e+12
+color timestamp: 1.6032123649e+12
+
+depth timestamp: 1.60321236495e+12
+color timestamp: 1.60321236494e+12
+
+depth timestamp: 1.60321236495e+12
+color timestamp: 1.60321236497e+12
+
+depth timestamp: 1.60321236499e+12
+color timestamp: 1.603212365e+12
+
+depth timestamp: 1.60321236505e+12
+color timestamp: 1.60321236504e+12
+
+depth timestamp: 1.60321236508e+12
+color timestamp: 1.60321236507e+12
+
+depth timestamp: 1.60321236508e+12
+color timestamp: 1.6032123651e+12
+
+depth timestamp: 1.60321236512e+12
+color timestamp: 1.60321236513e+12
+
+depth timestamp: 1.60321236518e+12
+color timestamp: 1.60321236517e+12
+
+depth timestamp: 1.60321236518e+12
+color timestamp: 1.6032123652e+12
+
+depth timestamp: 1.60321236525e+12
+color timestamp: 1.60321236524e+12
+
+depth timestamp: 1.60321236528e+12
+color timestamp: 1.60321236527e+12
+
+depth timestamp: 1.60321236528e+12
+color timestamp: 1.6032123653e+12
+
+depth timestamp: 1.60321236535e+12
+color timestamp: 1.60321236534e+12
+
+depth timestamp: 1.60321236535e+12
+color timestamp: 1.60321236537e+12
+
+depth timestamp: 1.60321236539e+12
+color timestamp: 1.6032123654e+12
+
+depth timestamp: 1.60321236545e+12
+color timestamp: 1.60321236544e+12
+
+depth timestamp: 1.60321236545e+12
+color timestamp: 1.60321236547e+12
+
+depth timestamp: 1.60321236549e+12
+color timestamp: 1.6032123655e+12
+
+depth timestamp: 1.60321236555e+12
+color timestamp: 1.60321236554e+12
+
+depth timestamp: 1.60321236555e+12
+color timestamp: 1.60321236557e+12
+
+depth timestamp: 1.60321236559e+12
+color timestamp: 1.6032123656e+12
+
+depth timestamp: 1.60321236565e+12
+color timestamp: 1.60321236564e+12
+
+depth timestamp: 1.60321236568e+12
+color timestamp: 1.60321236567e+12
+
+depth timestamp: 1.60321236568e+12
+color timestamp: 1.6032123657e+12
+
+depth timestamp: 1.60321236575e+12
+color timestamp: 1.60321236574e+12
+
+depth timestamp: 1.60321236575e+12
+color timestamp: 1.60321236577e+12
+
+depth timestamp: 1.60321236582e+12
+color timestamp: 1.60321236581e+12
+
+depth timestamp: 1.60321236585e+12
+color timestamp: 1.60321236584e+12
+
+depth timestamp: 1.60321236585e+12
+color timestamp: 1.60321236587e+12
+
+depth timestamp: 1.60321236592e+12
+color timestamp: 1.60321236591e+12
+
+depth timestamp: 1.60321236595e+12
+color timestamp: 1.60321236594e+12
+
+depth timestamp: 1.60321236598e+12
+color timestamp: 1.60321236597e+12
+
+depth timestamp: 1.60321236602e+12
+color timestamp: 1.60321236601e+12
+
+depth timestamp: 1.60321236605e+12
+color timestamp: 1.60321236604e+12
+
+depth timestamp: 1.60321236605e+12
+color timestamp: 1.60321236607e+12
+
+depth timestamp: 1.60321236612e+12
+color timestamp: 1.60321236611e+12
+
+depth timestamp: 1.60321236615e+12
+color timestamp: 1.60321236614e+12
+
+depth timestamp: 1.60321236618e+12
+color timestamp: 1.60321236617e+12
+
+depth timestamp: 1.60321236622e+12
+color timestamp: 1.60321236621e+12
+
+depth timestamp: 1.60321236625e+12
+color timestamp: 1.60321236624e+12
+
+depth timestamp: 1.60321236632e+12
+color timestamp: 1.60321236631e+12
+
+depth timestamp: 1.60321236635e+12
+color timestamp: 1.60321236634e+12
+
+depth timestamp: 1.60321236639e+12
+color timestamp: 1.60321236637e+12
+
+depth timestamp: 1.60321236642e+12
+color timestamp: 1.60321236641e+12
+
+depth timestamp: 1.60321236645e+12
+color timestamp: 1.60321236644e+12
+
+depth timestamp: 1.60321236648e+12
+color timestamp: 1.60321236647e+12
+
+depth timestamp: 1.60321236652e+12
+color timestamp: 1.60321236651e+12
+
+depth timestamp: 1.60321236655e+12
+color timestamp: 1.60321236654e+12
+
+depth timestamp: 1.60321236658e+12
+color timestamp: 1.60321236658e+12
+
+depth timestamp: 1.60321236662e+12
+color timestamp: 1.60321236661e+12
+
+depth timestamp: 1.60321236665e+12
+color timestamp: 1.60321236664e+12
+
+depth timestamp: 1.60321236668e+12
+color timestamp: 1.60321236668e+12
+
+depth timestamp: 1.60321236672e+12
+color timestamp: 1.60321236671e+12
+
+depth timestamp: 1.60321236675e+12
+color timestamp: 1.60321236674e+12
+
+depth timestamp: 1.60321236679e+12
+color timestamp: 1.60321236678e+12
+
+depth timestamp: 1.60321236682e+12
+color timestamp: 1.60321236681e+12
+
+depth timestamp: 1.60321236685e+12
+color timestamp: 1.60321236684e+12
+
+depth timestamp: 1.60321236689e+12
+color timestamp: 1.60321236688e+12
+
+depth timestamp: 1.60321236692e+12
+color timestamp: 1.60321236691e+12
+
+depth timestamp: 1.60321236695e+12
+color timestamp: 1.60321236694e+12
+
+depth timestamp: 1.60321236699e+12
+color timestamp: 1.60321236698e+12
+
+depth timestamp: 1.60321236702e+12
+color timestamp: 1.60321236701e+12
+
+depth timestamp: 1.60321236705e+12
+color timestamp: 1.60321236704e+12
+
+depth timestamp: 1.60321236709e+12
+color timestamp: 1.60321236708e+12
+
+depth timestamp: 1.60321236712e+12
+color timestamp: 1.60321236711e+12
+
+depth timestamp: 1.60321236715e+12
+color timestamp: 1.60321236714e+12
+
+depth timestamp: 1.60321236719e+12
+color timestamp: 1.60321236718e+12
+
+depth timestamp: 1.60321236722e+12
+color timestamp: 1.60321236721e+12
+
+depth timestamp: 1.60321236725e+12
+color timestamp: 1.60321236724e+12
+
+depth timestamp: 1.60321236728e+12
+color timestamp: 1.60321236728e+12
+
+depth timestamp: 1.60321236732e+12
+color timestamp: 1.60321236731e+12
+
+depth timestamp: 1.60321236735e+12
+color timestamp: 1.60321236734e+12
+
+depth timestamp: 1.60321236739e+12
+color timestamp: 1.60321236738e+12
+
+depth timestamp: 1.60321236742e+12
+color timestamp: 1.60321236741e+12
+
+depth timestamp: 1.60321236745e+12
+color timestamp: 1.60321236744e+12
+
+depth timestamp: 1.60321236749e+12
+color timestamp: 1.60321236748e+12
+
+depth timestamp: 1.60321236752e+12
+color timestamp: 1.60321236751e+12
+
+depth timestamp: 1.60321236755e+12
+color timestamp: 1.60321236755e+12
+
+depth timestamp: 1.60321236758e+12
+color timestamp: 1.60321236758e+12
+
+depth timestamp: 1.60321236762e+12
+color timestamp: 1.60321236761e+12
+
+depth timestamp: 1.60321236765e+12
+color timestamp: 1.60321236765e+12
+
+depth timestamp: 1.60321236768e+12
+color timestamp: 1.60321236768e+12
+
+depth timestamp: 1.60321236772e+12
+color timestamp: 1.60321236771e+12
+
+depth timestamp: 1.60321236775e+12
+color timestamp: 1.60321236775e+12
+
+depth timestamp: 1.60321236778e+12
+color timestamp: 1.60321236778e+12
+
+depth timestamp: 1.60321236782e+12
+color timestamp: 1.60321236781e+12
+
+depth timestamp: 1.60321236785e+12
+color timestamp: 1.60321236785e+12
+
+depth timestamp: 1.60321236788e+12
+color timestamp: 1.60321236788e+12
+
+depth timestamp: 1.60321236792e+12
+color timestamp: 1.60321236791e+12
+
+depth timestamp: 1.60321236795e+12
+color timestamp: 1.60321236795e+12
+
+depth timestamp: 1.60321236798e+12
+color timestamp: 1.60321236798e+12
+
+depth timestamp: 1.60321236802e+12
+color timestamp: 1.60321236801e+12
+
+depth timestamp: 1.60321236805e+12
+color timestamp: 1.60321236805e+12
+
+depth timestamp: 1.60321236808e+12
+color timestamp: 1.60321236808e+12
+
+depth timestamp: 1.60321236812e+12
+color timestamp: 1.60321236811e+12
+
+depth timestamp: 1.60321236815e+12
+color timestamp: 1.60321236815e+12
+
+depth timestamp: 1.60321236818e+12
+color timestamp: 1.60321236818e+12
+
+depth timestamp: 1.60321236822e+12
+color timestamp: 1.60321236821e+12
+
+depth timestamp: 1.60321236825e+12
+color timestamp: 1.60321236825e+12
+
+depth timestamp: 1.60321236828e+12
+color timestamp: 1.60321236828e+12
+
+depth timestamp: 1.60321236832e+12
+color timestamp: 1.60321236831e+12
+
+depth timestamp: 1.60321236835e+12
+color timestamp: 1.60321236835e+12
+
+depth timestamp: 1.60321236838e+12
+color timestamp: 1.60321236838e+12
+
+depth timestamp: 1.60321236842e+12
+color timestamp: 1.60321236841e+12
+
+depth timestamp: 1.60321236845e+12
+color timestamp: 1.60321236845e+12
+
+depth timestamp: 1.60321236848e+12
+color timestamp: 1.60321236848e+12
+
+depth timestamp: 1.60321236852e+12
+color timestamp: 1.60321236851e+12
+
+depth timestamp: 1.60321236855e+12
+color timestamp: 1.60321236855e+12
+
+depth timestamp: 1.60321236858e+12
+color timestamp: 1.60321236858e+12
+
+depth timestamp: 1.60321236862e+12
+color timestamp: 1.60321236861e+12
+
+depth timestamp: 1.60321236865e+12
+color timestamp: 1.60321236865e+12
+
+depth timestamp: 1.60321236869e+12
+color timestamp: 1.60321236868e+12
+
+depth timestamp: 1.60321236872e+12
+color timestamp: 1.60321236871e+12
+
+depth timestamp: 1.60321236875e+12
+color timestamp: 1.60321236875e+12
+
+depth timestamp: 1.60321236878e+12
+color timestamp: 1.60321236878e+12
+
+depth timestamp: 1.60321236882e+12
+color timestamp: 1.60321236881e+12
+
+depth timestamp: 1.60321236885e+12
+color timestamp: 1.60321236885e+12
+
+depth timestamp: 1.60321236888e+12
+color timestamp: 1.60321236888e+12
+
+depth timestamp: 1.60321236892e+12
+color timestamp: 1.60321236891e+12
+
+depth timestamp: 1.60321236895e+12
+color timestamp: 1.60321236895e+12
+
+depth timestamp: 1.60321236898e+12
+color timestamp: 1.60321236898e+12
+
+depth timestamp: 1.60321236902e+12
+color timestamp: 1.60321236901e+12
+
+depth timestamp: 1.60321236905e+12
+color timestamp: 1.60321236905e+12
+
+depth timestamp: 1.60321236908e+12
+color timestamp: 1.60321236908e+12
+
+depth timestamp: 1.60321236912e+12
+color timestamp: 1.60321236911e+12
+
+depth timestamp: 1.60321236915e+12
+color timestamp: 1.60321236915e+12
+
+depth timestamp: 1.60321236919e+12
+color timestamp: 1.60321236918e+12
+
+depth timestamp: 1.60321236922e+12
+color timestamp: 1.60321236921e+12
+
+depth timestamp: 1.60321236925e+12
+color timestamp: 1.60321236925e+12
+
+depth timestamp: 1.60321236928e+12
+color timestamp: 1.60321236928e+12
+
+depth timestamp: 1.60321236932e+12
+color timestamp: 1.60321236932e+12
+
+depth timestamp: 1.60321236935e+12
+color timestamp: 1.60321236935e+12
+
+depth timestamp: 1.60321236938e+12
+color timestamp: 1.60321236938e+12
+
+depth timestamp: 1.60321236942e+12
+color timestamp: 1.60321236942e+12
+
+depth timestamp: 1.60321236945e+12
+color timestamp: 1.60321236945e+12
+
+depth timestamp: 1.60321236949e+12
+color timestamp: 1.60321236948e+12
+
+depth timestamp: 1.60321236952e+12
+color timestamp: 1.60321236952e+12
+
+depth timestamp: 1.60321236955e+12
+color timestamp: 1.60321236955e+12
+
+depth timestamp: 1.60321236959e+12
+color timestamp: 1.60321236958e+12
+
+depth timestamp: 1.60321236962e+12
+color timestamp: 1.60321236962e+12
+
+depth timestamp: 1.60321236965e+12
+color timestamp: 1.60321236965e+12
+
+depth timestamp: 1.60321236969e+12
+color timestamp: 1.60321236968e+12
+
+depth timestamp: 1.60321236972e+12
+color timestamp: 1.60321236972e+12
+
+depth timestamp: 1.60321236975e+12
+color timestamp: 1.60321236975e+12
+
+depth timestamp: 1.60321236978e+12
+color timestamp: 1.60321236978e+12
+
+depth timestamp: 1.60321236982e+12
+color timestamp: 1.60321236982e+12
+
+depth timestamp: 1.60321236985e+12
+color timestamp: 1.60321236985e+12
+
+depth timestamp: 1.60321236989e+12
+color timestamp: 1.60321236988e+12
+
+depth timestamp: 1.60321236992e+12
+color timestamp: 1.60321236992e+12
+
+depth timestamp: 1.60321236998e+12
+color timestamp: 1.60321236998e+12
+
+depth timestamp: 1.60321237002e+12
+color timestamp: 1.60321237002e+12
+
+depth timestamp: 1.60321237005e+12
+color timestamp: 1.60321237005e+12
+
+depth timestamp: 1.60321237008e+12
+color timestamp: 1.60321237008e+12
+
+depth timestamp: 1.60321237012e+12
+color timestamp: 1.60321237012e+12
+
+depth timestamp: 1.60321237015e+12
+color timestamp: 1.60321237015e+12
+
+depth timestamp: 1.60321237018e+12
+color timestamp: 1.60321237018e+12
+
+depth timestamp: 1.60321237022e+12
+color timestamp: 1.60321237022e+12
+
+depth timestamp: 1.60321237025e+12
+color timestamp: 1.60321237025e+12
+
+depth timestamp: 1.60321237028e+12
+color timestamp: 1.60321237028e+12
+
+depth timestamp: 1.60321237032e+12
+color timestamp: 1.60321237032e+12
+
+depth timestamp: 1.60321237035e+12
+color timestamp: 1.60321237035e+12
+
+depth timestamp: 1.60321237039e+12
+color timestamp: 1.60321237038e+12
+
+depth timestamp: 1.60321237042e+12
+color timestamp: 1.60321237042e+12
+
+depth timestamp: 1.60321237045e+12
+color timestamp: 1.60321237045e+12
+
+depth timestamp: 1.60321237048e+12
+color timestamp: 1.60321237048e+12
+
+depth timestamp: 1.60321237052e+12
+color timestamp: 1.60321237052e+12
+
+depth timestamp: 1.60321237055e+12
+color timestamp: 1.60321237055e+12
+
+depth timestamp: 1.60321237058e+12
+color timestamp: 1.60321237058e+12
+
+depth timestamp: 1.60321237062e+12
+color timestamp: 1.60321237062e+12
+
+depth timestamp: 1.60321237065e+12
+color timestamp: 1.60321237065e+12
+
+depth timestamp: 1.60321237069e+12
+color timestamp: 1.60321237068e+12
+
+depth timestamp: 1.60321237072e+12
+color timestamp: 1.60321237072e+12
+
+depth timestamp: 1.60321237075e+12
+color timestamp: 1.60321237075e+12
+
+depth timestamp: 1.60321237079e+12
+color timestamp: 1.60321237078e+12
+
+depth timestamp: 1.60321237082e+12
+color timestamp: 1.60321237082e+12
+
+depth timestamp: 1.60321237085e+12
+color timestamp: 1.60321237085e+12
+
+depth timestamp: 1.60321237089e+12
+color timestamp: 1.60321237088e+12
+
+depth timestamp: 1.60321237092e+12
+color timestamp: 1.60321237092e+12
+
+depth timestamp: 1.60321237095e+12
+color timestamp: 1.60321237095e+12
+
+depth timestamp: 1.60321237098e+12
+color timestamp: 1.60321237098e+12
+
+depth timestamp: 1.60321237102e+12
+color timestamp: 1.60321237102e+12
+
+depth timestamp: 1.60321237105e+12
+color timestamp: 1.60321237105e+12
+
+depth timestamp: 1.60321237108e+12
+color timestamp: 1.60321237108e+12
+
+depth timestamp: 1.60321237112e+12
+color timestamp: 1.60321237112e+12
+
+depth timestamp: 1.60321237115e+12
+color timestamp: 1.60321237115e+12
+
+depth timestamp: 1.60321237118e+12
+color timestamp: 1.60321237118e+12
+
+depth timestamp: 1.60321237122e+12
+color timestamp: 1.60321237122e+12
+
+depth timestamp: 1.60321237125e+12
+color timestamp: 1.60321237125e+12
+
+depth timestamp: 1.60321237128e+12
+color timestamp: 1.60321237128e+12
+
+depth timestamp: 1.60321237132e+12
+color timestamp: 1.60321237132e+12
+
+depth timestamp: 1.60321237135e+12
+color timestamp: 1.60321237135e+12
+
+depth timestamp: 1.60321237138e+12
+color timestamp: 1.60321237138e+12
+
+depth timestamp: 1.60321237142e+12
+color timestamp: 1.60321237142e+12
+
+depth timestamp: 1.60321237145e+12
+color timestamp: 1.60321237145e+12
+
+depth timestamp: 1.60321237148e+12
+color timestamp: 1.60321237148e+12
+
+depth timestamp: 1.60321237152e+12
+color timestamp: 1.60321237152e+12
+
+depth timestamp: 1.60321237155e+12
+color timestamp: 1.60321237155e+12
+
+depth timestamp: 1.60321237159e+12
+color timestamp: 1.60321237158e+12
+
+depth timestamp: 1.60321237162e+12
+color timestamp: 1.60321237162e+12
+
+depth timestamp: 1.60321237165e+12
+color timestamp: 1.60321237165e+12
+
+depth timestamp: 1.60321237172e+12
+color timestamp: 1.60321237172e+12
+
+depth timestamp: 1.60321237175e+12
+color timestamp: 1.60321237175e+12
+
+depth timestamp: 1.60321237179e+12
+color timestamp: 1.60321237178e+12
+
+depth timestamp: 1.60321237182e+12
+color timestamp: 1.60321237182e+12
+
+depth timestamp: 1.60321237185e+12
+color timestamp: 1.60321237185e+12
+
+depth timestamp: 1.60321237189e+12
+color timestamp: 1.60321237188e+12
+
+depth timestamp: 1.60321237192e+12
+color timestamp: 1.60321237192e+12
+
+depth timestamp: 1.60321237195e+12
+color timestamp: 1.60321237195e+12
+
+depth timestamp: 1.60321237199e+12
+color timestamp: 1.60321237198e+12
+
+depth timestamp: 1.60321237202e+12
+color timestamp: 1.60321237202e+12
+
+depth timestamp: 1.60321237205e+12
+color timestamp: 1.60321237205e+12
+
+depth timestamp: 1.60321237208e+12
+color timestamp: 1.60321237208e+12
+
+depth timestamp: 1.60321237212e+12
+color timestamp: 1.60321237212e+12
+
+depth timestamp: 1.60321237215e+12
+color timestamp: 1.60321237215e+12
+
+depth timestamp: 1.60321237219e+12
+color timestamp: 1.60321237218e+12
+
+depth timestamp: 1.60321237222e+12
+color timestamp: 1.60321237222e+12
+
+depth timestamp: 1.60321237225e+12
+color timestamp: 1.60321237225e+12
+
+depth timestamp: 1.60321237229e+12
+color timestamp: 1.60321237228e+12
+
+depth timestamp: 1.60321237232e+12
+color timestamp: 1.60321237232e+12
+
+depth timestamp: 1.60321237235e+12
+color timestamp: 1.60321237235e+12
+
+depth timestamp: 1.60321237239e+12
+color timestamp: 1.60321237238e+12
+
+depth timestamp: 1.60321237242e+12
+color timestamp: 1.60321237242e+12
+
+depth timestamp: 1.60321237245e+12
+color timestamp: 1.60321237245e+12
+
+depth timestamp: 1.60321237249e+12
+color timestamp: 1.60321237248e+12
+
+depth timestamp: 1.60321237252e+12
+color timestamp: 1.60321237252e+12
+
+depth timestamp: 1.60321237255e+12
+color timestamp: 1.60321237255e+12
+
+depth timestamp: 1.60321237259e+12
+color timestamp: 1.60321237258e+12
+
+depth timestamp: 1.60321237262e+12
+color timestamp: 1.60321237262e+12
+
+depth timestamp: 1.60321237265e+12
+color timestamp: 1.60321237265e+12
+
+depth timestamp: 1.60321237269e+12
+color timestamp: 1.60321237268e+12
+
+depth timestamp: 1.60321237272e+12
+color timestamp: 1.60321237272e+12
+
+depth timestamp: 1.60321237275e+12
+color timestamp: 1.60321237275e+12
+
+depth timestamp: 1.60321237279e+12
+color timestamp: 1.60321237278e+12
+
+depth timestamp: 1.60321237282e+12
+color timestamp: 1.60321237282e+12
+
+depth timestamp: 1.60321237285e+12
+color timestamp: 1.60321237285e+12
+
+depth timestamp: 1.60321237289e+12
+color timestamp: 1.60321237288e+12
+
+depth timestamp: 1.60321237292e+12
+color timestamp: 1.60321237292e+12
+
+depth timestamp: 1.60321237295e+12
+color timestamp: 1.60321237295e+12
+
+depth timestamp: 1.60321237299e+12
+color timestamp: 1.60321237298e+12
+
+depth timestamp: 1.60321237302e+12
+color timestamp: 1.60321237302e+12
+
+depth timestamp: 1.60321237305e+12
+color timestamp: 1.60321237305e+12
+
+depth timestamp: 1.60321237309e+12
+color timestamp: 1.60321237308e+12
+
+depth timestamp: 1.60321237312e+12
+color timestamp: 1.60321237312e+12
+
+depth timestamp: 1.60321237315e+12
+color timestamp: 1.60321237315e+12
+
+depth timestamp: 1.60321237319e+12
+color timestamp: 1.60321237318e+12
+
+depth timestamp: 1.60321237322e+12
+color timestamp: 1.60321237322e+12
+
+depth timestamp: 1.60321237325e+12
+color timestamp: 1.60321237325e+12
+
+depth timestamp: 1.60321237329e+12
+color timestamp: 1.60321237328e+12
+
+depth timestamp: 1.60321237332e+12
+color timestamp: 1.60321237332e+12
+
+depth timestamp: 1.60321237335e+12
+color timestamp: 1.60321237335e+12
+
+depth timestamp: 1.60321237339e+12
+color timestamp: 1.60321237338e+12
+
+depth timestamp: 1.60321237342e+12
+color timestamp: 1.60321237342e+12
+
+depth timestamp: 1.60321237345e+12
+color timestamp: 1.60321237345e+12
+
+depth timestamp: 1.60321237349e+12
+color timestamp: 1.60321237348e+12
+
+depth timestamp: 1.60321237352e+12
+color timestamp: 1.60321237352e+12
+
+depth timestamp: 1.60321237355e+12
+color timestamp: 1.60321237355e+12
+
+depth timestamp: 1.60321237359e+12
+color timestamp: 1.60321237358e+12
+
+depth timestamp: 1.60321237362e+12
+color timestamp: 1.60321237362e+12
+
+depth timestamp: 1.60321237365e+12
+color timestamp: 1.60321237365e+12
+
+depth timestamp: 1.60321237369e+12
+color timestamp: 1.60321237368e+12
+
+depth timestamp: 1.60321237372e+12
+color timestamp: 1.60321237372e+12
+
+depth timestamp: 1.60321237375e+12
+color timestamp: 1.60321237375e+12
+
+depth timestamp: 1.60321237379e+12
+color timestamp: 1.60321237378e+12
+
+depth timestamp: 1.60321237382e+12
+color timestamp: 1.60321237382e+12
+
+depth timestamp: 1.60321237385e+12
+color timestamp: 1.60321237385e+12
+
+depth timestamp: 1.60321237389e+12
+color timestamp: 1.60321237388e+12
+
+depth timestamp: 1.60321237392e+12
+color timestamp: 1.60321237392e+12
+
+depth timestamp: 1.60321237395e+12
+color timestamp: 1.60321237395e+12
+
+depth timestamp: 1.60321237399e+12
+color timestamp: 1.60321237398e+12
+
+depth timestamp: 1.60321237402e+12
+color timestamp: 1.60321237402e+12
+
+depth timestamp: 1.60321237405e+12
+color timestamp: 1.60321237405e+12
+
+depth timestamp: 1.60321237409e+12
+color timestamp: 1.60321237408e+12
+
+depth timestamp: 1.60321237412e+12
+color timestamp: 1.60321237412e+12
+
+depth timestamp: 1.60321237415e+12
+color timestamp: 1.60321237415e+12
+
+depth timestamp: 1.60321237419e+12
+color timestamp: 1.60321237418e+12
+
+depth timestamp: 1.60321237422e+12
+color timestamp: 1.60321237422e+12
+
+depth timestamp: 1.60321237425e+12
+color timestamp: 1.60321237425e+12
+
+depth timestamp: 1.60321237429e+12
+color timestamp: 1.60321237428e+12
+
+depth timestamp: 1.60321237432e+12
+color timestamp: 1.60321237432e+12
+
+depth timestamp: 1.60321237435e+12
+color timestamp: 1.60321237435e+12
+
+depth timestamp: 1.60321237439e+12
+color timestamp: 1.60321237438e+12
+
+depth timestamp: 1.60321237442e+12
+color timestamp: 1.60321237442e+12
+
+depth timestamp: 1.60321237445e+12
+color timestamp: 1.60321237445e+12
+
+depth timestamp: 1.60321237449e+12
+color timestamp: 1.60321237448e+12
+
+depth timestamp: 1.60321237452e+12
+color timestamp: 1.60321237452e+12
+
+depth timestamp: 1.60321237455e+12
+color timestamp: 1.60321237455e+12
+
+depth timestamp: 1.60321237459e+12
+color timestamp: 1.60321237458e+12
+
+depth timestamp: 1.60321237462e+12
+color timestamp: 1.60321237462e+12
+
+depth timestamp: 1.60321237465e+12
+color timestamp: 1.60321237465e+12
+
+depth timestamp: 1.60321237469e+12
+color timestamp: 1.60321237468e+12
+
+depth timestamp: 1.60321237472e+12
+color timestamp: 1.60321237472e+12
+
+depth timestamp: 1.60321237475e+12
+color timestamp: 1.60321237475e+12
+
+depth timestamp: 1.60321237479e+12
+color timestamp: 1.60321237478e+12
+
+depth timestamp: 1.60321237482e+12
+color timestamp: 1.60321237482e+12
+
+depth timestamp: 1.60321237485e+12
+color timestamp: 1.60321237485e+12
+
+depth timestamp: 1.60321237489e+12
+color timestamp: 1.60321237488e+12
+
+depth timestamp: 1.60321237492e+12
+color timestamp: 1.60321237492e+12
+
+depth timestamp: 1.60321237495e+12
+color timestamp: 1.60321237495e+12
+
+depth timestamp: 1.60321237499e+12
+color timestamp: 1.60321237498e+12
+
+depth timestamp: 1.60321237502e+12
+color timestamp: 1.60321237502e+12
+
+depth timestamp: 1.60321237505e+12
+color timestamp: 1.60321237505e+12
+
+depth timestamp: 1.60321237509e+12
+color timestamp: 1.60321237508e+12
+
+depth timestamp: 1.60321237512e+12
+color timestamp: 1.60321237512e+12
+
+depth timestamp: 1.60321237515e+12
+color timestamp: 1.60321237515e+12
+
+depth timestamp: 1.60321237519e+12
+color timestamp: 1.60321237518e+12
+
+depth timestamp: 1.60321237522e+12
+color timestamp: 1.60321237522e+12
+
+depth timestamp: 1.60321237525e+12
+color timestamp: 1.60321237525e+12
+
+depth timestamp: 1.60321237529e+12
+color timestamp: 1.60321237528e+12
+
+depth timestamp: 1.60321237532e+12
+color timestamp: 1.60321237532e+12
+
+depth timestamp: 1.60321237535e+12
+color timestamp: 1.60321237535e+12
+
+depth timestamp: 1.60321237539e+12
+color timestamp: 1.60321237538e+12
+
+depth timestamp: 1.60321237542e+12
+color timestamp: 1.60321237542e+12
+
+depth timestamp: 1.60321237545e+12
+color timestamp: 1.60321237545e+12
+
+depth timestamp: 1.60321237549e+12
+color timestamp: 1.60321237548e+12
+
+depth timestamp: 1.60321237552e+12
+color timestamp: 1.60321237552e+12
+
+depth timestamp: 1.60321237555e+12
+color timestamp: 1.60321237555e+12
+
+depth timestamp: 1.60321237559e+12
+color timestamp: 1.60321237558e+12
+
+depth timestamp: 1.60321237562e+12
+color timestamp: 1.60321237562e+12
+
+depth timestamp: 1.60321237565e+12
+color timestamp: 1.60321237565e+12
+
+depth timestamp: 1.60321237569e+12
+color timestamp: 1.60321237568e+12
+
+depth timestamp: 1.60321237572e+12
+color timestamp: 1.60321237572e+12
+
+depth timestamp: 1.60321237575e+12
+color timestamp: 1.60321237575e+12
+
+depth timestamp: 1.60321237579e+12
+color timestamp: 1.60321237578e+12
+
+depth timestamp: 1.60321237582e+12
+color timestamp: 1.60321237582e+12
+
+depth timestamp: 1.60321237585e+12
+color timestamp: 1.60321237585e+12
+
+depth timestamp: 1.60321237589e+12
+color timestamp: 1.60321237588e+12
+
+depth timestamp: 1.60321237592e+12
+color timestamp: 1.60321237592e+12
+
+depth timestamp: 1.60321237595e+12
+color timestamp: 1.60321237595e+12
+
+depth timestamp: 1.60321237599e+12
+color timestamp: 1.60321237598e+12
+
+depth timestamp: 1.60321237602e+12
+color timestamp: 1.60321237602e+12
+
+depth timestamp: 1.60321237605e+12
+color timestamp: 1.60321237605e+12
+
+depth timestamp: 1.60321237609e+12
+color timestamp: 1.60321237608e+12
+
+depth timestamp: 1.60321237612e+12
+color timestamp: 1.60321237612e+12
+
+depth timestamp: 1.60321237615e+12
+color timestamp: 1.60321237615e+12
+
+depth timestamp: 1.60321237619e+12
+color timestamp: 1.60321237618e+12
+
+depth timestamp: 1.60321237622e+12
+color timestamp: 1.60321237622e+12
+
+depth timestamp: 1.60321237629e+12
+color timestamp: 1.60321237628e+12
+
+depth timestamp: 1.60321237632e+12
+color timestamp: 1.60321237632e+12
+
+depth timestamp: 1.60321237635e+12
+color timestamp: 1.60321237635e+12
+
+depth timestamp: 1.60321237639e+12
+color timestamp: 1.60321237638e+12
+
+depth timestamp: 1.60321237642e+12
+color timestamp: 1.60321237642e+12
+
+depth timestamp: 1.60321237645e+12
+color timestamp: 1.60321237645e+12
+
+depth timestamp: 1.60321237649e+12
+color timestamp: 1.60321237648e+12
+
+depth timestamp: 1.60321237652e+12
+color timestamp: 1.60321237652e+12
+
+depth timestamp: 1.60321237655e+12
+color timestamp: 1.60321237655e+12
+
+depth timestamp: 1.60321237659e+12
+color timestamp: 1.60321237658e+12
+
+depth timestamp: 1.60321237662e+12
+color timestamp: 1.60321237662e+12
+
+depth timestamp: 1.60321237665e+12
+color timestamp: 1.60321237665e+12
+
+depth timestamp: 1.60321237669e+12
+color timestamp: 1.60321237668e+12
+
+depth timestamp: 1.60321237672e+12
+color timestamp: 1.60321237672e+12
+
+depth timestamp: 1.60321237675e+12
+color timestamp: 1.60321237675e+12
+
+depth timestamp: 1.60321237679e+12
+color timestamp: 1.60321237678e+12
+
+depth timestamp: 1.60321237682e+12
+color timestamp: 1.60321237682e+12
+
+depth timestamp: 1.60321237685e+12
+color timestamp: 1.60321237685e+12
+
+depth timestamp: 1.60321237689e+12
+color timestamp: 1.60321237688e+12
+
+depth timestamp: 1.60321237692e+12
+color timestamp: 1.60321237692e+12
+
+depth timestamp: 1.60321237695e+12
+color timestamp: 1.60321237695e+12
+
+depth timestamp: 1.60321237699e+12
+color timestamp: 1.60321237698e+12
+
+depth timestamp: 1.60321237706e+12
+color timestamp: 1.60321237705e+12
+
+depth timestamp: 1.60321237709e+12
+color timestamp: 1.60321237708e+12
+
+depth timestamp: 1.60321237712e+12
+color timestamp: 1.60321237712e+12
+
+depth timestamp: 1.60321237715e+12
+color timestamp: 1.60321237715e+12
+
+depth timestamp: 1.60321237719e+12
+color timestamp: 1.60321237718e+12
+
+depth timestamp: 1.60321237722e+12
+color timestamp: 1.60321237722e+12
+
+depth timestamp: 1.60321237725e+12
+color timestamp: 1.60321237725e+12
+
+depth timestamp: 1.60321237729e+12
+color timestamp: 1.60321237728e+12
+
+depth timestamp: 1.60321237732e+12
+color timestamp: 1.60321237732e+12
+
+depth timestamp: 1.60321237735e+12
+color timestamp: 1.60321237735e+12
+
+depth timestamp: 1.60321237739e+12
+color timestamp: 1.60321237738e+12
+
+depth timestamp: 1.60321237742e+12
+color timestamp: 1.60321237742e+12
+
+depth timestamp: 1.60321237745e+12
+color timestamp: 1.60321237745e+12
+
+depth timestamp: 1.60321237749e+12
+color timestamp: 1.60321237748e+12
+
+depth timestamp: 1.60321237752e+12
+color timestamp: 1.60321237752e+12
+
+depth timestamp: 1.60321237755e+12
+color timestamp: 1.60321237755e+12
+
+depth timestamp: 1.60321237759e+12
+color timestamp: 1.60321237758e+12
+
+depth timestamp: 1.60321237762e+12
+color timestamp: 1.60321237762e+12
+
+depth timestamp: 1.60321237765e+12
+color timestamp: 1.60321237765e+12
+
+depth timestamp: 1.60321237769e+12
+color timestamp: 1.60321237768e+12
+
+depth timestamp: 1.60321237772e+12
+color timestamp: 1.60321237772e+12
+
+depth timestamp: 1.60321237775e+12
+color timestamp: 1.60321237775e+12
+
+depth timestamp: 1.60321237779e+12
+color timestamp: 1.60321237778e+12
+
+depth timestamp: 1.60321237782e+12
+color timestamp: 1.60321237782e+12
+
+depth timestamp: 1.60321237785e+12
+color timestamp: 1.60321237785e+12
+
+depth timestamp: 1.60321237789e+12
+color timestamp: 1.60321237788e+12
+
+depth timestamp: 1.60321237792e+12
+color timestamp: 1.60321237792e+12
+
+depth timestamp: 1.60321237799e+12
+color timestamp: 1.60321237798e+12
+
+depth timestamp: 1.60321237802e+12
+color timestamp: 1.60321237802e+12
+
+depth timestamp: 1.60321237805e+12
+color timestamp: 1.60321237805e+12
+
+depth timestamp: 1.60321237809e+12
+color timestamp: 1.60321237808e+12
+
+depth timestamp: 1.60321237812e+12
+color timestamp: 1.60321237812e+12
+
+depth timestamp: 1.60321237815e+12
+color timestamp: 1.60321237815e+12
+
+depth timestamp: 1.60321237822e+12
+color timestamp: 1.60321237822e+12
+
+depth timestamp: 1.60321237825e+12
+color timestamp: 1.60321237825e+12
+
+depth timestamp: 1.60321237829e+12
+color timestamp: 1.60321237828e+12
+
+depth timestamp: 1.60321237832e+12
+color timestamp: 1.60321237832e+12
+
+depth timestamp: 1.60321237835e+12
+color timestamp: 1.60321237835e+12
+
+depth timestamp: 1.60321237839e+12
+color timestamp: 1.60321237838e+12
+
+depth timestamp: 1.60321237845e+12
+color timestamp: 1.60321237845e+12
+
+depth timestamp: 1.60321237852e+12
+color timestamp: 1.60321237852e+12
+
+depth timestamp: 1.60321237855e+12
+color timestamp: 1.60321237855e+12
+
+depth timestamp: 1.60321237859e+12
+color timestamp: 1.60321237858e+12
+
+depth timestamp: 1.60321237862e+12
+color timestamp: 1.60321237862e+12
+
+depth timestamp: 1.60321237865e+12
+color timestamp: 1.60321237865e+12
+
+depth timestamp: 1.60321237869e+12
+color timestamp: 1.60321237868e+12
+
+depth timestamp: 1.60321237875e+12
+color timestamp: 1.60321237875e+12
+
+depth timestamp: 1.60321237879e+12
+color timestamp: 1.60321237878e+12
+
+depth timestamp: 1.60321237882e+12
+color timestamp: 1.60321237882e+12
+
+depth timestamp: 1.60321237885e+12
+color timestamp: 1.60321237885e+12
+
+depth timestamp: 1.60321237889e+12
+color timestamp: 1.60321237888e+12
+
+depth timestamp: 1.60321237892e+12
+color timestamp: 1.60321237892e+12
+
+depth timestamp: 1.60321237899e+12
+color timestamp: 1.60321237898e+12
+
+depth timestamp: 1.60321237902e+12
+color timestamp: 1.60321237902e+12
+
+depth timestamp: 1.60321237905e+12
+color timestamp: 1.60321237905e+12
+
+depth timestamp: 1.60321237909e+12
+color timestamp: 1.60321237908e+12
+
+depth timestamp: 1.60321237912e+12
+color timestamp: 1.60321237912e+12
+
+depth timestamp: 1.60321237916e+12
+color timestamp: 1.60321237915e+12
+
+depth timestamp: 1.60321237919e+12
+color timestamp: 1.60321237919e+12
+
+depth timestamp: 1.60321237922e+12
+color timestamp: 1.60321237922e+12
+
+depth timestamp: 1.60321237925e+12
+color timestamp: 1.60321237925e+12
+
+depth timestamp: 1.60321237929e+12
+color timestamp: 1.60321237929e+12
+
+depth timestamp: 1.60321237932e+12
+color timestamp: 1.60321237932e+12
+
+depth timestamp: 1.60321237935e+12
+color timestamp: 1.60321237935e+12
+
+depth timestamp: 1.60321237939e+12
+color timestamp: 1.60321237939e+12
+
+depth timestamp: 1.60321237942e+12
+color timestamp: 1.60321237942e+12
+
+depth timestamp: 1.60321237945e+12
+color timestamp: 1.60321237945e+12
+
+depth timestamp: 1.60321237949e+12
+color timestamp: 1.60321237949e+12
+
+depth timestamp: 1.60321237952e+12
+color timestamp: 1.60321237952e+12
+
+depth timestamp: 1.60321237955e+12
+color timestamp: 1.60321237955e+12
+
+depth timestamp: 1.60321237962e+12
+color timestamp: 1.60321237962e+12
+
+depth timestamp: 1.60321237965e+12
+color timestamp: 1.60321237965e+12
+
+depth timestamp: 1.60321237969e+12
+color timestamp: 1.60321237969e+12
+
+depth timestamp: 1.60321237972e+12
+color timestamp: 1.60321237972e+12
+
+depth timestamp: 1.60321237975e+12
+color timestamp: 1.60321237975e+12
+
+depth timestamp: 1.60321237982e+12
+color timestamp: 1.60321237982e+12
+
+depth timestamp: 1.60321237985e+12
+color timestamp: 1.60321237985e+12
+
+depth timestamp: 1.60321237989e+12
+color timestamp: 1.60321237989e+12
+
+depth timestamp: 1.60321237992e+12
+color timestamp: 1.60321237992e+12
+
+depth timestamp: 1.60321237999e+12
+color timestamp: 1.60321237999e+12
+
+depth timestamp: 1.60321238002e+12
+color timestamp: 1.60321238002e+12
+
+depth timestamp: 1.60321238005e+12
+color timestamp: 1.60321238005e+12
+
+depth timestamp: 1.60321238012e+12
+color timestamp: 1.60321238012e+12
+
+depth timestamp: 1.60321238015e+12
+color timestamp: 1.60321238015e+12
+
+depth timestamp: 1.60321238019e+12
+color timestamp: 1.60321238019e+12
+
+depth timestamp: 1.60321238025e+12
+color timestamp: 1.60321238025e+12
+
+depth timestamp: 1.60321238029e+12
+color timestamp: 1.60321238029e+12
+
+depth timestamp: 1.60321238032e+12
+color timestamp: 1.60321238032e+12
+
+depth timestamp: 1.60321238035e+12
+color timestamp: 1.60321238035e+12
+
+depth timestamp: 1.60321238039e+12
+color timestamp: 1.60321238039e+12
+
+depth timestamp: 1.60321238042e+12
+color timestamp: 1.60321238042e+12
+
+depth timestamp: 1.60321238045e+12
+color timestamp: 1.60321238045e+12
+
+depth timestamp: 1.60321238052e+12
+color timestamp: 1.60321238052e+12
+
+depth timestamp: 1.60321238055e+12
+color timestamp: 1.60321238055e+12
+
+depth timestamp: 1.60321238059e+12
+color timestamp: 1.60321238059e+12
+
+depth timestamp: 1.60321238062e+12
+color timestamp: 1.60321238062e+12
+
+depth timestamp: 1.60321238065e+12
+color timestamp: 1.60321238065e+12
+
+depth timestamp: 1.60321238072e+12
+color timestamp: 1.60321238072e+12
+
+depth timestamp: 1.60321238075e+12
+color timestamp: 1.60321238075e+12
+
+depth timestamp: 1.60321238079e+12
+color timestamp: 1.60321238079e+12
+
+depth timestamp: 1.60321238082e+12
+color timestamp: 1.60321238082e+12
+
+depth timestamp: 1.60321238085e+12
+color timestamp: 1.60321238085e+12
+
+depth timestamp: 1.60321238089e+12
+color timestamp: 1.60321238089e+12
+
+depth timestamp: 1.60321238092e+12
+color timestamp: 1.60321238092e+12
+
+depth timestamp: 1.60321238095e+12
+color timestamp: 1.60321238095e+12
+
+depth timestamp: 1.60321238099e+12
+color timestamp: 1.60321238099e+12
+
+depth timestamp: 1.60321238102e+12
+color timestamp: 1.60321238102e+12
+
+depth timestamp: 1.60321238105e+12
+color timestamp: 1.60321238106e+12
+
+depth timestamp: 1.60321238112e+12
+color timestamp: 1.60321238112e+12
+
+depth timestamp: 1.60321238115e+12
+color timestamp: 1.60321238116e+12
+
+depth timestamp: 1.60321238119e+12
+color timestamp: 1.60321238119e+12
+
+depth timestamp: 1.60321238122e+12
+color timestamp: 1.60321238122e+12
+
+depth timestamp: 1.60321238129e+12
+color timestamp: 1.60321238129e+12
+
+depth timestamp: 1.60321238132e+12
+color timestamp: 1.60321238132e+12
+
+depth timestamp: 1.60321238135e+12
+color timestamp: 1.60321238136e+12
+
+depth timestamp: 1.60321238142e+12
+color timestamp: 1.60321238142e+12
+
+depth timestamp: 1.60321238145e+12
+color timestamp: 1.60321238146e+12
+
+depth timestamp: 1.60321238152e+12
+color timestamp: 1.60321238153e+12
+
+depth timestamp: 1.60321238155e+12
+color timestamp: 1.60321238156e+12
+
+depth timestamp: 1.60321238162e+12
+color timestamp: 1.60321238163e+12
+
+depth timestamp: 1.60321238165e+12
+color timestamp: 1.60321238166e+12
+
+depth timestamp: 1.60321238169e+12
+color timestamp: 1.60321238169e+12
+
+depth timestamp: 1.60321238172e+12
+color timestamp: 1.60321238173e+12
+
+depth timestamp: 1.60321238175e+12
+color timestamp: 1.60321238176e+12
+
+depth timestamp: 1.60321238179e+12
+color timestamp: 1.60321238179e+12
+
+depth timestamp: 1.60321238182e+12
+color timestamp: 1.60321238183e+12
+
+depth timestamp: 1.60321238185e+12
+color timestamp: 1.60321238186e+12
+
+depth timestamp: 1.60321238192e+12
+color timestamp: 1.60321238193e+12
+
+depth timestamp: 1.60321238195e+12
+color timestamp: 1.60321238196e+12
+
+depth timestamp: 1.60321238199e+12
+color timestamp: 1.60321238199e+12
+
+depth timestamp: 1.60321238202e+12
+color timestamp: 1.60321238203e+12
+
+depth timestamp: 1.60321238205e+12
+color timestamp: 1.60321238206e+12
+
+depth timestamp: 1.60321238209e+12
+color timestamp: 1.60321238209e+12
+
+depth timestamp: 1.60321238212e+12
+color timestamp: 1.60321238213e+12
+
+depth timestamp: 1.60321238215e+12
+color timestamp: 1.60321238216e+12
+
+depth timestamp: 1.60321238219e+12
+color timestamp: 1.60321238219e+12
+
+depth timestamp: 1.60321238222e+12
+color timestamp: 1.60321238223e+12
+
+depth timestamp: 1.60321238225e+12
+color timestamp: 1.60321238226e+12
+
+depth timestamp: 1.60321238232e+12
+color timestamp: 1.60321238233e+12
+
+depth timestamp: 1.60321238235e+12
+color timestamp: 1.60321238236e+12
+
+depth timestamp: 1.60321238239e+12
+color timestamp: 1.60321238239e+12
+
+depth timestamp: 1.60321238245e+12
+color timestamp: 1.60321238246e+12
+
+depth timestamp: 1.60321238249e+12
+color timestamp: 1.60321238249e+12
+
+depth timestamp: 1.60321238252e+12
+color timestamp: 1.60321238253e+12
+
+depth timestamp: 1.60321238255e+12
+color timestamp: 1.60321238256e+12
+
+depth timestamp: 1.60321238259e+12
+color timestamp: 1.60321238259e+12
+
+depth timestamp: 1.60321238262e+12
+color timestamp: 1.60321238263e+12
+
+depth timestamp: 1.60321238265e+12
+color timestamp: 1.60321238266e+12
+
+depth timestamp: 1.60321238272e+12
+color timestamp: 1.60321238273e+12
+
+depth timestamp: 1.60321238275e+12
+color timestamp: 1.60321238276e+12
+
+depth timestamp: 1.60321238279e+12
+color timestamp: 1.60321238279e+12
+
+depth timestamp: 1.60321238282e+12
+color timestamp: 1.60321238283e+12
+
+depth timestamp: 1.60321238285e+12
+color timestamp: 1.60321238286e+12
+
+depth timestamp: 1.60321238289e+12
+color timestamp: 1.60321238289e+12
+
+depth timestamp: 1.60321238292e+12
+color timestamp: 1.60321238293e+12
+
+depth timestamp: 1.60321238295e+12
+color timestamp: 1.60321238296e+12
+
+depth timestamp: 1.60321238299e+12
+color timestamp: 1.60321238299e+12
+
+depth timestamp: 1.60321238302e+12
+color timestamp: 1.60321238303e+12
+
+depth timestamp: 1.60321238305e+12
+color timestamp: 1.60321238306e+12
+
+depth timestamp: 1.60321238309e+12
+color timestamp: 1.60321238309e+12
+
+depth timestamp: 1.60321238312e+12
+color timestamp: 1.60321238313e+12
+
+depth timestamp: 1.60321238315e+12
+color timestamp: 1.60321238316e+12
+
+depth timestamp: 1.60321238319e+12
+color timestamp: 1.60321238319e+12
+
+depth timestamp: 1.60321238325e+12
+color timestamp: 1.60321238326e+12
+
+depth timestamp: 1.60321238329e+12
+color timestamp: 1.60321238329e+12
+
+depth timestamp: 1.60321238332e+12
+color timestamp: 1.60321238333e+12
+
+depth timestamp: 1.60321238335e+12
+color timestamp: 1.60321238336e+12
+
+depth timestamp: 1.60321238339e+12
+color timestamp: 1.60321238339e+12
+
+depth timestamp: 1.60321238346e+12
+color timestamp: 1.60321238346e+12
+
+depth timestamp: 1.60321238349e+12
+color timestamp: 1.60321238349e+12
+
+depth timestamp: 1.60321238352e+12
+color timestamp: 1.60321238353e+12
+
+depth timestamp: 1.60321238355e+12
+color timestamp: 1.60321238356e+12
+
+depth timestamp: 1.60321238359e+12
+color timestamp: 1.60321238359e+12
+
+depth timestamp: 1.60321238362e+12
+color timestamp: 1.60321238363e+12
+
+depth timestamp: 1.60321238369e+12
+color timestamp: 1.60321238369e+12
+
+depth timestamp: 1.60321238372e+12
+color timestamp: 1.60321238373e+12
+
+depth timestamp: 1.60321238375e+12
+color timestamp: 1.60321238376e+12
+
+depth timestamp: 1.60321238379e+12
+color timestamp: 1.60321238379e+12
+
+depth timestamp: 1.60321238382e+12
+color timestamp: 1.60321238383e+12
+
+depth timestamp: 1.60321238385e+12
+color timestamp: 1.60321238386e+12
+
+depth timestamp: 1.60321238389e+12
+color timestamp: 1.60321238389e+12
+
+depth timestamp: 1.60321238395e+12
+color timestamp: 1.60321238396e+12
+
+depth timestamp: 1.60321238399e+12
+color timestamp: 1.60321238399e+12
+
+depth timestamp: 1.60321238402e+12
+color timestamp: 1.60321238403e+12
+
+depth timestamp: 1.60321238409e+12
+color timestamp: 1.60321238409e+12
+
+depth timestamp: 1.60321238412e+12
+color timestamp: 1.60321238413e+12
+
+depth timestamp: 1.60321238415e+12
+color timestamp: 1.60321238416e+12
+
+depth timestamp: 1.60321238419e+12
+color timestamp: 1.60321238419e+12
+
+depth timestamp: 1.60321238422e+12
+color timestamp: 1.60321238423e+12
+
+depth timestamp: 1.60321238425e+12
+color timestamp: 1.60321238426e+12
+
+depth timestamp: 1.60321233744e+12
+color timestamp: 1.60321233742e+12
+
+depth timestamp: 1.60321233751e+12
+color timestamp: 1.60321233752e+12
+
+depth timestamp: 1.60321233768e+12
+color timestamp: 1.60321233769e+12
+
+depth timestamp: 1.60321233778e+12
+color timestamp: 1.60321233779e+12
+
+depth timestamp: 1.60321233788e+12
+color timestamp: 1.60321233789e+12
+
+depth timestamp: 1.60321233798e+12
+color timestamp: 1.60321233799e+12
+
+depth timestamp: 1.60321233834e+12
+color timestamp: 1.60321233836e+12
+
+depth timestamp: 1.60321233844e+12
+color timestamp: 1.60321233846e+12
+
+depth timestamp: 1.60321233861e+12
+color timestamp: 1.60321233862e+12
+
+depth timestamp: 1.60321233888e+12
+color timestamp: 1.60321233889e+12
+
+depth timestamp: 1.60321233934e+12
+color timestamp: 1.60321233936e+12
+
+depth timestamp: 1.60321233951e+12
+color timestamp: 1.60321233952e+12
+
+depth timestamp: 1.60321233961e+12
+color timestamp: 1.60321233962e+12
+
+depth timestamp: 1.60321234028e+12
+color timestamp: 1.60321234029e+12
+
+depth timestamp: 1.60321234038e+12
+color timestamp: 1.60321234039e+12
+
+depth timestamp: 1.60321234088e+12
+color timestamp: 1.60321234089e+12
+
+depth timestamp: 1.60321234128e+12
+color timestamp: 1.60321234129e+12
+
+depth timestamp: 1.60321234184e+12
+color timestamp: 1.60321234183e+12
+
+depth timestamp: 1.60321234208e+12
+color timestamp: 1.60321234209e+12
+
+depth timestamp: 1.60321234218e+12
+color timestamp: 1.60321234219e+12
+
+depth timestamp: 1.60321234288e+12
+color timestamp: 1.60321234289e+12
+
+depth timestamp: 1.60321234331e+12
+color timestamp: 1.60321234333e+12
+
+depth timestamp: 1.60321234344e+12
+color timestamp: 1.60321234346e+12
+
+depth timestamp: 1.60321234358e+12
+color timestamp: 1.60321234359e+12
+
+depth timestamp: 1.60321234388e+12
+color timestamp: 1.60321234389e+12
+
+depth timestamp: 1.60321234424e+12
+color timestamp: 1.60321234423e+12
+
+depth timestamp: 1.60321234438e+12
+color timestamp: 1.60321234439e+12
+
+depth timestamp: 1.60321234451e+12
+color timestamp: 1.60321234453e+12
+
+depth timestamp: 1.60321234488e+12
+color timestamp: 1.60321234489e+12
+
+depth timestamp: 1.60321234521e+12
+color timestamp: 1.60321234523e+12
+
+depth timestamp: 1.60321234631e+12
+color timestamp: 1.6032123463e+12
+
+depth timestamp: 1.60321234641e+12
+color timestamp: 1.60321234643e+12
+
+depth timestamp: 1.60321234671e+12
+color timestamp: 1.6032123467e+12
+
+depth timestamp: 1.60321234695e+12
+color timestamp: 1.60321234696e+12
+
+depth timestamp: 1.60321234705e+12
+color timestamp: 1.60321234706e+12
+
+depth timestamp: 1.60321234735e+12
+color timestamp: 1.60321234736e+12
+
+depth timestamp: 1.60321234741e+12
+color timestamp: 1.60321234743e+12
+
+depth timestamp: 1.60321234755e+12
+color timestamp: 1.60321234756e+12
+
+depth timestamp: 1.60321234771e+12
+color timestamp: 1.6032123477e+12
+
+depth timestamp: 1.60321234781e+12
+color timestamp: 1.60321234783e+12
+
+depth timestamp: 1.60321234805e+12
+color timestamp: 1.60321234806e+12
+
+depth timestamp: 1.60321234851e+12
+color timestamp: 1.6032123485e+12
+
+depth timestamp: 1.60321234905e+12
+color timestamp: 1.60321234904e+12
+
+depth timestamp: 1.60321234918e+12
+color timestamp: 1.60321234917e+12
+
+depth timestamp: 1.60321234938e+12
+color timestamp: 1.60321234937e+12
+
+depth timestamp: 1.60321234951e+12
+color timestamp: 1.60321234951e+12
+
+depth timestamp: 1.60321234965e+12
+color timestamp: 1.60321234965e+12
+
+depth timestamp: 1.60321234988e+12
+color timestamp: 1.60321234988e+12
+
+depth timestamp: 1.60321235228e+12
+color timestamp: 1.60321235229e+12
+
+depth timestamp: 1.60321235321e+12
+color timestamp: 1.60321235322e+12
+
+depth timestamp: 1.60321235331e+12
+color timestamp: 1.60321235332e+12
+
+depth timestamp: 1.60321235371e+12
+color timestamp: 1.60321235372e+12
+
+depth timestamp: 1.60321235438e+12
+color timestamp: 1.60321235438e+12
+
+depth timestamp: 1.60321235488e+12
+color timestamp: 1.60321235488e+12
+
+depth timestamp: 1.60321235572e+12
+color timestamp: 1.60321235572e+12
+
+depth timestamp: 1.60321235638e+12
+color timestamp: 1.60321235638e+12
+
+depth timestamp: 1.60321235672e+12
+color timestamp: 1.60321235671e+12
+
+depth timestamp: 1.60321235682e+12
+color timestamp: 1.60321235681e+12
+
+depth timestamp: 1.60321235782e+12
+color timestamp: 1.60321235781e+12
+
+depth timestamp: 1.60321235978e+12
+color timestamp: 1.60321235977e+12
+
+depth timestamp: 1.60321236085e+12
+color timestamp: 1.60321236084e+12
+
+depth timestamp: 1.60321236098e+12
+color timestamp: 1.60321236097e+12
+
+depth timestamp: 1.60321236162e+12
+color timestamp: 1.60321236161e+12
+
+depth timestamp: 1.60321236252e+12
+color timestamp: 1.60321236251e+12
+
+depth timestamp: 1.60321236265e+12
+color timestamp: 1.60321236264e+12
+
+depth timestamp: 1.60321236995e+12
+color timestamp: 1.60321236995e+12
+
+depth timestamp: 1.60321237169e+12
+color timestamp: 1.60321237168e+12
+
+depth timestamp: 1.60321237702e+12
+color timestamp: 1.60321237702e+12
+
+depth timestamp: 1.60321237819e+12
+color timestamp: 1.60321237818e+12
+
+depth timestamp: 1.60321237849e+12
+color timestamp: 1.60321237848e+12
+
+depth timestamp: 1.60321237872e+12
+color timestamp: 1.60321237872e+12
+
+depth timestamp: 1.60321237895e+12
+color timestamp: 1.60321237895e+12
+
+depth timestamp: 1.60321237979e+12
+color timestamp: 1.60321237979e+12
+
+depth timestamp: 1.60321237995e+12
+color timestamp: 1.60321237995e+12
+
+depth timestamp: 1.60321238009e+12
+color timestamp: 1.60321238009e+12
+
+depth timestamp: 1.60321238022e+12
+color timestamp: 1.60321238022e+12
+
+depth timestamp: 1.60321238049e+12
+color timestamp: 1.60321238049e+12
+
+depth timestamp: 1.60321238109e+12
+color timestamp: 1.60321238109e+12
+
+depth timestamp: 1.60321238125e+12
+color timestamp: 1.60321238126e+12
+
+depth timestamp: 1.60321238139e+12
+color timestamp: 1.60321238139e+12
+
+depth timestamp: 1.60321238149e+12
+color timestamp: 1.60321238149e+12
+
+depth timestamp: 1.60321238159e+12
+color timestamp: 1.60321238159e+12
+
+depth timestamp: 1.60321238189e+12
+color timestamp: 1.60321238189e+12
+
+depth timestamp: 1.60321238242e+12
+color timestamp: 1.60321238243e+12
+
+depth timestamp: 1.60321238322e+12
+color timestamp: 1.60321238323e+12
+
+depth timestamp: 1.60321238342e+12
+color timestamp: 1.60321238343e+12
+
+depth timestamp: 1.60321238365e+12
+color timestamp: 1.60321238366e+12
+
+depth timestamp: 1.60321238392e+12
+color timestamp: 1.60321238393e+12
+
+depth timestamp: 1.60321238405e+12
+color timestamp: 1.60321238406e+12
+
+depth timestamp: 1.60321233901e+12
+color timestamp: 1.60321233902e+12
+
+depth timestamp: 1.60321234061e+12
+color timestamp: 1.60321234062e+12
+
+depth timestamp: 1.60321234144e+12
+color timestamp: 1.60321234146e+12
+
+depth timestamp: 1.60321234318e+12
+color timestamp: 1.60321234319e+12
+
+depth timestamp: 1.60321234508e+12
+color timestamp: 1.60321234509e+12
+
+depth timestamp: 1.60321235135e+12
+color timestamp: 1.60321235135e+12
+
+depth timestamp: 1.60321235165e+12
+color timestamp: 1.60321235165e+12
+
+depth timestamp: 1.60321235175e+12
+color timestamp: 1.60321235175e+12
+
+depth timestamp: 1.60321235401e+12
+color timestamp: 1.60321235402e+12
+
+depth timestamp: 1.60321235452e+12
+color timestamp: 1.60321235452e+12
+
+depth timestamp: 1.60321235615e+12
+color timestamp: 1.60321235615e+12
+
+depth timestamp: 1.60321235885e+12
+color timestamp: 1.60321235884e+12
+
+depth timestamp: 1.60321235935e+12
+color timestamp: 1.60321235934e+12
+
+depth timestamp: 1.60321235945e+12
+color timestamp: 1.60321235944e+12
+
+depth timestamp: 1.60321235992e+12
+color timestamp: 1.60321235991e+12
+
+depth timestamp: 1.60321236002e+12
+color timestamp: 1.60321236001e+12
+
+depth timestamp: 1.60321236075e+12
+color timestamp: 1.60321236074e+12
+
+depth timestamp: 1.60321237842e+12
+color timestamp: 1.60321237842e+12
+
+depth timestamp: 1.60321237959e+12
+color timestamp: 1.60321237959e+12
+
+depth timestamp: 1.60321238229e+12
+color timestamp: 1.60321238229e+12
+
+depth timestamp: 1.60321238269e+12
+color timestamp: 1.60321238269e+12
+
+depth timestamp: 1.60321238429e+12
+color timestamp: 1.60321238429e+12
+
+depth timestamp: 1.60321233811e+12
+color timestamp: 1.60321233812e+12
+
+depth timestamp: 1.60321233821e+12
+color timestamp: 1.60321233822e+12
+
+depth timestamp: 1.60321233878e+12
+color timestamp: 1.60321233879e+12
+
+depth timestamp: 1.60321235521e+12
+color timestamp: 1.60321235522e+12
+
+depth timestamp: 1.60321236628e+12
+color timestamp: 1.60321236627e+12
+
+depth timestamp: 1.60321237625e+12
+color timestamp: 1.60321237625e+12
+
+depth timestamp: 1.60321237795e+12
+color timestamp: 1.60321237795e+12
+
+depth timestamp: 1.60321238069e+12
+color timestamp: 1.60321238069e+12
+
+depth timestamp: 1.60321235511e+12
+color timestamp: 1.60321235512e+12
+

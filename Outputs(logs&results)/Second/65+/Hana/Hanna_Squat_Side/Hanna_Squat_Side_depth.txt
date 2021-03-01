@@ -1,0 +1,2679 @@
+depth timestamp: 1227088.99
+color timestamp: 1227097.634
+
+depth timestamp: 1227122.193
+color timestamp: 1227130.806
+
+depth timestamp: 1227155.372
+color timestamp: 1227163.979
+
+depth timestamp: 1227188.575
+color timestamp: 1227197.151
+
+depth timestamp: 1227221.777
+color timestamp: 1227230.324
+
+depth timestamp: 1227254.956
+color timestamp: 1227263.496
+
+depth timestamp: 1227288.159
+color timestamp: 1227296.669
+
+depth timestamp: 1227321.361
+color timestamp: 1227329.842
+
+depth timestamp: 1227354.54
+color timestamp: 1227363.014
+
+depth timestamp: 1227387.719
+color timestamp: 1227396.187
+
+depth timestamp: 1227420.945
+color timestamp: 1227429.359
+
+depth timestamp: 1227454.101
+color timestamp: 1227462.532
+
+depth timestamp: 1227487.303
+color timestamp: 1227495.704
+
+depth timestamp: 1227520.482
+color timestamp: 1227528.877
+
+depth timestamp: 1227553.661
+color timestamp: 1227562.049
+
+depth timestamp: 1227586.888
+color timestamp: 1227595.222
+
+depth timestamp: 1227620.043
+color timestamp: 1227628.394
+
+depth timestamp: 1227653.246
+color timestamp: 1227661.567
+
+depth timestamp: 1227686.425
+color timestamp: 1227694.739
+
+depth timestamp: 1227719.604
+color timestamp: 1227727.912
+
+depth timestamp: 1227752.83
+color timestamp: 1227761.084
+
+depth timestamp: 1227786.009
+color timestamp: 1227794.257
+
+depth timestamp: 1227819.211
+color timestamp: 1227794.257
+
+depth timestamp: 1227885.593
+color timestamp: 1227860.602
+
+depth timestamp: 1227951.951
+color timestamp: 1227960.12
+
+depth timestamp: 1227985.13
+color timestamp: 1227960.12
+
+depth timestamp: 1228051.512
+color timestamp: 1228059.637
+
+depth timestamp: 1228117.894
+color timestamp: 1228092.81
+
+depth timestamp: 1228184.299
+color timestamp: 1228192.327
+
+depth timestamp: 1228217.478
+color timestamp: 1228192.327
+
+depth timestamp: 1228317.038
+color timestamp: 1228325.017
+
+depth timestamp: 1228350.241
+color timestamp: 1228325.017
+
+depth timestamp: 1228449.825
+color timestamp: 1228424.535
+
+depth timestamp: 1228549.362
+color timestamp: 1228557.225
+
+depth timestamp: 1228582.542
+color timestamp: 1228557.225
+
+depth timestamp: 1228648.946
+color timestamp: 1228623.57
+
+depth timestamp: 1228715.328
+color timestamp: 1228723.088
+
+depth timestamp: 1228781.71
+color timestamp: 1228723.088
+
+depth timestamp: 1228848.067
+color timestamp: 1228855.778
+
+depth timestamp: 1228980.832
+color timestamp: 1228988.468
+
+depth timestamp: 1229014.033
+color timestamp: 1228988.468
+
+depth timestamp: 1229080.415
+color timestamp: 1229054.813
+
+depth timestamp: 1229146.797
+color timestamp: 1229154.331
+
+depth timestamp: 1229213.155
+color timestamp: 1229253.848
+
+depth timestamp: 1229279.537
+color timestamp: 1229287.021
+
+depth timestamp: 1229312.762
+color timestamp: 1229287.021
+
+depth timestamp: 1229379.121
+color timestamp: 1229386.538
+
+depth timestamp: 1229412.323
+color timestamp: 1229419.711
+
+depth timestamp: 1229478.705
+color timestamp: 1229452.883
+
+depth timestamp: 1229545.063
+color timestamp: 1229552.401
+
+depth timestamp: 1229611.468
+color timestamp: 1229585.573
+
+depth timestamp: 1229677.826
+color timestamp: 1229685.091
+
+depth timestamp: 1229711.005
+color timestamp: 1229685.091
+
+depth timestamp: 1229777.387
+color timestamp: 1229784.609
+
+depth timestamp: 1229810.59
+color timestamp: 1229817.781
+
+depth timestamp: 1229910.174
+color timestamp: 1229917.299
+
+depth timestamp: 1229943.329
+color timestamp: 1229917.299
+
+depth timestamp: 1230009.711
+color timestamp: 1230016.816
+
+depth timestamp: 1230076.116
+color timestamp: 1230049.989
+
+depth timestamp: 1230142.498
+color timestamp: 1230116.334
+
+depth timestamp: 1230208.88
+color timestamp: 1230215.851
+
+depth timestamp: 1230242.058
+color timestamp: 1230215.851
+
+depth timestamp: 1230275.261
+color timestamp: 1230315.369
+
+depth timestamp: 1230341.643
+color timestamp: 1230348.541
+
+depth timestamp: 1230441.204
+color timestamp: 1230414.887
+
+depth timestamp: 1230474.383
+color timestamp: 1230481.232
+
+depth timestamp: 1230540.764
+color timestamp: 1230547.577
+
+depth timestamp: 1230573.967
+color timestamp: 1230580.749
+
+depth timestamp: 1230640.372
+color timestamp: 1230613.922
+
+depth timestamp: 1230673.528
+color timestamp: 1230713.439
+
+depth timestamp: 1230739.909
+color timestamp: 1230746.612
+
+depth timestamp: 1230839.494
+color timestamp: 1230846.129
+
+depth timestamp: 1230872.673
+color timestamp: 1230846.129
+
+depth timestamp: 1230905.875
+color timestamp: 1230945.647
+
+depth timestamp: 1231038.615
+color timestamp: 1231045.165
+
+depth timestamp: 1231138.199
+color timestamp: 1231111.51
+
+depth timestamp: 1231204.581
+color timestamp: 1231177.855
+
+depth timestamp: 1231237.76
+color timestamp: 1231244.2
+
+depth timestamp: 1231270.963
+color timestamp: 1231244.2
+
+depth timestamp: 1231370.547
+color timestamp: 1231376.89
+
+depth timestamp: 1231403.726
+color timestamp: 1231410.062
+
+depth timestamp: 1231436.928
+color timestamp: 1231410.062
+
+depth timestamp: 1231503.31
+color timestamp: 1231509.58
+
+depth timestamp: 1231602.871
+color timestamp: 1231609.098
+
+depth timestamp: 1231636.05
+color timestamp: 1231609.098
+
+depth timestamp: 1231702.432
+color timestamp: 1231675.443
+
+depth timestamp: 1231801.993
+color timestamp: 1231808.133
+
+depth timestamp: 1231835.195
+color timestamp: 1231808.133
+
+depth timestamp: 1231868.398
+color timestamp: 1231907.65
+
+depth timestamp: 1231901.577
+color timestamp: 1231907.65
+
+depth timestamp: 1231934.756
+color timestamp: 1231940.823
+
+depth timestamp: 1232067.543
+color timestamp: 1232040.34
+
+depth timestamp: 1232133.901
+color timestamp: 1232106.685
+
+depth timestamp: 1232167.08
+color timestamp: 1232173.03
+
+depth timestamp: 1232200.283
+color timestamp: 1232173.03
+
+depth timestamp: 1232266.665
+color timestamp: 1232239.376
+
+depth timestamp: 1232333.046
+color timestamp: 1232305.721
+
+depth timestamp: 1232399.428
+color timestamp: 1232372.066
+
+depth timestamp: 1232432.63
+color timestamp: 1232438.411
+
+depth timestamp: 1232498.989
+color timestamp: 1232504.756
+
+depth timestamp: 1232532.191
+color timestamp: 1232504.756
+
+depth timestamp: 1232631.775
+color timestamp: 1232604.273
+
+depth timestamp: 1232731.313
+color timestamp: 1232736.963
+
+depth timestamp: 1232797.718
+color timestamp: 1232770.136
+
+depth timestamp: 1232830.897
+color timestamp: 1232869.654
+
+depth timestamp: 1232864.076
+color timestamp: 1232869.654
+
+depth timestamp: 1232897.279
+color timestamp: 1232869.654
+
+depth timestamp: 1233030.042
+color timestamp: 1233035.516
+
+depth timestamp: 1233063.222
+color timestamp: 1233035.516
+
+depth timestamp: 1233096.4
+color timestamp: 1233135.034
+
+depth timestamp: 1233129.626
+color timestamp: 1233135.034
+
+depth timestamp: 1233195.985
+color timestamp: 1233201.379
+
+depth timestamp: 1233262.367
+color timestamp: 1233267.724
+
+depth timestamp: 1233361.927
+color timestamp: 1233367.241
+
+depth timestamp: 1233395.107
+color timestamp: 1233367.241
+
+depth timestamp: 1233461.512
+color timestamp: 1233433.586
+
+depth timestamp: 1233527.87
+color timestamp: 1233499.932
+
+depth timestamp: 1233627.454
+color timestamp: 1233599.449
+
+depth timestamp: 1233660.633
+color timestamp: 1233665.794
+
+depth timestamp: 1233760.194
+color timestamp: 1233732.139
+
+depth timestamp: 1233793.397
+color timestamp: 1233831.657
+
+depth timestamp: 1233826.576
+color timestamp: 1233831.657
+
+depth timestamp: 1233859.779
+color timestamp: 1233864.829
+
+depth timestamp: 1233992.542
+color timestamp: 1233997.519
+
+depth timestamp: 1234058.9
+color timestamp: 1234030.692
+
+depth timestamp: 1234092.103
+color timestamp: 1234130.21
+
+depth timestamp: 1234125.305
+color timestamp: 1234130.21
+
+depth timestamp: 1234158.484
+color timestamp: 1234163.382
+
+depth timestamp: 1234191.687
+color timestamp: 1234163.382
+
+depth timestamp: 1234291.248
+color timestamp: 1234296.072
+
+depth timestamp: 1234357.653
+color timestamp: 1234362.417
+
+depth timestamp: 1234390.832
+color timestamp: 1234395.59
+
+depth timestamp: 1234424.034
+color timestamp: 1234395.59
+
+depth timestamp: 1234523.618
+color timestamp: 1234528.28
+
+depth timestamp: 1234556.798
+color timestamp: 1234528.28
+
+depth timestamp: 1234656.358
+color timestamp: 1234627.797
+
+depth timestamp: 1234689.561
+color timestamp: 1234694.143
+
+depth timestamp: 1234722.74
+color timestamp: 1234694.143
+
+depth timestamp: 1234755.919
+color timestamp: 1234793.66
+
+depth timestamp: 1234855.504
+color timestamp: 1234860.005
+
+depth timestamp: 1234921.862
+color timestamp: 1234893.178
+
+depth timestamp: 1234955.064
+color timestamp: 1234992.695
+
+depth timestamp: 1234988.244
+color timestamp: 1234992.695
+
+depth timestamp: 1235021.446
+color timestamp: 1234992.695
+
+depth timestamp: 1235087.828
+color timestamp: 1235092.213
+
+depth timestamp: 1235121.03
+color timestamp: 1235092.213
+
+depth timestamp: 1235220.591
+color timestamp: 1235224.903
+
+depth timestamp: 1235253.77
+color timestamp: 1235258.075
+
+depth timestamp: 1235286.973
+color timestamp: 1235258.075
+
+depth timestamp: 1235386.557
+color timestamp: 1235390.766
+
+depth timestamp: 1235519.321
+color timestamp: 1235523.456
+
+depth timestamp: 1235552.5
+color timestamp: 1235556.628
+
+depth timestamp: 1235585.703
+color timestamp: 1235556.628
+
+depth timestamp: 1235618.882
+color timestamp: 1235656.146
+
+depth timestamp: 1235718.443
+color timestamp: 1235722.491
+
+depth timestamp: 1235784.801
+color timestamp: 1235788.836
+
+depth timestamp: 1235818.027
+color timestamp: 1235788.836
+
+depth timestamp: 1235851.206
+color timestamp: 1235888.353
+
+depth timestamp: 1235884.385
+color timestamp: 1235888.353
+
+depth timestamp: 1235950.767
+color timestamp: 1235954.699
+
+depth timestamp: 1235983.969
+color timestamp: 1235954.699
+
+depth timestamp: 1236083.53
+color timestamp: 1236087.389
+
+depth timestamp: 1236116.71
+color timestamp: 1236120.561
+
+depth timestamp: 1236183.091
+color timestamp: 1236153.734
+
+depth timestamp: 1236282.675
+color timestamp: 1236286.424
+
+depth timestamp: 1236315.855
+color timestamp: 1236286.424
+
+depth timestamp: 1236382.259
+color timestamp: 1236385.941
+
+depth timestamp: 1236448.618
+color timestamp: 1236419.114
+
+depth timestamp: 1236515.023
+color timestamp: 1236485.459
+
+depth timestamp: 1236548.179
+color timestamp: 1236551.804
+
+depth timestamp: 1236614.583
+color timestamp: 1236618.149
+
+depth timestamp: 1236680.942
+color timestamp: 1236651.322
+
+depth timestamp: 1236813.729
+color timestamp: 1236817.184
+
+depth timestamp: 1236846.908
+color timestamp: 1236850.357
+
+depth timestamp: 1236880.087
+color timestamp: 1236850.357
+
+depth timestamp: 1236946.492
+color timestamp: 1236949.874
+
+depth timestamp: 1237012.874
+color timestamp: 1236983.047
+
+depth timestamp: 1237112.435
+color timestamp: 1237115.737
+
+depth timestamp: 1237211.996
+color timestamp: 1237215.255
+
+depth timestamp: 1237245.175
+color timestamp: 1237215.255
+
+depth timestamp: 1237278.378
+color timestamp: 1237314.772
+
+depth timestamp: 1237377.939
+color timestamp: 1237381.117
+
+depth timestamp: 1237411.141
+color timestamp: 1237381.117
+
+depth timestamp: 1237444.344
+color timestamp: 1237480.635
+
+depth timestamp: 1237477.499
+color timestamp: 1237480.635
+
+depth timestamp: 1237577.084
+color timestamp: 1237580.152
+
+depth timestamp: 1237643.466
+color timestamp: 1237613.325
+
+depth timestamp: 1237676.645
+color timestamp: 1237712.842
+
+depth timestamp: 1237709.824
+color timestamp: 1237712.842
+
+depth timestamp: 1237743.026
+color timestamp: 1237746.015
+
+depth timestamp: 1237809.408
+color timestamp: 1237812.36
+
+depth timestamp: 1237842.587
+color timestamp: 1237812.36
+
+depth timestamp: 1237908.969
+color timestamp: 1237911.878
+
+depth timestamp: 1237975.351
+color timestamp: 1237978.223
+
+depth timestamp: 1238108.138
+color timestamp: 1238077.74
+
+depth timestamp: 1238174.496
+color timestamp: 1238144.085
+
+depth timestamp: 1238207.698
+color timestamp: 1238243.603
+
+depth timestamp: 1238307.259
+color timestamp: 1238309.948
+
+depth timestamp: 1238373.665
+color timestamp: 1238376.293
+
+depth timestamp: 1238406.844
+color timestamp: 1238376.293
+
+depth timestamp: 1238440.023
+color timestamp: 1238442.638
+
+depth timestamp: 1238539.584
+color timestamp: 1238542.156
+
+depth timestamp: 1238605.966
+color timestamp: 1238608.501
+
+depth timestamp: 1238639.192
+color timestamp: 1238608.501
+
+depth timestamp: 1238672.348
+color timestamp: 1238674.846
+
+depth timestamp: 1238705.55
+color timestamp: 1238674.846
+
+depth timestamp: 1238738.753
+color timestamp: 1238741.191
+
+depth timestamp: 1238805.134
+color timestamp: 1238807.536
+
+depth timestamp: 1238838.314
+color timestamp: 1238840.708
+
+depth timestamp: 1238937.875
+color timestamp: 1238907.053
+
+depth timestamp: 1239070.662
+color timestamp: 1239039.744
+
+depth timestamp: 1239137.02
+color timestamp: 1239106.089
+
+depth timestamp: 1239170.223
+color timestamp: 1239205.606
+
+depth timestamp: 1239236.604
+color timestamp: 1239205.606
+
+depth timestamp: 1239302.963
+color timestamp: 1239271.951
+
+depth timestamp: 1239369.368
+color timestamp: 1239371.469
+
+depth timestamp: 1239402.547
+color timestamp: 1239404.641
+
+depth timestamp: 1239502.108
+color timestamp: 1239504.159
+
+depth timestamp: 1239535.334
+color timestamp: 1239537.331
+
+depth timestamp: 1239601.669
+color timestamp: 1239603.677
+
+depth timestamp: 1239634.895
+color timestamp: 1239603.677
+
+depth timestamp: 1239668.074
+color timestamp: 1239670.022
+
+depth timestamp: 1239701.254
+color timestamp: 1239703.194
+
+depth timestamp: 1239734.456
+color timestamp: 1239703.194
+
+depth timestamp: 1239800.838
+color timestamp: 1239802.712
+
+depth timestamp: 1239900.399
+color timestamp: 1239902.229
+
+depth timestamp: 1240066.342
+color timestamp: 1240068.092
+
+depth timestamp: 1240165.926
+color timestamp: 1240134.437
+
+depth timestamp: 1240199.082
+color timestamp: 1240200.782
+
+depth timestamp: 1240232.308
+color timestamp: 1240200.782
+
+depth timestamp: 1240298.689
+color timestamp: 1240300.3
+
+depth timestamp: 1240431.43
+color timestamp: 1240432.99
+
+depth timestamp: 1240497.812
+color timestamp: 1240499.335
+
+depth timestamp: 1240597.396
+color timestamp: 1240565.68
+
+depth timestamp: 1240630.598
+color timestamp: 1240632.025
+
+depth timestamp: 1240663.754
+color timestamp: 1240632.025
+
+depth timestamp: 1240730.16
+color timestamp: 1240698.37
+
+depth timestamp: 1240796.518
+color timestamp: 1240764.715
+
+depth timestamp: 1240829.72
+color timestamp: 1240864.233
+
+depth timestamp: 1240896.103
+color timestamp: 1240897.405
+
+depth timestamp: 1241062.045
+color timestamp: 1241030.095
+
+depth timestamp: 1241194.809
+color timestamp: 1241162.785
+
+depth timestamp: 1241228.011
+color timestamp: 1241229.13
+
+depth timestamp: 1241261.191
+color timestamp: 1241229.13
+
+depth timestamp: 1241294.37
+color timestamp: 1241328.648
+
+depth timestamp: 1241360.752
+color timestamp: 1241328.648
+
+depth timestamp: 1241393.954
+color timestamp: 1241394.993
+
+depth timestamp: 1241427.157
+color timestamp: 1241394.993
+
+depth timestamp: 1241493.515
+color timestamp: 1241461.338
+
+depth timestamp: 1241593.076
+color timestamp: 1241594.028
+
+depth timestamp: 1241626.279
+color timestamp: 1241594.028
+
+depth timestamp: 1241659.482
+color timestamp: 1241660.373
+
+depth timestamp: 1241725.864
+color timestamp: 1241726.718
+
+depth timestamp: 1241792.222
+color timestamp: 1241759.891
+
+depth timestamp: 1241825.425
+color timestamp: 1241859.408
+
+depth timestamp: 1241891.806
+color timestamp: 1241859.408
+
+depth timestamp: 1242024.57
+color timestamp: 1242025.271
+
+depth timestamp: 1242157.31
+color timestamp: 1242157.961
+
+depth timestamp: 1242190.489
+color timestamp: 1242157.961
+
+depth timestamp: 1242223.715
+color timestamp: 1242224.306
+
+depth timestamp: 1242256.895
+color timestamp: 1242224.306
+
+depth timestamp: 1242356.456
+color timestamp: 1242323.824
+
+depth timestamp: 1242389.682
+color timestamp: 1242390.169
+
+depth timestamp: 1242422.837
+color timestamp: 1242390.169
+
+depth timestamp: 1242489.243
+color timestamp: 1242489.686
+
+depth timestamp: 1242522.422
+color timestamp: 1242489.686
+
+depth timestamp: 1242622.006
+color timestamp: 1242622.376
+
+depth timestamp: 1242655.186
+color timestamp: 1242622.376
+
+depth timestamp: 1242787.949
+color timestamp: 1242755.067
+
+depth timestamp: 1242821.128
+color timestamp: 1242821.412
+
+depth timestamp: 1242854.331
+color timestamp: 1242821.412
+
+depth timestamp: 1242987.071
+color timestamp: 1242987.274
+
+depth timestamp: 1243119.858
+color timestamp: 1243119.964
+
+depth timestamp: 1243186.217
+color timestamp: 1243186.309
+
+depth timestamp: 1243219.419
+color timestamp: 1243186.309
+
+depth timestamp: 1243285.778
+color timestamp: 1243252.654
+
+depth timestamp: 1243352.159
+color timestamp: 1243352.172
+
+depth timestamp: 1243385.362
+color timestamp: 1243385.345
+
+depth timestamp: 1243418.541
+color timestamp: 1243385.345
+
+depth timestamp: 1243484.947
+color timestamp: 1243484.862
+
+depth timestamp: 1243551.329
+color timestamp: 1243518.035
+
+depth timestamp: 1243584.508
+color timestamp: 1243617.552
+
+depth timestamp: 1243617.71
+color timestamp: 1243617.552
+
+depth timestamp: 1243684.092
+color timestamp: 1243717.07
+
+depth timestamp: 1243783.653
+color timestamp: 1243783.415
+
+depth timestamp: 1243816.832
+color timestamp: 1243849.76
+
+depth timestamp: 1243850.035
+color timestamp: 1243849.76
+
+depth timestamp: 1243982.775
+color timestamp: 1243982.45
+
+depth timestamp: 1244082.36
+color timestamp: 1244081.968
+
+depth timestamp: 1244148.742
+color timestamp: 1244181.485
+
+depth timestamp: 1244281.506
+color timestamp: 1244247.83
+
+depth timestamp: 1244314.708
+color timestamp: 1244347.348
+
+depth timestamp: 1244381.067
+color timestamp: 1244380.52
+
+depth timestamp: 1244414.246
+color timestamp: 1244446.865
+
+depth timestamp: 1244447.426
+color timestamp: 1244446.865
+
+depth timestamp: 1244547.01
+color timestamp: 1244546.383
+
+depth timestamp: 1244580.213
+color timestamp: 1244546.383
+
+depth timestamp: 1244613.392
+color timestamp: 1244645.901
+
+depth timestamp: 1244646.595
+color timestamp: 1244645.901
+
+depth timestamp: 1244712.977
+color timestamp: 1244745.418
+
+depth timestamp: 1244746.156
+color timestamp: 1244745.418
+
+depth timestamp: 1244779.358
+color timestamp: 1244811.763
+
+depth timestamp: 1244912.076
+color timestamp: 1244944.453
+
+depth timestamp: 1244978.481
+color timestamp: 1245010.798
+
+depth timestamp: 1245111.245
+color timestamp: 1245110.316
+
+depth timestamp: 1245144.424
+color timestamp: 1245110.316
+
+depth timestamp: 1245244.008
+color timestamp: 1245276.179
+
+depth timestamp: 1245277.187
+color timestamp: 1245276.179
+
+depth timestamp: 1245310.367
+color timestamp: 1245276.179
+
+depth timestamp: 1245376.772
+color timestamp: 1245375.696
+
+depth timestamp: 1245409.951
+color timestamp: 1245442.041
+
+depth timestamp: 1245476.31
+color timestamp: 1245475.214
+
+depth timestamp: 1245542.715
+color timestamp: 1245541.559
+
+depth timestamp: 1245575.895
+color timestamp: 1245607.904
+
+depth timestamp: 1245609.074
+color timestamp: 1245607.904
+
+depth timestamp: 1245708.681
+color timestamp: 1245740.594
+
+depth timestamp: 1245741.861
+color timestamp: 1245740.594
+
+depth timestamp: 1245775.064
+color timestamp: 1245806.939
+
+depth timestamp: 1245874.624
+color timestamp: 1245873.284
+
+depth timestamp: 1245974.186
+color timestamp: 1246005.974
+
+depth timestamp: 1246073.77
+color timestamp: 1246072.319
+
+depth timestamp: 1246140.152
+color timestamp: 1246105.492
+
+depth timestamp: 1246306.095
+color timestamp: 1246304.527
+
+depth timestamp: 1246339.251
+color timestamp: 1246370.872
+
+depth timestamp: 1246438.859
+color timestamp: 1246437.217
+
+depth timestamp: 1246505.241
+color timestamp: 1246503.562
+
+depth timestamp: 1246538.42
+color timestamp: 1246503.562
+
+depth timestamp: 1246571.623
+color timestamp: 1246603.08
+
+depth timestamp: 1246671.183
+color timestamp: 1246702.597
+
+depth timestamp: 1246704.386
+color timestamp: 1246702.597
+
+depth timestamp: 1246803.947
+color timestamp: 1246802.115
+
+depth timestamp: 1246903.532
+color timestamp: 1246901.632
+
+depth timestamp: 1247003.093
+color timestamp: 1247034.323
+
+depth timestamp: 1247102.678
+color timestamp: 1247100.668
+
+depth timestamp: 1247169.036
+color timestamp: 1247133.84
+
+depth timestamp: 1247202.216
+color timestamp: 1247233.358
+
+depth timestamp: 1247235.442
+color timestamp: 1247233.358
+
+depth timestamp: 1247268.644
+color timestamp: 1247299.703
+
+depth timestamp: 1247335.003
+color timestamp: 1247366.048
+
+depth timestamp: 1247368.182
+color timestamp: 1247366.048
+
+depth timestamp: 1247434.564
+color timestamp: 1247465.565
+
+depth timestamp: 1247467.766
+color timestamp: 1247465.565
+
+depth timestamp: 1247500.946
+color timestamp: 1247531.91
+
+depth timestamp: 1247567.351
+color timestamp: 1247531.91
+
+depth timestamp: 1247633.71
+color timestamp: 1247631.428
+
+depth timestamp: 1247666.936
+color timestamp: 1247664.601
+
+depth timestamp: 1247733.248
+color timestamp: 1247764.118
+
+depth timestamp: 1247866.035
+color timestamp: 1247896.808
+
+depth timestamp: 1247965.619
+color timestamp: 1247996.326
+
+depth timestamp: 1248031.978
+color timestamp: 1248062.671
+
+depth timestamp: 1248131.539
+color timestamp: 1248129.016
+
+depth timestamp: 1248164.742
+color timestamp: 1248195.361
+
+depth timestamp: 1248197.921
+color timestamp: 1248195.361
+
+depth timestamp: 1248231.147
+color timestamp: 1248195.361
+
+depth timestamp: 1248297.506
+color timestamp: 1248294.879
+
+depth timestamp: 1248330.684
+color timestamp: 1248328.051
+
+depth timestamp: 1248397.067
+color timestamp: 1248427.569
+
+depth timestamp: 1248430.269
+color timestamp: 1248427.569
+
+depth timestamp: 1248463.448
+color timestamp: 1248427.569
+
+depth timestamp: 1248529.831
+color timestamp: 1248527.086
+
+depth timestamp: 1248563.01
+color timestamp: 1248593.431
+
+depth timestamp: 1248695.774
+color timestamp: 1248726.121
+
+depth timestamp: 1248795.358
+color timestamp: 1248792.466
+
+depth timestamp: 1248894.943
+color timestamp: 1248891.984
+
+depth timestamp: 1248961.301
+color timestamp: 1248958.329
+
+depth timestamp: 1249027.66
+color timestamp: 1249024.674
+
+depth timestamp: 1249094.065
+color timestamp: 1249057.847
+
+depth timestamp: 1249127.268
+color timestamp: 1249157.364
+
+depth timestamp: 1249226.829
+color timestamp: 1249223.709
+
+depth timestamp: 1249260.009
+color timestamp: 1249256.882
+
+depth timestamp: 1249326.39
+color timestamp: 1249290.054
+
+depth timestamp: 1249359.57
+color timestamp: 1249389.572
+
+depth timestamp: 1249392.772
+color timestamp: 1249389.572
+
+depth timestamp: 1249425.952
+color timestamp: 1249455.917
+
+depth timestamp: 1249459.132
+color timestamp: 1249455.917
+
+depth timestamp: 1249492.357
+color timestamp: 1249489.09
+
+depth timestamp: 1249591.895
+color timestamp: 1249588.607
+
+depth timestamp: 1249691.48
+color timestamp: 1249721.297
+
+depth timestamp: 1249791.064
+color timestamp: 1249787.642
+
+depth timestamp: 1249824.244
+color timestamp: 1249787.642
+
+depth timestamp: 1249923.828
+color timestamp: 1249953.505
+
+depth timestamp: 1250023.389
+color timestamp: 1250053.023
+
+depth timestamp: 1250056.592
+color timestamp: 1250053.023
+
+depth timestamp: 1250089.772
+color timestamp: 1250119.368
+
+depth timestamp: 1250122.974
+color timestamp: 1250119.368
+
+depth timestamp: 1250156.13
+color timestamp: 1250119.368
+
+depth timestamp: 1250322.12
+color timestamp: 1250318.403
+
+depth timestamp: 1250355.299
+color timestamp: 1250318.403
+
+depth timestamp: 1250388.478
+color timestamp: 1250417.92
+
+depth timestamp: 1250421.658
+color timestamp: 1250417.92
+
+depth timestamp: 1250488.063
+color timestamp: 1250484.265
+
+depth timestamp: 1250620.827
+color timestamp: 1250616.955
+
+depth timestamp: 1250720.388
+color timestamp: 1250716.473
+
+depth timestamp: 1250786.77
+color timestamp: 1250782.818
+
+depth timestamp: 1250853.152
+color timestamp: 1250849.163
+
+depth timestamp: 1250985.916
+color timestamp: 1250981.853
+
+depth timestamp: 1251019.096
+color timestamp: 1251015.026
+
+depth timestamp: 1251052.275
+color timestamp: 1251015.026
+
+depth timestamp: 1251085.477
+color timestamp: 1251114.543
+
+depth timestamp: 1251118.657
+color timestamp: 1251114.543
+
+depth timestamp: 1251185.062
+color timestamp: 1251214.061
+
+depth timestamp: 1251251.42
+color timestamp: 1251280.406
+
+depth timestamp: 1251284.623
+color timestamp: 1251280.406
+
+depth timestamp: 1251317.779
+color timestamp: 1251280.406
+
+depth timestamp: 1251351.005
+color timestamp: 1251379.924
+
+depth timestamp: 1251384.208
+color timestamp: 1251379.924
+
+depth timestamp: 1251417.364
+color timestamp: 1251413.096
+
+depth timestamp: 1251550.128
+color timestamp: 1251545.786
+
+depth timestamp: 1251649.712
+color timestamp: 1251678.476
+
+depth timestamp: 1251749.274
+color timestamp: 1251744.821
+
+depth timestamp: 1251782.476
+color timestamp: 1251777.994
+
+depth timestamp: 1251848.858
+color timestamp: 1251844.339
+
+depth timestamp: 1251948.419
+color timestamp: 1251943.857
+
+depth timestamp: 1251981.598
+color timestamp: 1251943.857
+
+depth timestamp: 1252014.801
+color timestamp: 1252043.374
+
+depth timestamp: 1252047.98
+color timestamp: 1252043.374
+
+depth timestamp: 1252114.362
+color timestamp: 1252142.892
+
+depth timestamp: 1252280.306
+color timestamp: 1252242.409
+
+depth timestamp: 1252313.509
+color timestamp: 1252375.099
+
+depth timestamp: 1252346.711
+color timestamp: 1252375.099
+
+depth timestamp: 1252446.249
+color timestamp: 1252441.444
+
+depth timestamp: 1252579.013
+color timestamp: 1252574.135
+
+depth timestamp: 1252612.215
+color timestamp: 1252607.307
+
+depth timestamp: 1252910.923
+color timestamp: 1252905.86
+
+depth timestamp: 1252944.125
+color timestamp: 1252905.86
+
+depth timestamp: 1252977.305
+color timestamp: 1253005.377
+
+depth timestamp: 1253010.484
+color timestamp: 1253005.377
+
+depth timestamp: 1253076.866
+color timestamp: 1253071.722
+
+depth timestamp: 1253110.069
+color timestamp: 1253104.895
+
+depth timestamp: 1253143.248
+color timestamp: 1253104.895
+
+depth timestamp: 1253176.451
+color timestamp: 1253204.413
+
+depth timestamp: 1253209.654
+color timestamp: 1253204.413
+
+depth timestamp: 1253276.012
+color timestamp: 1253270.758
+
+depth timestamp: 1253309.215
+color timestamp: 1253303.93
+
+depth timestamp: 1253408.776
+color timestamp: 1253436.62
+
+depth timestamp: 1253508.361
+color timestamp: 1253502.965
+
+depth timestamp: 1253541.54
+color timestamp: 1253502.965
+
+depth timestamp: 1253674.304
+color timestamp: 1253668.828
+
+depth timestamp: 1253707.507
+color timestamp: 1253735.173
+
+depth timestamp: 1253840.271
+color timestamp: 1253834.691
+
+depth timestamp: 1253873.45
+color timestamp: 1253901.036
+
+depth timestamp: 1253906.653
+color timestamp: 1253901.036
+
+depth timestamp: 1253939.833
+color timestamp: 1253901.036
+
+depth timestamp: 1253973.011
+color timestamp: 1254000.553
+
+depth timestamp: 1254006.214
+color timestamp: 1254000.553
+
+depth timestamp: 1254072.596
+color timestamp: 1254066.898
+
+depth timestamp: 1254105.775
+color timestamp: 1254133.243
+
+depth timestamp: 1254138.978
+color timestamp: 1254133.243
+
+depth timestamp: 1254172.158
+color timestamp: 1254199.588
+
+depth timestamp: 1254238.563
+color timestamp: 1254199.588
+
+depth timestamp: 1254437.686
+color timestamp: 1254431.796
+
+depth timestamp: 1254470.865
+color timestamp: 1254464.969
+
+depth timestamp: 1254636.808
+color timestamp: 1254631.325
+
+depth timestamp: 1254670.011
+color timestamp: 1254691.285
+
+depth timestamp: 1254769.572
+color timestamp: 1254744.221
+
+depth timestamp: 1254802.775
+color timestamp: 1254797.361
+
+depth timestamp: 1254869.157
+color timestamp: 1254850.414
+
+depth timestamp: 1254902.336
+color timestamp: 1254934.956
+
+depth timestamp: 1254935.516
+color timestamp: 1254934.956
+
+depth timestamp: 1254968.718
+color timestamp: 1254974.891
+
+depth timestamp: 1255001.921
+color timestamp: 1254974.891
+
+depth timestamp: 1255035.124
+color timestamp: 1255086.975
+
+depth timestamp: 1255068.28
+color timestamp: 1255086.975
+
+depth timestamp: 1255101.483
+color timestamp: 1255086.975
+
+depth timestamp: 1255134.686
+color timestamp: 1255123.253
+
+depth timestamp: 1255234.247
+color timestamp: 1255230.462
+
+depth timestamp: 1255367.011
+color timestamp: 1255371.336
+
+depth timestamp: 1255433.393
+color timestamp: 1255406.656
+
+depth timestamp: 1255532.954
+color timestamp: 1255548.285
+
+depth timestamp: 1255599.336
+color timestamp: 1255583.78
+
+depth timestamp: 1255698.921
+color timestamp: 1255690.466
+
+depth timestamp: 1255732.1
+color timestamp: 1255761.599
+
+depth timestamp: 1255831.662
+color timestamp: 1255797.007
+
+depth timestamp: 1255864.865
+color timestamp: 1255867.473
+
+depth timestamp: 1255898.067
+color timestamp: 1255867.473
+
+depth timestamp: 1255931.246
+color timestamp: 1255937.214
+
+depth timestamp: 1255964.426
+color timestamp: 1255937.214
+
+depth timestamp: 1255997.605
+color timestamp: 1256006.548
+
+depth timestamp: 1256030.831
+color timestamp: 1256006.548
+
+depth timestamp: 1256064.01
+color timestamp: 1256075.737
+
+depth timestamp: 1256097.19
+color timestamp: 1256110.245
+
+depth timestamp: 1256130.393
+color timestamp: 1256110.245
+
+depth timestamp: 1256229.954
+color timestamp: 1256213.593
+
+depth timestamp: 1256329.492
+color timestamp: 1256317.348
+
+depth timestamp: 1256395.897
+color timestamp: 1256386.682
+
+depth timestamp: 1256495.459
+color timestamp: 1256490.96
+
+depth timestamp: 1256595.02
+color timestamp: 1256595.556
+
+depth timestamp: 1256628.246
+color timestamp: 1256595.556
+
+depth timestamp: 1256727.785
+color timestamp: 1256735.502
+
+depth timestamp: 1256760.964
+color timestamp: 1256735.502
+
+depth timestamp: 1256827.37
+color timestamp: 1256805.707
+
+depth timestamp: 1256860.549
+color timestamp: 1256876.028
+
+depth timestamp: 1256893.728
+color timestamp: 1256876.028
+
+depth timestamp: 1256926.907
+color timestamp: 1256946.523
+
+depth timestamp: 1256960.134
+color timestamp: 1256946.523
+
+depth timestamp: 1256993.313
+color timestamp: 1257017.135
+
+depth timestamp: 1257026.492
+color timestamp: 1257017.135
+
+depth timestamp: 1257059.695
+color timestamp: 1257052.484
+
+depth timestamp: 1257192.436
+color timestamp: 1257158.793
+
+depth timestamp: 1257292.02
+color timestamp: 1257265.421
+
+depth timestamp: 1257358.426
+color timestamp: 1257336.67
+
+depth timestamp: 1257457.964
+color timestamp: 1257444.721
+
+depth timestamp: 1257557.572
+color timestamp: 1257553.525
+
+depth timestamp: 1257590.729
+color timestamp: 1257553.525
+
+depth timestamp: 1257657.134
+color timestamp: 1257662.533
+
+depth timestamp: 1257723.493
+color timestamp: 1257698.956
+
+depth timestamp: 1257789.875
+color timestamp: 1257771.889
+
+depth timestamp: 1257823.077
+color timestamp: 1257808.428
+
+depth timestamp: 1257856.257
+color timestamp: 1257882.116
+
+depth timestamp: 1257889.483
+color timestamp: 1257882.116
+
+depth timestamp: 1257922.64
+color timestamp: 1257918.946
+
+depth timestamp: 1257955.842
+color timestamp: 1257918.946
+
+depth timestamp: 1257989.045
+color timestamp: 1258030.13
+
+depth timestamp: 1258022.224
+color timestamp: 1258030.13
+
+depth timestamp: 1258121.785
+color timestamp: 1258104.863
+
+depth timestamp: 1258221.37
+color timestamp: 1258218.572
+
+depth timestamp: 1258287.729
+color timestamp: 1258257.027
+
+depth timestamp: 1258354.134
+color timestamp: 1258334.719
+
+depth timestamp: 1258453.695
+color timestamp: 1258452.637
+
+depth timestamp: 1258520.101
+color timestamp: 1258492.195
+
+depth timestamp: 1258553.257
+color timestamp: 1258571.803
+
+depth timestamp: 1258652.842
+color timestamp: 1258651.788
+
+depth timestamp: 1258719.2
+color timestamp: 1258771.883
+
+depth timestamp: 1258785.582
+color timestamp: 1258771.883
+
+depth timestamp: 1258818.785
+color timestamp: 1258811.992
+
+depth timestamp: 1258851.964
+color timestamp: 1258852.159
+
+depth timestamp: 1258885.167
+color timestamp: 1258852.159
+
+depth timestamp: 1258918.37
+color timestamp: 1258932.028
+
+depth timestamp: 1258951.526
+color timestamp: 1258932.028
+
+depth timestamp: 1258984.705
+color timestamp: 1259011.636
+
+depth timestamp: 1259051.111
+color timestamp: 1259051.542
+
+depth timestamp: 1259150.672
+color timestamp: 1259091.506
+
+depth timestamp: 1259250.257
+color timestamp: 1259251.738
+
+depth timestamp: 1259316.616
+color timestamp: 1259291.905
+
+depth timestamp: 1259383.021
+color timestamp: 1259372.355
+
+depth timestamp: 1259482.606
+color timestamp: 1259493.9
+
+depth timestamp: 1259515.762
+color timestamp: 1259534.764
+
+depth timestamp: 1259615.37
+color timestamp: 1259616.723
+
+depth timestamp: 1259681.729
+color timestamp: 1259739.807
+
+depth timestamp: 1259748.088
+color timestamp: 1259739.807
+
+depth timestamp: 1259781.291
+color timestamp: 1259780.902
+
+depth timestamp: 1259814.47
+color timestamp: 1259780.902
+
+depth timestamp: 1259880.852
+color timestamp: 1259863.239
+
+depth timestamp: 1259914.055
+color timestamp: 1259904.479
+
+depth timestamp: 1259947.234
+color timestamp: 1259987.077
+
+depth timestamp: 1259980.437
+color timestamp: 1259987.077
+
+depth timestamp: 1260013.616
+color timestamp: 1260028.434
+
+depth timestamp: 1260113.201
+color timestamp: 1260152.736
+
+depth timestamp: 1260179.56
+color timestamp: 1260194.267
+
+depth timestamp: 1260279.145
+color timestamp: 1260277.445
+
+depth timestamp: 1260312.324
+color timestamp: 1260319.092
+
+depth timestamp: 1260411.909
+color timestamp: 1260402.532
+
+depth timestamp: 1260445.089
+color timestamp: 1260486.145
+
+depth timestamp: 1260544.65
+color timestamp: 1260528.024
+
+depth timestamp: 1260611.032
+color timestamp: 1260569.933
+
+depth timestamp: 1260644.235
+color timestamp: 1260653.865
+
+depth timestamp: 1260677.437
+color timestamp: 1260653.865
+
+depth timestamp: 1260743.796
+color timestamp: 1260737.972
+
+depth timestamp: 1260776.975
+color timestamp: 1260780.083
+
+depth timestamp: 1260810.154
+color timestamp: 1260822.253
+
+depth timestamp: 1260876.56
+color timestamp: 1260906.708
+
+depth timestamp: 1260909.739
+color timestamp: 1260906.708
+
+depth timestamp: 1260942.942
+color timestamp: 1260948.993
+
+depth timestamp: 1261042.503
+color timestamp: 1261033.709
+
+depth timestamp: 1261108.886
+color timestamp: 1261076.14
+
+depth timestamp: 1261175.267
+color timestamp: 1261161.117
+
+depth timestamp: 1261208.47
+color timestamp: 1261203.664
+
+depth timestamp: 1261341.211
+color timestamp: 1261331.566
+
+depth timestamp: 1261374.413
+color timestamp: 1261374.286
+
+depth timestamp: 1261507.178
+color timestamp: 1261502.449
+
+depth timestamp: 1261606.763
+color timestamp: 1261587.456
+
+depth timestamp: 1261639.919
+color timestamp: 1261629.625
+
+depth timestamp: 1261673.121
+color timestamp: 1261713.412
+
+depth timestamp: 1261706.347
+color timestamp: 1261713.412
+
+depth timestamp: 1261739.503
+color timestamp: 1261713.412
+
+depth timestamp: 1261805.886
+color timestamp: 1261796.474
+
+depth timestamp: 1261839.088
+color timestamp: 1261837.715
+
+depth timestamp: 1261872.268
+color timestamp: 1261879.014
+
+depth timestamp: 1261905.447
+color timestamp: 1261879.014
+
+depth timestamp: 1261971.829
+color timestamp: 1261961.379
+
+depth timestamp: 1262104.617
+color timestamp: 1262084.405
+
+depth timestamp: 1262137.796
+color timestamp: 1262125.268
+
+depth timestamp: 1262170.999
+color timestamp: 1262206.792
+
+depth timestamp: 1262270.561
+color timestamp: 1262288.026
+
+depth timestamp: 1262303.74
+color timestamp: 1262288.026
+
+depth timestamp: 1262403.325
+color timestamp: 1262408.439
+
+depth timestamp: 1262536.066
+color timestamp: 1262567.424
+
+depth timestamp: 1262569.292
+color timestamp: 1262567.424
+
+depth timestamp: 1262602.448
+color timestamp: 1262567.424
+
+depth timestamp: 1262635.651
+color timestamp: 1262646.568
+
+depth timestamp: 1262668.854
+color timestamp: 1262686.038
+
+depth timestamp: 1262702.01
+color timestamp: 1262686.038
+
+depth timestamp: 1262735.212
+color timestamp: 1262764.775
+
+depth timestamp: 1262801.618
+color timestamp: 1262804.043
+
+depth timestamp: 1262834.774
+color timestamp: 1262843.252
+
+depth timestamp: 1262868.0
+color timestamp: 1262843.252
+
+depth timestamp: 1262967.538
+color timestamp: 1262960.444
+
+depth timestamp: 1263000.717
+color timestamp: 1263038.224
+
+depth timestamp: 1263067.123
+color timestamp: 1263038.224
+
+depth timestamp: 1263166.684
+color timestamp: 1263154.4
+
+depth timestamp: 1263233.067
+color timestamp: 1263231.542
+
+depth timestamp: 1263266.246
+color timestamp: 1263269.996
+
+depth timestamp: 1263432.213
+color timestamp: 1263424.134
+
+depth timestamp: 1263465.369
+color timestamp: 1263462.792
+
+depth timestamp: 1263498.596
+color timestamp: 1263462.792
+
+depth timestamp: 1263531.775
+color timestamp: 1263539.991
+
+depth timestamp: 1263598.157
+color timestamp: 1263617.365
+
+depth timestamp: 1263664.539
+color timestamp: 1263694.593
+
+depth timestamp: 1263697.718
+color timestamp: 1263694.593
+
+depth timestamp: 1263730.921
+color timestamp: 1263733.106
+
+depth timestamp: 1263764.124
+color timestamp: 1263733.106
+
+depth timestamp: 1263830.459
+color timestamp: 1263810.45
+
+depth timestamp: 1263930.044
+color timestamp: 1263926.772
+
+depth timestamp: 1263963.247
+color timestamp: 1263926.772
+
+depth timestamp: 1264029.629
+color timestamp: 1264004.523
+
+depth timestamp: 1264129.214
+color timestamp: 1264121.221
+
+depth timestamp: 1264162.394
+color timestamp: 1264198.595
+
+depth timestamp: 1264228.752
+color timestamp: 1264198.595
+
+depth timestamp: 1264361.517
+color timestamp: 1264353.545
+
+depth timestamp: 1264427.923
+color timestamp: 1264392.406
+
+depth timestamp: 1264494.258
+color timestamp: 1264470.244
+
+depth timestamp: 1264527.461
+color timestamp: 1264548.024
+
+depth timestamp: 1264560.664
+color timestamp: 1264548.024
+
+depth timestamp: 1264627.045
+color timestamp: 1264625.426
+
+depth timestamp: 1264660.225
+color timestamp: 1264664.026
+
+depth timestamp: 1264693.427
+color timestamp: 1264664.026
+
+depth timestamp: 1264726.63
+color timestamp: 1264741.545
+
+depth timestamp: 1264793.013
+color timestamp: 1264780.377
+
+depth timestamp: 1264826.192
+color timestamp: 1264819.237
+
+depth timestamp: 1264925.754
+color timestamp: 1264936.052
+
+depth timestamp: 1264958.933
+color timestamp: 1264936.052
+
+depth timestamp: 1265025.338
+color timestamp: 1265014.151
+
+depth timestamp: 1265091.721
+color timestamp: 1265092.599
+
+depth timestamp: 1265158.08
+color timestamp: 1265132.098
+
+depth timestamp: 1265257.688
+color timestamp: 1265251.554
+
+depth timestamp: 1265357.226
+color timestamp: 1265331.395
+
+depth timestamp: 1265456.811
+color timestamp: 1265411.38
+
+depth timestamp: 1265489.991
+color timestamp: 1265532.2
+
+depth timestamp: 1265523.17
+color timestamp: 1265532.2
+
+depth timestamp: 1265556.372
+color timestamp: 1265572.831
+
+depth timestamp: 1265589.575
+color timestamp: 1265572.831
+
+depth timestamp: 1265655.935
+color timestamp: 1265695.654
+
+depth timestamp: 1265689.137
+color timestamp: 1265695.654
+
+depth timestamp: 1265722.317
+color timestamp: 1265736.895
+
+depth timestamp: 1265755.519
+color timestamp: 1265736.895
+
+depth timestamp: 1265855.081
+color timestamp: 1265861.604
+
+depth timestamp: 1265954.642
+color timestamp: 1265946.117
+
+depth timestamp: 1265987.845
+color timestamp: 1265946.117
+
+depth timestamp: 1266021.024
+color timestamp: 1266031.791
+
+depth timestamp: 1266120.609
+color timestamp: 1266117.726
+
+depth timestamp: 1266220.194
+color timestamp: 1266203.487
+
+depth timestamp: 1266352.935
+color timestamp: 1266332.462
+
+depth timestamp: 1266386.138
+color timestamp: 1266375.531
+
+depth timestamp: 1266419.318
+color timestamp: 1266461.814
+
+depth timestamp: 1266452.497
+color timestamp: 1266461.814
+
+depth timestamp: 1266485.723
+color timestamp: 1266461.814
+
+depth timestamp: 1266552.059
+color timestamp: 1266548.272
+
+depth timestamp: 1266585.261
+color timestamp: 1266591.573
+
+depth timestamp: 1266618.441
+color timestamp: 1266634.904
+
+depth timestamp: 1266651.644
+color timestamp: 1266634.904
+
+depth timestamp: 1266718.026
+color timestamp: 1266721.709
+
+depth timestamp: 1266817.587
+color timestamp: 1266852.281
+
+depth timestamp: 1266883.993
+color timestamp: 1266895.901
+
+depth timestamp: 1266917.172
+color timestamp: 1266895.901
+
+depth timestamp: 1266950.352
+color timestamp: 1266983.259
+
+depth timestamp: 1267049.937
+color timestamp: 1267070.79
+
+depth timestamp: 1267149.522
+color timestamp: 1267158.496
+
+depth timestamp: 1267282.239
+color timestamp: 1267290.373
+
+depth timestamp: 1267315.442
+color timestamp: 1267290.373
+
+depth timestamp: 1267348.644
+color timestamp: 1267378.514
+
+depth timestamp: 1267381.848
+color timestamp: 1267378.514
+
+depth timestamp: 1267415.004
+color timestamp: 1267378.514
+
+depth timestamp: 1267448.23
+color timestamp: 1267466.829
+
+depth timestamp: 1267481.409
+color timestamp: 1267466.829
+
+depth timestamp: 1267514.588
+color timestamp: 1267510.827
+
+depth timestamp: 1267547.768
+color timestamp: 1267554.737
+
+depth timestamp: 1267680.556
+color timestamp: 1267686.267
+
+depth timestamp: 1267746.938
+color timestamp: 1267730.236
+
+depth timestamp: 1267813.297
+color timestamp: 1267818.318
+
+depth timestamp: 1267846.477
+color timestamp: 1267862.432
+
+depth timestamp: 1267946.062
+color timestamp: 1267906.836
+
+depth timestamp: 1268045.647
+color timestamp: 1268039.962
+
+depth timestamp: 1268178.388
+color timestamp: 1268173.145
+
+depth timestamp: 1268244.77
+color timestamp: 1268217.404
+
+depth timestamp: 1268277.95
+color timestamp: 1268306.01
+
+depth timestamp: 1268311.129
+color timestamp: 1268306.01
+
+depth timestamp: 1268344.309
+color timestamp: 1268306.01
+
+depth timestamp: 1268377.535
+color timestamp: 1268394.818
+
+depth timestamp: 1268410.714
+color timestamp: 1268394.818
+
+depth timestamp: 1268443.917
+color timestamp: 1268439.048
+
+depth timestamp: 1268477.097
+color timestamp: 1268483.452
+
+depth timestamp: 1268576.658
+color timestamp: 1268571.767
+
+depth timestamp: 1268643.064
+color timestamp: 1268615.823
+
+depth timestamp: 1268742.626
+color timestamp: 1268747.526
+
+depth timestamp: 1268775.805
+color timestamp: 1268747.526
+
+depth timestamp: 1268875.39
+color timestamp: 1268878.533
+
+depth timestamp: 1269074.513
+color timestamp: 1269095.388
+
+depth timestamp: 1269174.098
+color timestamp: 1269181.613
+
+depth timestamp: 1269207.301
+color timestamp: 1269181.613
+
+depth timestamp: 1269240.48
+color timestamp: 1269267.549
+
+depth timestamp: 1269273.683
+color timestamp: 1269267.549
+
+depth timestamp: 1269306.863
+color timestamp: 1269310.415
+
+depth timestamp: 1269340.043
+color timestamp: 1269310.415
+
+depth timestamp: 1269373.245
+color timestamp: 1269396.495
+
+depth timestamp: 1269406.425
+color timestamp: 1269396.495
+
+depth timestamp: 1269439.627
+color timestamp: 1269439.593
+
+depth timestamp: 1269472.807
+color timestamp: 1269439.593
+
+depth timestamp: 1269572.368
+color timestamp: 1269612.45
+
+depth timestamp: 1269705.133
+color timestamp: 1269699.14
+
+depth timestamp: 1269771.539
+color timestamp: 1269785.394
+
+depth timestamp: 1269871.101
+color timestamp: 1269871.358
+
+depth timestamp: 1269937.46
+color timestamp: 1269957.264
+
+depth timestamp: 1270070.224
+color timestamp: 1270086.617
+
+depth timestamp: 1270136.606
+color timestamp: 1270173.074
+
+depth timestamp: 1270169.786
+color timestamp: 1270173.074
+
+depth timestamp: 1270202.989
+color timestamp: 1270216.376
+
+depth timestamp: 1270236.191
+color timestamp: 1270216.376
+
+depth timestamp: 1270269.371
+color timestamp: 1270303.094
+
+depth timestamp: 1270302.573
+color timestamp: 1270303.094
+
+depth timestamp: 1270335.753
+color timestamp: 1270346.512
+
+depth timestamp: 1270368.956
+color timestamp: 1270346.512
+
+depth timestamp: 1270402.136
+color timestamp: 1270433.26
+
+depth timestamp: 1270468.494
+color timestamp: 1270433.26
+
+depth timestamp: 1270568.103
+color timestamp: 1270562.67
+
+depth timestamp: 1270601.283
+color timestamp: 1270605.884
+
+depth timestamp: 1270700.844
+color timestamp: 1270692.458
+
+depth timestamp: 1270800.429
+color timestamp: 1270779.206
+
+depth timestamp: 1270866.812
+color timestamp: 1270866.128
+
+depth timestamp: 1271032.733
+color timestamp: 1271040.494
+
+depth timestamp: 1271065.912
+color timestamp: 1271040.494
+
+depth timestamp: 1271099.138
+color timestamp: 1271128.548
+
+depth timestamp: 1271165.497
+color timestamp: 1271173.097
+
+depth timestamp: 1271198.7
+color timestamp: 1271173.097
+
+depth timestamp: 1271231.879
+color timestamp: 1271262.224
+
+depth timestamp: 1271265.059
+color timestamp: 1271262.224
+
+depth timestamp: 1271298.262
+color timestamp: 1271306.803
+
+depth timestamp: 1271331.465
+color timestamp: 1271306.803
+
+depth timestamp: 1271364.644
+color timestamp: 1271395.466
+
+depth timestamp: 1271397.823
+color timestamp: 1271395.466
+
+depth timestamp: 1271464.206
+color timestamp: 1271484.187
+
+depth timestamp: 1271497.408
+color timestamp: 1271484.187
+
+depth timestamp: 1271563.79
+color timestamp: 1271573.489
+
+depth timestamp: 1271663.352
+color timestamp: 1271662.239
+
+depth timestamp: 1271762.913
+color timestamp: 1271750.67
+
+depth timestamp: 1271928.904
+color timestamp: 1271927.59
+
+depth timestamp: 1271962.083
+color timestamp: 1271971.879
+
+depth timestamp: 1271995.263
+color timestamp: 1272015.963
+
+depth timestamp: 1272028.442
+color timestamp: 1272015.963
+
+depth timestamp: 1272094.824
+color timestamp: 1272060.223
+
+depth timestamp: 1272128.027
+color timestamp: 1272148.654
+
+depth timestamp: 1272161.207
+color timestamp: 1272148.654
+
+depth timestamp: 1272194.386
+color timestamp: 1272193.174
+
+depth timestamp: 1272227.565
+color timestamp: 1272193.174
+
+depth timestamp: 1272260.768
+color timestamp: 1272281.75
+
+depth timestamp: 1272293.948
+color timestamp: 1272281.75
+
+depth timestamp: 1272360.33
+color timestamp: 1272325.922
+
+depth timestamp: 1272393.533
+color timestamp: 1272414.411
+
+depth timestamp: 1272459.915
+color timestamp: 1272458.728
+
+depth timestamp: 1272559.477
+color timestamp: 1272591.215
+
+depth timestamp: 1272625.859
+color timestamp: 1272635.474
+
+depth timestamp: 1272791.826
+color timestamp: 1272812.423
+
+depth timestamp: 1272891.412
+color timestamp: 1272856.537
+
+depth timestamp: 1272957.771
+color timestamp: 1272944.91
+
+depth timestamp: 1272990.927
+color timestamp: 1273033.457
+
+depth timestamp: 1273090.535
+color timestamp: 1273077.542
+
+depth timestamp: 1273123.715
+color timestamp: 1273121.801
+
+depth timestamp: 1273156.917
+color timestamp: 1273121.801
+
+depth timestamp: 1273190.097
+color timestamp: 1273210.233
+
+depth timestamp: 1273256.479
+color timestamp: 1273298.606
+
+depth timestamp: 1273289.659
+color timestamp: 1273298.606
+
+depth timestamp: 1273322.861
+color timestamp: 1273342.865
+
+depth timestamp: 1273356.064
+color timestamp: 1273342.865
+
+depth timestamp: 1273389.244
+color timestamp: 1273387.153
+
+depth timestamp: 1273422.446
+color timestamp: 1273387.153
+
+depth timestamp: 1273521.985
+color timestamp: 1273519.843
+
+depth timestamp: 1273588.391
+color timestamp: 1273563.957
+
+depth timestamp: 1273754.334
+color timestamp: 1273740.877
+
+depth timestamp: 1273853.896
+color timestamp: 1273829.511
+
+depth timestamp: 1273887.099
+color timestamp: 1273918.319
+
+depth timestamp: 1273953.505
+color timestamp: 1273962.869
+
+depth timestamp: 1274019.863
+color timestamp: 1274051.735
+
+depth timestamp: 1274086.222
+color timestamp: 1274096.052
+
+depth timestamp: 1274119.402
+color timestamp: 1274096.052
+
+depth timestamp: 1274152.629
+color timestamp: 1274184.686
+
+depth timestamp: 1274219.012
+color timestamp: 1274184.686
+
+depth timestamp: 1274252.214
+color timestamp: 1274273.263
+
+depth timestamp: 1274285.393
+color timestamp: 1274273.263
+
+depth timestamp: 1274318.573
+color timestamp: 1274317.202
+
+depth timestamp: 1274351.753
+color timestamp: 1274317.202
+
+depth timestamp: 1274451.337
+color timestamp: 1274492.323
+
+depth timestamp: 1274617.282
+color timestamp: 1274621.966
+
+depth timestamp: 1274816.428
+color timestamp: 1274793.952
+
+depth timestamp: 1274982.395
+color timestamp: 1274963.152
+
+depth timestamp: 1275015.551
+color timestamp: 1275005.003
+
+depth timestamp: 1275048.754
+color timestamp: 1275088.123
+
+depth timestamp: 1275115.16
+color timestamp: 1275088.123
+
+depth timestamp: 1275181.519
+color timestamp: 1275171.068
+
+depth timestamp: 1275247.901
+color timestamp: 1275253.724
+
+depth timestamp: 1275281.081
+color timestamp: 1275253.724
+
+depth timestamp: 1275347.486
+color timestamp: 1275335.567
+
+depth timestamp: 1275380.666
+color timestamp: 1275416.917
+
+depth timestamp: 1275413.845
+color timestamp: 1275416.917
+
+depth timestamp: 1275447.048
+color timestamp: 1275416.917
+
+depth timestamp: 1275513.407
+color timestamp: 1275498.092
+
+depth timestamp: 1275579.79
+color timestamp: 1275538.578
+
+depth timestamp: 1275745.757
+color timestamp: 1275739.935
+
+depth timestamp: 1275978.06
+color timestamp: 1275940.538
+
+depth timestamp: 1276110.824
+color timestamp: 1276101.292
+
+depth timestamp: 1276144.026
+color timestamp: 1276181.22
+
+depth timestamp: 1276210.409
+color timestamp: 1276181.22
+
+depth timestamp: 1276343.174
+color timestamp: 1276419.841
+
+depth timestamp: 1276376.353
+color timestamp: 1276419.841
+
+depth timestamp: 1276442.712
+color timestamp: 1276459.718
+
+depth timestamp: 1276542.297
+color timestamp: 1276579.377
+
+depth timestamp: 1276608.656
+color timestamp: 1276579.377
+
+depth timestamp: 1276641.858
+color timestamp: 1276658.724
+
+depth timestamp: 1276708.264
+color timestamp: 1276738.042
+
+depth timestamp: 1276774.646
+color timestamp: 1276738.042
+
+depth timestamp: 1276807.826
+color timestamp: 1276817.592
+
+depth timestamp: 1276907.387
+color timestamp: 1276897.317
+
+depth timestamp: 1276940.591
+color timestamp: 1276976.983
+
+depth timestamp: 1277172.917
+color timestamp: 1277175.235
+
+depth timestamp: 1277239.299
+color timestamp: 1277214.995
+
+depth timestamp: 1277305.681
+color timestamp: 1277294.662
+
+depth timestamp: 1277338.884
+color timestamp: 1277334.538
+
+depth timestamp: 1277372.064
+color timestamp: 1277374.473
+
+depth timestamp: 1277405.266
+color timestamp: 1277374.473
+
+depth timestamp: 1277538.007
+color timestamp: 1277534.821
+
+depth timestamp: 1277637.592
+color timestamp: 1277656.686
+
+depth timestamp: 1277670.772
+color timestamp: 1277656.686
+
+depth timestamp: 1277703.975
+color timestamp: 1277738.732
+
+depth timestamp: 1277770.357
+color timestamp: 1277738.732
+
+depth timestamp: 1277803.536
+color timestamp: 1277821.388
+
+depth timestamp: 1277903.098
+color timestamp: 1277904.102
+
+depth timestamp: 1278102.269
+color timestamp: 1278111.582
+
+depth timestamp: 1278168.628
+color timestamp: 1278153.2
+
+depth timestamp: 1278201.831
+color timestamp: 1278237.162
+
+depth timestamp: 1278268.19
+color timestamp: 1278237.162
+
+depth timestamp: 1278334.597
+color timestamp: 1278321.762
+
+depth timestamp: 1278367.776
+color timestamp: 1278364.309
+
+depth timestamp: 1278467.339
+color timestamp: 1278449.896
+
+depth timestamp: 1278500.542
+color timestamp: 1278536.121
+
+depth timestamp: 1278533.722
+color timestamp: 1278536.121
+
+depth timestamp: 1278566.901
+color timestamp: 1278579.741
+
+depth timestamp: 1278600.104
+color timestamp: 1278579.741
+
+depth timestamp: 1278633.284
+color timestamp: 1278623.652
+
+depth timestamp: 1278699.666
+color timestamp: 1278667.853
+
+depth timestamp: 1278732.892
+color timestamp: 1278756.487
+
+depth timestamp: 1278799.228
+color timestamp: 1278800.572
+
+depth timestamp: 1278832.43
+color timestamp: 1278800.572
+
+depth timestamp: 1279031.554
+color timestamp: 1279022.187
+
+depth timestamp: 1279164.342
+color timestamp: 1279200.471
+
+depth timestamp: 1279230.7
+color timestamp: 1279200.471
+
+depth timestamp: 1279263.903
+color timestamp: 1279289.918
+
+depth timestamp: 1279297.083
+color timestamp: 1279289.918
+
+depth timestamp: 1279429.847
+color timestamp: 1279423.827
+
+depth timestamp: 1279463.027
+color timestamp: 1279423.827
+
+depth timestamp: 1279496.23
+color timestamp: 1279512.635
+
+depth timestamp: 1279529.409
+color timestamp: 1279512.635
+
+depth timestamp: 1279562.612
+color timestamp: 1279601.153
+
+depth timestamp: 1279595.792
+color timestamp: 1279601.153
+
+depth timestamp: 1279662.174
+color timestamp: 1279645.529
+
+depth timestamp: 1279695.377
+color timestamp: 1279734.337
+
+depth timestamp: 1279728.556
+color timestamp: 1279734.337
+
+depth timestamp: 1279828.118
+color timestamp: 1279823.436
+
+depth timestamp: 1279960.882
+color timestamp: 1279956.851
+
+depth timestamp: 1280126.826
+color timestamp: 1280134.497
+
+depth timestamp: 1280160.029
+color timestamp: 1280179.104
+
+depth timestamp: 1280193.209
+color timestamp: 1280179.104
+
+depth timestamp: 1280226.412
+color timestamp: 1280268.203
+
+depth timestamp: 1280259.615
+color timestamp: 1280268.203
+
+depth timestamp: 1280359.176
+color timestamp: 1280356.866
+
+depth timestamp: 1280425.535
+color timestamp: 1280401.096
+
+depth timestamp: 1280458.738
+color timestamp: 1280490.311
+
+depth timestamp: 1280491.917
+color timestamp: 1280490.311
+
+depth timestamp: 1280525.12
+color timestamp: 1280534.918
+
+depth timestamp: 1280558.299
+color timestamp: 1280579.583
+
+depth timestamp: 1280591.479
+color timestamp: 1280579.583
+
+depth timestamp: 1280624.682
+color timestamp: 1280669.088
+
+depth timestamp: 1280657.908
+color timestamp: 1280669.088
+
+depth timestamp: 1280724.267
+color timestamp: 1280713.899
+
+depth timestamp: 1280823.829
+color timestamp: 1280803.694
+
+depth timestamp: 1230972.257
+color timestamp: 1230978.819
+
+depth timestamp: 1236780.526
+color timestamp: 1236784.012
+
+depth timestamp: 1240331.869
+color timestamp: 1240300.3
+
+depth timestamp: 1244215.124
+color timestamp: 1244247.83
+
+depth timestamp: 1246638.005
+color timestamp: 1246636.252
+
+depth timestamp: 1248629.392
+color timestamp: 1248626.604
+
+depth timestamp: 1250255.714
+color timestamp: 1250252.058
+
+depth timestamp: 1250288.894
+color timestamp: 1250318.403
+
+depth timestamp: 1252744.956
+color timestamp: 1252739.997
+
+depth timestamp: 1252778.159
+color timestamp: 1252773.17
+
+depth timestamp: 1254338.124
+color timestamp: 1254365.451
+
