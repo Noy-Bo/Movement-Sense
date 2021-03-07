@@ -1,4 +1,4 @@
-import Algebra
+import Calculations.Algebra
 
 from Calculations.Algebra import isZero, getDistance, takeClosest
 

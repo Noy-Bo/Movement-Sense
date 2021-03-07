@@ -1,6 +1,6 @@
 from tkinter import Tk, ttk, filedialog, Label, Entry, Button, Checkbutton, BooleanVar, Canvas, W, E, StringVar
 
-from Calculations.Calculations import CalculateAngles
+from Calculations.Calculations import CalculateAngles, CalculateMeasurement
 from Processing.Sync import SyncByMovementOpenpose, SyncByMovementVicon, matchTimestamps
 from Readers.BagFile import BagFileSetup
 from Readers.Vicon import ViconReader
@@ -10,7 +10,7 @@ class GuiInterface(object):
     def __init__(self):
         self.title = "Image Processing Project"
         # self.path = "C:\\Users\\markf\\Downloads\\Project\\RunMe\\"
-        self.path = "C:\\Users\\markf\\Downloads\\Project\\sub003\\Squat\\"
+        self.path = "C:\\Age_Estimation_Project\\bag_files\sub003\\Squat\\"
         self.root = None
         self.combo = None
         self.textBox = None
@@ -157,9 +157,9 @@ class GuiInterface(object):
             openposeMeasurements = []
             viconMeasurements = []
             for j in range(len(orientations)):
-                openposeData, correspondingTimestamps = CalculateAngles(openposeSkeletonsLists[j], calculations[i], openposeTimestampsLists[j])
+                openposeData, correspondingTimestamps = CalculateMeasurement(openposeSkeletonsLists[j], calculations[i], openposeTimestampsLists[j])
                 openposeMeasurements.append([openposeData, correspondingTimestamps])
-                viconData = CalculateAngles(viconSkeletons, calculations[i])
+                viconData = CalculateMeasurement(viconSkeletons, calculations[i])
                 cutViconData = matchTimestamps(openposeTimestampsLists[j], viconData)
                 viconMeasurements.append(cutViconData)
 
