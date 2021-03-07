@@ -180,13 +180,13 @@ finally:
         for stamp in all_color_timestamps:
             if stamp == cd[0]:
                 color_str = str(stamp)
-                break;
+                break
 
 
         for stamp in all_depth_timestamps:
             if stamp == cd[1]:
                 depth_str = str(stamp)
-                break;
+                break
 
         timestampsColorJson.append({'color_timestamp': color_str, 'depth_timestamp': depth_str})
 
