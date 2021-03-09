@@ -4,6 +4,7 @@ from Calculations.Calculations import CalculateAngles, CalculateMeasurement
 from Processing.Sync import SyncByMovementOpenpose, SyncByMovementVicon, matchTimestamps
 from Readers.BagFile import BagFileSetup
 from Readers.Vicon import ViconReader
+from Utilities.GraphGenerator import GenerateGraph
 
 
 class GuiInterface(object):
@@ -169,4 +170,4 @@ class GuiInterface(object):
         for i in range(len(calculations)):
             for j in range(len(orientations)):
                 print('Graph of ' + calculations[i] + ' from ' + orientations[j] + ' Camera')
-                GenerateGraph(openposeMeasurementsMat[i][j][0], openposeMeasurementsMat[i][j][1], viconMeasurementsMat[i][j], calculations[i], orientations[j])
+                GenerateGraph(openposeMeasurementsMat[i][j][0], openposeMeasurementsMat[i][j][1], viconMeasurementsMat[i][j], calculations[i], orientations[j],"C:\Age_Estimation_Project\\bag_files")
