@@ -5,7 +5,7 @@ from Calculations.Algebra import isZero, getDistance, takeClosest
 factor = 0.7
 
 
-def SyncByMovementOpenpose(openPoseSkeletons, timestamps):
+def SyncByMovementOpenpose(openPoseSkeletons, timestamps): #TODO return stable frames after the movement.
     # openpose
     first = None
     idx = None

@@ -13,16 +13,24 @@ def GetMeasurementType(calculation):
     return ylabel
 
 
-def GenerateGraphOfCorrelation():
 
 
-def GenerateGraph(timestamps, openposeMeasurements, viconMeasurements, calculation, orientation):
-    colors = cm.rainbow(np.linspace(0, 1, len(ys)))
-    fig = plt.figure(num=None, figsize=(18, 10))
-    # ax = fig.add_subplot(111)
-    plt.title(calculation + GetMeasurementType(calculation) + ' from ' + orientation + ' camera')
-    plt.set_ylabel(GetMeasurementType(calculation))
-    plt.set_xlabel('time (sec)')
-    for i in range(len(timestamps)):
-        plt.scatter(timestamps[i], measurements[i], color=rnd)
-    plt.savefig(orientation + '_' + calculation + '.pdf')
+
+def GenerateGraph(openposeMeasurements,timestamps, viconMeasurements, calculation, orientation, path):
+    # colors = cm.rainbow(np.linspace(0, 1, len(ys)))
+    title = calculation + GetMeasurementType(calculation) + ' from ' + orientation + ' camera'
+    fileName = orientation + '_' + calculation
+    plt.title(title)
+    plt.ylabel(GetMeasurementType(calculation))
+    plt.xlabel('time (sec)')
+    if openposeMeasurements is not None:
+        plt.scatter(timestamps, openposeMeasurements, color='RED')
+        fileName += '_Openpose'
+    if viconMeasurements is not None:
+        plt.scatter(timestamps, viconMeasurements, color='BLUE')
+        fileName += '_Vicon'
+    try:
+        plt.savefig(path + fileName + '.pdf')
+    except:
+        print("Can't overwrite open file")
+    plt.clf()
