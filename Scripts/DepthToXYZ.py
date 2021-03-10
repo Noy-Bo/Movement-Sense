@@ -22,13 +22,14 @@ import scipy.stats
 #from Excel import addToExcel
 import sys
 
-import ViconCalculations
+import Scripts.ViconCalculations
+from Calculations.Algebra import OpenPoseReader
+from Scripts import ViconCalculations
 
 sys.path.append('C:\Python27\Lib\site-packages')
 
 import numpy as np
 import pyrealsense2 as rs
-import Algebra
 import cv2
 
 
@@ -80,7 +81,7 @@ class AlphaPoseObject(object):
 #     x.add()
 
 # =========== OPENPOSE
-skeletonsTable = Algebra.OpenPoseReader()
+skeletonsTable = OpenPoseReader()
 
 
 # ===========

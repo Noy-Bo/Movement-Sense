@@ -18,6 +18,8 @@ import cv2
 import csv
 
 
+
+
 class Point3D(object):
     def __init__(self, x, y, z):
         self.x = x
@@ -36,9 +38,10 @@ class Point3D(object):
         return (self.x, self.y).__hash__()
         # return hash(self.x,self.y)
 
+
 ################################################
 class OpenPoseSkeleton(object):
-    def __init__(self,keypoints):
+    def __init__(self, keypoints):
         i = 0
         self.nose = Point3D(keypoints[i], keypoints[i + 1], keypoints[i + 2])
         i += 3
@@ -185,12 +188,15 @@ plotCount = 0
 def takeClosest(num, collection):
     return min(collection, key=lambda x: abs(x - num))
 
-def takeClosestByZ(zValue, collection):         # returns closest of collection of Point3D by zValue
+
+def takeClosestByZ(zValue, collection):  # returns closest of collection of Point3D by zValue
     return min(collection, key=lambda x: abs(x.z - zValue))
 
-def eroding(x, y, height, width,isRotated):               # takes x,y coordinates of pixel, height,width of frame, returns set of Point3D points eroded from the original pixel (can change size of erosion)
 
-    if isRotated == True: #important in case we rotat
+def eroding(x, y, height, width,
+            isRotated):  # takes x,y coordinates of pixel, height,width of frame, returns set of Point3D points eroded from the original pixel (can change size of erosion)
+
+    if isRotated == True:  # important in case we rotat
         tmp = height
         height = width
         width = tmp
@@ -209,8 +215,10 @@ def eroding(x, y, height, width,isRotated):               # takes x,y coordinate
     set1 = set(collection)
     return set1
 
-def rounded(value, collection):                 # take a value (z) and collection of points in space, returns point the average of group size half of original collection, closest to value
-    half = len(collection) / 2
+
+def rounded(value,
+            collection):  # take a value (z) and collection of points in space, returns point the average of group size half of original collection, closest to value
+    half = int(len(collection) / 2)
     collect = []
     for i in range(half):
         point = takeClosestByZ(value, collection)
@@ -226,16 +234,18 @@ def rounded(value, collection):                 # take a value (z) and collectio
     z = z / len(collect)
     return Point3D(x, y, z)
 
-def roundGraph(x_collection,y_collection,graph,xlabel,ylabel,limit,color = 'b'):      # outputs a graph with scattered points and smoothened line
+
+def roundGraph(x_collection, y_collection, graph, xlabel, ylabel, limit,
+               color='b'):  # outputs a graph with scattered points and smoothened line
     if len(x_collection) < 3:
-         return
+        return
     # resets the graph - TODO: perhaps find a way to only update the latest point
-    #graph.clear() # for vis?
+    # graph.clear() # for vis?
     # casts the data to np.array type for the plot
     x = np.array(x_collection)
     y = np.array(y_collection)
     # if i remember correctly, splits the range between first and second argument to 'third argument' slices (used to be 100, dont need it for 1d line, but need np.linespace)
-    x_smooth = np.linspace(x.min(),x.max(),200)
+    x_smooth = np.linspace(x.min(), x.max(), 200)
     # no idea
     spl = make_interp_spline(x, y, k=1)
     # no idea
@@ -245,12 +255,9 @@ def roundGraph(x_collection,y_collection,graph,xlabel,ylabel,limit,color = 'b'):
     graph.set_xlabel(xlabel)
     graph.set_ylim([0, limit])
 
-    #graph.plot(x_smooth, y_smooth)
+    # graph.plot(x_smooth, y_smooth)
     # if we want to add the scattered points
-    graph.scatter(x, y, c=color, label='data',s=2)
-
-
-
+    graph.scatter(x, y, c=color, label='data', s=2)
 
 
 def getDistance(pointA, pointB):
@@ -260,22 +267,28 @@ def getDistance(pointA, pointB):
 
 def getNorm(p):
     return math.sqrt((math.pow(p.x, 2) + math.pow(p.y, 2) + math.pow(p.z, 2)))
+
+
 def getNorm2D(p):
     return math.sqrt((math.pow(p.x, 2) + math.pow(p.y, 2)))
+
 
 def getNormalizeVector(pointA, pointB=Point3D(0, 0, 0)):
     p = Point3D((pointA.x - pointB.x), (pointA.y - pointB.y), (pointA.z - pointB.z))
     norm = getNorm(p)
     # if norm != 0:
-            # p.x = p.x / norm
-            # p.y = p.y / norm
-            # p.z = p.z / norm
-    #print (p.z+p.y+p.x)
+    # p.x = p.x / norm
+    # p.y = p.y / norm
+    # p.z = p.z / norm
+    # print (p.z+p.y+p.x)
     return p
-def getVectorFrom2Points(pointA,pointB):
-    return np.subtract(pointA,pointB)
 
-def getAngle(pointA,pointB):
+
+def getVectorFrom2Points(pointA, pointB):
+    return np.subtract(pointA, pointB)
+
+
+def getAngle(pointA, pointB):
     dotProduct = np.dot(pointA, pointB)
     norms = np.linalg.norm(pointA) * np.linalg.norm(pointB)
     angleRadians = np.arccos(np.divide(dotProduct, norms))
@@ -297,6 +310,7 @@ def getNormalizeVector2D(pointA, pointB=Point3D(0, 0, 0)):
             pass
     return p
 
+
 def getAngle2D(normalizedVectorA, normalizedVectorB):
     # dot product
     angle = -1
@@ -311,6 +325,7 @@ def getAngle2D(normalizedVectorA, normalizedVectorB):
     if angle == 90:
         print("error")
     return angle
+
 
 # def getAngle(normalizedVectorA, normalizedVectorB):
 #     # dot product
@@ -340,7 +355,7 @@ def isZero(p):
         return False
 
 
-def outOfBoundries(x, y,isRotated):
+def outOfBoundries(x, y, isRotated):
     if isRotated is False:
         if x > (max_width_resulotion - 1) or y > (max_height_resulotion - 1):
             return True
@@ -352,26 +367,41 @@ def outOfBoundries(x, y,isRotated):
         else:
             return False
 
-def getRotatedPixel(x,y,center_x,center_y,angle):
+
+def getRotatedPixel(x, y, center_x, center_y, angle):
     xp = (x - center_x) * np.cos(angle) - (y - center_y) * np.sin(angle) + center_x
     yp = (x - center_x) * np.sin(angle) + (y - center_y) * np.cos(angle) + center_y
 
-    return xp,yp
+    return xp, yp
+
 
 def OpenPoseReader():
     # final objects list
     openpose_list = []
     # original path to files
+    # raw_filenames = glob.glob('*openpose/*.json')
     raw_filenames = glob.glob('*openpose/*.json')
     # constructing filenames
     for item in raw_filenames:
         # open json file
         with open(item) as json_file:
             data = json.load(json_file)
-        name_temp = item.replace('openpose\\','')
+        name_temp = item.replace('openpose\\', '')
         # get image id name
-        image_id = name_temp.replace('_keypoints.json','')
+        image_id = name_temp.replace('_keypoints.json', '')
         # get keypoints
         keypoints = data['people'][0]['pose_keypoints_2d']
-        openpose_list.append(OpenPoseObject(image_id,keypoints))
+        openpose_list.append(OpenPoseObject(image_id, keypoints))
     return openpose_list
+
+def OpenLogFile(path, orientation):
+    # open's the log as json array.
+    log_file = open(path + orientation + "_log.json")
+    log_array = json.load(log_file)
+    log_list = []
+    # generating the log_list
+    for item in log_array:
+        log_list.append(
+            Timestamp(item['color_timestamp'],
+                      item['depth_timestamp']))  # json_list contains all pairs of depth & color
+    return log_list
