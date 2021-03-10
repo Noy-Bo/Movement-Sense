@@ -1,0 +1,40 @@
+Main: 														---------[MARK]--------
+
+	-- List of Lists skeletons;
+	-- List of Lists timestamps;
+	
+	*load vicon file & create vicon skeletons.				---------[MARK]--------
+	  .. input- path
+	  .. output - list vicon skeletons
+	
+	*for each shooting angle (front\side\back) 				---------[MARK]--------
+	  .. input - path, orientation 
+	  .. output - list OpenPoseSkeleton, list timestamps
+		
+		load bag file.
+		read bag file + create openpose skeletons + ||save list of timestamps||.
+		 
+	*sync openpose and vicon								---------[NOY]---------
+	  .. input -  list OpenPoseSkeleton, list timestamps, list Vicon skeletons
+	  .. output - list OpenPoseSkeleton, list timestamps, list Vicon skeletons
+	
+	*calculate measurements(knee angle.. hip.. shoulder.. according to exercise) (*check - remove    skeleton[i] & timestamps[i])							 ---------[MARK]--------
+	  .. input - flag, list OpenPoseSkeleton, list timestamps
+	  .. output -  list measurements, list cutTimestamps
+	  
+	
+	*calculate measurements from VICON.						---------[MARK]-------- 
+	  .. input - flag, list viconSkeletons
+	  .. output - list measurements,
+	
+	* matching frames between openpose and vicon. 			---------[NOY]---------
+	  .. input - measurements_vicon,  timestamps_op
+	  .. output - measurements_vicon, timestamps_op (same size), timestamps_vicon
+	
+	*generate files (graphs \ merged graphs \ correlation).
+	  .. input - measurements_vicon, measurements_op, timestamps_op
+	  .. output - graph files (...(
+
+* script to generate visualization.
+		
+
