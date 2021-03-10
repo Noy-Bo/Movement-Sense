@@ -1,8 +1,9 @@
 import pathlib
+import pickle
 import threading
 from tkinter import Tk, ttk, filedialog, Label, Entry, Button, Checkbutton, BooleanVar, Canvas, W, E, StringVar
-import pickle
-from Calculations.Calculations import CalculateAngles
+
+from Calculations.Calculations import CalculateAngles, CalculateMeasurement
 from Processing.Sync import SyncByMovementOpenpose, SyncByMovementVicon, matchTimestamps
 from Readers.BagFile import BagFileSetup
 from Readers.Vicon import ViconReader
@@ -11,9 +12,9 @@ from Utilities.GraphGenerator import GenerateGraph, GenerateGraphOfCorrelation
 
 class GuiInterface(object):
     def __init__(self):
-        self.title = "Image Processing Project"
-        # self.path = "C:\\Users\\markf\\Downloads\\Project\\RunMe\\"
-        self.path = "C:\\Users\\markf\\Downloads\\Project\\sub003\\Squat\\"
+        self.title = "Movement Sense"
+        self.path = "C:\\Age_Estimation_Project\\bag_files\\sub003\\Squat\\"
+        # self.path = "C:\\Age_Estimation_Project\\bag_files\sub003\\Squat\\"
         self.root = None
         self.combo = None
         self.textBox = None
@@ -130,34 +131,33 @@ class GuiInterface(object):
         # List of vicon skeletons
         viconSkeletons = ViconReader(self.path + 'vicon.csv')
         viconSkeletons = SyncByMovementVicon(viconSkeletons)
-        # # Two lists: one of Openpose skeletons, one of timestamps
-        # for i in range(len(self.orientations)):
-        #     # print(self.orientations[i])
-        #     self.textBox.set("Working on " + str(i + 1) + '/' + str(len(self.orientations)) + " bag file")
-        #     openposeSkeletons, openposeTimestamps = BagFileSetup(self.path, self.orientations[i])
-        #     openposeSkeletons, openposeTimestamps = SyncByMovementOpenpose(openposeSkeletons, openposeTimestamps)
-        #     openposeSkeletonsLists.append(openposeSkeletons)
-        #     openposeTimestampsLists.append(openposeTimestamps)
+        # Two lists: one of Openpose skeletons, one of timestamps
+        for i in range(len(self.orientations)):
+            # print(self.orientations[i])
+            self.textBox.set("Working on " + str(i + 1) + '/' + str(len(self.orientations)) + " bag file")
+            openposeSkeletons, openposeTimestamps = BagFileSetup(self.path, self.orientations[i])
+            openposeSkeletons, openposeTimestamps = SyncByMovementOpenpose(openposeSkeletons, openposeTimestamps)
+            openposeSkeletonsLists.append(openposeSkeletons)
+            openposeTimestampsLists.append(openposeTimestamps)
 
         # pickle.dump(openposeSkeletonsLists, open(self.path + 'loadfiles\\' + "openposeSkeletonsLists", 'wb'))
         # pickle.dump(openposeTimestampsLists, open(self.path + 'loadfiles\\' + "openposeTimestampsLists", 'wb'))
-        openposeSkeletonsLists = pickle.load(open(self.path + 'loadfiles\\' + "openposeSkeletonsLists", 'rb'))
-        openposeTimestampsLists = pickle.load(open(self.path + 'loadfiles\\' + "openposeTimestampsLists", 'rb'))
+        # openposeSkeletonsLists = pickle.load(open(self.path + 'loadfiles\\' + "openposeSkeletonsLists", 'rb'))
+        # openposeTimestampsLists = pickle.load(open(self.path + 'loadfiles\\' + "openposeTimestampsLists", 'rb'))
 
         self.textBox.set("Calculating measurements...")
         openposeMeasurementsMat = []
         viconMeasurementsMat = []
         for i in range(len(self.calculations)):
-            # openposeTimestampsLists.append(CalculateAnglesOpenpose())
             openposeMeasurements = []
             viconMeasurements = []
             for j in range(len(self.orientations)):
-                openposeData, correspondingTimestamps = CalculateAngles(openposeSkeletonsLists[j], self.calculations[i],
-                                                                        openposeTimestampsLists[j])
+                openposeData, correspondingTimestamps = CalculateMeasurement(openposeSkeletonsLists[j], calculations[i], openposeTimestampsLists[j])
                 openposeMeasurements.append([openposeData, correspondingTimestamps])
-                viconData = CalculateAngles(viconSkeletons, self.calculations[i])
+                viconData = CalculateMeasurement(viconSkeletons, calculations[i])
                 cutViconData = matchTimestamps(openposeTimestampsLists[j], viconData)
                 viconMeasurements.append(cutViconData)
+
             openposeMeasurementsMat.append(openposeMeasurements)
             viconMeasurementsMat.append(viconMeasurements)
 

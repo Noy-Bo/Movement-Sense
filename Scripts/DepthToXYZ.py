@@ -154,7 +154,7 @@ parser.add_argument("-i", "--input", type=str, help="Bag file to read")
 args = parser.parse_args()
 
 # setup plot - two graphs and two images
-fig = plt.figure(num=None, figsize=(26, 14))
+fig = plt.figure(num=None, figsize=(18, 10))
 
 ax = fig.add_subplot(221)
 # ax.set_ylabel("Butt to floor distance (Meter)")
@@ -184,10 +184,10 @@ plotCount = 1;
 
 # letting the pipe warm up for couple of seconds then starting to capture frames
 playback.resume()
-time.sleep(0.9)
+time.sleep(1)
 try:
     while True:
-    #while loop < 12:
+    #while loop < 5:
         loop = loop + 1
         # Get frameset of color and depth
         frames = pipeline.wait_for_frames()
@@ -506,9 +506,7 @@ finally:
     cut_dataY_vicon = []
     dataX_vicon,dataY_vicon = ViconCalculations.calculate()
 
-
-
-    # cleaning vicon ASI (specific bag file error)
+    # cleaning vicon ASI (specific bag)
     for idx in range(0,len(dataY_vicon)):
         if dataY_vicon[idx] > 68:
             cut_dataX_vicon.append(dataX_vicon[idx])
@@ -518,67 +516,13 @@ finally:
     cut_dataY_vicon = []
     cut_dataX_vicon = []
 
-    # #dilutting vicon data by 4
-    # for idx in range(0, len(dataY_vicon)):
-    #     if idx %4 == 0:
-    #         cut_dataX_vicon.append(dataX_vicon[idx])
-    #         cut_dataY_vicon.append(dataY_vicon[idx])
-    # dataX_vicon = cut_dataX_vicon
-    # dataY_vicon = cut_dataY_vicon
-    # cut_dataY_vicon = []
-    # cut_dataX_vicon = []
-
-    # transofrming data - moving vicon data on the time line
-    transform_scalar = 0.1
-    for idx in range(0, len(dataX_vicon)):
-        dataX_vicon[idx] += transform_scalar
-
-    # matching our data to vicon's via timestamps
+    # matching our shooting to vicon's via timestamps
     for idx in range(0,len(dataX2)):
         vicon_timestamp = Algebra.takeClosest(dataX2[idx],dataX_vicon)
         for vIdx in range(0,len(dataX_vicon)):
             if vicon_timestamp == dataX_vicon[vIdx]:
                 cut_dataX_vicon.append(dataX_vicon[vIdx])
                 cut_dataY_vicon.append(dataY_vicon[vIdx])
-
-
-    # # minimizing MSE
-    # min_mse = np.Inf
-    # opt_transform_scalar = None
-    #
-    # # learning loop
-    # transform_scalar = -0.1
-    # while transform_scalar <= 0.1:
-    #     cut_dataX_vicon = []
-    #     cut_dataY_vicon = []
-    #
-    #     # transofrming data - moving vicon data on the time line
-    #     for idx in range(0,len(dataX_vicon)):
-    #         dataX_vicon[idx] += transform_scalar
-    #
-    #     # matching our data to vicon's via timestamps
-    #     for idx in range(0,len(dataX2)):
-    #         vicon_timestamp = Algebra.takeClosest(dataX2[idx],dataX_vicon)
-    #         for vIdx in range(0,len(dataX_vicon)):
-    #             if vicon_timestamp == dataX_vicon[vIdx]:
-    #                 cut_dataX_vicon.append(dataX_vicon[vIdx])
-    #                 cut_dataY_vicon.append(dataY_vicon[vIdx])
-    #
-    #     vicon_x = np.array(cut_dataX_vicon)
-    #     vicon_y = np.array(cut_dataY_vicon)
-    #     data_rs_x = np.array(dataX2)
-    #     data_rs_y = np.array(dataY2)
-    #
-    #     mse = np.mean((vicon_y[2:(len(vicon_y)-2)] - data_rs_y[2:(len(data_rs_y)-2)])**2)
-    #     if mse < min_mse:
-    #         min_mse = mse
-    #         opt_transform_scalar = transform_scalar
-    #
-    #     transform_scalar += 0.01
-    # transform_scalar = opt_transform_scalar
-    # print ("finished minimizing MSE, lowest MSE: {}, with tranform scalar: {}".format(str(min_mse),str(opt_transform_scalar)))
-
-
 
 
     #Algebra.roundGraph(dataX, dataY, ax, "Time (sec)", "Butt to floor distance (meter)", 1.5)
@@ -605,25 +549,18 @@ finally:
     peterson = scipy.stats.pearsonr(cut_dataY_vicon, dataY2)  # Pearson's r
     spearman = scipy.stats.spearmanr(cut_dataY_vicon, dataY2)  # Spearman's rho
     kendall = scipy.stats.kendalltau(cut_dataY_vicon, dataY2)  # Kendall's tau
-    # calculate variances
-    variance = 0
-    for idx in range(0,len(cut_dataY_vicon)):
-        variance += ((cut_dataY_vicon[idx] - dataY2[idx])**2)
-    variance /= (len(cut_dataY_vicon) - 1)
+
 
     # graph
 
-    fig = plt.figure(num=None, figsize=(17, 17))
+    fig = plt.figure(num=None, figsize=(20, 12))
     ax = fig.add_subplot(111)
-    Algebra.roundGraph(cut_dataY_vicon, dataY2, ax, "Vicon", "Realsense", 200, 'r',True)
-    ax.text(1, 1,("Pearson's r: {} \n Spearman's rho: {} \n Kendall's tau: {} \n variance: {} ".format(str(peterson[0])[:-12], str(spearman[0])[:-12],
-                                                                                      str(kendall[0])[:-12],str(variance)[:-12])),
+    Algebra.roundGraph(cut_dataY_vicon, dataY2, ax, "Vicon", "Realsense", 200, 'r')
+    ax.text(1, 1,("Pearson's r: {} \n Spearman's rho: {} \n Kendall's tau: {} \n".format(str(peterson[0])[:-12], str(spearman[0])[:-12],
+                                                                                      str(kendall[0])[:-12])),
      horizontalalignment='right',
-     verticalalignment='bottom',
+     verticalalignment='top',
      transform = ax.transAxes)
-    ax.plot([0, 1], [0, 1], transform=ax.transAxes)
-
-
     plt.savefig("correlation.pdf")
     bx.clear()
 
