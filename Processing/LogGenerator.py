@@ -20,9 +20,9 @@ takeClosest = lambda num,collection:min(collection,key=lambda x:abs(x-num))
 # Setup:
 pipeline = rs.pipeline()
 cfg = rs.config()
-cfg.enable_device_from_file("C:\Age_Estimation_Project\\bag_files\Sub002_Stand_Front.bag", True)
-logfile_color_name = "Sub002_Stand_Front_color.txt"
-logfile_depth_name = "Sub002_Stand_Front_depth.txt"
+cfg.enable_device_from_file("C:\Age_Estimation_Project\\bag_files\sub005\left\side.bag", True)
+logfile_color_name = "Sub005_Left_Side_color.txt"
+logfile_depth_name = "Sub005_Left_Side_depth.txt"
 listfile_name = "list.txt"
 
 
@@ -103,11 +103,11 @@ try:
             grey_color = 153
             depth_image_3d = np.dstack(
                 (depth_image, depth_image, depth_image))  # depth image is 1 channel, color is 3 channels
-            color_image = np.where((depth_image_3d > clipping_distance) | (depth_image_3d <= 0), grey_color, color_image)
+            #color_image = np.where((depth_image_3d > clipping_distance) | (depth_image_3d <= 0), grey_color, color_image)
 
 
             # rotation angle in degree
-            rotated = ndimage.rotate(color_image, 90)
+            rotated = ndimage.rotate(color_image, 270)
 
             # writing the png to dir
             cv2.imwrite("{}.png".format(color_timestamp_str), rotated)

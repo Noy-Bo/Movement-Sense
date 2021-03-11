@@ -1,40 +1,72 @@
 import numpy as np
 
-from Calculations.Algebra import getVectorFrom2Points, getAngle, isZero
+from Calculations.Algebra import getVectorFrom2Points, getAngle, isZero, getDistance
+from Entities.Point3D import Point3D
 
 
-# Calculate list of angles
-def CalculateAngles(skeletons, angleType, timestamps=None):
-    angles = []
+def CalculateMeasurement(skeletons, calculations, timestamps=None):
+
+    # knee angle
+    if calculations is "Knees":
+        points = ('rHip', 'rKnee', 'rAnkle')
+        if timestamps is None:
+            points = ('RPSI','RKNE','RANK')
+        return CalculateAngles(skeletons, CalculateAngle3D, points, timestamps)
+
+    # shoulder's kyphosis
+    elif calculations is "Kyphosis":
+        points = ('rShoulder','neck','lShoulder')
+        if timestamps is None:
+            points = ('RSHO','LSHO','CLAV')
+        return CalculateAngles(skeletons, CalculateAngle2D, points, timestamps)
+
+    # center mass
+    elif calculations is "Mass":
+        points = ('midHip','_')
+        if timestamps is None:
+            points = ('RPSI','LPSI')
+    return CalculteCenterOfMass(skeletons,points,timestamps)
+
+    return
+
+def CalculteCenterOfMass(skeletons, points, timestamps = None):
+    centerOfMassPoints = []
     correspondingTimestamps = []
-    AngleCalculation = None
-    pointA = None
-    pointB = None
-    pointC = None
-
-    if angleType is 'Knees':
-        AngleCalculation = CalculateAngle3D
-        pointA = 'rHip'
-        pointB = 'rKnee'
-        pointC = 'rAnkle'
-        if timestamps is None:
-            pointA = 'RPSI'
-            pointB = 'RKNE'
-            pointC = 'RANK'
-
-    elif angleType is 'Kyphosis':
-        AngleCalculation = CalculateAngle2D
-        pointA = 'rShoulder'
-        pointB = 'neck'
-        pointC = 'lShoulder'
-        if timestamps is None:
-            pointA = 'RSHO'
-            pointB = 'LSHO'
-            pointC = 'CLAV'
+    varianceDistance = []
 
     for i in range(len(skeletons)):
-        angle = AngleCalculation(getattr(skeletons[i], pointA), getattr(skeletons[i], pointB),
-                                 getattr(skeletons[i], pointC))
+
+        if timestamps is None: # vicon
+            if (isZero(getattr(skeletons[i], points[0])) is not None or isZero(getattr(skeletons[i], points[1])) is not None):
+                point = AverageOfPoints([getattr(skeletons[i], points[0]),getattr(skeletons[i], points[1])])
+                centerOfMassPoints.append(point)
+
+        elif timestamps is not None: # openpose
+            if (getattr(skeletons[i],points[0]) is not None):
+                point = getattr(skeletons[i],points[0])
+                centerOfMassPoints.append(point)
+                correspondingTimestamps.append(timestamps[i])
+
+    avgPoint = AverageOfPoints(centerOfMassPoints)
+
+    for i in range(len(centerOfMassPoints)):
+        dist = getDistance(avgPoint,centerOfMassPoints[i])
+        varianceDistance.append(dist)
+
+
+    if timestamps is None:
+        return varianceDistance
+    else:
+        return varianceDistance, correspondingTimestamps
+
+
+def CalculateAngles(skeletons, CalcAngle, points,timestamps=None):
+    angles = []
+    correspondingTimestamps = []
+
+    for i in range(len(skeletons)):
+        angle = CalcAngle(getattr(skeletons[i], points[0]), getattr(skeletons[i], points[1]),
+                                 getattr(skeletons[i], points[2]))
         if angle != -1 or angle != -2:
             angles.append(angle)
             if timestamps is not None:
@@ -44,6 +76,66 @@ def CalculateAngles(skeletons, angleType, timestamps=None):
         return angles
     else:
         return angles, correspondingTimestamps
+
+
+
+
+
+def AverageOfPoints(points):
+    x=y=z=count=0
+    for p in points:
+        x+=p.x
+        y+=p.y
+        z+=p.z
+        count+=1
+    x /= count
+    y /= count
+    z /= count
+    avgPoint =  Point3D(x,y,z)
+    return avgPoint
+
+
+# # Calculate list of angles
+# def CalculateAngles(skeletons, angleType, timestamps=None):
+#     angles = []
+#     correspondingTimestamps = []
+#     AngleCalculation = None
+#     pointA = None
+#     pointB = None
+#     pointC = None
+#
+#     if angleType is 'Knees':
+#         AngleCalculation = CalculateAngle3D
+#         pointA = 'rHip'
+#         pointB = 'rKnee'
+#         pointC = 'rAnkle'
+#         if timestamps is None:
+#             pointA = 'RPSI'
+#             pointB = 'RKNE'
+#             pointC = 'RANK'
+#
+#     elif angleType is 'Kyphosis':
+#         AngleCalculation = CalculateAngle2D
+#         pointA = 'rShoulder'
+#         pointB = 'neck'
+#         pointC = 'lShoulder'
+#         if timestamps is None:
+#             pointA = 'RSHO'
+#             pointB = 'LSHO'
+#             pointC = 'CLAV'
+#
+#     for i in range(len(skeletons)):
+#         angle = AngleCalculation(getattr(skeletons[i], pointA), getattr(skeletons[i], pointB),
+#                                  getattr(skeletons[i], pointC))
+#         if angle != -1 or angle != -2:
+#             angles.append(angle)
+#             if timestamps is not None:
+#                 correspondingTimestamps.append(timestamps[i])
+#
+#     if timestamps is None:
+#         return angles
+#     else:
+#         return angles, correspondingTimestamps
 
 
 # # Calculate list of angles - OpenPose

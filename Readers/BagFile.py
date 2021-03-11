@@ -83,7 +83,7 @@ def BagFileSetup(path, orientation):  # path = '.../', orientation = 'front'
     time.sleep(1)
     loop = 0
     try:
-        while True:
+        while loop < 300:
             loop += 1
             # Get frameset of color and depth
             frames = pipeline.wait_for_frames()
