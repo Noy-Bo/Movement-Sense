@@ -2,23 +2,29 @@ import Calculations.Algebra
 
 from Calculations.Algebra import isZero, getDistance, takeClosest
 
-factor = 0.7
+factor_forward = 1.4
+factor_backward = 1.3
 
 
 def SyncByMovementOpenpose(openPoseSkeletons, timestamps): #TODO return stable frames after the movement.
     # openpose
-    first = None
+    a = []
+    firstDistance = None
     idx = None
+    passedForwardCheck = False
     for i in range(0, len(openPoseSkeletons)):
 
         dist = CalcDistance(openPoseSkeletons[i], "openpose")
 
         if dist is not None:
+            a.append(dist)
+            if firstDistance is None:
+                firstDistance = dist
 
-            if first is None:
-                first = dist
+            if dist > (firstDistance * factor_forward) and dist < (firstDistance *3):
+                passedForwardCheck = True
 
-            if dist < (first * factor):
+            if passedForwardCheck is True and dist < (firstDistance * factor_backward):
                 idx = i
                 break
 
@@ -33,18 +39,22 @@ def SyncByMovementOpenpose(openPoseSkeletons, timestamps): #TODO return stable f
 
 def SyncByMovementVicon(viconSkeletons):
     # vicon
-    first = None
+    firstDistance = None
     idx = None
+    passedForwardCheck = False
     for i in range(0, len(viconSkeletons)):
 
         dist = CalcDistance(viconSkeletons[i], "vicon")
 
         if dist is not None:
 
-            if first is None:
-                first = dist
+            if firstDistance is None:
+                firstDistance = dist
 
-            if dist < (first * factor):
+            if dist > (firstDistance * factor_forward):
+                passedForwardCheck = True
+
+            if passedForwardCheck is True and dist < (firstDistance * factor_backward):
                 idx = i
                 break
 
@@ -56,13 +66,13 @@ def CalcDistance(skeleton, type):
     dist = None
 
     if "openpose" in type:
-        if (isZero(skeleton.neck) == False and isZero(
+        if (isZero(skeleton.rElbow) == False and isZero(
                 skeleton.rKnee) == False):
-            dist = getDistance(skeleton.neck, skeleton.rKnee)
+            dist = getDistance(skeleton.rElbow, skeleton.rKnee)
 
     elif "vicon" in type:
-        if ((isZero(skeleton.RKNE) is False) and (isZero(skeleton.CLAV) is False)):
-            dist = getDistance(skeleton.RKNE, skeleton.CLAV)
+        if ((isZero(skeleton.RELB) is False) and (isZero(skeleton.RKNE) is False)):
+            dist = getDistance(skeleton.RELB, skeleton.RKNE)
 
     return dist
 

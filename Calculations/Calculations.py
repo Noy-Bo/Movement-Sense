@@ -39,6 +39,7 @@ def CalculteCenterOfMass(skeletons, points, timestamps = None):
         if timestamps is None: # vicon
             if (isZero(getattr(skeletons[i], points[0])) is not None or isZero(getattr(skeletons[i], points[1])) is not None):
                 point = AverageOfPoints([getattr(skeletons[i], points[0]),getattr(skeletons[i], points[1])])
+                point.x /= 100; point.y /= 100; point.z /= 100
                 centerOfMassPoints.append(point)
 
         elif timestamps is not None: # openpose

@@ -13,8 +13,9 @@ from Utilities.GraphGenerator import GenerateGraph, GenerateGraphOfCorrelation
 class GuiInterface(object):
     def __init__(self):
         self.title = "Movement Sense"
-        self.path = "C:\\Age_Estimation_Project\\bag_files\\sub003\\Squat\\"
-        # self.path = "C:\\Age_Estimation_Project\\bag_files\sub003\\Squat\\"
+        #self.path = "C:\\Age_Estimation_Project\\bag_files\\sub005\\left\\"
+        self.path = "C:\\Age_Estimation_Project\\bag_files\sub007\\squat\\"
+        #self.path = "C:\\Age_Estimation_Project\\bag_files\sub003\\Squat\\"
         self.root = None
         self.combo = None
         self.textBox = None
@@ -132,18 +133,18 @@ class GuiInterface(object):
         viconSkeletons = ViconReader(self.path + 'vicon.csv')
         viconSkeletons = SyncByMovementVicon(viconSkeletons)
         # Two lists: one of Openpose skeletons, one of timestamps
-        for i in range(len(self.orientations)):
-            # print(self.orientations[i])
-            self.textBox.set("Working on " + str(i + 1) + '/' + str(len(self.orientations)) + " bag file")
-            openposeSkeletons, openposeTimestamps = BagFileSetup(self.path, self.orientations[i])
-            openposeSkeletons, openposeTimestamps = SyncByMovementOpenpose(openposeSkeletons, openposeTimestamps)
-            openposeSkeletonsLists.append(openposeSkeletons)
-            openposeTimestampsLists.append(openposeTimestamps)
-
+        # for i in range(len(self.orientations)):
+        #     # print(self.orientations[i])
+        #     self.textBox.set("Working on " + str(i + 1) + '/' + str(len(self.orientations)) + " bag file")
+        #     openposeSkeletons, openposeTimestamps = BagFileSetup(self.path, self.orientations[i])
+        #     openposeSkeletons, openposeTimestamps = SyncByMovementOpenpose(openposeSkeletons, openposeTimestamps)
+        #     openposeSkeletonsLists.append(openposeSkeletons)
+        #     openposeTimestampsLists.append(openposeTimestamps)
+        #
         # pickle.dump(openposeSkeletonsLists, open(self.path + 'loadfiles\\' + "openposeSkeletonsLists", 'wb'))
         # pickle.dump(openposeTimestampsLists, open(self.path + 'loadfiles\\' + "openposeTimestampsLists", 'wb'))
-        # openposeSkeletonsLists = pickle.load(open(self.path + 'loadfiles\\' + "openposeSkeletonsLists", 'rb'))
-        # openposeTimestampsLists = pickle.load(open(self.path + 'loadfiles\\' + "openposeTimestampsLists", 'rb'))
+        openposeSkeletonsLists = pickle.load(open(self.path + 'loadfiles\\' + "openposeSkeletonsLists", 'rb'))
+        openposeTimestampsLists = pickle.load(open(self.path + 'loadfiles\\' + "openposeTimestampsLists", 'rb'))
 
         self.textBox.set("Calculating measurements...")
         openposeMeasurementsMat = []
@@ -152,9 +153,9 @@ class GuiInterface(object):
             openposeMeasurements = []
             viconMeasurements = []
             for j in range(len(self.orientations)):
-                openposeData, correspondingTimestamps = CalculateMeasurement(openposeSkeletonsLists[j], calculations[i], openposeTimestampsLists[j])
+                openposeData, correspondingTimestamps = CalculateMeasurement(openposeSkeletonsLists[j], self.calculations[i], openposeTimestampsLists[j])
                 openposeMeasurements.append([openposeData, correspondingTimestamps])
-                viconData = CalculateMeasurement(viconSkeletons, calculations[i])
+                viconData = CalculateMeasurement(viconSkeletons, self.calculations[i])
                 cutViconData = matchTimestamps(openposeTimestampsLists[j], viconData)
                 viconMeasurements.append(cutViconData)
 
