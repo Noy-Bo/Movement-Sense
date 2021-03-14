@@ -27,6 +27,10 @@ class GuiInterface(object):
         self.backCheckBox = None
         self.orientations = []
         self.calculations = []
+        self.cameraOrientations = ['0', '90 right', '180', '90 left']
+        self.frontOrientation = None
+        self.sideOrientation = None
+        self.backOrientation = None
 
     def setupInterface(self):
         # initialize windows
@@ -35,8 +39,9 @@ class GuiInterface(object):
         self.root.configure(bd=10)
         # self.root.geometry("300x200")
 
+        # Column 0
         # Calculation checkboxes:
-        Label(self.root, text="Calculations").grid(row=0, column=0, sticky=W + E, pady=5)
+        Label(self.root, text="Calculations").grid(row=0, column=0, sticky=W, pady=5)
         # add kyphosis button
         self.KyphosisCheckBox = BooleanVar()
         self.KyphosisCheckBox.set(False)
@@ -55,39 +60,64 @@ class GuiInterface(object):
         Checkbutton(self.root, text="Knees", variable=self.kneesCheckBox,
                     command=lambda: self.addToCalculations('Knees'), cursor="hand2").grid(row=3, column=0,
                                                                                           sticky=W)
+        # Column 1
+        # separator line
+        separator = ttk.Separator(self.root, orient='vertical')
+        separator.grid(row=0, column=1, rowspan=4, sticky="ns", padx=5)
 
+        # Column 2
         # Orientation checkboxes:
-        Label(self.root, text="Orientations").grid(row=0, column=1, sticky=W + E, pady=5)
+        Label(self.root, text="Orientations").grid(row=0, column=2, sticky=W + E, pady=5)
         # add front camera button
         self.frontCheckBox = BooleanVar()
         self.frontCheckBox.set(False)
         Checkbutton(self.root, text="Front", variable=self.frontCheckBox,
-                    command=lambda: self.addToOrientation('Front'), cursor="hand2").grid(row=1, column=1,
+                    command=lambda: self.addToOrientation('Front'), cursor="hand2").grid(row=1, column=2,
                                                                                          sticky=W)
         # add side camera button
         self.sideCheckBox = BooleanVar()
         self.sideCheckBox.set(False)
         Checkbutton(self.root, text="Side", variable=self.sideCheckBox,
-                    command=lambda: self.addToOrientation('Side'), cursor="hand2").grid(row=2, column=1,
+                    command=lambda: self.addToOrientation('Side'), cursor="hand2").grid(row=2, column=2,
                                                                                         sticky=W)
         # add back camera button
         self.backCheckBox = BooleanVar()
         self.backCheckBox.set(False)
         Checkbutton(self.root, text="Back", variable=self.backCheckBox,
-                    command=lambda: self.addToOrientation('Back'), cursor="hand2").grid(row=3, column=1,
+                    command=lambda: self.addToOrientation('Back'), cursor="hand2").grid(row=3, column=2,
                                                                                         sticky=W)
 
+        # Column 3
+        Label(self.root, text="Camera Angle").grid(row=0, column=3, sticky=W + E, pady=5, padx=10)
+
+        self.frontOrientation = ttk.Combobox(self.root, width=5, values=self.cameraOrientations)
+        self.frontOrientation.current(0)
+        self.frontOrientation.grid(row=1, column=3, sticky=W, padx=10)
+
+        self.sideOrientation = ttk.Combobox(self.root, width=5, values=self.cameraOrientations)
+        self.sideOrientation.current(0)
+        self.sideOrientation.grid(row=2, column=3, sticky=W, padx=10)
+
+        self.backOrientation = ttk.Combobox(self.root, width=5, values=self.cameraOrientations)
+        self.backOrientation.current(0)
+        self.backOrientation.grid(row=3, column=3, sticky=W, padx=10)
+
         # add choose file button
-        Button(self.root, text="Vicon Path", width=16, command=lambda: self.browseFile(), cursor="hand2",
-               activebackground="Lavender").grid(row=4, column=0, sticky=W + E, padx=15, pady=10)
+        Button(self.root, text="Vicon Path", width=12, command=lambda: self.browseFile(), cursor="hand2",
+               activebackground="Lavender").grid(row=4, column=0, sticky=W + E, pady=10)
+
+        # add choose file button
+        Button(self.root, text="Generate log", width=12, command=lambda: self.browseFile(), cursor="hand2",
+               activebackground="Lavender").grid(row=4, column=2, sticky=W + E, pady=10)
+
+        # add run button
+        button_run = Button(self.root, text="Run", command=lambda: self.startMainThread(), cursor="hand2",
+                            activebackground="Lavender", width=10).grid(row=4, column=3, pady=10)
 
         # add text box
         self.textBox = StringVar()
         self.textBox.set("Welcome")
         Label(self.root, textvariable=self.textBox).grid(row=5, column=0, sticky=W + E, columnspan=4)
-        # add run button
-        button_run = Button(self.root, text="Run", command=lambda: self.startMainThread(), cursor="hand2",
-                            activebackground="Lavender", width=10).grid(row=4, column=1, sticky=W + E, padx=15, pady=10)
         self.root.mainloop()
 
     def runButton(self):
@@ -107,10 +137,15 @@ class GuiInterface(object):
 
     def browseFile(self):
         file = filedialog.askopenfile(parent=self.root, mode='rb', title='Choose a file')
+        print(self.translateAngle(self.frontOrientation))
         try:
             self.path = file.name.replace('vicon.csv', '')
         except:
             self.textBox.set("Please select a valid path")
+
+    def translateAngle(self, camera):
+        angle = self.cameraOrientations.index(camera.get())
+        return 90 * angle
 
     def addToCalculations(self, param):
         if param in self.calculations:
