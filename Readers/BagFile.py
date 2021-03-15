@@ -17,7 +17,7 @@ import time
 from Calculations import Algebra
 
 
-def BagFileSetup(path, orientation):  # path = '.../', orientation = 'front'
+def BagFileSetup(path, orientation,rotationAngle):  # path = '.../', orientation = 'front'
     # =========== ALPHAPOSE
     # open's the alphapose results and sets them in json array
     # skeletonsTable = []  # contains all json's, with the bigger score
@@ -151,15 +151,8 @@ def BagFileSetup(path, orientation):  # path = '.../', orientation = 'front'
 
                     points = pc.calculate(aligned_depth_frame)
                     verts = np.asarray(points.get_vertices(2)).reshape(h,w, 3)
-                    #verts = ndimage.rotate(verts, 90)
-                    verts = np.rot90(verts)  # this is for images that were rotated 90 degrees
-                    verts = np.rot90(verts)  # this is for images that were rotated 90 degrees
-                    verts = np.rot90(verts)  # this is for images that were rotated 90 degrees
-
-
-
-
-                    color_image_copy = ndimage.rotate(color_image.copy(), 270)
+                    verts = ndimage.rotate(verts, rotationAngle)
+                    color_image_copy = ndimage.rotate(color_image.copy(), rotationAngle)
                     isRotated = True  # dont forget to disable this in cases u dont rotate
 
                     # print("rawsize: {}, vertsSize: {}".format(vertsRaw.size, verts.size))
@@ -203,7 +196,8 @@ def BagFileSetup(path, orientation):  # path = '.../', orientation = 'front'
                     cv2.circle(color_image_copy, (int(pixelSkeleton.lWrist.x), int(pixelSkeleton.lWrist.y)), 4,
                             (0, 255, 0), -1)
                     cv2.circle(color_image_copy, (int(pixelSkeleton.neck.x),int(pixelSkeleton.neck.y)),4,(0,0,255),-1)
-                    cv2.imshow("sanity check",color_image_copy)
+                    cv2.putText(color_image_copy, "frame no. "+str(numOfFrames), (int(h/2), 30), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 255, 255), 2)
+                    cv2.imshow(orientation + " bag file" ,color_image_copy)
                     cv2.waitKey(1)
 
 
@@ -247,7 +241,6 @@ def BagFileSetup(path, orientation):  # path = '.../', orientation = 'front'
                     #         dist = getDistance(skeleton.rElbow, skeleton.rKnee)
                     #         #print(dist)
                     numOfFrames += 1
-                    # print(numOfFrames)
                     lastTimeStamp = frameTimestamp
 
                     data_skeletons.append(skeleton)
@@ -255,7 +248,7 @@ def BagFileSetup(path, orientation):  # path = '.../', orientation = 'front'
 
                 # Algebra.roundGraph(dataX,dataY,ax)
 
-            print(str(loop) + 'th frame')
+            #print(str(loop) + 'th frame')
             # resuming after heavy calculations.
             playback.resume()
 

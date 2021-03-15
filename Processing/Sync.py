@@ -96,3 +96,17 @@ def matchTimestamps(openposeTimestamps, viconMeasurements):
                 cutViconMeasurements.append(viconMeasurements[vIdx])
 
     return cutViconMeasurements
+
+def removeOutliers(cutViconData,openposeData,correspondingTimestamps):
+
+    outliersIndexes = []
+    for i in range(len(openposeData)):
+        if openposeData[i] == 0 or  openposeData[i] == -1 or openposeData[i] == -2 or cutViconData[i] == 0 or cutViconData[i] == -1 or cutViconData[i] == -2:
+            outliersIndexes.append(i)
+
+    for i in range(len(outliersIndexes)):
+        del cutViconData[outliersIndexes[i]-i]
+        del openposeData[outliersIndexes[i]-i]
+        del correspondingTimestamps[outliersIndexes[i]-i]
+
+    return cutViconData,openposeData,correspondingTimestamps
