@@ -26,7 +26,9 @@ def GenerateGraphOfCorrelation(openposeMeasurements, viconMeasurements, name, pa
     maxVal = max(max(openposeMeasurements), max(viconMeasurements)) * 1.15
 
     # graph
-    fig = plt.figure()
+    fig = plt.figure(figsize=(15,7))
+    title = "Correlation Graph of " + name
+    plt.title(title)
     ax = fig.add_subplot(111)
     ax.set_ylabel("Vicon measurements")
     ax.set_xlabel("Openpose measurements")
@@ -37,7 +39,7 @@ def GenerateGraphOfCorrelation(openposeMeasurements, viconMeasurements, name, pa
                                                                                           str(spearman[0])[:-12],
                                                                                           str(kendall[0])[:-12])),
             horizontalalignment='right',
-            verticalalignment='top',
+            verticalalignment='bottom',
             transform=ax.transAxes)
     # ax.plot([minVal, minVal], [maxVal, maxVal], transform=ax.transAxes)
     ax.plot(ax.get_xlim(), ax.get_ylim(), ls="--", c=".2")
@@ -48,17 +50,19 @@ def GenerateGraphOfCorrelation(openposeMeasurements, viconMeasurements, name, pa
 
 def GenerateGraph(timestamps, openposeMeasurements, viconMeasurements, calculation, orientation, path):
     # colors = cm.rainbow(np.linspace(0, 1, len(ys)))
+    fig = plt.figure(figsize=(15, 7))
     title = calculation + GetMeasurementType(calculation) + ' from ' + orientation + ' camera'
     fileName = orientation + '_' + calculation
     plt.title(title)
     plt.ylabel(GetMeasurementType(calculation))
     plt.xlabel('time (sec)')
     if openposeMeasurements is not None:
-        plt.scatter(timestamps, openposeMeasurements, color='RED', s=3)
+        plt.scatter(timestamps, openposeMeasurements, color='RED', s=4, label = 'OpenPose')
         fileName += '_Openpose'
     if viconMeasurements is not None:
-        plt.scatter(timestamps, viconMeasurements, color='BLUE', s=3)
+        plt.scatter(timestamps, viconMeasurements, color='BLUE', s=4, label='Vicon',)
         fileName += '_Vicon'
+    plt.legend()
     try:
         plt.savefig(path + fileName + '.pdf')
     except:
