@@ -2,8 +2,11 @@ import argparse
 import json
 import math
 
+import cv2
 import numpy as np
+from scipy import ndimage
 
+from Calculations.Algebra import isZero, getDistance
 from Entities.OpenPose import OpenPoseSkeleton
 from Entities.Point3D import Point3D
 from Entities.Timestamp import Timestamp
@@ -14,7 +17,7 @@ import time
 from Calculations import Algebra
 
 
-def BagFileSetup(path, orientation):  # path = '.../', orientation = 'front'
+def BagFileSetup(path, orientation,rotationAngle):  # path = '.../', orientation = 'front'
     # =========== ALPHAPOSE
     # open's the alphapose results and sets them in json array
     # skeletonsTable = []  # contains all json's, with the bigger score
@@ -83,7 +86,7 @@ def BagFileSetup(path, orientation):  # path = '.../', orientation = 'front'
     time.sleep(1)
     loop = 0
     try:
-        while loop < 300:
+        while True:
             loop += 1
             # Get frameset of color and depth
             frames = pipeline.wait_for_frames()
@@ -122,7 +125,8 @@ def BagFileSetup(path, orientation):  # path = '.../', orientation = 'front'
                     # if str(math.floor(float(item.depth_timestamp))) == str(round(float(depth_timestamp))):  # python 2.7: change to item.depth_timestamp == str(depth_timestamp)
                     logTimestamp = math.floor(float(item.depth_timestamp) / 10)
                     # frameTimestamp = math.floor(float(depth_timestamp) / 10)
-                    if logTimestamp == frameTimestamp:
+                    #if logTimestamp == frameTimestamp: # for e stamp
+                    if float(item.depth_timestamp) == depth_timestamp:
                         color_frame_name = item.color_timestamp + ".png"
                         break
 
@@ -146,10 +150,9 @@ def BagFileSetup(path, orientation):  # path = '.../', orientation = 'front'
                     #     w * h, 'v3f/stream', 't2f/stream', 'n3f/stream')
 
                     points = pc.calculate(aligned_depth_frame)
-                    verts = np.asarray(points.get_vertices(2)).reshape(h, w, 3)
-
-                    # rotation
-                    verts = np.rot90(verts)  # this is for images that were rotated 90 degrees
+                    verts = np.asarray(points.get_vertices(2)).reshape(h,w, 3)
+                    verts = ndimage.rotate(verts, rotationAngle)
+                    color_image_copy = ndimage.rotate(color_image.copy(), rotationAngle)
                     isRotated = True  # dont forget to disable this in cases u dont rotate
 
                     # print("rawsize: {}, vertsSize: {}".format(vertsRaw.size, verts.size))
@@ -160,6 +163,43 @@ def BagFileSetup(path, orientation):  # path = '.../', orientation = 'front'
                     # pixelSkeleton = AlphaPoseSkeleton(skeletonObject)
                     # ==================== OpenPose
                     pixelSkeleton = OpenPoseSkeleton(skeletonObject.keypoints)
+
+
+                    #printing points test
+                    #color_image_copy = color_image.copy()
+                    cv2.circle(color_image_copy, (int(pixelSkeleton.rShoulder.x),int(pixelSkeleton.rShoulder.y)),4,(255,0,0),-1)
+                    cv2.circle(color_image_copy, (int(pixelSkeleton.lShoulder.x),int(pixelSkeleton.lShoulder.y)),4,(0,255,0),-1)
+                    cv2.circle(color_image_copy, (int(pixelSkeleton.rKnee.x), int(pixelSkeleton.rKnee.y)), 4,
+                            (255, 0, 0), -1)
+                    cv2.circle(color_image_copy, (int(pixelSkeleton.lKnee.x), int(pixelSkeleton.lKnee.y)), 4,
+                            (0, 255, 0), -1)
+                    cv2.circle(color_image_copy, (int(pixelSkeleton.lHip.x), int(pixelSkeleton.lHip.y)), 4,
+                            (0, 255, 0), -1)
+                    cv2.circle(color_image_copy, (int(pixelSkeleton.rHip.x), int(pixelSkeleton.rHip.y)), 4,
+                            (255, 0, 0), -1)
+                    cv2.circle(color_image_copy, (int(pixelSkeleton.lAnkle.x), int(pixelSkeleton.lAnkle.y)), 4,
+                            (0, 255, 0), -1)
+                    cv2.circle(color_image_copy, (int(pixelSkeleton.rAnkle.x), int(pixelSkeleton.rAnkle.y)), 4,
+                            (255, 0, 0), -1)
+                    cv2.circle(color_image_copy, (int(pixelSkeleton.lElbow.x), int(pixelSkeleton.lElbow.y)), 4,
+                            (0, 255, 0), -1)
+                    cv2.circle(color_image_copy, (int(pixelSkeleton.rElbow.x), int(pixelSkeleton.rElbow.y)), 4,
+                            (255, 0, 0), -1)
+                    cv2.circle(color_image_copy, (int(pixelSkeleton.neck.x), int(pixelSkeleton.neck.y)), 4,
+                            (0, 0, 255), -1)
+                    # cv2.circle(color_image_copy, (int(pixelSkeleton.midHip.x), int(pixelSkeleton.midHip.y)), 4,
+                    #           (0, 0, 255), -1)
+                    cv2.circle(color_image_copy, (int(pixelSkeleton.lShoulder.x), int(pixelSkeleton.lShoulder.y)), 4,
+                            (0, 255, 0), -1)
+                    cv2.circle(color_image_copy, (int(pixelSkeleton.rWrist.x), int(pixelSkeleton.rWrist.y)), 4,
+                            (255, 0, 0), -1)
+                    cv2.circle(color_image_copy, (int(pixelSkeleton.lWrist.x), int(pixelSkeleton.lWrist.y)), 4,
+                            (0, 255, 0), -1)
+                    cv2.circle(color_image_copy, (int(pixelSkeleton.neck.x),int(pixelSkeleton.neck.y)),4,(0,0,255),-1)
+                    cv2.putText(color_image_copy, "frame no. "+str(numOfFrames), (int(h/2), 30), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 255, 255), 2)
+                    cv2.imshow(orientation + " bag file" ,color_image_copy)
+                    cv2.waitKey(1)
+
 
                     for i in range(0, 75, 3):
                         # incase pose estimation didnt return a valid point.
@@ -193,8 +233,14 @@ def BagFileSetup(path, orientation):  # path = '.../', orientation = 'front'
                     # skeleton = AlphaPoseSkeleton(skeletonObject)
                     # OPEN POSE
                     skeleton = OpenPoseSkeleton(skeletonObject.keypoints)
+
+                    # test, deletable
+                    # if loop > 100:
+                    #     if (isZero(skeleton.rElbow) == False and isZero(
+                    #             skeleton.rKnee) == False):
+                    #         dist = getDistance(skeleton.rElbow, skeleton.rKnee)
+                    #         #print(dist)
                     numOfFrames += 1
-                    # print(numOfFrames)
                     lastTimeStamp = frameTimestamp
 
                     data_skeletons.append(skeleton)
@@ -202,7 +248,7 @@ def BagFileSetup(path, orientation):  # path = '.../', orientation = 'front'
 
                 # Algebra.roundGraph(dataX,dataY,ax)
 
-            print(str(loop) + 'th frame')
+            #print(str(loop) + 'th frame')
             # resuming after heavy calculations.
             playback.resume()
 

@@ -10,7 +10,7 @@ def CalculateMeasurement(skeletons, calculations, timestamps=None):
     if calculations is "Knees":
         points = ('rHip', 'rKnee', 'rAnkle')
         if timestamps is None:
-            points = ('RPSI','RKNE','RANK')
+            points = ('RASI','RKNE','RANK')
         return CalculateAngles(skeletons, CalculateAngle3D, points, timestamps)
 
     # shoulder's kyphosis
@@ -39,6 +39,7 @@ def CalculteCenterOfMass(skeletons, points, timestamps = None):
         if timestamps is None: # vicon
             if (isZero(getattr(skeletons[i], points[0])) is not None or isZero(getattr(skeletons[i], points[1])) is not None):
                 point = AverageOfPoints([getattr(skeletons[i], points[0]),getattr(skeletons[i], points[1])])
+                point.x /= 100; point.y /= 100; point.z /= 100
                 centerOfMassPoints.append(point)
 
         elif timestamps is not None: # openpose
@@ -67,7 +68,7 @@ def CalculateAngles(skeletons, CalcAngle, points,timestamps=None):
     for i in range(len(skeletons)):
         angle = CalcAngle(getattr(skeletons[i], points[0]), getattr(skeletons[i], points[1]),
                                  getattr(skeletons[i], points[2]))
-        if angle != -1 or angle != -2:
+        if angle != -1 or angle != -2 or angle != 0:
             angles.append(angle)
             if timestamps is not None:
                 correspondingTimestamps.append(timestamps[i])

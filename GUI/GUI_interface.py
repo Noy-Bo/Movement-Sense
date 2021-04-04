@@ -1,10 +1,12 @@
+import os
 import pathlib
 import pickle
 import threading
 from tkinter import Tk, ttk, filedialog, Label, Entry, Button, Checkbutton, BooleanVar, Canvas, W, E, StringVar
 
 from Calculations.Calculations import CalculateAngles, CalculateMeasurement
-from Processing.Sync import SyncByMovementOpenpose, SyncByMovementVicon, matchTimestamps
+from Processing.LogGenerator import GenerateLog
+from Processing.Sync import SyncByMovementOpenpose, SyncByMovementVicon, matchTimestamps, removeOutliers
 from Readers.BagFile import BagFileSetup
 from Readers.Vicon import ViconReader
 from Utilities.GraphGenerator import GenerateGraph, GenerateGraphOfCorrelation
@@ -13,8 +15,9 @@ from Utilities.GraphGenerator import GenerateGraph, GenerateGraphOfCorrelation
 class GuiInterface(object):
     def __init__(self):
         self.title = "Movement Sense"
-        self.path = "C:\\Age_Estimation_Project\\bag_files\\sub003\\Squat\\"
-        # self.path = "C:\\Age_Estimation_Project\\bag_files\sub003\\Squat\\"
+        #self.path = "C:\\Age_Estimation_Project\\bag_files\\sub005\\left\\"
+        self.path = "C:\\Age_Estimation_Project\\bag_files\sub007\\squat\\"
+        #self.path = "C:\\Age_Estimation_Project\\bag_files\sub003\\Squat\\"
         self.root = None
         self.combo = None
         self.textBox = None
@@ -41,7 +44,7 @@ class GuiInterface(object):
 
         # Column 0
         # Calculation checkboxes:
-        Label(self.root, text="Calculations").grid(row=0, column=0, sticky=W, pady=5)
+        Label(self.root, text="Calculation").grid(row=0, column=0, sticky=W, pady=5)
         # add kyphosis button
         self.KyphosisCheckBox = BooleanVar()
         self.KyphosisCheckBox.set(False)
@@ -67,7 +70,7 @@ class GuiInterface(object):
 
         # Column 2
         # Orientation checkboxes:
-        Label(self.root, text="Orientations").grid(row=0, column=2, sticky=W + E, pady=5)
+        Label(self.root, text="Orientation").grid(row=0, column=2, sticky=W + E, pady=5)
         # add front camera button
         self.frontCheckBox = BooleanVar()
         self.frontCheckBox.set(False)
@@ -106,8 +109,8 @@ class GuiInterface(object):
         Button(self.root, text="Vicon Path", width=12, command=lambda: self.browseFile(), cursor="hand2",
                activebackground="Lavender").grid(row=4, column=0, sticky=W + E, pady=10)
 
-        # add generate logs button
-        Button(self.root, text="Generate log", width=12, command=lambda: self.browseFile(), cursor="hand2",
+        # add generate log button
+        Button(self.root, text="Generate logs", width=12, command=lambda: self.GenerateLogs(), cursor="hand2",
                activebackground="Lavender").grid(row=4, column=2, sticky=W + E, pady=10)
 
         # add run button
@@ -144,7 +147,7 @@ class GuiInterface(object):
 
     def translateAngle(self, camera):
         angle = self.cameraOrientations.index(camera.get())
-        return 90 * angle
+        return 360 - (90 * angle)
 
     def addToCalculations(self, param):
         if param in self.calculations:
@@ -158,6 +161,17 @@ class GuiInterface(object):
             return
         self.orientations.append(param)
 
+    def getRotationAngle(self,orientation):
+        name = orientation.lower() + 'Orientation'
+        attr = getattr(self, name)
+        rotationAngle = self.translateAngle(attr)
+        return rotationAngle
+
+    def GenerateLogs(self):
+        for i in range(len(self.orientations)):
+            rotationAngle = self.getRotationAngle(self.orientations[i])
+            GenerateLog(self.path, self.orientations[i],rotationAngle)
+
     def Main(self):
         openposeSkeletonsLists = []
         openposeTimestampsLists = []
@@ -165,17 +179,23 @@ class GuiInterface(object):
         # List of vicon skeletons
         viconSkeletons = ViconReader(self.path + 'vicon.csv')
         viconSkeletons = SyncByMovementVicon(viconSkeletons)
-        # Two lists: one of Openpose skeletons, one of timestamps
+        #Two lists: one of Openpose skeletons, one of timestamps
         for i in range(len(self.orientations)):
             # print(self.orientations[i])
             self.textBox.set("Working on " + str(i + 1) + '/' + str(len(self.orientations)) + " bag file")
-            openposeSkeletons, openposeTimestamps = BagFileSetup(self.path, self.orientations[i])
+            rotationAngle = self.getRotationAngle(self.orientations[i])
+            openposeSkeletons, openposeTimestamps = BagFileSetup(self.path, self.orientations[i], rotationAngle)
             openposeSkeletons, openposeTimestamps = SyncByMovementOpenpose(openposeSkeletons, openposeTimestamps)
             openposeSkeletonsLists.append(openposeSkeletons)
             openposeTimestampsLists.append(openposeTimestamps)
 
-        # pickle.dump(openposeSkeletonsLists, open(self.path + 'loadfiles\\' + "openposeSkeletonsLists", 'wb'))
-        # pickle.dump(openposeTimestampsLists, open(self.path + 'loadfiles\\' + "openposeTimestampsLists", 'wb'))
+        dirPath = self.path + 'loadfiles'
+        try:
+            os.mkdir(dirPath)
+        except OSError:
+            pass
+        pickle.dump(openposeSkeletonsLists, open(self.path + 'loadfiles\\' + "openposeSkeletonsLists", 'wb'))
+        pickle.dump(openposeTimestampsLists, open(self.path + 'loadfiles\\' + "openposeTimestampsLists", 'wb'))
         # openposeSkeletonsLists = pickle.load(open(self.path + 'loadfiles\\' + "openposeSkeletonsLists", 'rb'))
         # openposeTimestampsLists = pickle.load(open(self.path + 'loadfiles\\' + "openposeTimestampsLists", 'rb'))
 
@@ -186,12 +206,12 @@ class GuiInterface(object):
             openposeMeasurements = []
             viconMeasurements = []
             for j in range(len(self.orientations)):
-                openposeData, correspondingTimestamps = CalculateMeasurement(openposeSkeletonsLists[j], calculations[i], openposeTimestampsLists[j])
-                openposeMeasurements.append([openposeData, correspondingTimestamps])
-                viconData = CalculateMeasurement(viconSkeletons, calculations[i])
+                openposeData, correspondingTimestamps = CalculateMeasurement(openposeSkeletonsLists[j], self.calculations[i], openposeTimestampsLists[j])
+                viconData = CalculateMeasurement(viconSkeletons, self.calculations[i])
                 cutViconData = matchTimestamps(openposeTimestampsLists[j], viconData)
+                cutViconData, openposeData, correspondingTimestamps = removeOutliers(cutViconData,openposeData,correspondingTimestamps)
                 viconMeasurements.append(cutViconData)
-
+                openposeMeasurements.append([openposeData, correspondingTimestamps])
             openposeMeasurementsMat.append(openposeMeasurements)
             viconMeasurementsMat.append(viconMeasurements)
 

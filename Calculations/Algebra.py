@@ -293,6 +293,8 @@ def getAngle(pointA, pointB):
     norms = np.linalg.norm(pointA) * np.linalg.norm(pointB)
     angleRadians = np.arccos(np.divide(dotProduct, norms))
     angleDegrees = angleRadians * (180 / np.pi)
+    if math.isnan(angleDegrees) is True:
+        angleDegrees = -1
     return angleDegrees
 
 
