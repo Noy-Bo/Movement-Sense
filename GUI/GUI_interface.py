@@ -106,7 +106,7 @@ class GuiInterface(object):
         Button(self.root, text="Vicon Path", width=12, command=lambda: self.browseFile(), cursor="hand2",
                activebackground="Lavender").grid(row=4, column=0, sticky=W + E, pady=10)
 
-        # add choose file button
+        # add generate logs button
         Button(self.root, text="Generate log", width=12, command=lambda: self.browseFile(), cursor="hand2",
                activebackground="Lavender").grid(row=4, column=2, sticky=W + E, pady=10)
 
@@ -137,7 +137,6 @@ class GuiInterface(object):
 
     def browseFile(self):
         file = filedialog.askopenfile(parent=self.root, mode='rb', title='Choose a file')
-        print(self.translateAngle(self.frontOrientation))
         try:
             self.path = file.name.replace('vicon.csv', '')
         except:
