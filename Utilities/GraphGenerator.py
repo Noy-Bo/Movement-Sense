@@ -12,7 +12,7 @@ def GetMeasurementType(calculation):
     elif calculation is 'Kyphosis':
         ylabel = 'Angle (degrees)'
     elif calculation is 'Mass':
-        ylabel = 'Variance'
+        ylabel = 'Variance (cm)'
     return ylabel
 
 

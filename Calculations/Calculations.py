@@ -1,4 +1,5 @@
 import numpy as np
+from scipy import ndimage
 
 from Calculations.Algebra import getVectorFrom2Points, getAngle, isZero, getDistance
 from Entities.Point3D import Point3D
@@ -39,7 +40,7 @@ def CalculteCenterOfMass(skeletons, points, timestamps = None):
         if timestamps is None: # vicon
             if (isZero(getattr(skeletons[i], points[0])) is not None or isZero(getattr(skeletons[i], points[1])) is not None):
                 point = AverageOfPoints([getattr(skeletons[i], points[0]),getattr(skeletons[i], points[1])])
-                point.x /= 100; point.y /= 100; point.z /= 100
+                point.x /= 1000; point.y /= 1000; point.z /= 1000
                 centerOfMassPoints.append(point)
 
         elif timestamps is not None: # openpose
@@ -51,14 +52,18 @@ def CalculteCenterOfMass(skeletons, points, timestamps = None):
     avgPoint = AverageOfPoints(centerOfMassPoints)
 
     for i in range(len(centerOfMassPoints)):
-        dist = getDistance(avgPoint,centerOfMassPoints[i])
+        dist = getDistance(centerOfMassPoints[0],centerOfMassPoints[i])
+        dist *= 100 # from meter to cm
+        if dist > 100:
+            dist = 0; # outliers elimination
         varianceDistance.append(dist)
 
 
     if timestamps is None:
         return varianceDistance
     else:
-        return varianceDistance, correspondingTimestamps
+        #apply gaus smoothing
+        return ndimage.gaussian_filter1d(varianceDistance, 5).tolist(), correspondingTimestamps
 
 
 def CalculateAngles(skeletons, CalcAngle, points,timestamps=None):
@@ -68,10 +73,9 @@ def CalculateAngles(skeletons, CalcAngle, points,timestamps=None):
     for i in range(len(skeletons)):
         angle = CalcAngle(getattr(skeletons[i], points[0]), getattr(skeletons[i], points[1]),
                                  getattr(skeletons[i], points[2]))
-        if angle != -1 or angle != -2 or angle != 0:
-            angles.append(angle)
-            if timestamps is not None:
-                correspondingTimestamps.append(timestamps[i])
+        angles.append(angle)
+        if timestamps is not None:
+            correspondingTimestamps.append(timestamps[i])
 
     if timestamps is None:
         return angles

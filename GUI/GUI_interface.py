@@ -180,22 +180,22 @@ class GuiInterface(object):
         viconSkeletons = ViconReader(self.path + 'vicon.csv')
         viconSkeletons = SyncByMovementVicon(viconSkeletons)
         #Two lists: one of Openpose skeletons, one of timestamps
-        # for i in range(len(self.orientations)):
-        #     # print(self.orientations[i])
-        #     self.textBox.set("Working on " + str(i + 1) + '/' + str(len(self.orientations)) + " bag file")
-        #     rotationAngle = self.getRotationAngle(self.orientations[i])
-        #     openposeSkeletons, openposeTimestamps = BagFileSetup(self.path, self.orientations[i], rotationAngle)
-        #     openposeSkeletons, openposeTimestamps = SyncByMovementOpenpose(openposeSkeletons, openposeTimestamps)
-        #     openposeSkeletonsLists.append(openposeSkeletons)
-        #     openposeTimestampsLists.append(openposeTimestamps)
-        #
-        # dirPath = self.path + 'loadfiles'
-        # try:
-        #     os.mkdir(dirPath)
-        # except OSError:
-        #     pass
-        # pickle.dump(openposeSkeletonsLists, open(self.path + 'loadfiles\\' + "openposeSkeletonsLists", 'wb'))
-        # pickle.dump(openposeTimestampsLists, open(self.path + 'loadfiles\\' + "openposeTimestampsLists", 'wb'))
+        for i in range(len(self.orientations)):
+            # print(self.orientations[i])
+            self.textBox.set("Working on " + str(i + 1) + '/' + str(len(self.orientations)) + " bag file")
+            rotationAngle = self.getRotationAngle(self.orientations[i])
+            openposeSkeletons, openposeTimestamps = BagFileSetup(self.path, self.orientations[i], rotationAngle)
+            openposeSkeletons, openposeTimestamps = SyncByMovementOpenpose(openposeSkeletons, openposeTimestamps)
+            openposeSkeletonsLists.append(openposeSkeletons)
+            openposeTimestampsLists.append(openposeTimestamps)
+
+        dirPath = self.path + 'loadfiles'
+        try:
+            os.mkdir(dirPath)
+        except OSError:
+            pass
+        pickle.dump(openposeSkeletonsLists, open(self.path + 'loadfiles\\' + "openposeSkeletonsLists", 'wb'))
+        pickle.dump(openposeTimestampsLists, open(self.path + 'loadfiles\\' + "openposeTimestampsLists", 'wb'))
         openposeSkeletonsLists = pickle.load(open(self.path + 'loadfiles\\' + "openposeSkeletonsLists", 'rb'))
         openposeTimestampsLists = pickle.load(open(self.path + 'loadfiles\\' + "openposeTimestampsLists", 'rb'))
 
