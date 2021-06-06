@@ -2,7 +2,8 @@ import os
 import pathlib
 import pickle
 import threading
-from tkinter import Tk, ttk, filedialog, Label, Entry, Button, Checkbutton, BooleanVar, Canvas, W, E, StringVar
+from tkinter import Tk, ttk, filedialog, Label, Entry, Button, Checkbutton, BooleanVar, Canvas, W, E, StringVar, Menu, \
+    Toplevel
 
 from Calculations.Calculations import CalculateAngles, CalculateMeasurement
 from Processing.LogGenerator import GenerateLog
@@ -11,16 +12,46 @@ from Readers.BagFile import BagFileSetup
 from Readers.Vicon import ViconReader
 from Utilities.GraphGenerator import GenerateGraph, GenerateGraphOfCorrelation
 
+INSTRUCTIONS = "First, organize the folder according to the next diagram:\n\n" \
+               "path/\n" \
+               "   vicon.csv\n" \
+               "   front.bag\n" \
+               "   front_log.json\n" \
+               "   side.bag\n" \
+               "   side_log.json\n" \
+               "   back.bag\n" \
+               "   back_log.json\n" \
+               "   front_openpose/\n" \
+               "       1.607859213e+12_keypoints.json\n" \
+               "       ...\n" \
+               "   side_openpose/\n" \
+               "       1.607859213e+12_keypoints.json\n" \
+               "       ...\n" \
+               "   back_openpose/\n" \
+               "       1.607859213e+12_keypoints.json\n" \
+               "       ...\n\n" \
+               "-   All rotations are " \
+               "optional\n-   xxx_log.json can be generated using this tool\n-   xxx_openpose is generated using the " \
+               "Openpose tool (separate)\n\nThen, click ‘Vicon Path’ to navigate the program to your vicon.csv.\nIf " \
+               "xxx_log.json are missing, please select the requested orientations and each camera’s angle, " \
+               "and press ‘Generate logs’.\nThen, to get measurements graphs, please choose the requested " \
+               "calculations and camera orientations used and press ‘Run’.\nThe program will output the requested " \
+               "graphs to the same path originally used, inside a new folder named ‘Graphs’ "
+
 
 class GuiInterface(object):
     def __init__(self):
         self.title = "Movement Sense"
-        #self.path = "C:\\Age_Estimation_Project\\bag_files\\sub005\\left\\"
+        # self.path = "C:\\Age_Estimation_Project\\bag_files\\sub005\\left\\"
         self.path = "C:\\Age_Estimation_Project\\bag_files\sub007\\squat\\"
-        #self.path = "C:\\Age_Estimation_Project\\bag_files\sub003\\Squat\\"
+        # self.path = "C:\\Age_Estimation_Project\\bag_files\sub003\\Squat\\"
         self.root = None
         self.combo = None
+        self.instructionsWindow = None
+        self.aboutWindow = None
         self.textBox = None
+        self.buttonRun = None
+        self.buttonLog = None
 
         self.kneesCheckBox = None
         self.massCheckBox = None
@@ -110,18 +141,53 @@ class GuiInterface(object):
                activebackground="Lavender").grid(row=4, column=0, sticky=W + E, pady=10)
 
         # add generate log button
-        Button(self.root, text="Generate logs", width=12, command=lambda: self.GenerateLogs(), cursor="hand2",
-               activebackground="Lavender").grid(row=4, column=2, sticky=W + E, pady=10)
+        self.buttonLog = Button(self.root, text="Generate logs", width=12,
+                                command=lambda: self.startMainThread(self.GenerateLogs()), cursor="hand2",
+                                activebackground="Lavender")
+        self.buttonLog.grid(row=4, column=2, sticky=W + E, pady=10)
 
         # add run button
-        button_run = Button(self.root, text="Run", command=lambda: self.startMainThread(), cursor="hand2",
-                            activebackground="Lavender", width=10).grid(row=4, column=3, pady=10)
+        self.buttonRun = Button(self.root, text="Run", command=lambda: self.startMainThread(self.runButton()),
+                                cursor="hand2",
+                                activebackground="Lavender", width=10)
+        self.buttonRun.grid(row=4, column=3, pady=10)
+
+        # add toolbar
+        menubar = Menu(self.root, tearoff=0)
+        self.root.config(menu=menubar)
+        menubar.add_command(label='Instructions', command=lambda: self.openInstructionsWindow())
+        # menubar.add_separator()
+        menubar.add_command(label='About', command=lambda: self.openAboutWindow())
 
         # add text box
         self.textBox = StringVar()
         self.textBox.set("Welcome")
         Label(self.root, textvariable=self.textBox).grid(row=5, column=0, sticky=W + E, columnspan=4)
         self.root.mainloop()
+
+    def openInstructionsWindow(self):
+        if self.instructionsWindow is None:
+            self.instructionsWindow = Toplevel(self.root)
+            self.instructionsWindow.title("Instructions")
+            self.instructionsWindow.geometry("700x450")
+            Label(self.instructionsWindow, text=INSTRUCTIONS, justify='left').pack()
+            self.instructionsWindow.protocol("WM_DELETE_WINDOW", self.onInstructionsClose)
+
+    def openAboutWindow(self):
+        if self.aboutWindow is None:
+            self.aboutWindow = Toplevel(self.root)
+            self.aboutWindow.title("About")
+            self.aboutWindow.geometry("200x200")
+            Label(self.aboutWindow, text="Noy Boutbul hamisken\nMark Fesenko").pack()
+            self.aboutWindow.protocol("WM_DELETE_WINDOW", self.onAboutClose)
+
+    def onInstructionsClose(self):
+        self.instructionsWindow.destroy()
+        self.instructionsWindow = None
+
+    def onAboutClose(self):
+        self.aboutWindow.destroy()
+        self.aboutWindow = None
 
     def runButton(self):
         if len(self.orientations) == 0:
@@ -133,9 +199,9 @@ class GuiInterface(object):
             self.Main()
             self.textBox.set("Done!")
 
-    def startMainThread(self):
+    def startMainThread(self, button):
         global funcThread
-        funcThread = threading.Thread(target=self.runButton)
+        funcThread = threading.Thread(target=button)
         funcThread.start()
 
     def browseFile(self):
@@ -161,16 +227,33 @@ class GuiInterface(object):
             return
         self.orientations.append(param)
 
-    def getRotationAngle(self,orientation):
+    def getRotationAngle(self, orientation):
         name = orientation.lower() + 'Orientation'
         attr = getattr(self, name)
         rotationAngle = self.translateAngle(attr)
         return rotationAngle
 
     def GenerateLogs(self):
+        if len(self.orientations) == 0:
+            self.textBox.set("Please choose orientations")
+            return
+        else:
+            self.buttonRun.configure(state='disabled')  # must be active, disabled, or normal
+            self.buttonLog.configure(state='disabled')
         for i in range(len(self.orientations)):
+            self.textBox.set("Generating " + self.orientations[i] + " orientation log files...")
             rotationAngle = self.getRotationAngle(self.orientations[i])
-            GenerateLog(self.path, self.orientations[i],rotationAngle)
+            try:
+                GenerateLog(self.path, self.orientations[i], rotationAngle)
+            except:
+                self.textBox.set("Path error. Please choose correct path")
+                self.buttonRun.configure(state='normal')  # must be active, disabled, or normal
+                self.buttonLog.configure(state='normal')
+                return
+        if len(self.orientations) > 0:
+            self.textBox.set("Done generating log files!")
+            self.buttonRun.configure(state='normal')  # must be active, disabled, or normal
+            self.buttonLog.configure(state='normal')
 
     def Main(self):
         openposeSkeletonsLists = []
@@ -179,25 +262,27 @@ class GuiInterface(object):
         # List of vicon skeletons
         viconSkeletons = ViconReader(self.path + 'vicon.csv')
         viconSkeletons = SyncByMovementVicon(viconSkeletons)
-        #Two lists: one of Openpose skeletons, one of timestamps
-        for i in range(len(self.orientations)):
-            # print(self.orientations[i])
-            self.textBox.set("Working on " + str(i + 1) + '/' + str(len(self.orientations)) + " bag file")
-            rotationAngle = self.getRotationAngle(self.orientations[i])
-            openposeSkeletons, openposeTimestamps = BagFileSetup(self.path, self.orientations[i], rotationAngle)
-            openposeSkeletons, openposeTimestamps = SyncByMovementOpenpose(openposeSkeletons, openposeTimestamps)
-            openposeSkeletonsLists.append(openposeSkeletons)
-            openposeTimestampsLists.append(openposeTimestamps)
+        if os.path.exists(self.path + 'loadfiles'):
+            openposeSkeletonsLists = pickle.load(open(self.path + 'loadfiles\\' + "openposeSkeletonsLists", 'rb'))
+            openposeTimestampsLists = pickle.load(open(self.path + 'loadfiles\\' + "openposeTimestampsLists", 'rb'))
+        else:
+            # Two lists: one of Openpose skeletons, one of timestamps
+            for i in range(len(self.orientations)):
+                # print(self.orientations[i])
+                self.textBox.set("Working on " + str(i + 1) + '/' + str(len(self.orientations)) + " bag file")
+                rotationAngle = self.getRotationAngle(self.orientations[i])
+                openposeSkeletons, openposeTimestamps = BagFileSetup(self.path, self.orientations[i], rotationAngle)
+                openposeSkeletons, openposeTimestamps = SyncByMovementOpenpose(openposeSkeletons, openposeTimestamps)
+                openposeSkeletonsLists.append(openposeSkeletons)
+                openposeTimestampsLists.append(openposeTimestamps)
 
-        dirPath = self.path + 'loadfiles'
-        try:
-            os.mkdir(dirPath)
-        except OSError:
-            pass
-        pickle.dump(openposeSkeletonsLists, open(self.path + 'loadfiles\\' + "openposeSkeletonsLists", 'wb'))
-        pickle.dump(openposeTimestampsLists, open(self.path + 'loadfiles\\' + "openposeTimestampsLists", 'wb'))
-        # openposeSkeletonsLists = pickle.load(open(self.path + 'loadfiles\\' + "openposeSkeletonsLists", 'rb'))
-        # openposeTimestampsLists = pickle.load(open(self.path + 'loadfiles\\' + "openposeTimestampsLists", 'rb'))
+            dirPath = self.path + 'loadfiles'
+            try:
+                os.mkdir(dirPath)
+            except OSError:
+                pass
+            pickle.dump(openposeSkeletonsLists, open(self.path + 'loadfiles\\' + "openposeSkeletonsLists", 'wb'))
+            pickle.dump(openposeTimestampsLists, open(self.path + 'loadfiles\\' + "openposeTimestampsLists", 'wb'))
 
         self.textBox.set("Calculating measurements...")
         openposeMeasurementsMat = []
@@ -206,10 +291,13 @@ class GuiInterface(object):
             openposeMeasurements = []
             viconMeasurements = []
             for j in range(len(self.orientations)):
-                openposeData, correspondingTimestamps = CalculateMeasurement(openposeSkeletonsLists[j], self.calculations[i], openposeTimestampsLists[j])
+                openposeData, correspondingTimestamps = CalculateMeasurement(openposeSkeletonsLists[j],
+                                                                             self.calculations[i],
+                                                                             openposeTimestampsLists[j])
                 viconData = CalculateMeasurement(viconSkeletons, self.calculations[i])
                 cutViconData = matchTimestamps(openposeTimestampsLists[j], viconData)
-                cutViconData, openposeData, correspondingTimestamps = removeOutliers(cutViconData,openposeData,correspondingTimestamps)
+                cutViconData, openposeData, correspondingTimestamps = removeOutliers(cutViconData, openposeData,
+                                                                                     correspondingTimestamps)
                 viconMeasurements.append(cutViconData)
                 openposeMeasurements.append([openposeData, correspondingTimestamps])
             openposeMeasurementsMat.append(openposeMeasurements)

@@ -2,6 +2,7 @@ import xlsxwriter
 
 # https://xlsxwriter.readthedocs.io/chart.html
 
+
 def addToExcel(filename, dataX, dataX2, dataY, dataY2, heading, headingX, headingY, headingY2):
     # Workbook() takes one, non-optional, argument
     # which is the filename that we want to create.
@@ -102,6 +103,43 @@ def addToExcel(filename, dataX, dataX2, dataY, dataY2, heading, headingX, headin
     # is anchored to cell E2 .
     worksheet.insert_chart('H2', chart1)
     worksheet.insert_chart('H30', chart2)
+
+    # Finally, close the Excel file
+    # via the close() method.
+    workbook.close()
+
+
+def addToExcel(filename, dataX, dataY, headingX, headingY):
+    # Workbook() takes one, non-optional, argument
+    # which is the filename that we want to create.
+    workbook = xlsxwriter.Workbook(filename)
+
+    # The workbook object is then used to add new
+    # worksheet via the add_worksheet() method.
+    worksheet = workbook.add_worksheet()
+
+    # Create a new Format object to formats cells
+    # in worksheets using add_format() method .
+
+    # here we create bold format object .
+    bold = workbook.add_format({'bold': 1})
+
+    # create a data list .
+    headings = [headingX, headingY]
+
+    data = [
+        dataX,
+        dataY
+    ]
+
+    # Write a row of data starting from 'A1'
+    # with bold format .
+    worksheet.write_row('A1', headings, bold)
+
+    # Write a column of data starting from
+    # 'A2', 'B2', 'C2' respectively .
+    worksheet.write_column('A2', data[0])
+    worksheet.write_column('B2', data[1])
 
     # Finally, close the Excel file
     # via the close() method.
