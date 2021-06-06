@@ -21,9 +21,10 @@ Realsense and Vicon systems.
 * Comparing extracted data with Vicon(current kinematics Gold-Standart) data.
 * Accessable-to-all GUI tool to automate the extraction, analyzation and validation process.
 ##
-Technologies:
+### Technologies:
 OpenCV, Tkinter, Cubemos – skeleton tracking SDK, OpenPose - pose estimation, AlphaPose - pose estimation, Intel Realsense Depth Camera D415 / D435, Intel Realsense SDK.
-## Visualization
+##
+### Visualization
 
 <p float="center">
   <img src="https://github.com/Noy-Bo/Image-Vision-Project/blob/main/readme/project_30.gif" alt="alt text">
