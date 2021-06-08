@@ -47,8 +47,8 @@ class GuiInterface(object):
     def __init__(self):
         self.title = "Movement Sense"
         # self.path = "C:\\Age_Estimation_Project\\bag_files\\sub005\\left\\"
-        self.path = 'C:/Users/markf/Downloads/Project/sub003/Squat/'
-        # self.path = "C:\\Age_Estimation_Project\\bag_files\sub003\\Squat\\"
+        # self.path = 'C:/Users/markf/Downloads/Project/sub003/Squat/'
+        self.path = ''
         self.root = None
         self.combo = None
         self.instructionsWindow = None
@@ -228,6 +228,8 @@ class GuiInterface(object):
             self.textBox.set("Please choose camera orientation settings")
         elif len(self.calculations) == 0:
             self.textBox.set("Please choose measurements")
+        elif not os.path.isfile(self.path + 'vicon.csv'):
+            self.textBox.set("Please select a valid path")
         else:
             self.textBox.set("Working...")
             self.disableButtons()
