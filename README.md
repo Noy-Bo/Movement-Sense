@@ -1,4 +1,4 @@
-# Image Vision Project
+# Movement Sense
 
 Image Vision Project at Geometric Image Processing Lab (GIP) – Technion. As a part of a research study which aims to estimate age via sport exercise videos. The main goal of our project was to be able to generate accurate data out of samples captured by intel realsense depth cameras where subjects are performing sport exercises.
 

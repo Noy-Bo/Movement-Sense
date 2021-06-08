@@ -262,6 +262,7 @@ class GuiInterface(object):
         # List of vicon skeletons
         viconSkeletons = ViconReader(self.path + 'vicon.csv')
         viconSkeletons = SyncByMovementVicon(viconSkeletons)
+
         if os.path.exists(self.path + 'loadfiles'):
             openposeSkeletonsLists = pickle.load(open(self.path + 'loadfiles\\' + "openposeSkeletonsLists", 'rb'))
             openposeTimestampsLists = pickle.load(open(self.path + 'loadfiles\\' + "openposeTimestampsLists", 'rb'))
