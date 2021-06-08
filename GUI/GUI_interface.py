@@ -1,9 +1,11 @@
+import glob
 import os
 import pathlib
 import pickle
+import sys
 import threading
 from tkinter import Tk, ttk, filedialog, Label, Entry, Button, Checkbutton, BooleanVar, Canvas, W, E, StringVar, Menu, \
-    Toplevel
+    Toplevel, messagebox
 
 from Calculations.Calculations import CalculateAngles, CalculateMeasurement
 from Processing.LogGenerator import GenerateLog
@@ -37,7 +39,8 @@ INSTRUCTIONS = "First, organize the folder according to the next diagram:\n\n" \
                "xxx_log.json are missing, please select the requested orientations and each camera’s angle, " \
                "and press ‘Generate logs’.\nThen, to get measurements graphs, please choose the requested " \
                "calculations and camera orientations used and press ‘Run’.\nThe program will output the requested " \
-               "graphs to the same path originally used, inside a new folder named ‘Graphs’ "
+               "graphs to the same path originally used, inside a new folder named ‘Graphs’.\n\n" \
+               "* Press 'Reset' to remove all chached files"
 
 
 class GuiInterface(object):
@@ -53,7 +56,14 @@ class GuiInterface(object):
         self.textBox = None
         self.buttonRun = None
         self.buttonLog = None
+        self.buttonBrowse = None
 
+        self.checkButtonKnees = None
+        self.checkButtonMass = None
+        self.checkButtonKyphosis = None
+        self.checkButtonFront = None
+        self.checkButtonSide = None
+        self.checkButtonBack = None
         self.kneesCheckBox = None
         self.massCheckBox = None
         self.KyphosisCheckBox = None
@@ -80,21 +90,21 @@ class GuiInterface(object):
         # add kyphosis button
         self.KyphosisCheckBox = BooleanVar()
         self.KyphosisCheckBox.set(False)
-        Checkbutton(self.root, text="Kyphosis", variable=self.KyphosisCheckBox,
-                    command=lambda: self.addToCalculations('Kyphosis'), cursor="hand2").grid(row=1, column=0,
-                                                                                             sticky=W)
+        self.checkButtonKyphosis = Checkbutton(self.root, text="Kyphosis", variable=self.KyphosisCheckBox,
+                    command=lambda: self.addToCalculations('Kyphosis'), cursor="hand2")
+        self.checkButtonKyphosis.grid(row=1, column=0, sticky=W)
         # add mass center button
         self.massCheckBox = BooleanVar()
         self.massCheckBox.set(False)
-        Checkbutton(self.root, text="Mass Center", variable=self.massCheckBox,
-                    command=lambda: self.addToCalculations('Mass'), cursor="hand2").grid(row=2, column=0,
-                                                                                         sticky=W)
+        self.checkButtonMass = Checkbutton(self.root, text="Mass Center", variable=self.massCheckBox,
+                    command=lambda: self.addToCalculations('Mass'), cursor="hand2")
+        self.checkButtonMass.grid(row=2, column=0, sticky=W)
         # add knees button
         self.kneesCheckBox = BooleanVar()
         self.kneesCheckBox.set(False)
-        Checkbutton(self.root, text="Knees", variable=self.kneesCheckBox,
-                    command=lambda: self.addToCalculations('Knees'), cursor="hand2").grid(row=3, column=0,
-                                                                                          sticky=W)
+        self.checkButtonKnees = Checkbutton(self.root, text="Knees", variable=self.kneesCheckBox,
+                    command=lambda: self.addToCalculations('Knees'), cursor="hand2")
+        self.checkButtonKnees.grid(row=3, column=0, sticky=W)
         # Column 1
         # separator line
         separator = ttk.Separator(self.root, orient='vertical')
@@ -103,52 +113,55 @@ class GuiInterface(object):
         # Column 2
         # Orientation checkboxes:
         Label(self.root, text="Orientation").grid(row=0, column=2, sticky=W + E, pady=5)
+
         # add front camera button
         self.frontCheckBox = BooleanVar()
         self.frontCheckBox.set(False)
-        Checkbutton(self.root, text="Front", variable=self.frontCheckBox,
-                    command=lambda: self.addToOrientation('Front'), cursor="hand2").grid(row=1, column=2,
-                                                                                         sticky=W)
+        self.checkButtonFront = Checkbutton(self.root, text="Front", variable=self.frontCheckBox,
+                    command=lambda: self.addToOrientation('Front'), cursor="hand2")
+        self.checkButtonFront.grid(row=1, column=2, sticky=W)
+
         # add side camera button
         self.sideCheckBox = BooleanVar()
         self.sideCheckBox.set(False)
-        Checkbutton(self.root, text="Side", variable=self.sideCheckBox,
-                    command=lambda: self.addToOrientation('Side'), cursor="hand2").grid(row=2, column=2,
-                                                                                        sticky=W)
+        self.checkButtonSide = Checkbutton(self.root, text="Side", variable=self.sideCheckBox,
+                    command=lambda: self.addToOrientation('Side'), cursor="hand2")
+        self.checkButtonSide.grid(row=2, column=2, sticky=W)
         # add back camera button
         self.backCheckBox = BooleanVar()
         self.backCheckBox.set(False)
-        Checkbutton(self.root, text="Back", variable=self.backCheckBox,
-                    command=lambda: self.addToOrientation('Back'), cursor="hand2").grid(row=3, column=2,
-                                                                                        sticky=W)
+        self.checkButtonBack = Checkbutton(self.root, text="Back", variable=self.backCheckBox,
+                    command=lambda: self.addToOrientation('Back'), cursor="hand2")
+        self.checkButtonBack.grid(row=3, column=2, sticky=W)
 
         # Column 3
         Label(self.root, text="Camera Angle").grid(row=0, column=3, sticky=W + E, pady=5, padx=10)
 
         self.frontOrientation = ttk.Combobox(self.root, width=5, values=self.cameraOrientations)
-        self.frontOrientation.current(0)
+        self.frontOrientation.current(1)
         self.frontOrientation.grid(row=1, column=3, sticky=W, padx=10)
 
         self.sideOrientation = ttk.Combobox(self.root, width=5, values=self.cameraOrientations)
-        self.sideOrientation.current(0)
+        self.sideOrientation.current(1)
         self.sideOrientation.grid(row=2, column=3, sticky=W, padx=10)
 
         self.backOrientation = ttk.Combobox(self.root, width=5, values=self.cameraOrientations)
-        self.backOrientation.current(0)
+        self.backOrientation.current(1)
         self.backOrientation.grid(row=3, column=3, sticky=W, padx=10)
 
         # add choose file button
-        Button(self.root, text="Vicon Path", width=12, command=lambda: self.browseFile(), cursor="hand2",
-               activebackground="Lavender").grid(row=4, column=0, sticky=W + E, pady=10)
+        self.buttonBrowse = Button(self.root, text="Vicon Path", width=12, command=lambda: self.browseFile(), cursor="hand2",
+               activebackground="Lavender")
+        self.buttonBrowse.grid(row=4, column=0, sticky=W + E, pady=10)
 
         # add generate log button
         self.buttonLog = Button(self.root, text="Generate logs", width=12,
-                                command=lambda: self.startMainThread(self.GenerateLogs()), cursor="hand2",
+                                command=lambda: self.startMainThread(self.GenerateLogs), cursor="hand2",
                                 activebackground="Lavender")
         self.buttonLog.grid(row=4, column=2, sticky=W + E, pady=10)
 
         # add run button
-        self.buttonRun = Button(self.root, text="Run", command=lambda: self.startMainThread(self.runButton()),
+        self.buttonRun = Button(self.root, text="Run", command=lambda: self.startMainThread(self.runButton),
                                 cursor="hand2",
                                 activebackground="Lavender", width=10)
         self.buttonRun.grid(row=4, column=3, pady=10)
@@ -157,20 +170,40 @@ class GuiInterface(object):
         menubar = Menu(self.root, tearoff=0)
         self.root.config(menu=menubar)
         menubar.add_command(label='Instructions', command=lambda: self.openInstructionsWindow())
-        # menubar.add_separator()
+        menubar.add_command(label='Reset', command=lambda: self.resetPickle())
         menubar.add_command(label='About', command=lambda: self.openAboutWindow())
+
 
         # add text box
         self.textBox = StringVar()
         self.textBox.set("Welcome")
         Label(self.root, textvariable=self.textBox).grid(row=5, column=0, sticky=W + E, columnspan=4)
+        self.root.protocol("WM_DELETE_WINDOW", self.on_closing)
         self.root.mainloop()
+
+    def on_closing(self):
+        if messagebox.askokcancel("Quit", "Do you want to quit?"):
+            self.root.destroy()
+
+    def resetPickle(self):
+        path = self.path + 'loadfiles/'
+        if os.path.isdir(path):
+            files = glob.glob(path + '*')
+            if len(files) > 0:
+                if messagebox.askokcancel("Yes", "Delete all cached files?"):
+                    for f in files:
+                        os.remove(f)
+                    self.textBox.set("Cache cleared")
+            else:
+                self.textBox.set("Cache is already clear")
+        else:
+            self.textBox.set("No cache folder in here")
 
     def openInstructionsWindow(self):
         if self.instructionsWindow is None:
             self.instructionsWindow = Toplevel(self.root)
             self.instructionsWindow.title("Instructions")
-            self.instructionsWindow.geometry("700x450")
+            self.instructionsWindow.geometry("710x460")
             Label(self.instructionsWindow, text=INSTRUCTIONS, justify='left').pack()
             self.instructionsWindow.protocol("WM_DELETE_WINDOW", self.onInstructionsClose)
 
@@ -197,8 +230,38 @@ class GuiInterface(object):
             self.textBox.set("Please choose measurements")
         else:
             self.textBox.set("Working...")
+            self.disableButtons()
             self.Main()
             self.textBox.set("Done!")
+            self.enableButtons()
+
+    def disableButtons(self):
+        self.buttonRun.configure(state='disabled')  # must be active, disabled, or normal
+        self.buttonLog.configure(state='disabled')
+        self.buttonBrowse.configure(state='disabled')
+        self.checkButtonFront.config(state='disabled')
+        self.checkButtonSide.config(state='disabled')
+        self.checkButtonBack.config(state='disabled')
+        self.checkButtonKyphosis.config(state='disabled')
+        self.checkButtonKnees.config(state='disabled')
+        self.checkButtonMass.config(state='disabled')
+        self.frontOrientation.config(state='disabled')
+        self.sideOrientation.config(state='disabled')
+        self.backOrientation.config(state='disabled')
+
+    def enableButtons(self):
+        self.buttonRun.configure(state='normal')  # must be active, disabled, or normal
+        self.buttonLog.configure(state='normal')
+        self.buttonBrowse.configure(state='normal')
+        self.checkButtonFront.config(state='normal')
+        self.checkButtonSide.config(state='normal')
+        self.checkButtonBack.config(state='normal')
+        self.checkButtonKyphosis.config(state='normal')
+        self.checkButtonKnees.config(state='normal')
+        self.checkButtonMass.config(state='normal')
+        self.frontOrientation.config(state='normal')
+        self.sideOrientation.config(state='normal')
+        self.backOrientation.config(state='normal')
 
     def startMainThread(self, button):
         global funcThread
@@ -241,8 +304,7 @@ class GuiInterface(object):
             self.textBox.set("Please choose orientations")
             return
         else:
-            self.buttonRun.configure(state='disabled')  # must be active, disabled, or normal
-            self.buttonLog.configure(state='disabled')
+            self.disableButtons()
         for i in range(len(self.orientations)):
             self.textBox.set("Generating " + self.orientations[i] + " orientation log files...")
             rotationAngle = self.getRotationAngle(self.orientations[i])
@@ -250,13 +312,11 @@ class GuiInterface(object):
                 GenerateLog(self.path, self.orientations[i], rotationAngle)
             except:
                 self.textBox.set("Path error. Please choose correct path")
-                self.buttonRun.configure(state='normal')  # must be active, disabled, or normal
-                self.buttonLog.configure(state='normal')
+                self.disableButtons()
                 return
         if len(self.orientations) > 0:
             self.textBox.set("Done generating log files!")
-            self.buttonRun.configure(state='normal')  # must be active, disabled, or normal
-            self.buttonLog.configure(state='normal')
+            self.enableButtons()
 
     def Main(self):
         openposeSkeletonsLists = []
@@ -266,11 +326,15 @@ class GuiInterface(object):
         viconSkeletons = ViconReader(self.path + 'vicon.csv')
         viconSkeletons = SyncByMovementVicon(viconSkeletons)
 
+        picklePath = self.path + 'loadfiles\\'
+        pathlib.Path(picklePath).mkdir(parents=True, exist_ok=True)
         if os.path.exists(self.path + 'loadfiles'):
-            pickleType = pickle.load(open(self.path + 'loadfiles\\' + "type", 'rb'))
+            angles = [self.translateAngle(self.frontOrientation), self.translateAngle(self.sideOrientation), self.translateAngle(self.backOrientation)]
+            pickleOrientations = pickle.load(open(self.path + 'loadfiles\\' + "orientations", 'rb'))
+            pickleAngles = pickle.load(open(self.path + 'loadfiles\\' + "angles", 'rb'))
             openposeSkeletonsLists = pickle.load(open(self.path + 'loadfiles\\' + "openposeSkeletonsLists", 'rb'))
             openposeTimestampsLists = pickle.load(open(self.path + 'loadfiles\\' + "openposeTimestampsLists", 'rb'))
-            if self.orientations != pickleType:
+            if self.orientations != pickleOrientations or angles != pickleAngles:
                 # Two lists: one of Openpose skeletons, one of timestamps
                 for i in range(len(self.orientations)):
                     self.textBox.set("Working on " + str(i + 1) + '/' + str(len(self.orientations)) + " bag file")
@@ -285,6 +349,8 @@ class GuiInterface(object):
                     os.mkdir(dirPath)
                 except OSError:
                     pass
+                pickle.dump(angles, open(self.path + 'loadfiles\\' + "angles", 'wb'))
+                pickle.dump(self.orientations, open(self.path + 'loadfiles\\' + "orientations", 'wb'))
                 pickle.dump(openposeSkeletonsLists, open(self.path + 'loadfiles\\' + "openposeSkeletonsLists", 'wb'))
                 pickle.dump(openposeTimestampsLists, open(self.path + 'loadfiles\\' + "openposeTimestampsLists", 'wb'))
 
