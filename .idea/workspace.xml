@@ -870,12 +870,11 @@
       <change beforePath="$PROJECT_DIR$/Readers/BagFile.py" beforeDir="false" afterPath="$PROJECT_DIR$/Readers/BagFile.py" afterDir="false" />
 =======
     <list default="true" id="dead10eb-19ae-440f-bf46-63d9f0acf155" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/Program.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Program.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GUI/GUI_interface.py" beforeDir="false" afterPath="$PROJECT_DIR$/GUI/GUI_interface.py" afterDir="false" />
 >>>>>>> master
     </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -967,6 +966,8 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+<<<<<<< HEAD
+=======
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <module name="Program" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -989,6 +990,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+>>>>>>> master
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="Program" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -1010,6 +1012,8 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
     <recent_temporary>
       <list>
@@ -1060,6 +1064,7 @@
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
+>>>>>>> master
     <recent_temporary>
       <list>
         <item itemvalue="Python.Main" />
@@ -1074,7 +1079,7 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="0077ca02-de9c-493d-a405-ececaee5b777" name="Default Changelist" comment="" />
+      <changelist id="dead10eb-19ae-440f-bf46-63d9f0acf155" name="Default Changelist" comment="" />
       <created>1615371509064</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -1087,7 +1092,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
