@@ -281,6 +281,12 @@ class GuiInterface(object):
         angle = self.cameraOrientations.index(camera.get())
         return 360 - (90 * angle)
 
+    def checkPickleFiles(self):
+        for filename in ['orientations', 'angles', 'openposeSkeletonsLists', 'openposeTimestampsLists']:
+            if not os.path.isfile(self.path + 'loadfiles/' + filename):
+                return False
+        return True
+
     def addToCalculations(self, param):
         if param in self.calculations:
             self.calculations.remove(param)
@@ -331,11 +337,16 @@ class GuiInterface(object):
         picklePath = self.path + 'loadfiles\\'
         pathlib.Path(picklePath).mkdir(parents=True, exist_ok=True)
         if os.path.exists(self.path + 'loadfiles'):
-            angles = [self.translateAngle(self.frontOrientation), self.translateAngle(self.sideOrientation), self.translateAngle(self.backOrientation)]
-            pickleOrientations = pickle.load(open(self.path + 'loadfiles\\' + "orientations", 'rb'))
-            pickleAngles = pickle.load(open(self.path + 'loadfiles\\' + "angles", 'rb'))
-            openposeSkeletonsLists = pickle.load(open(self.path + 'loadfiles\\' + "openposeSkeletonsLists", 'rb'))
-            openposeTimestampsLists = pickle.load(open(self.path + 'loadfiles\\' + "openposeTimestampsLists", 'rb'))
+            self.textBox.set("Loading cached files...")
+            angles = [self.translateAngle(self.frontOrientation), self.translateAngle(self.sideOrientation),
+                      self.translateAngle(self.backOrientation)]
+            pickleOrientations = None
+            pickleAngles = None
+            if self.checkPickleFiles():
+                pickleOrientations = pickle.load(open(self.path + 'loadfiles\\' + "orientations", 'rb'))
+                pickleAngles = pickle.load(open(self.path + 'loadfiles\\' + "angles", 'rb'))
+                openposeSkeletonsLists = pickle.load(open(self.path + 'loadfiles\\' + "openposeSkeletonsLists", 'rb'))
+                openposeTimestampsLists = pickle.load(open(self.path + 'loadfiles\\' + "openposeTimestampsLists", 'rb'))
             if self.orientations != pickleOrientations or angles != pickleAngles:
                 # Two lists: one of Openpose skeletons, one of timestamps
                 for i in range(len(self.orientations)):
