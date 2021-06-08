@@ -10,6 +10,7 @@ from Processing.LogGenerator import GenerateLog
 from Processing.Sync import SyncByMovementOpenpose, SyncByMovementVicon, matchTimestamps, removeOutliers
 from Readers.BagFile import BagFileSetup
 from Readers.Vicon import ViconReader
+from Utilities.Excel import GenerateExcel
 from Utilities.GraphGenerator import GenerateGraph, GenerateGraphOfCorrelation
 
 INSTRUCTIONS = "First, organize the folder according to the next diagram:\n\n" \
@@ -43,7 +44,7 @@ class GuiInterface(object):
     def __init__(self):
         self.title = "Movement Sense"
         # self.path = "C:\\Age_Estimation_Project\\bag_files\\sub005\\left\\"
-        self.path = "C:\\Age_Estimation_Project\\bag_files\sub007\\squat\\"
+        self.path = 'C:/Users/markf/Downloads/Project/sub003/Squat/'
         # self.path = "C:\\Age_Estimation_Project\\bag_files\sub003\\Squat\\"
         self.root = None
         self.combo = None
@@ -177,8 +178,8 @@ class GuiInterface(object):
         if self.aboutWindow is None:
             self.aboutWindow = Toplevel(self.root)
             self.aboutWindow.title("About")
-            self.aboutWindow.geometry("200x200")
-            Label(self.aboutWindow, text="Noy Boutbul hamisken\nMark Fesenko").pack()
+            self.aboutWindow.geometry("50x100")
+            Label(self.aboutWindow, text="Noy Boutbul\nMark Fesenko").pack()
             self.aboutWindow.protocol("WM_DELETE_WINDOW", self.onAboutClose)
 
     def onInstructionsClose(self):
@@ -220,12 +221,14 @@ class GuiInterface(object):
             self.calculations.remove(param)
             return
         self.calculations.append(param)
+        self.calculations = sorted(self.calculations)
 
     def addToOrientation(self, param):
         if param in self.orientations:
             self.orientations.remove(param)
             return
         self.orientations.append(param)
+        self.orientations = sorted(self.orientations)
 
     def getRotationAngle(self, orientation):
         name = orientation.lower() + 'Orientation'
@@ -264,26 +267,26 @@ class GuiInterface(object):
         viconSkeletons = SyncByMovementVicon(viconSkeletons)
 
         if os.path.exists(self.path + 'loadfiles'):
+            pickleType = pickle.load(open(self.path + 'loadfiles\\' + "type", 'rb'))
             openposeSkeletonsLists = pickle.load(open(self.path + 'loadfiles\\' + "openposeSkeletonsLists", 'rb'))
             openposeTimestampsLists = pickle.load(open(self.path + 'loadfiles\\' + "openposeTimestampsLists", 'rb'))
-        else:
-            # Two lists: one of Openpose skeletons, one of timestamps
-            for i in range(len(self.orientations)):
-                # print(self.orientations[i])
-                self.textBox.set("Working on " + str(i + 1) + '/' + str(len(self.orientations)) + " bag file")
-                rotationAngle = self.getRotationAngle(self.orientations[i])
-                openposeSkeletons, openposeTimestamps = BagFileSetup(self.path, self.orientations[i], rotationAngle)
-                openposeSkeletons, openposeTimestamps = SyncByMovementOpenpose(openposeSkeletons, openposeTimestamps)
-                openposeSkeletonsLists.append(openposeSkeletons)
-                openposeTimestampsLists.append(openposeTimestamps)
+            if self.orientations != pickleType:
+                # Two lists: one of Openpose skeletons, one of timestamps
+                for i in range(len(self.orientations)):
+                    self.textBox.set("Working on " + str(i + 1) + '/' + str(len(self.orientations)) + " bag file")
+                    rotationAngle = self.getRotationAngle(self.orientations[i])
+                    openposeSkeletons, openposeTimestamps = BagFileSetup(self.path, self.orientations[i], rotationAngle)
+                    openposeSkeletons, openposeTimestamps = SyncByMovementOpenpose(openposeSkeletons, openposeTimestamps)
+                    openposeSkeletonsLists.append(openposeSkeletons)
+                    openposeTimestampsLists.append(openposeTimestamps)
 
-            dirPath = self.path + 'loadfiles'
-            try:
-                os.mkdir(dirPath)
-            except OSError:
-                pass
-            pickle.dump(openposeSkeletonsLists, open(self.path + 'loadfiles\\' + "openposeSkeletonsLists", 'wb'))
-            pickle.dump(openposeTimestampsLists, open(self.path + 'loadfiles\\' + "openposeTimestampsLists", 'wb'))
+                dirPath = self.path + 'loadfiles'
+                try:
+                    os.mkdir(dirPath)
+                except OSError:
+                    pass
+                pickle.dump(openposeSkeletonsLists, open(self.path + 'loadfiles\\' + "openposeSkeletonsLists", 'wb'))
+                pickle.dump(openposeTimestampsLists, open(self.path + 'loadfiles\\' + "openposeTimestampsLists", 'wb'))
 
         self.textBox.set("Calculating measurements...")
         openposeMeasurementsMat = []
@@ -306,9 +309,14 @@ class GuiInterface(object):
 
         self.textBox.set("Exporting graphs...")
         graphsOutput = self.path + 'Graphs\\'
+        excelOutput = self.path + 'Excel\\'
         pathlib.Path(graphsOutput).mkdir(parents=True, exist_ok=True)
+        pathlib.Path(excelOutput).mkdir(parents=True, exist_ok=True)
         for i in range(len(self.calculations)):
             for j in range(len(self.orientations)):
+                GenerateExcel(openposeMeasurementsMat[i][j][1], openposeMeasurementsMat[i][j][0],
+                              viconMeasurementsMat[i][j], excelOutput,
+                              self.calculations[i] + '_' + self.orientations[j])
                 GenerateGraph(openposeMeasurementsMat[i][j][1], openposeMeasurementsMat[i][j][0],
                               viconMeasurementsMat[i][j], self.calculations[i], self.orientations[j], graphsOutput)
                 GenerateGraphOfCorrelation(openposeMeasurementsMat[i][j][0], viconMeasurementsMat[i][j],

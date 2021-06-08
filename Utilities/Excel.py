@@ -109,10 +109,10 @@ def addToExcel(filename, dataX, dataX2, dataY, dataY2, heading, headingX, headin
     workbook.close()
 
 
-def addToExcel(filename, dataX, dataY, headingX, headingY):
+def GenerateExcel(timestamps, openpose_data, vicon_data, path, filename):
     # Workbook() takes one, non-optional, argument
     # which is the filename that we want to create.
-    workbook = xlsxwriter.Workbook(filename)
+    workbook = xlsxwriter.Workbook(path + filename + '.xlsx')
 
     # The workbook object is then used to add new
     # worksheet via the add_worksheet() method.
@@ -125,11 +125,12 @@ def addToExcel(filename, dataX, dataY, headingX, headingY):
     bold = workbook.add_format({'bold': 1})
 
     # create a data list .
-    headings = [headingX, headingY]
+    headings = ['Timestamps', 'Openpose', 'Vicon']
 
     data = [
-        dataX,
-        dataY
+        timestamps,
+        openpose_data,
+        vicon_data
     ]
 
     # Write a row of data starting from 'A1'
@@ -140,6 +141,7 @@ def addToExcel(filename, dataX, dataY, headingX, headingY):
     # 'A2', 'B2', 'C2' respectively .
     worksheet.write_column('A2', data[0])
     worksheet.write_column('B2', data[1])
+    worksheet.write_column('C2', data[2])
 
     # Finally, close the Excel file
     # via the close() method.
